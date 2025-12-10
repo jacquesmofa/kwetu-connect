@@ -335,44 +335,57 @@ const ContactPage = () => {
               </form>
             </motion.div>
 
-            {/* Sidebar */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="lg:col-span-1"
-            >
-              <div className="bg-primary p-8 rounded-2xl text-white sticky top-24">
-                <h3 className="text-2xl font-bold mb-6">Why Partner With Us</h3>
+            {/* Why Partner With Us */}
+            <div className="relative overflow-hidden rounded-2xl shadow-xl p-8 lg:p-12">
+              <img
+                src="https://readdy.ai/api/search-image?query=successful%20business%20partnership%20collaboration%20diverse%20professionals%20working%20together%20strategic%20alliance%20proven%20track%20record%20modern%20office%20setting%20professional%20environment%20bright%20natural%20lighting%20high%20quality%20photography&width=1200&height=800&seq=whypartnerbg&orientation=landscape"
+                alt="Why Partner Background"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/85 to-[#1a3a5a]/85"></div>
+              <div className="relative">
+                <h2 className="text-3xl font-bold text-white mb-8 font-['Playfair_Display']">Why Partner With Us</h2>
                 <ul className="space-y-4 mb-8">
-                  {[
-                    'Proven track record of successful partnerships',
-                    'Access to diverse communities and networks',
-                    'Innovative and evidence-based approaches',
-                    'Comprehensive support and collaboration',
-                    'Measurable impact and transparent reporting',
-                  ].map((benefit, index) => (
-                    <li key={index} className="flex items-start">
-                      <i className="ri-check-line text-accent text-xl mr-3 mt-0.5 flex-shrink-0"></i>
-                      <span>{benefit}</span>
-                    </li>
-                  ))}
+                  <li className="flex items-start text-white">
+                    <i className="ri-check-line text-[#D4AF37] text-2xl mr-3 mt-1 flex-shrink-0"></i>
+                    <span className="text-lg">Proven track record of successful partnerships</span>
+                  </li>
+                  <li className="flex items-start text-white">
+                    <i className="ri-check-line text-[#D4AF37] text-2xl mr-3 mt-1 flex-shrink-0"></i>
+                    <span className="text-lg">Access to diverse communities and networks</span>
+                  </li>
+                  <li className="flex items-start text-white">
+                    <i className="ri-check-line text-[#D4AF37] text-2xl mr-3 mt-1 flex-shrink-0"></i>
+                    <span className="text-lg">Innovative and evidence-based approaches</span>
+                  </li>
+                  <li className="flex items-start text-white">
+                    <i className="ri-check-line text-[#D4AF37] text-2xl mr-3 mt-1 flex-shrink-0"></i>
+                    <span className="text-lg">Comprehensive support and collaboration</span>
+                  </li>
+                  <li className="flex items-start text-white">
+                    <i className="ri-check-line text-[#D4AF37] text-2xl mr-3 mt-1 flex-shrink-0"></i>
+                    <span className="text-lg">Measurable impact and transparent reporting</span>
+                  </li>
                 </ul>
 
-                <div className="border-t border-white/20 pt-6">
-                  <h4 className="font-bold mb-3">Response Time</h4>
-                  <p className="text-gray-200 text-sm mb-6">
+                <div className="glass-effect-gold border border-[#D4AF37]/30 rounded-xl p-6">
+                  <h3 className="text-xl font-bold text-white mb-3 flex items-center">
+                    <i className="ri-time-line text-[#D4AF37] mr-2"></i>
+                    Response Time
+                  </h3>
+                  <p className="text-white/90 mb-4">
                     We aim to respond to all inquiries within 24-48 hours during business days.
                   </p>
-
-                  <h4 className="font-bold mb-3">Privacy Policy</h4>
-                  <p className="text-gray-200 text-sm">
+                  <h3 className="text-xl font-bold text-white mb-3 flex items-center">
+                    <i className="ri-shield-check-line text-[#D4AF37] mr-2"></i>
+                    Privacy Policy
+                  </h3>
+                  <p className="text-white/90">
                     Your information is secure and will only be used to respond to your inquiry. We respect your privacy.
                   </p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -428,9 +441,9 @@ const ContactPage = () => {
                   <div>
                     <div className="font-semibold text-primary mb-1">Address</div>
                     <div className="text-gray-700">
-                      Sydney, New South Wales
+                      58 Illyria Street, Rosemeadow
                       <br />
-                      Australia
+                      Sydney 2560 NSW, Australia
                     </div>
                   </div>
                 </div>
@@ -494,8 +507,18 @@ const ContactPage = () => {
       </section>
 
       {/* Newsletter Signup */}
-      <section className="py-24 bg-accent">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <section className="py-24 bg-accent relative overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <img
+            src="https://readdy.ai/api/search-image?query=newsletter%20subscription%20modern%20professional%20design%20people%20connecting%20digital%20communication%20email%20marketing%20beautiful%20workspace%20simple%20clean%20background&width=1920&height=1080&seq=newsletterbg&orientation=landscape"
+            alt="Newsletter Background"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-accent/80"></div>
+        </div>
+
+        <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

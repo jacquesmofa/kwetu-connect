@@ -778,7 +778,7 @@ export default function Crop2026() {
             {sponsorshipTiers.map((tier, index) => (
               <div
                 key={index}
-                className={`bg-white rounded-2xl shadow-lg overflow-hidden ${
+                className={`bg-white rounded-2xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-[0_0_40px_rgba(212,175,55,0.6)] hover:animate-shake ${
                   tier.highlight ? 'ring-4 ring-accent transform lg:scale-105' : ''
                 }`}
               >
@@ -813,8 +813,18 @@ export default function Crop2026() {
       </section>
 
       {/* Call to Action - Single CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-[#0A2540] to-[#1a3a5a] text-white">
-        <div className="container-custom text-center">
+      <section className="py-20 bg-gradient-to-br from-[#0A2540] to-[#1a3a5a] text-white relative overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <img
+            src="https://readdy.ai/api/search-image?query=inspiring%20conference%20collaboration%20diverse%20people%20networking%20partnership%20transformation%20cultural%20resilience%20beautiful%20professional%20setting%20warm%20lighting%20simple%20clean%20background&width=1920&height=1080&seq=cropctabg&orientation=landscape"
+            alt="Conference CTA Background"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/85 to-[#1a3a5a]/85"></div>
+        </div>
+
+        <div className="container-custom text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 font-['Playfair_Display']">
             Be Part of the Change
           </h2>

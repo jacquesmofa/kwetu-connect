@@ -1,3 +1,4 @@
+
 import { lazy } from 'react';
 import type { RouteObject } from 'react-router-dom';
 
@@ -7,6 +8,7 @@ const ProgramsPage = lazy(() => import('../pages/programs/page'));
 const Crop2026Page = lazy(() => import('../pages/crop2026/page'));
 const HealthRecruitmentPage = lazy(() => import('../pages/health-recruitment/page'));
 const ContactPage = lazy(() => import('../pages/contact/page'));
+const GalleryPage = lazy(() => import('../pages/gallery/page'));
 const NotFoundPage = lazy(() => import('../pages/NotFound'));
 const PrivacyPolicyPage = lazy(() => import('../pages/privacy-policy/page'));
 const TermsOfServicePage = lazy(() => import('../pages/terms-of-service/page'));
@@ -35,6 +37,10 @@ const routes: RouteObject[] = [
   {
     path: '/contact',
     element: <ContactPage />,
+  },
+  {
+    path: '/gallery',
+    element: <GalleryPage />,
   },
   {
     path: '/privacy-policy',

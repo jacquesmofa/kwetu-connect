@@ -285,17 +285,20 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Impact Statistics */}
+      {/* Sister Organization Feature */}
       <section className="py-16 sm:py-20 lg:py-24 bg-primary relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5 pointer-events-none">
-          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="world-pattern-about" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-                <circle cx="50" cy="50" r="1" fill="white" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#world-pattern-about)" />
-          </svg>
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <img
+            src="https://readdy.ai/api/search-image?query=grassroots%20community%20development%20Global%20South%20village%20collaborative%20sustainable%20development%20projects%20warm%20natural%20lighting%20beautiful%20landscape%20simple%20clean%20background&width=1920&height=1080&seq=sisterbg&orientation=landscape"
+            alt="Sister Organization Background"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-primary/80"></div>
+        </div>
+
+        <div className="absolute inset-0 opacity-10 pointer-events-none">
+          <div className="absolute inset-0" style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px)' }}></div>
         </div>
         <div className="container-custom relative">
           <div className="text-center mb-12 lg:mb-16">

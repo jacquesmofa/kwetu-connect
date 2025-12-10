@@ -9,6 +9,7 @@
   
   body {
     @apply font-sans antialiased;
+    /* Removed cursor: none to restore normal cursor */
   }
 }
 
@@ -39,9 +40,197 @@
       transform: translateY(0);
     }
   }
+
+  /* Glassmorphism Effects */
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .glass-effect-dark {
+    background: rgba(10, 37, 64, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+
+  .glass-effect-gold {
+    background: rgba(212, 175, 55, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+  }
+
+  /* Glittering Background Animation */
+  @keyframes glitter {
+    0%, 100% { opacity: 0; transform: scale(0); }
+    50% { opacity: 1; transform: scale(1); }
+  }
+
+  .glitter-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .glitter-particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: #D4AF37;
+    border-radius: 50%;
+    animation: glitter 3s infinite;
+    box-shadow: 0 0 10px #D4AF37;
+  }
+
+  /* Floating Stars and Lights Animation */
+  @keyframes floatUp {
+    0% {
+      opacity: 0;
+      transform: translateY(0) scale(0);
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-100vh) scale(1);
+    }
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+  }
+
+  .floating-star {
+    position: absolute;
+    color: #D4AF37;
+    animation: floatUp 8s ease-in infinite, twinkle 2s ease-in-out infinite;
+    pointer-events: none;
+    text-shadow: 0 0 10px #D4AF37, 0 0 20px #D4AF37;
+  }
+
+  .floating-light {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #D4AF37;
+    border-radius: 50%;
+    animation: floatUp 6s ease-in infinite;
+    pointer-events: none;
+    box-shadow: 0 0 15px #D4AF37, 0 0 30px #D4AF37, 0 0 45px rgba(212, 175, 55, 0.5);
+  }
+
+  /* Smooth scroll-triggered animations */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Professional hover effects with physics */
+  .professional-hover {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .professional-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(10, 37, 64, 0.2);
+  }
+
+  /* Magnetic Button Effect */
+  .magnetic-button {
+    position: relative;
+    transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  /* Layered Parallax */
+  .parallax-layer {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Volumetric Glow */
+  .volumetric-glow {
+    position: relative;
+  }
+
+  .volumetric-glow::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, transparent 70%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+  }
+
+  .volumetric-glow:hover::before {
+    opacity: 1;
+  }
+
+  /* Floating Animation */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Shimmer Effect */
+  @keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+  }
+
+  .shimmer {
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+    background-size: 1000px 100%;
+    animation: shimmer 3s infinite;
+  }
+
+  @keyframes shake {
+    0%, 100% { transform: translateX(0) translateY(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-2px) translateY(-2px); }
+    20%, 40%, 60%, 80% { transform: translateX(2px) translateY(2px); }
+  }
+
+  .animate-shake {
+    animation: shake 0.5s ease-in-out;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.6); }
+    50% { box-shadow: 0 0 30px rgba(212, 175, 55, 0.9); }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
 }
 
-/* Custom scrollbar */
+/* Custom Cursor - Disabled */
+.custom-cursor,
+.custom-cursor-follower {
+  display: none;
+}
+
+/* Custom scrollbar with brand colors */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -53,6 +242,7 @@
 ::-webkit-scrollbar-thumb {
   background: #D4AF37;
   border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -63,4 +253,45 @@
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* Smooth page transitions */
+* {
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+/* Override for elements that need specific transitions */
+button, a, .transition-all {
+  transition-property: all;
+}
+
+/* Parallax effect base */
+.parallax {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Professional gradient overlays */
+.gradient-overlay-primary {
+  background: linear-gradient(135deg, rgba(10, 37, 64, 0.95) 0%, rgba(10, 37, 64, 0.85) 100%);
+}
+
+.gradient-overlay-accent {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.95) 0%, rgba(212, 175, 55, 0.85) 100%);
+}
+
+/* Scroll-controlled opacity */
+.scroll-opacity {
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+/* Interactive hover magnetic field - Restored normal cursor */
+a, button {
+  cursor: pointer;
+}
+
+a:hover, button:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }

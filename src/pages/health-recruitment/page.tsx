@@ -249,7 +249,7 @@ const HealthRecruitmentPage = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl" style={{ paddingBottom: '56.25%' }}>
               <iframe
                 className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                src="https://www.youtube.com/embed/i8DuRLLgSAo"
                 title="KWETU CONNECT Health Recruitment"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
@@ -345,6 +345,16 @@ const HealthRecruitmentPage = () => {
 
       {/* Application Process Section */}
       <section className="py-20 bg-primary relative overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <img
+            src="https://readdy.ai/api/search-image?query=healthcare%20career%20journey%20professional%20development%20medical%20training%20diverse%20healthcare%20workers%20success%20pathway%20beautiful%20professional%20setting%20warm%20lighting%20simple%20clean%20background&width=1920&height=1080&seq=healthprocessbg&orientation=landscape"
+            alt="Application Process Background"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-primary/80"></div>
+        </div>
+
         <div className="absolute inset-0 opacity-5 pointer-events-none">
           <div className="absolute inset-0" style={{ backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px)' }}></div>
         </div>
@@ -433,17 +443,17 @@ const HealthRecruitmentPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Link
               to="/programs#mental-health"
-              className="group bg-gradient-to-br from-teal to-teal-light p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 cursor-pointer"
+              className="group bg-primary hover:bg-primary/90 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer"
             >
               <div className="w-16 h-16 flex items-center justify-center mb-6">
-                <i className="ri-mental-health-line text-5xl text-white"></i>
+                <i className="ri-mental-health-line text-5xl text-accent"></i>
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Mental Health & Wellbeing</h3>
               <p className="text-white/90 text-sm leading-relaxed mb-4">
                 Supporting healthcare workers' mental health and wellbeing
               </p>
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity">
-                <span className="inline-flex items-center text-white font-semibold hover:underline">
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="inline-flex items-center text-accent font-semibold hover:underline">
                   Learn More <i className="ri-arrow-right-line ml-2"></i>
                 </span>
               </div>
@@ -451,17 +461,17 @@ const HealthRecruitmentPage = () => {
 
             <Link
               to="/programs#job-opportunities"
-              className="group bg-gradient-to-br from-orange-600 to-accent p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 cursor-pointer"
+              className="group bg-accent hover:bg-accent/90 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer"
             >
               <div className="w-16 h-16 flex items-center justify-center mb-6">
-                <i className="ri-briefcase-heart-line text-5xl text-white"></i>
+                <i className="ri-briefcase-heart-line text-5xl text-primary"></i>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Job Opportunities & Care for Caregivers</h3>
-              <p className="text-white/90 text-sm leading-relaxed mb-4">
+              <h3 className="text-2xl font-bold text-primary mb-4">Job Opportunities & Care for Caregivers</h3>
+              <p className="text-primary/90 text-sm leading-relaxed mb-4">
                 Career pathways and support for healthcare professionals
               </p>
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity">
-                <span className="inline-flex items-center text-white font-semibold hover:underline">
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="inline-flex items-center text-primary font-semibold hover:underline">
                   Learn More <i className="ri-arrow-right-line ml-2"></i>
                 </span>
               </div>
@@ -469,17 +479,17 @@ const HealthRecruitmentPage = () => {
 
             <Link
               to="/programs#cultural-exchange"
-              className="group bg-gradient-to-br from-green-700 to-green-400 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 cursor-pointer"
+              className="group bg-primary hover:bg-primary/90 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer"
             >
               <div className="w-16 h-16 flex items-center justify-center mb-6">
-                <i className="ri-earth-line text-5xl text-white"></i>
+                <i className="ri-earth-line text-5xl text-accent"></i>
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Cultural Exchange Programs</h3>
               <p className="text-white/90 text-sm leading-relaxed mb-4">
                 Culturally competent care through exchange and learning
               </p>
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity">
-                <span className="inline-flex items-center text-white font-semibold hover:underline">
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="inline-flex items-center text-accent font-semibold hover:underline">
                   Learn More <i className="ri-arrow-right-line ml-2"></i>
                 </span>
               </div>
@@ -487,17 +497,17 @@ const HealthRecruitmentPage = () => {
 
             <Link
               to="/programs#seniors-wisdom"
-              className="group bg-gradient-to-br from-primary to-blue-400 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-2 cursor-pointer"
+              className="group bg-accent hover:bg-accent/90 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 cursor-pointer"
             >
               <div className="w-16 h-16 flex items-center justify-center mb-6">
-                <i className="ri-user-star-line text-5xl text-white"></i>
+                <i className="ri-user-star-line text-5xl text-primary"></i>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Seniors Wisdom & Guidance</h3>
-              <p className="text-white/90 text-sm leading-relaxed mb-4">
+              <h3 className="text-2xl font-bold text-primary mb-4">Seniors Wisdom & Guidance</h3>
+              <p className="text-primary/90 text-sm leading-relaxed mb-4">
                 Honoring elders through quality aged care services
               </p>
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity">
-                <span className="inline-flex items-center text-white font-semibold hover:underline">
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="inline-flex items-center text-primary font-semibold hover:underline">
                   Learn More <i className="ri-arrow-right-line ml-2"></i>
                 </span>
               </div>
@@ -566,6 +576,16 @@ const HealthRecruitmentPage = () => {
 
       {/* CTA Section */}
       <section id="apply" className="py-20 bg-primary relative overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0">
+          <img
+            src="https://readdy.ai/api/search-image?query=healthcare%20professionals%20celebrating%20success%20diverse%20team%20meaningful%20career%20transformation%20beautiful%20professional%20setting%20warm%20lighting%20simple%20clean%20background&width=1920&height=1080&seq=healthctabg&orientation=landscape"
+            alt="Healthcare CTA Background"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-primary/80"></div>
+        </div>
+
         <div className="absolute inset-0 opacity-10 pointer-events-none">
           <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(45deg, transparent 30%, rgba(255,255,255,.1) 30%, rgba(255,255,255,.1) 70%, transparent 70%)' }}></div>
         </div>
