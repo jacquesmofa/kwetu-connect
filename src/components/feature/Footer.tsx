@@ -223,7 +223,7 @@ export default function Footer() {
         <div className="container-custom py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/60 text-sm">
-              © {new Date().getFullYear()} KWETU CONNECT. All rights reserved.
+              © {new Date().getFullYear()} KWETU CONNECT. All rights reserved MJ.
             </p>
             <div className="flex items-center gap-6">
               <a href="/privacy-policy" className="text-white/60 hover:text-accent transition-all duration-300 text-sm whitespace-nowrap magnetic-button">
