@@ -184,79 +184,82 @@ export default function Crop2026() {
   const agenda = [
     {
       day: 'Day 1 - November 6, 2026',
-      title: 'Opening & Cultural Foundations',
+      title: 'Opening & Foundation',
       sessions: [
         { 
-          time: '9:00 AM - 10:00 AM', 
+          time: '8:00 AM - 9:00 AM', 
           title: 'Registration & Welcome Coffee', 
           track: 'General',
           location: 'Main Foyer',
           description: 'Welcome reception with refreshments and networking opportunities. Collect your conference materials and connect with fellow delegates.',
         },
         { 
-          time: '10:00 AM - 11:00 AM', 
-          title: 'Opening Ceremony & Traditional Welcome', 
+          time: '9:00 AM - 10:30 AM', 
+          title: 'Opening Ceremony & Keynote Address', 
           track: 'Cultural',
           location: 'Main Auditorium',
-          speakers: 'Traditional Custodians & Conference Organizers',
-          description: 'Traditional Welcome to Country ceremony followed by official conference opening. Keynote address on the importance of cultural resilience in our shared planetary future.',
+          speakers: 'Co-organizers & Indigenous Leaders',
+          description: 'Welcome addresses from co-organizers, Indigenous acknowledgment, and keynote on cultural resilience and care transformation in the 21st century.',
         },
         { 
-          time: '11:00 AM - 12:30 PM', 
-          title: 'Keynote: Cultural Resilience in the 21st Century', 
-          track: 'Cultural',
-          location: 'Main Auditorium',
-          speakers: 'Dr. Amara Okafor',
-          description: 'Exploring how Indigenous and cultural communities worldwide are preserving identity while adapting to rapid global change. Case studies from five continents.',
-        },
-        { 
-          time: '12:30 PM - 1:30 PM', 
-          title: 'Networking Lunch', 
+          time: '10:30 AM - 11:00 AM', 
+          title: 'Morning Tea & Networking', 
           track: 'General',
           location: 'Exhibition Hall',
-          description: 'Catered lunch with opportunities to explore exhibition booths and connect with partners and sponsors.',
         },
         { 
-          time: '1:30 PM - 3:00 PM', 
-          title: 'Panel: Indigenous Knowledge & Climate Action', 
+          time: '11:00 AM - 1:00 PM', 
+          title: 'Plenary Panel: Bridging Culture, Care & Climate', 
           track: 'Resilience',
           location: 'Main Auditorium',
-          speakers: 'Dr. Chen Wei, Dr. Kofi Mensah, Sarah Green',
-          description: 'How traditional ecological knowledge can inform modern climate action strategies. Interactive panel discussion with Q&A.',
+          speakers: 'Global Leaders Panel',
+          description: 'Global leaders discuss integrating cultural perspectives into climate action and care industry transformation.',
         },
         { 
-          time: '3:00 PM - 3:30 PM', 
+          time: '1:00 PM - 2:00 PM', 
+          title: 'Lunch & Cultural Exposition', 
+          track: 'General',
+          location: 'Exhibition Hall',
+        },
+        { 
+          time: '2:00 PM - 4:00 PM', 
+          title: 'Parallel Thematic Workshops: Culture & Care Integration', 
+          track: 'Cultural',
+          location: 'Multiple Rooms',
+          description: 'Deep-dive sessions on Climate Justice, Culture-Based Trade, and Cultural Approaches to Care.',
+        },
+        { 
+          time: '4:00 PM - 4:30 PM', 
           title: 'Afternoon Tea', 
           track: 'General',
           location: 'Exhibition Hall',
         },
         { 
-          time: '3:30 PM - 5:00 PM', 
-          title: 'Breakout Sessions: Cultural Heritage Preservation', 
-          track: 'Cultural',
+          time: '4:30 PM - 6:00 PM', 
+          title: 'Community Roundtables: Care for Caregivers', 
+          track: 'Health',
           location: 'Multiple Rooms',
-          description: 'Choose from 5 concurrent workshops covering language revitalization, digital archiving, traditional arts, cultural tourism, and heritage education.',
+          description: 'Grassroots leaders share community-led resilience initiatives and cultural heritage perspectives on care.',
         },
         { 
-          time: '6:00 PM - 8:00 PM', 
-          title: 'Welcome Reception & Cultural Performances', 
+          time: '6:30 PM - 8:30 PM', 
+          title: 'Welcome Reception & Cultural Performance', 
           track: 'General',
           location: 'Waterfront Terrace',
-          description: 'Evening reception featuring traditional performances, cultural displays, and networking opportunities with stunning harbor views.',
         },
       ],
     },
     {
       day: 'Day 2 - November 7, 2026',
-      title: 'Innovation & Partnerships',
+      title: 'Deep Dive & Innovation',
       sessions: [
         { 
           time: '9:00 AM - 10:30 AM', 
-          title: 'Keynote: Sustainable Development & Cultural Identity', 
-          track: 'Trade',
+          title: 'Plenary: Indigenous Knowledge & Care Systems', 
+          track: 'Cultural',
           location: 'Main Auditorium',
-          speakers: 'Carlos Rodriguez',
-          description: 'Balancing economic development with cultural preservation. Innovative models for sustainable livelihoods that strengthen rather than erode cultural identity.',
+          speakers: 'Indigenous Leaders',
+          description: 'Indigenous leaders present traditional knowledge as solutions to contemporary care and environmental challenges.',
         },
         { 
           time: '10:30 AM - 11:00 AM', 
@@ -265,100 +268,83 @@ export default function Crop2026() {
           location: 'Exhibition Hall',
         },
         { 
-          time: '11:00 AM - 12:30 PM', 
-          title: 'Panel: Health Equity & Community Wellbeing', 
+          time: '11:00 AM - 1:00 PM', 
+          title: 'Parallel Workshops: Redefining Care Industry', 
           track: 'Health',
-          location: 'Main Auditorium',
-          speakers: 'Dr. Priya Sharma, Michael Thompson, Dr. Fatima Al-Rashid',
-          description: 'Integrating traditional healing practices with modern healthcare. Addressing mental health stigma and building culturally appropriate support systems.',
+          location: 'Multiple Rooms',
+          description: 'Sessions on Cultural Transformative Values for Care, Senior Participation in Decision-Making, and Technology Integration.',
         },
         { 
-          time: '12:30 PM - 1:30 PM', 
-          title: 'Networking Lunch', 
+          time: '1:00 PM - 2:00 PM', 
+          title: 'Lunch', 
           track: 'General',
           location: 'Exhibition Hall',
         },
         { 
-          time: '1:30 PM - 3:00 PM', 
-          title: 'Workshops: Building Transnational Partnerships', 
+          time: '2:00 PM - 4:00 PM', 
+          title: 'Youth Forum: Next Generation Leadership in Care', 
           track: 'Resilience',
-          location: 'Multiple Rooms',
-          description: 'Practical workshops on partnership development, cross-cultural collaboration, funding strategies, and project management for international initiatives.',
+          location: 'Main Auditorium',
+          description: 'Young leaders present innovative approaches to cultural resilience and care transformation.',
         },
         { 
-          time: '3:00 PM - 3:30 PM', 
+          time: '4:00 PM - 4:30 PM', 
           title: 'Afternoon Tea', 
           track: 'General',
           location: 'Exhibition Hall',
         },
         { 
-          time: '3:30 PM - 5:00 PM', 
-          title: 'Innovation Showcase: Technology & Cultural Preservation', 
+          time: '4:30 PM - 6:00 PM', 
+          title: 'Research Presentations: Culture Meets Care', 
           track: 'Cultural',
           location: 'Innovation Hub',
-          speakers: 'Dr. Yuki Tanaka & Innovation Teams',
-          description: 'Demonstrations of cutting-edge technologies for language preservation, cultural archiving, virtual reality cultural experiences, and digital storytelling.',
+          description: 'Academic and community researchers share findings on cultural approaches to care industry innovation.',
         },
         { 
-          time: '6:00 PM - 9:00 PM', 
+          time: '7:00 PM - 10:00 PM', 
           title: 'Gala Dinner & Awards Ceremony', 
           track: 'General',
           location: 'Grand Ballroom',
-          description: 'Formal dinner celebrating excellence in cultural resilience work. Awards presentation, keynote address, and entertainment.',
         },
       ],
     },
     {
       day: 'Day 3 - November 8, 2026',
-      title: 'Action & Future Pathways',
+      title: 'Sydney Discovery & Cultural Immersion',
       sessions: [
         { 
           time: '9:00 AM - 10:30 AM', 
-          title: 'Keynote: Youth Leadership & Cultural Futures', 
+          title: 'Optional: Working Group Sessions', 
           track: 'Resilience',
-          location: 'Main Auditorium',
-          speakers: 'Youth Panel Leaders',
-          description: 'Young cultural leaders share their vision for the future. How the next generation is reimagining cultural resilience for a changing world.',
+          location: 'Multiple Rooms',
+          description: 'Final collaborative sessions for action planning and commitments.',
         },
         { 
           time: '10:30 AM - 11:00 AM', 
-          title: 'Morning Tea', 
+          title: 'Morning Tea & Departure Preparation', 
           track: 'General',
           location: 'Exhibition Hall',
         },
         { 
-          time: '11:00 AM - 12:30 PM', 
-          title: 'Panel: Turning Vulnerability into Opportunity', 
-          track: 'Resilience',
-          location: 'Main Auditorium',
-          speakers: 'Prof. James Whitehorse, Maria Santos, Dr. Emma Wilson',
-          description: 'How communities are transforming challenges into catalysts for positive change. Stories of resilience, innovation, and empowerment.',
+          time: '11:00 AM - 5:00 PM', 
+          title: 'Sydney Cultural & Tourism Experience', 
+          track: 'Cultural',
+          location: 'Sydney City',
+          description: 'Guided tours of Sydney\'s iconic landmarks: Opera House, Harbour Bridge, Royal Botanic Gardens, and cultural sites. Experience Australia\'s vibrant multicultural heritage.',
         },
         { 
-          time: '12:30 PM - 1:30 PM', 
-          title: 'Networking Lunch', 
+          time: '5:00 PM - 6:00 PM', 
+          title: 'Optional: Sunset Harbour Cruise', 
           track: 'General',
-          location: 'Exhibition Hall',
+          location: 'Sydney Harbour',
+          description: 'Relaxing cruise on Sydney Harbour with networking opportunities.',
         },
         { 
-          time: '1:30 PM - 3:00 PM', 
-          title: 'Action Planning Sessions', 
-          track: 'Resilience',
-          location: 'Multiple Rooms',
-          description: 'Collaborative sessions to develop concrete action plans, partnerships, and commitments for post-conference implementation.',
-        },
-        { 
-          time: '3:00 PM - 3:30 PM', 
-          title: 'Afternoon Tea', 
+          time: '6:30 PM - 8:00 PM', 
+          title: 'Farewell Dinner (Optional)', 
           track: 'General',
-          location: 'Exhibition Hall',
-        },
-        { 
-          time: '3:30 PM - 5:00 PM', 
-          title: 'Closing Ceremony & Call to Action', 
-          track: 'General',
-          location: 'Main Auditorium',
-          description: 'Conference summary, key takeaways, and collective commitment to action. Closing remarks and traditional farewell ceremony.',
+          location: 'Waterfront Restaurant',
+          description: 'Closing celebration with Australian cuisine and cultural performances.',
         },
       ],
     },
@@ -367,58 +353,58 @@ export default function Crop2026() {
   const sponsorshipTiers = [
     {
       tier: 'Platinum Partner',
-      price: '$50,000+',
+      price: 'AUD $100,000+',
       color: 'from-gray-400 to-gray-600',
-      highlight: false,
+      highlight: true,
       benefits: [
         'Premier branding on all conference materials',
         'Keynote speaking opportunity',
-        '10 complimentary delegate passes',
-        'Exhibition booth (premium location)',
-        'Logo on conference website & app',
+        '10 complimentary delegate registrations',
+        'Exhibition booth in prime location',
+        'Logo on Sydney Declaration document',
+        'Exclusive networking reception with speakers',
+        'Full-page advertisement in conference compendium',
         'Recognition in all media releases',
-        'VIP access to all social events',
-        'Post-conference delegate list',
       ],
     },
     {
       tier: 'Gold Partner',
-      price: '$25,000+',
+      price: 'AUD $50,000 - $99,999',
       color: 'from-accent to-yellow-600',
-      highlight: true,
+      highlight: false,
       benefits: [
         'Prominent branding on conference materials',
         'Panel participation opportunity',
-        '6 complimentary delegate passes',
-        'Exhibition booth (standard location)',
-        'Logo on conference website',
-        'Recognition at opening ceremony',
-        'Access to networking events',
+        '6 complimentary delegate registrations',
+        'Exhibition booth',
+        'Logo on conference website and materials',
+        'Social media recognition',
       ],
     },
     {
       tier: 'Silver Partner',
-      price: '$10,000+',
+      price: 'AUD $25,000 - $49,999',
       color: 'from-gray-300 to-gray-400',
       highlight: false,
       benefits: [
-        'Branding on selected materials',
-        '3 complimentary delegate passes',
+        'Branding on selected conference materials',
+        '4 complimentary delegate registrations',
+        'Exhibition space',
         'Logo on conference website',
-        'Recognition in program',
-        'Access to main networking events',
+        'Quarter-page advertisement in compendium',
+        'Recognition in conference programme',
       ],
     },
     {
       tier: 'Bronze Partner',
-      price: '$5,000+',
+      price: 'AUD $10,000 - $24,999',
       color: 'from-orange-400 to-orange-600',
       highlight: false,
       benefits: [
+        '2 complimentary delegate registrations',
         'Logo on conference website',
-        '2 complimentary delegate passes',
-        'Recognition in program',
-        'Access to selected events',
+        'Listing in conference programme',
+        'Social media acknowledgment',
       ],
     },
   ];
@@ -448,109 +434,110 @@ export default function Crop2026() {
         {/* Overlay - Reduced opacity */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A2540]/70 via-[#0A2540]/60 to-[#0A2540]/70"></div>
 
-        {/* Top Official Website Button */}
-        <div className="absolute top-28 right-8 z-20">
+        {/* Top Official Website Button - Repositioned for mobile */}
+        <div className="absolute top-20 sm:top-24 md:top-28 right-2 sm:right-4 md:right-8 z-20">
           <a
             href="https://crop2026.org"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#D4AF37] text-[#0A2540] font-semibold rounded-lg hover:bg-[#C4A137] transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 whitespace-nowrap"
+            className="inline-flex items-center gap-1 sm:gap-2 px-3 py-2 sm:px-4 sm:py-2.5 md:px-6 md:py-3 bg-[#D4AF37] text-[#0A2540] font-semibold text-xs sm:text-sm md:text-base rounded-md sm:rounded-lg hover:bg-[#C4A137] transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 whitespace-nowrap"
           >
-            <i className="ri-external-link-line"></i>
-            Official Conference Website
+            <i className="ri-external-link-line text-sm sm:text-base"></i>
+            <span className="hidden sm:inline">Official Conference Website</span>
+            <span className="sm:hidden">Official Site</span>
           </a>
         </div>
 
-        {/* Main Content - Reduced spacing */}
-        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 pt-24 pb-24">
+        {/* Main Content - Adjusted spacing for mobile */}
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 pt-32 sm:pt-28 md:pt-24 pb-16 sm:pb-20 md:pb-24">
           <div className="max-w-7xl mx-auto">
             {/* Main Content */}
-            <div className="text-center text-white space-y-2 mb-6">
+            <div className="text-center text-white space-y-2 sm:space-y-2 mb-4 sm:mb-6">
               {/* Subtitle */}
-              <div className="text-accent text-base sm:text-lg font-serif italic">
+              <div className="text-accent text-sm sm:text-base md:text-lg font-serif italic">
                 Cultural Resilience, One Planet
               </div>
 
               {/* Main Title */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                 CROP Conference<br />
                 <span className="text-accent">2026</span>
               </h1>
 
               {/* Date */}
-              <div className="text-lg sm:text-xl font-semibold text-white/90">
+              <div className="text-base sm:text-lg md:text-xl font-semibold text-white/90">
                 November 6th - 8th, 2026
               </div>
 
               {/* Venue */}
-              <div className="flex items-center justify-center gap-2 text-base sm:text-lg text-white/80">
-                <i className="ri-map-pin-line text-accent"></i>
-                <span>The Dome, 1 Showground Rd, Sydney Olympic Park NSW 2127</span>
+              <div className="flex items-center justify-center gap-2 text-xs sm:text-sm md:text-base lg:text-lg text-white/80 px-2">
+                <i className="ri-map-pin-line text-accent flex-shrink-0"></i>
+                <span className="text-center">The Dome, 1 Showground Rd, Sydney Olympic Park NSW 2127</span>
               </div>
 
               {/* Divider */}
               <div className="flex items-center justify-center gap-4 py-2">
-                <div className="h-px w-16 bg-accent"></div>
-                <i className="ri-global-line text-accent text-2xl"></i>
-                <div className="h-px w-16 bg-accent"></div>
+                <div className="h-px w-12 sm:w-16 bg-accent"></div>
+                <i className="ri-global-line text-accent text-xl sm:text-2xl"></i>
+                <div className="h-px w-12 sm:w-16 bg-accent"></div>
               </div>
 
               {/* Conference Question */}
-              <div className="max-w-4xl mx-auto">
-                <p className="text-lg sm:text-xl lg:text-2xl font-serif italic leading-relaxed text-white/95">
+              <div className="max-w-4xl mx-auto px-2">
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-serif italic leading-relaxed text-white/95">
                   "How can cultural resilience shape a sustainable future for our shared planet?"
                 </p>
               </div>
 
               {/* Description */}
-              <div className="max-w-4xl mx-auto pt-1">
-                <p className="text-sm sm:text-base lg:text-lg leading-relaxed text-white/90">
+              <div className="max-w-4xl mx-auto pt-1 px-2">
+                <p className="text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed text-white/90">
                   Join <strong className="text-accent">800+ international</strong> Indigenous and cultural leaders, policymakers, academics, private sector innovators, and youth changemakers in shaping the future of cultural resilience, care transformation, and planetary sustainability.
                 </p>
               </div>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-6 sm:mb-8 px-4">
               <a
                 href="https://crop2026.org"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-10 py-4 bg-[#D4AF37] text-[#0A2540] font-bold text-lg rounded-full hover:bg-[#C4A137] transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 whitespace-nowrap"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 md:px-10 py-3 sm:py-3.5 md:py-4 bg-[#D4AF37] text-[#0A2540] font-bold text-base sm:text-lg rounded-full hover:bg-[#C4A137] transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 whitespace-nowrap"
               >
-                <i className="ri-user-add-line text-xl"></i>
+                <i className="ri-user-add-line text-lg sm:text-xl"></i>
                 Register Now
               </a>
               <a
                 href="https://crop2026.org"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-10 py-4 bg-white/10 backdrop-blur-md text-white font-bold text-lg rounded-full border-2 border-white/30 hover:bg-white/20 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 whitespace-nowrap"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 md:px-10 py-3 sm:py-3.5 md:py-4 bg-white/10 backdrop-blur-md text-white font-bold text-base sm:text-lg rounded-full border-2 border-white/30 hover:bg-white/20 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 whitespace-nowrap"
               >
-                <i className="ri-hand-heart-line text-xl"></i>
+                <i className="ri-hand-heart-line text-lg sm:text-xl"></i>
                 Partner With Us
               </a>
             </div>
 
             {/* Countdown Timer */}
-            <div className="flex justify-center">
-              <div className="inline-block bg-white/5 backdrop-blur-lg rounded-2xl px-8 sm:px-12 py-5 border border-white/10 shadow-2xl">
-                <p className="text-xs sm:text-sm uppercase tracking-widest mb-3 text-accent font-bold text-center">Conference Begins In</p>
-                <div className="grid grid-cols-4 gap-4 sm:gap-8">
+            <div className="flex justify-center px-4">
+              <div className="inline-block bg-white/5 backdrop-blur-lg rounded-xl sm:rounded-2xl px-4 sm:px-8 md:px-12 py-4 sm:py-5 border border-white/10 shadow-2xl w-full max-w-2xl">
+                <p className="text-xs sm:text-sm uppercase tracking-widest mb-2 sm:mb-3 text-accent font-bold text-center">Conference Begins In</p>
+                <div className="grid grid-cols-4 gap-2 sm:gap-4 md:gap-8">
                   <div className="text-center">
-                    <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-1">{timeLeft.days}</div>
+                    <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1">{timeLeft.days}</div>
                     <div className="text-xs sm:text-sm uppercase tracking-wider text-white/70">Days</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-1">{timeLeft.hours}</div>
+                    <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1">{timeLeft.hours}</div>
                     <div className="text-xs sm:text-sm uppercase tracking-wider text-white/70">Hours</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-1">{timeLeft.minutes}</div>
+                    <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1">{timeLeft.minutes}</div>
                     <div className="text-xs sm:text-sm uppercase tracking-wider text-white/70">Minutes</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-1">{timeLeft.seconds}</div>
+                    <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1">{timeLeft.seconds}</div>
                     <div className="text-xs sm:text-sm uppercase tracking-wider text-white/70">Seconds</div>
                   </div>
                 </div>
@@ -560,15 +547,15 @@ export default function Crop2026() {
         </div>
 
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-10">
           <div className="flex flex-col items-center gap-2 animate-bounce">
-            <span className="text-white/60 text-sm font-medium">Scroll to explore</span>
-            <i className="ri-arrow-down-line text-white/60 text-2xl"></i>
+            <span className="text-white/60 text-xs sm:text-sm font-medium">Scroll to explore</span>
+            <i className="ri-arrow-down-line text-white/60 text-xl sm:text-2xl"></i>
           </div>
         </div>
 
         {/* Slideshow Indicators */}
-        <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-10 flex gap-2">
+        <div className="absolute bottom-16 sm:bottom-20 left-1/2 transform -translate-x-1/2 z-10 flex gap-2">
           {heroImages.map((_, index) => (
             <button
               key={index}
@@ -690,12 +677,21 @@ export default function Crop2026() {
         <div className="container-custom">
           <div className="text-center mb-16 lg:mb-16">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0A2540] mb-6 font-['Playfair_Display']">
-              Conference Agenda
+              3-Day Schedule
             </h2>
             <div className="w-24 h-1 bg-[#D4AF37] mx-auto mb-6"></div>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-              Three days of inspiring sessions, workshops, and networking
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-8">
+              Detailed programme timeline (subject to updates)
             </p>
+            <a
+              href="https://crop2026.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#D4AF37] text-[#0A2540] font-semibold rounded-lg hover:bg-[#C4A137] transition-all duration-300 shadow-md hover:shadow-lg whitespace-nowrap"
+            >
+              <i className="ri-download-line text-lg"></i>
+              Download Full Programme (PDF)
+            </a>
           </div>
 
           <div className="space-y-8 sm:space-y-12">
@@ -767,10 +763,10 @@ export default function Crop2026() {
         <div className="container-custom">
           <div className="text-center mb-16 lg:mb-16">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary mb-6 font-['Playfair_Display']">
-              Sponsorship Opportunities
+              Sponsorship Tiers
             </h2>
             <p className="text-xl sm:text-2xl text-gray-600 px-4 max-w-3xl mx-auto">
-              Partner with us to amplify your impact and reach global audiences
+              Flexible sponsorship packages designed to maximize your impact and visibility
             </p>
           </div>
 
@@ -795,19 +791,34 @@ export default function Crop2026() {
                       </li>
                     ))}
                   </ul>
-                  <Link
-                    to="/contact"
-                    className={`block w-full text-center px-6 py-3 rounded-lg font-semibold transition-all whitespace-nowrap cursor-pointer ${
+                  <a
+                    href="https://crop2026.org"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`block w-full text-center px-6 py-3 rounded-lg font-semibold transition-all whitespace-nowrap ${
                       tier.highlight
                         ? 'bg-accent hover:bg-accent-dark text-primary'
                         : 'bg-primary hover:bg-primary-light text-white'
                     }`}
                   >
-                    Secure This Tier
-                  </Link>
+                    Proceed to Payment
+                  </a>
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-lg text-gray-700 mb-6">
+              Custom partnership packages available. Contact us to discuss tailored opportunities.
+            </p>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary-light transition-all duration-300 shadow-md hover:shadow-lg whitespace-nowrap"
+            >
+              <i className="ri-mail-line text-xl"></i>
+              Contact Us for Custom Packages
+            </Link>
           </div>
         </div>
       </section>

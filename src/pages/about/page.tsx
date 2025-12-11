@@ -59,10 +59,10 @@ const AboutPage = () => {
 
   const teamMembers = [
     {
-      name: 'Dr. Amara Okafor',
-      role: 'Founder & CEO',
-      image: 'https://readdy.ai/api/search-image?query=professional%20African%20woman%20CEO%20executive%20portrait%20confident%20smile%20business%20suit%20simple%20clean%20background&width=400&height=400&seq=team1&orientation=squarish',
-      bio: 'Leading expert in cultural resilience with 15+ years experience in international development',
+      name: 'Mr Morris Mukasa',
+      role: 'Founder & Director',
+      image: 'https://readdy.ai/api/search-image?query=professional%20african%20male%20founder%20director%20portrait%20confident%20warm%20smile%20business%20suit%20leadership%20executive%20simple%20clean%20background&width=400&height=400&seq=team1morris&orientation=squarish',
+      bio: 'Distinguished advocate, humanitarian, and community leader dedicated to promoting social justice, trauma recovery, and empowerment of marginalised communities',
     },
     {
       name: 'James Chen',
@@ -261,7 +261,7 @@ const AboutPage = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-64 sm:h-80 object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
+                    className="w-full h-64 sm:h-80 object-cover object-top group-hover:scale-110 transition-all duration-500"
                   />
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/80 transition-all duration-500 flex items-center justify-center opacity-0 group-hover:opacity-100">
                     <a

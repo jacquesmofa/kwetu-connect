@@ -5,6 +5,7 @@ import Footer from '../../components/feature/Footer';
 
 const HomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [showFullBio, setShowFullBio] = useState(false);
 
   const heroImages = [
     'https://readdy.ai/api/search-image?query=diverse%20multicultural%20community%20members%20connecting%20hands%20together%20in%20modern%20Australian%20setting%20with%20professional%20business%20atmosphere%20representing%20unity%20and%20partnership%20collaboration%20warm%20natural%20lighting%20simple%20clean%20background&width=1920&height=1080&seq=hero1&orientation=landscape',
@@ -939,7 +940,7 @@ const HomePage = () => {
                   Cultural Resilience, One Planet Conference
                 </h3>
                 <p className="text-primary text-lg sm:text-xl mb-6">
-                  Sydney, Australia | March 2026
+                  Sydney, Australia | November 6-8, 2026
                 </p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-start text-primary">
@@ -1016,6 +1017,147 @@ const HomePage = () => {
                   {stat.label}
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Founder Section */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4 font-['Playfair_Display']">
+              Meet Our Founder
+            </h2>
+            <div className="w-24 h-1 bg-accent mx-auto"></div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
+            {/* Founder Image */}
+            <div className="flex justify-center">
+              <div className="relative">
+                <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden shadow-2xl">
+                  <img
+                    src="https://readdy.ai/api/search-image?query=professional%20african%20male%20founder%20director%20portrait%20confident%20warm%20smile%20business%20suit%20leadership%20executive%20simple%20clean%20background&width=600&height=600&seq=founder1&orientation=squarish"
+                    alt="Mr Morris Mukasa"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div className="absolute -bottom-4 -right-4 bg-accent text-primary px-6 py-3 rounded-lg shadow-lg">
+                  <p className="font-bold text-sm">Founder & Director</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Founder Bio */}
+            <div>
+              <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-2">
+                Mr Morris Mukasa
+              </h3>
+              <p className="text-lg text-accent mb-6 font-semibold">
+                Founder & Director, KWETU CONNECT PTY LTD
+              </p>
+
+              <div className="text-base text-gray-700 leading-relaxed space-y-4">
+                <p>
+                  Mr Morris Mukasa is a distinguished advocate, humanitarian, and community leader dedicated to promoting social justice, trauma recovery, utilising cultural & religious values for empowerment of marginalised communities. With a career spanning multiple continents.
+                </p>
+
+                <p>
+                  Mr Mukasa has supported vulnerable groups such as refugees, asylum seekers, detainees, people with disabilities and marginalised individuals by using music, creative and performing arts, story telling, poems and cultural dialogue as therapeutic tools.
+                </p>
+
+                {showFullBio && (
+                  <>
+                    <p>
+                      Mr Mukasa is the Oceania's region King's representative (Kabaka Foundation) since 2020 and holds key roles with the Refugee Communities Advocacy Network as a consultant.
+                    </p>
+
+                    <p>
+                      Morris has worked extensively in crisis management, conflict resolution, and refugee support. He is also a Board member of Global Talent Pathways an organisation processing pathways for refugee and ensure and contributing to economic, peaceful settlement and reintegration.
+                    </p>
+
+                    <p>
+                      In Australia, Morris co-founded Kwetu 4 Communities Inc. a non-profit association that promotes cultural understanding and trauma healing. Through this organisation he established a company known as Kwetu Connect PTY LTD, (managing barriers and navigating Partnerships opportunities)
+                    </p>
+
+                    <p>
+                      Mr Mukasa has facilitated conflict resolution initiatives, served on policy reform committees, also as the business development manager for companies of people with disabilities and contributed to international dialogues on refugee support, including engagements with UN representatives in Australia.
+                    </p>
+
+                    <p>
+                      Mr. Mukasa's commitment to social justice has earned him several accolades, including the African Australian Community Service Award in 2023 & 2024, Community transformative Award in 2024, then of recent appointed to represent the African Nations Refugees at Sydney Archdiocese SYNOD Committee member.
+                    </p>
+
+                    <p className="italic">
+                      He is supported by his brimful wife Teddy Nakalembe and their children all involved in most of community projects as a complete Kwetu basset Family.
+                    </p>
+                  </>
+                )}
+              </div>
+
+              <button
+                onClick={() => setShowFullBio(!showFullBio)}
+                className="mt-6 inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-primary px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 whitespace-nowrap cursor-pointer"
+              >
+                {showFullBio ? 'Show Less' : 'Read More'}
+                <i className={`${showFullBio ? 'ri-arrow-up-s-line' : 'ri-arrow-down-s-line'}`}></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-12 lg:mb-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4 font-['Playfair_Display']">
+              Our Trusted Partners
+            </h2>
+            <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+              Collaborating with leading organizations to create lasting impact
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8">
+            {[
+              { name: 'United Nations', url: 'https://www.un.org', logo: 'https://readdy.ai/api/search-image?query=United%20Nations%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner1&orientation=squarish' },
+              { name: 'World Health Organization', url: 'https://www.who.int', logo: 'https://readdy.ai/api/search-image?query=World%20Health%20Organization%20WHO%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner2&orientation=squarish' },
+              { name: 'Australian Government', url: 'https://www.australia.gov.au', logo: 'https://readdy.ai/api/search-image?query=Australian%20Government%20official%20logo%20coat%20of%20arms%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner3&orientation=squarish' },
+              { name: 'NSW Health', url: 'https://www.health.nsw.gov.au', logo: 'https://readdy.ai/api/search-image?query=NSW%20Health%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner4&orientation=squarish' },
+              { name: 'University of Sydney', url: 'https://www.sydney.edu.au', logo: 'https://readdy.ai/api/search-image?query=University%20of%20Sydney%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner5&orientation=squarish' },
+              { name: 'Red Cross Australia', url: 'https://www.redcross.org.au', logo: 'https://readdy.ai/api/search-image?query=Red%20Cross%20Australia%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner6&orientation=squarish' },
+              { name: 'UNICEF Australia', url: 'https://www.unicef.org.au', logo: 'https://readdy.ai/api/search-image?query=UNICEF%20Australia%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner7&orientation=squarish' },
+              { name: 'Refugee Council', url: 'https://www.refugeecouncil.org.au', logo: 'https://readdy.ai/api/search-image?query=Refugee%20Council%20of%20Australia%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner8&orientation=squarish' },
+              { name: 'Multicultural NSW', url: 'https://www.multiculturalnsw.id.au', logo: 'https://readdy.ai/api/search-image?query=Multicultural%20NSW%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner9&orientation=squarish' },
+              { name: 'Settlement Services', url: 'https://www.ssi.org.au', logo: 'https://readdy.ai/api/search-image?query=Settlement%20Services%20International%20SSI%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner10&orientation=squarish' },
+              { name: 'African Communities', url: '#', logo: 'https://readdy.ai/api/search-image?query=African%20Communities%20Council%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner11&orientation=squarish' },
+              { name: 'Global Health Alliance', url: '#', logo: 'https://readdy.ai/api/search-image?query=Global%20Health%20Alliance%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner12&orientation=squarish' },
+              { name: 'Cultural Heritage Foundation', url: '#', logo: 'https://readdy.ai/api/search-image?query=Cultural%20Heritage%20Foundation%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner13&orientation=squarish' },
+              { name: 'Sydney Olympic Park', url: 'https://www.sydneyolympicpark.com.au', logo: 'https://readdy.ai/api/search-image?query=Sydney%20Olympic%20Park%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner14&orientation=squarish' },
+              { name: 'Community Care Alliance', url: '#', logo: 'https://readdy.ai/api/search-image?query=Community%20Care%20Alliance%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner15&orientation=squarish' },
+              { name: 'Indigenous Health Network', url: '#', logo: 'https://readdy.ai/api/search-image?query=Indigenous%20Health%20Network%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner16&orientation=squarish' },
+              { name: 'Trade Development Council', url: '#', logo: 'https://readdy.ai/api/search-image?query=Trade%20Development%20Council%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner17&orientation=squarish' },
+              { name: 'Mental Health Australia', url: 'https://mhaustralia.org', logo: 'https://readdy.ai/api/search-image?query=Mental%20Health%20Australia%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner18&orientation=squarish' },
+              { name: 'Aged Care Quality', url: 'https://www.agedcarequality.gov.au', logo: 'https://readdy.ai/api/search-image?query=Aged%20Care%20Quality%20and%20Safety%20Commission%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner19&orientation=squarish' },
+              { name: 'Global Partnerships Forum', url: '#', logo: 'https://readdy.ai/api/search-image?query=Global%20Partnerships%20Forum%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner20&orientation=squarish' },
+            ].map((partner, index) => (
+              <a
+                key={index}
+                href={partner.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-white p-6 rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex items-center justify-center cursor-pointer"
+              >
+                <img
+                  src={partner.logo}
+                  alt={partner.name}
+                  className="w-full h-24 object-contain group-hover:scale-110 transition-all duration-300"
+                  title={partner.name}
+                />
+              </a>
             ))}
           </div>
         </div>
