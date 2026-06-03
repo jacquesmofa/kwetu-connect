@@ -158,6 +158,31 @@ export default function Crop2026() {
     },
   ];
 
+  /*
+   * ============================================================
+   * PARTNER LOGOS — HOW TO UPDATE WHEN YOU GET REAL LOGOS
+   * ============================================================
+   *
+   * The partner logos below currently use auto-generated search images.
+   * When you receive real partner logo files, upload them to Cloudinary
+   * and replace each entry with a direct logo URL.
+   *
+   * STEP 1: Upload the logo image to Cloudinary (drag & drop).
+   * STEP 2: Copy the URL from Cloudinary.
+   * STEP 3: Replace the entry below with a 'logo' property.
+   *
+   * Example change:
+   *   BEFORE: { name: 'UN Women', url: 'https://www.unwomen.org/', seq: 'unwomen' }
+   *   AFTER:  { name: 'UN Women', url: 'https://www.unwomen.org/', logo: 'https://res.cloudinary.com/.../unwomen-logo.png', seq: 'unwomen' }
+   *
+   * STEP 4: In the rendering grid below, change the <img> src from:
+   *     src={`https://readdy.ai/api/search-image?query=...`}
+   *   To:
+   *     src={partner.logo}
+   *
+   * Keep the same width/height for consistent layout.
+   * ============================================================
+   */
   const partners = [
     { name: 'UN Women', url: 'https://www.unwomen.org/', seq: 'unwomen' },
     { name: 'UNHCR', url: 'https://www.unhcr.org/', seq: 'unhcr' },
@@ -215,6 +240,7 @@ export default function Crop2026() {
       <meta property="og:description" content="Join 800+ global leaders at The Dome, Sydney Showground for CROP 2026 - November 6-8, 2026." />
       <meta property="og:url" content="https://kwetuconnect.com.au/crop2026" />
       <meta property="og:type" content="event" />
+      <meta property="og:image" content="https://res.cloudinary.com/dzppzxpad/image/upload/w_1200,q_auto,f_auto/v1780502472/Artboard_3_copy_2_2x_nxsxcz.png" />
       <script type="application/ld+json">{JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Event",
@@ -241,13 +267,14 @@ export default function Crop2026() {
           "url": "https://kwetuconnect.com.au"
         },
         "description": "Cultural Resilience, One Planet Conference 2026 - A global gathering of Indigenous leaders, policymakers, academics, and changemakers in Sydney, Australia.",
-        "url": "https://kwetuconnect.com.au/crop2026"
+        "url": "https://kwetuconnect.com.au/crop2026",
+        "image": "https://res.cloudinary.com/dzppzxpad/image/upload/w_1200,q_auto,f_auto/v1780502472/Artboard_3_copy_2_2x_nxsxcz.png"
       })}</script>
 
       <Navbar />
 
       {/* ─── HERO ─── */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center pt-24 lg:pt-28">
         {heroImages.map((image, index) => (
           <div
             key={index}
@@ -259,6 +286,29 @@ export default function Crop2026() {
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A2540]/75 via-[#0A2540]/65 to-[#0A2540]/75"></div>
 
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8 text-center text-white">
+          <div className="flex items-center justify-center gap-6 md:gap-10 mb-6">
+            <a href="https://www.thrivetours.ca/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300">
+              <img
+                src="https://res.cloudinary.com/dzppzxpad/image/upload/q_auto/f_auto/v1780500929/Thrive_Tours_Logo_2026_mp3vsr.png"
+                alt="Thrive Tours Logo"
+                className="h-14 md:h-20 w-auto object-contain drop-shadow-2xl bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2"
+              />
+            </a>
+            <a href="https://kwetuconnect.org/crop2026" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300">
+              <img
+                src="https://res.cloudinary.com/dzppzxpad/image/upload/q_auto/f_auto/v1780502472/Artboard_3_copy_2_2x_nxsxcz.png"
+                alt="CROP 2026 Conference Logo"
+                className="h-20 md:h-28 w-auto object-contain drop-shadow-2xl"
+              />
+            </a>
+            <a href="https://ldiinitiatives.org/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300">
+              <img
+                src="https://res.cloudinary.com/dzppzxpad/image/upload/q_auto/f_auto/v1780503022/Artboard_4_copy_7_2x_fekl5w.png"
+                alt="LDII Logo"
+                className="h-14 md:h-20 w-auto object-contain drop-shadow-2xl bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2"
+              />
+            </a>
+          </div>
           <div className="inline-block mb-4">
             <span className="text-[#D4AF37] font-semibold text-sm uppercase tracking-wider bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full">Sydney, Australia</span>
           </div>
@@ -344,6 +394,17 @@ export default function Crop2026() {
                 <div className="text-white/70 text-sm">{sub}</div>
               </div>
             ))}
+          </div>
+          <div className="mt-10 text-center border-t border-white/20 pt-8">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20 mb-3">
+              <i className="ri-award-line text-[#D4AF37] text-xl"></i>
+              <p className="text-white/90 text-sm md:text-base font-medium">
+                <span className="text-[#D4AF37] font-semibold">Thrive Tours:</span> Recognized for sustainability internationally, nationally and provincially
+              </p>
+            </div>
+            <p className="text-white/70 text-sm max-w-3xl mx-auto">
+              In 2025, earned the Sustainable Tourism Award from the Tourism Industry Association of Ontario and the Tourism Industry Association of Canada. In 2026, named a Sustainable Tourism Global Winner for Authenticity and Eco Adventure at Global Islands: Leading Beyond 2030 in Madeira, Portugal.
+            </p>
           </div>
         </div>
       </section>
@@ -525,40 +586,37 @@ export default function Crop2026() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
             {[
               {
-                icon: 'ri-global-line',
-                color: 'from-[#0A2540] to-[#1a4a7a]',
                 name: 'KWETU CONNECT PTY LTD',
                 desc: 'A pioneering organization dedicated to bridging cultural communities with sustainable development initiatives, redefining cultural understanding of care among Indigenous communities.',
                 link: '/crop2026/kwetu-connect',
                 website: 'https://kwetuconnect.org/',
+                logo: 'https://res.cloudinary.com/dhjajm7ru/image/upload/v1780003947/Kwetu_connect_Logo_x6w26r.jpg',
               },
               {
-                icon: 'ri-hand-heart-line',
-                color: 'from-[#D4AF37] to-yellow-600',
+                name: 'Thrive Tours',
+                desc: 'Thrive Tours is a 100% Indigenous-owned and led experiential tourism and education company, headquartered at Batchewana First Nation in Bawaating (Sault Ste. Marie, Ontario, Canada). Haudenosaunee-led and working in respectful partnership with Anishinaabe Knowledge Carriers on whose territory it operates, Thrive Tours is among Canada’s most recognized Indigenous tourism companies, honoured for sustainability at the international, national, and provincial levels.',
+                link: '/crop2026/thrive-tours',
+                website: 'https://www.thrivetours.ca/',
+                logo: 'https://res.cloudinary.com/dzppzxpad/image/upload/q_auto/f_auto/v1780500929/Thrive_Tours_Logo_2026_mp3vsr.png',
+              },
+              {
                 name: 'Livelihood Development International Initiatives (LDII)',
                 desc: 'A global organization committed to empowering vulnerable communities through sustainable livelihood programs, cultural preservation, and resilience-building initiatives.',
                 link: '/crop2026/ldii',
                 website: 'https://ldiinitiatives.org/',
+                logo: 'https://res.cloudinary.com/dzppzxpad/image/upload/q_auto/f_auto/v1780503022/Artboard_4_copy_7_2x_fekl5w.png',
               },
-              {
-                icon: 'ri-sailboat-line',
-                color: 'from-teal-500 to-teal-700',
-                name: 'Thrive Tours',
-                desc: 'A 100% Indigenous-owned eco-cultural tour company based in Baawaating (Sault Ste. Marie, Ontario), providing authentic Indigenous land-based experiences.',
-                link: '/crop2026/thrive-tours',
-                website: 'https://www.thrivetours.ca/',
-              },
-            ].map(({ icon, color, name, desc, link, website }) => (
-              <div key={name} className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
-                <div className={`w-16 h-16 bg-gradient-to-br ${color} rounded-2xl flex items-center justify-center mb-4`}>
-                  <i className={`${icon} text-3xl text-white`}></i>
+            ].map(({ name, desc, link, website, logo }) => (
+              <div key={name} className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 text-center">
+                <div className="flex justify-center mb-4">
+                  <img src={logo} alt={`${name} logo`} className="h-16 w-auto object-contain" />
                 </div>
                 <h3 className="text-xl font-bold text-[#0A2540] mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>{name}</h3>
                 <p className="text-gray-600 leading-relaxed mb-5">{desc}</p>
                 <div className="flex flex-col gap-3">
                   <Link
                     to={link}
-                    className="inline-flex items-center text-[#0A2540] font-semibold cursor-pointer group hover:text-[#D4AF37] transition-colors"
+                    className="inline-flex items-center justify-center text-[#0A2540] font-semibold cursor-pointer group hover:text-[#D4AF37] transition-colors"
                   >
                     <span>Learn More</span>
                     <i className="ri-arrow-right-line ml-2 group-hover:translate-x-1 transition-transform"></i>
@@ -567,7 +625,7 @@ export default function Crop2026() {
                     href={website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-[#D4AF37] font-semibold text-sm cursor-pointer group hover:text-[#C4A137] transition-colors"
+                    className="inline-flex items-center justify-center text-[#D4AF37] font-semibold text-sm cursor-pointer group hover:text-[#C4A137] transition-colors"
                   >
                     <i className="ri-global-line mr-1.5"></i>
                     <span>Visit Official Website</span>
@@ -578,6 +636,16 @@ export default function Crop2026() {
             ))}
           </div>
 
+          {/* ─── AS FEATURED IN ─── */}
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-[#0A2540] to-[#1a4a7a] text-white px-6 md:px-8 py-4 rounded-full shadow-lg">
+              <i className="ri-newspaper-line text-[#D4AF37] text-xl"></i>
+              <span className="text-sm md:text-base font-medium">
+                <span className="text-[#D4AF37] font-semibold">Thrive Tours</span> — As featured in the Toronto Star, Global Heroes, Destination Ontario, NationTalk, and an international documentary by EBS (South Korea)
+              </span>
+            </div>
+          </div>
+
           {/* Collaborative Partners */}
           <div className="text-center mb-10">
             <h3 className="text-2xl font-bold text-[#0A2540] mb-3" style={{ fontFamily: "'Playfair Display', serif" }}>Collaborative Partners</h3>
@@ -586,6 +654,18 @@ export default function Crop2026() {
             </p>
           </div>
 
+          {/*
+            ============================================================
+            PARTNER LOGO RENDERING — HOW TO UPDATE
+            ============================================================
+            The images below use auto-generated search images.
+            When you add real logos to the 'partners' array above
+            (see the comment block above the partners array for steps),
+            replace the <img> src below with:
+                src={partner.logo}
+            Make sure each partner object has a 'logo' property.
+            ============================================================
+          */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-8">
             {partners.map(({ name, url, seq }) => (
               <a key={seq} href={url} target="_blank" rel="noopener noreferrer"
@@ -757,6 +837,38 @@ export default function Crop2026() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* ─── OPENING CEREMONY & KEYNOTE SPEAKER ─── */}
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <span className="text-[#0A2540] font-semibold text-sm uppercase tracking-wider">Day 1 — 09:00 - 10:30</span>
+            <div className="h-0.5 w-16 bg-[#D4AF37] mt-2 mx-auto mb-4"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#0A2540]" style={{ fontFamily: "'Playfair Display', serif" }}>Opening Ceremony & Keynote Speaker</h2>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+              <div className="bg-gradient-to-br from-[#0A2540] to-[#1a4a7a] p-8 text-white flex flex-col items-center justify-center">
+                <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center mb-4">
+                  <i className="ri-mic-line text-3xl text-[#D4AF37]"></i>
+                </div>
+                <p className="text-[#D4AF37] font-bold text-sm uppercase tracking-wider mb-2">Keynote</p>
+                <p className="text-xl font-bold text-center" style={{ fontFamily: "'Playfair Display', serif" }}>Brad Robinson</p>
+                <p className="text-white/70 text-sm text-center mt-2">CEO, Thrive Tours</p>
+              </div>
+              <div className="md:col-span-2 p-8">
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Brad Robinson is the CEO of Thrive Tours and a Haudenosaunee leader from Oneida Nation of the Thames. Under his leadership, Thrive Tours earned sustainability recognition at every level in 2025, internationally from the Indigenous Tourism Association of Canada and, weeks apart, provincially and nationally with the Sustainable Tourism Award from the Tourism Industry Association of Ontario and the Tourism Industry Association of Canada. In 2026, Thrive Tours was named a Sustainable Tourism Global Winner for Authenticity and Eco Adventure at Global Islands: Leading Beyond 2030 in Madeira, Portugal.
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  As CROP 2026's Canadian anchor partner and Cultural Programming Lead, Brad brings two decades of Indigenous tourism and facilitation work to the gathering. His keynote will explore how Indigenous knowledge systems can inform global approaches to cultural resilience, care transformation, and planetary stewardship.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

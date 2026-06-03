@@ -217,7 +217,7 @@ const HomePage = () => {
       {/* Executive Summary Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
-          <div className="absolute top-20 left-20 text-gray-300 text-[200px] font-bold hidden lg:block">2025</div>
+          <div className="absolute top-20 left-20 text-gray-300 text-[200px] font-bold hidden lg:block">{new Date().getFullYear()}</div>
         </div>
         <div className="container-custom relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -1121,6 +1121,24 @@ const HomePage = () => {
             </p>
           </div>
 
+          {/*
+            ============================================================
+            PARTNER LOGOS — HOW TO UPDATE (EASY INSTRUCTIONS)
+            ============================================================
+            Step 1: Upload the partner logo to Cloudinary (drag & drop).
+            Step 2: Copy the Cloudinary URL.
+            Step 3: Replace the entry below with:
+              {
+                name: 'Partner Name',
+                url: 'https://www.partner-website.com',
+                logo: 'https://res.cloudinary.com/.../partner-logo.png',
+                seq: 'partner-unique-id'
+              }
+            Step 4: In the rendering grid below, change the <img> src to:
+                src={partner.logo}
+            Make sure each partner object has a 'logo' property.
+            ============================================================
+          */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8">
             {[
               { name: 'United Nations', url: 'https://www.un.org', logo: 'https://readdy.ai/api/search-image?query=United%20Nations%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner1&orientation=squarish' },

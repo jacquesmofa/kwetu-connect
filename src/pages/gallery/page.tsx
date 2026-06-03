@@ -1,282 +1,545 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { useState, useEffect, useRef, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from '../../components/feature/Navbar';
 import Footer from '../../components/feature/Footer';
+import { galleryCategories, galleryImages } from '../../mocks/gallery';
+
+/* ──────────────────────────────────────────────────────────────────────────
+   GALLERY PAGE  —  TWO VIEW MODES
+   ──────────────────────────────────────────────────────────────────────────
+
+   1. OVERVIEW MODE (default when you first visit /gallery)
+      • Shows each category as its own section
+      • Each section displays up to 10 preview images
+      • A "View All" button opens the full grid for that category
+      • Visitors scroll down to browse different categories
+
+   2. CATEGORY MODE (when you click a category tab or "View All")
+      • Shows the full masonry grid for ONE category only
+      • All photos in that category, scrollable
+      • Lightbox click-to-expand still works
+      • A "Back to Overview" link returns to the landing view
+
+   This keeps the initial gallery page clean and uncluttered while
+   still giving visitors access to every single photo.
+   ──────────────────────────────────────────────────────────────────────── */
 
 const GalleryPage = () => {
-  const [activeFilter, setActiveFilter] = useState('all');
+  /* ─── STATE ─── */
+  const [viewMode, setViewMode] = useState<'overview' | 'category'>('overview');
+  const [activeCategory, setActiveCategory] = useState<string>('conference');
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [selectedMedia, setSelectedMedia] = useState<any>(null);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+  const [showGridTitles, setShowGridTitles] = useState(true);
+  const [showLightboxCaption, setShowLightboxCaption] = useState(true);
+  const [hoveredId, setHoveredId] = useState<string | null>(null);
+  const captionTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
 
-  const filters = ['all', 'events', 'programs', 'community', 'partnerships'];
+  /* ─── FILTERED IMAGES for current category view ─── */
+  const categoryImages = galleryImages.filter(i => i.category === activeCategory);
+  const categoryName = galleryCategories.find(c => c.id === activeCategory)?.name || 'All Photos';
 
-  const galleryItems = [
-    {
-      type: 'image',
-      category: 'events',
-      title: 'CROP 2026 Conference Planning',
-      description: 'Strategic planning session for our flagship cultural resilience conference bringing together global leaders and community representatives',
-      url: 'https://readdy.ai/api/search-image?query=international%20conference%20planning%20diverse%20team%20strategic%20meeting%20professional%20setting%20cultural%20resilience%20theme%20modern%20office%20space%20natural%20lighting%20collaborative%20atmosphere%20simple%20clean%20background&width=800&height=600&seq=gallery1&orientation=landscape',
-    },
-    {
-      type: 'image',
-      category: 'programs',
-      title: 'Mental Health & Wellbeing Workshop',
-      description: 'Community-based mental health support program providing culturally sensitive care and wellness resources',
-      url: 'https://readdy.ai/api/search-image?query=mental%20health%20workshop%20community%20support%20group%20diverse%20participants%20wellness%20program%20professional%20setting%20compassionate%20care%20atmosphere%20simple%20clean%20background&width=800&height=600&seq=gallery2&orientation=landscape',
-    },
-    {
-      type: 'image',
-      category: 'community',
-      title: 'Cultural Heritage Celebration',
-      description: 'Preserving and promoting cultural identity through vibrant community events and traditional celebrations',
-      url: 'https://readdy.ai/api/search-image?query=cultural%20heritage%20celebration%20traditional%20festival%20diverse%20community%20members%20colorful%20authentic%20setting%20joyful%20atmosphere%20cultural%20pride%20simple%20clean%20background&width=800&height=600&seq=gallery3&orientation=landscape',
-    },
-    {
-      type: 'video',
-      category: 'programs',
-      title: 'Health Recruitment Success Stories',
-      description: 'Healthcare professionals sharing their transformative journey with KWETU CONNECT and the impact on their careers',
-      url: 'https://www.youtube.com/embed/i8DuRLLgSAo',
-      thumbnail: 'https://readdy.ai/api/search-image?query=healthcare%20professionals%20success%20stories%20diverse%20medical%20team%20professional%20setting%20hospital%20environment%20caring%20atmosphere%20simple%20clean%20background&width=800&height=600&seq=gallery4&orientation=landscape',
-    },
-    {
-      type: 'image',
-      category: 'partnerships',
-      title: 'Strategic Partnership Signing',
-      description: 'Formalizing partnerships for sustainable development and community empowerment initiatives',
-      url: 'https://readdy.ai/api/search-image?query=business%20partnership%20signing%20ceremony%20diverse%20leaders%20handshake%20professional%20setting%20formal%20agreement%20collaboration%20atmosphere%20simple%20clean%20background&width=800&height=600&seq=gallery5&orientation=landscape',
-    },
-    {
-      type: 'image',
-      category: 'community',
-      title: 'Seniors Wisdom Program',
-      description: 'Intergenerational mentorship and knowledge sharing honoring the wisdom of our elders',
-      url: 'https://readdy.ai/api/search-image?query=seniors%20elders%20mentoring%20youth%20intergenerational%20program%20community%20gathering%20wisdom%20sharing%20caring%20atmosphere%20simple%20clean%20background&width=800&height=600&seq=gallery6&orientation=landscape',
-    },
-    {
-      type: 'image',
-      category: 'programs',
-      title: 'Cultural Exchange Initiative',
-      description: 'Building bridges through authentic cultural experiences and international partnerships',
-      url: 'https://readdy.ai/api/search-image?query=cultural%20exchange%20program%20diverse%20people%20traditional%20clothing%20international%20partnership%20cultural%20learning%20atmosphere%20simple%20clean%20background&width=800&height=600&seq=gallery7&orientation=landscape',
-    },
-    {
-      type: 'image',
-      category: 'events',
-      title: 'Community Chaplaincy Services',
-      description: 'Supporting reintegration and transformation through compassionate community chaplaincy programs',
-      url: 'https://readdy.ai/api/search-image?query=community%20chaplaincy%20counseling%20support%20services%20compassionate%20care%20professional%20setting%20supportive%20atmosphere%20simple%20clean%20background&width=800&height=600&seq=gallery8&orientation=landscape',
-    },
-    {
-      type: 'image',
-      category: 'partnerships',
-      title: 'Sustainable Trade Workshop',
-      description: 'Facilitating market access and economic empowerment through capacity building and trade partnerships',
-      url: 'https://readdy.ai/api/search-image?query=sustainable%20trade%20workshop%20business%20training%20diverse%20entrepreneurs%20professional%20setting%20economic%20empowerment%20atmosphere%20simple%20clean%20background&width=800&height=600&seq=gallery9&orientation=landscape',
-    },
-    {
-      type: 'image',
-      category: 'community',
-      title: 'Health Equity Outreach',
-      description: 'Connecting underserved communities with quality healthcare services and wellness programs',
-      url: 'https://readdy.ai/api/search-image?query=healthcare%20outreach%20community%20health%20services%20diverse%20medical%20professionals%20caring%20for%20patients%20professional%20setting%20compassionate%20care%20atmosphere%20simple%20clean%20background&width=800&height=600&seq=gallery10&orientation=landscape',
-    },
-    {
-      type: 'image',
-      category: 'events',
-      title: 'Turning Vulnerability to Opportunity',
-      description: 'Empowerment programs transforming challenges into growth opportunities and sustainable solutions',
-      url: 'https://readdy.ai/api/search-image?query=community%20empowerment%20transformation%20workshop%20diverse%20people%20collaborating%20professional%20setting%20positive%20change%20atmosphere%20simple%20clean%20background&width=800&height=600&seq=gallery11&orientation=landscape',
-    },
-    {
-      type: 'image',
-      category: 'partnerships',
-      title: 'Sister Organization Collaboration',
-      description: 'Working with kwetu4communities for grassroots impact and sustainable community development',
-      url: 'https://readdy.ai/api/search-image?query=grassroots%20community%20collaboration%20partnership%20meeting%20diverse%20team%20working%20together%20professional%20setting%20collaborative%20atmosphere%20simple%20clean%20background&width=800&height=600&seq=gallery12&orientation=landscape',
-    },
-    {
-      type: 'image',
-      category: 'programs',
-      title: 'Healthcare Professional Training',
-      description: 'Comprehensive training and development programs for healthcare workers',
-      url: 'https://readdy.ai/api/search-image?query=healthcare%20professional%20training%20medical%20education%20diverse%20healthcare%20workers%20learning%20environment%20professional%20setting%20educational%20atmosphere%20simple%20clean%20background&width=800&height=600&seq=gallery13&orientation=landscape',
-    },
-    {
-      type: 'image',
-      category: 'community',
-      title: 'Community Resilience Building',
-      description: 'Strengthening community bonds through integrated programs and capacity building initiatives',
-      url: 'https://readdy.ai/api/search-image?query=community%20resilience%20building%20diverse%20community%20members%20working%20together%20collaborative%20environment%20empowerment%20atmosphere%20simple%20clean%20background&width=800&height=600&seq=gallery14&orientation=landscape',
-    },
-    {
-      type: 'image',
-      category: 'events',
-      title: 'Annual Impact Celebration',
-      description: 'Celebrating achievements and milestones with our community partners and stakeholders',
-      url: 'https://readdy.ai/api/search-image?query=annual%20celebration%20event%20diverse%20people%20celebrating%20achievements%20professional%20setting%20joyful%20atmosphere%20success%20celebration%20simple%20clean%20background&width=800&height=600&seq=gallery15&orientation=landscape',
-    },
-  ];
+  /* ─── SWITCH TO CATEGORY FULL-GRID VIEW ─── */
+  const enterCategory = useCallback((catId: string) => {
+    setActiveCategory(catId);
+    setViewMode('category');
+    setShowGridTitles(true);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    const timer = setTimeout(() => setShowGridTitles(false), 4000);
+    return () => clearTimeout(timer);
+  }, []);
 
-  const filteredItems = activeFilter === 'all' 
-    ? galleryItems 
-    : galleryItems.filter(item => item.category === activeFilter);
+  /* ─── SWITCH BACK TO OVERVIEW LANDING ─── */
+  const backToOverview = useCallback(() => {
+    setViewMode('overview');
+    setLightboxOpen(false);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
 
-  const openLightbox = (item: any) => {
-    setSelectedMedia(item);
+  /* ─── AUTO-HIDE grid titles after 4 seconds ─── */
+  useEffect(() => {
+    if (viewMode !== 'category') return;
+    setShowGridTitles(true);
+    const timer = setTimeout(() => setShowGridTitles(false), 4000);
+    return () => clearTimeout(timer);
+  }, [viewMode, activeCategory]);
+
+  /* ─── AUTO-HIDE lightbox caption after 4 seconds ─── */
+  useEffect(() => {
+    if (!lightboxOpen) return;
+    setShowLightboxCaption(true);
+    if (captionTimerRef.current) clearTimeout(captionTimerRef.current);
+    captionTimerRef.current = setTimeout(() => setShowLightboxCaption(false), 4000);
+    return () => {
+      if (captionTimerRef.current) clearTimeout(captionTimerRef.current);
+    };
+  }, [lightboxOpen, lightboxIndex]);
+
+  /* ─── KEYBOARD NAVIGATION (lightbox) ─── */
+  useEffect(() => {
+    if (!lightboxOpen) return;
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setLightboxOpen(false);
+        document.body.style.overflow = '';
+      }
+      if (e.key === 'ArrowLeft') {
+        setLightboxIndex(prev => (prev - 1 + categoryImages.length) % categoryImages.length);
+      }
+      if (e.key === 'ArrowRight') {
+        setLightboxIndex(prev => (prev + 1) % categoryImages.length);
+      }
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [lightboxOpen, categoryImages.length]);
+
+  /* ─── LIGHTBOX CONTROLS ─── */
+  const openLightbox = (index: number) => {
+    setLightboxIndex(index);
     setLightboxOpen(true);
+    document.body.style.overflow = 'hidden';
   };
 
   const closeLightbox = () => {
     setLightboxOpen(false);
-    setSelectedMedia(null);
+    document.body.style.overflow = '';
+  };
+
+  const goNext = () => {
+    setLightboxIndex(prev => (prev + 1) % categoryImages.length);
+  };
+
+  const goPrev = () => {
+    setLightboxIndex(prev => (prev - 1 + categoryImages.length) % categoryImages.length);
+  };
+
+  const resetCaptionTimer = () => {
+    setShowLightboxCaption(true);
+    if (captionTimerRef.current) clearTimeout(captionTimerRef.current);
+    captionTimerRef.current = setTimeout(() => setShowLightboxCaption(false), 4000);
+  };
+
+  const selectedItem = categoryImages[lightboxIndex];
+
+  /* ─── COMPUTE PREVIEW IMAGES per category for overview ─── */
+  const getCategoryPreviewImages = (catId: string) => {
+    return galleryImages.filter(i => i.category === catId).slice(0, 10);
+  };
+
+  const getCategoryCount = (catId: string) => {
+    return galleryImages.filter(i => i.category === catId).length;
+  };
+
+  /* ─── CATEGORY TAB COMPONENT ─── */
+  const CategoryTab = ({ cat }: { cat: { id: string; name: string } }) => {
+    const isActive = viewMode === 'category' && activeCategory === cat.id;
+    return (
+      <button
+        onClick={() => enterCategory(cat.id)}
+        className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 whitespace-nowrap cursor-pointer ${
+          isActive
+            ? 'bg-[#0A2540] text-white shadow-lg'
+            : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200 hover:border-[#D4AF37]/30'
+        }`}
+      >
+        {cat.name}
+      </button>
+    );
   };
 
   return (
     <div className="min-h-screen bg-white">
-      {/* SEO Metadata */}
-      <title>Gallery | KWETU CONNECT | Cultural Resilience Events & Community Programs</title>
-      <meta name="description" content="Browse the KWETU CONNECT gallery showcasing cultural resilience events, community programs, CROP 2026 conference highlights, and partnerships across Australia and the Global South." />
-      <meta name="keywords" content="KWETU CONNECT gallery, cultural events Australia, community programs photos, CROP 2026 conference, cultural resilience events Sydney" />
+      <title>Gallery | KWETU CONNECT | CROP 2026 Cultural Resilience Events & Community Programs</title>
+      <meta name="description" content="Browse the KWETU CONNECT gallery showcasing CROP 2026 conference highlights, cultural performances, community programs, team & partners, and venue photography across Australia." />
+      <meta name="keywords" content="KWETU CONNECT gallery, CROP 2026 photos, cultural events Australia, community programs gallery, Sydney conference photography, cultural resilience events" />
       <link rel="canonical" href="https://kwetuconnect.com.au/gallery" />
-      <meta property="og:title" content="Gallery | KWETU CONNECT | Cultural Events & Community Programs" />
-      <meta property="og:description" content="Visual highlights from KWETU CONNECT's cultural resilience events, community programs, and partnerships." />
+      <meta property="og:title" content="Gallery | KWETU CONNECT | CROP 2026 & Cultural Events" />
+      <meta property="og:description" content="Visual highlights from CROP 2026 conference, cultural performances, community programs, and partnerships." />
       <meta property="og:url" content="https://kwetuconnect.com.au/gallery" />
+      <meta property="og:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
+      <meta property="twitter:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
+
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="relative h-[60vh] overflow-hidden">
+      {/* ═══════════════════════════════════════════════════════════════════
+          HERO SECTION
+          ═══════════════════════════════════════════════════════════════════ */}
+      <section className="relative h-[45vh] md:h-[50vh] min-h-[300px] overflow-hidden">
         <img
-          src="https://readdy.ai/api/search-image?query=photo%20gallery%20exhibition%20modern%20professional%20design%20diverse%20community%20moments%20beautiful%20memories%20cultural%20heritage%20celebration%20simple%20background&width=1920&height=1080&seq=galleryhero&orientation=landscape"
-          alt="Gallery"
+          src="https://readdy.ai/api/search-image?query=professional%20photo%20gallery%20exhibition%20modern%20elegant%20design%20warm%20lighting%20diverse%20community%20moments%20cultural%20heritage%20celebration%20memories%20display%20wall%20high%20quality%20photography%20simple%20clean%20background&width=1920&height=1080&seq=gallery-hero-main&orientation=landscape"
+          alt="KWETU CONNECT Gallery"
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/85 via-primary/70 to-primary/85"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0A2540]/80 via-[#0A2540]/70 to-[#0A2540]/80"></div>
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center px-6 max-w-4xl">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-5xl md:text-7xl font-bold text-white mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4"
             >
-              OUR GALLERY
+              Gallery
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl text-gray-100"
+              className="text-lg md:text-xl text-white/90 font-light max-w-2xl mx-auto"
             >
               Moments of Impact, Stories of Transformation
             </motion.p>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="mt-5 inline-flex items-center gap-2 px-5 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white/80 text-sm"
+            >
+              <i className="ri-image-line"></i>
+              <span>{galleryImages.length}+ photographs across {galleryCategories.length} collections</span>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Filter Section */}
-      <section className="py-16 bg-gray-50">
+      {/* ═══════════════════════════════════════════════════════════════════
+          NAVIGATION TABS  +  BACK BUTTON
+          ═══════════════════════════════════════════════════════════════════ */}
+      <section className="py-8 bg-gray-50 border-b border-gray-100 sticky top-20 z-40">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center gap-4">
-            {filters.map((filter) => (
-              <button
-                key={filter}
-                onClick={() => setActiveFilter(filter)}
-                className={`px-8 py-3 rounded-full font-semibold transition-all duration-300 whitespace-nowrap cursor-pointer ${
-                  activeFilter === filter
-                    ? 'bg-accent text-primary shadow-[0_0_20px_rgba(212,175,55,0.6)] scale-105'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 border-2 border-gray-200 hover:border-accent/30'
-                }`}
-              >
-                {filter.charAt(0).toUpperCase() + filter.slice(1)}
-              </button>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            {/* Overview tab — only visible when in category mode */}
+            <AnimatePresence>
+              {viewMode === 'category' && (
+                <motion.button
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.2 }}
+                  onClick={backToOverview}
+                  className="px-5 py-2.5 rounded-full text-sm font-semibold bg-[#D4AF37] text-[#0A2540] hover:bg-[#c4a030] transition-all duration-300 whitespace-nowrap cursor-pointer shadow-md flex items-center gap-2"
+                >
+                  <i className="ri-arrow-left-line"></i>
+                  Back to Overview
+                </motion.button>
+              )}
+            </AnimatePresence>
+
+            {/* Category tabs */}
+            {galleryCategories.map((cat) => (
+              <CategoryTab key={cat.id} cat={cat} />
             ))}
           </div>
+
+          {/* Stats / breadcrumb bar */}
+          <div className="mt-4 text-center">
+            {viewMode === 'overview' ? (
+              <p className="text-sm text-gray-500">
+                Scroll down to explore each collection. Click "View All" to see the complete set.
+              </p>
+            ) : (
+              <p className="text-sm text-gray-600">
+                Showing <span className="font-semibold text-[#0A2540]">{categoryImages.length}</span> photos in{' '}
+                <span className="font-semibold text-[#0A2540]">{categoryName}</span>
+                <span className="text-gray-400 mx-2">|</span>
+                <span className="text-xs text-gray-400 italic">
+                  Titles auto-hide after 4 seconds — hover any photo to reveal details
+                </span>
+              </p>
+            )}
+          </div>
         </div>
       </section>
 
-      {/* Gallery Grid */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredItems.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
-                className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
-                onClick={() => openLightbox(item)}
-              >
-                <div className="relative h-80 w-full overflow-hidden">
-                  {item.type === 'image' ? (
-                    <img
-                      src={item.url}
-                      alt={item.title}
-                      className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700"
-                    />
-                  ) : (
-                    <div className="relative w-full h-full">
+      {/* ═══════════════════════════════════════════════════════════════════
+          VIEW 1  —  OVERVIEW LANDING (default)
+          Shows each category as a section with up to 10 preview images
+          ═══════════════════════════════════════════════════════════════════ */}
+      <AnimatePresence mode="wait">
+        {viewMode === 'overview' && (
+          <motion.div
+            key="overview"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
+          >
+            {galleryCategories.map((cat, catIdx) => {
+              const previews = getCategoryPreviewImages(cat.id);
+              const count = getCategoryCount(cat.id);
+              if (previews.length === 0) return null;
+
+              return (
+                <section
+                  key={cat.id}
+                  id={`section-${cat.id}`}
+                  className={`py-14 md:py-20 ${catIdx % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}`}
+                >
+                  <div className="max-w-7xl mx-auto px-6 lg:px-8">
+                    {/* Section header */}
+                    <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+                      <div>
+                        <h2 className="text-2xl md:text-3xl font-bold text-[#0A2540] mb-1">
+                          {cat.name}
+                        </h2>
+                        <p className="text-gray-500 text-sm">
+                          {count} {count === 1 ? 'photo' : 'photos'} — click any to preview
+                        </p>
+                      </div>
+                      <button
+                        onClick={() => enterCategory(cat.id)}
+                        className="px-6 py-2.5 bg-[#0A2540] text-white rounded-full text-sm font-semibold hover:bg-[#1a4a7a] transition-all duration-300 cursor-pointer flex items-center gap-2 whitespace-nowrap shadow-sm hover:shadow-md"
+                      >
+                        View All {count} Photos
+                        <i className="ri-arrow-right-line"></i>
+                      </button>
+                    </div>
+
+                    {/* Preview grid — masonry style, up to 10 images */}
+                    <div className="columns-2 sm:columns-3 md:columns-4 lg:columns-5 gap-4 space-y-4">
+                      {previews.map((item, idx) => (
+                        <motion.div
+                          key={item.id}
+                          initial={{ opacity: 0, y: 16 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true, margin: '-40px' }}
+                          transition={{ duration: 0.4, delay: idx * 0.05 }}
+                          className="break-inside-avoid group cursor-pointer"
+                          onClick={() => {
+                            enterCategory(cat.id);
+                            // Small delay to let category view render, then open lightbox
+                            setTimeout(() => {
+                              const catImages = galleryImages.filter(i => i.category === cat.id);
+                              const newIndex = catImages.findIndex(i => i.id === item.id);
+                              if (newIndex >= 0) openLightbox(newIndex);
+                            }, 350);
+                          }}
+                        >
+                          <div className="relative overflow-hidden rounded-xl bg-gray-100 shadow-sm hover:shadow-lg transition-all duration-500">
+                            <img
+                              src={item.url}
+                              alt={item.title}
+                              className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                              loading="lazy"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                            <div className="absolute bottom-0 left-0 right-0 p-3 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                              <p className="text-white font-semibold text-sm truncate">{item.title}</p>
+                            </div>
+                          </div>
+                        </motion.div>
+                      ))}
+                    </div>
+
+                    {/* "View All" bottom button (mobile-friendly) */}
+                    <div className="mt-6 text-center sm:hidden">
+                      <button
+                        onClick={() => enterCategory(cat.id)}
+                        className="px-6 py-2.5 bg-[#0A2540] text-white rounded-full text-sm font-semibold hover:bg-[#1a4a7a] transition-all duration-300 cursor-pointer"
+                      >
+                        View All {count} Photos
+                      </button>
+                    </div>
+                  </div>
+                </section>
+              );
+            })}
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* ═══════════════════════════════════════════════════════════════════
+          VIEW 2  —  CATEGORY FULL-GRID (masonry layout)
+          Shows ALL images for the selected category
+          ═══════════════════════════════════════════════════════════════════ */}
+      <AnimatePresence mode="wait">
+        {viewMode === 'category' && (
+          <motion.div
+            key="category"
+            ref={gridRef}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
+            className="py-14 md:py-20 bg-white"
+          >
+            <div className="max-w-7xl mx-auto px-6 lg:px-8">
+              {/* Section title */}
+              <div className="text-center mb-10">
+                <h2 className="text-2xl md:text-3xl font-bold text-[#0A2540] mb-2">
+                  {categoryName}
+                </h2>
+                <p className="text-gray-500 text-sm">
+                  {categoryImages.length} {categoryImages.length === 1 ? 'photo' : 'photos'} — click any to view full size
+                </p>
+              </div>
+
+              {/* Masonry columns */}
+              <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+                {categoryImages.map((item, index) => (
+                  <motion.div
+                    key={item.id}
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: '-40px' }}
+                    transition={{ duration: 0.5, delay: (index % 6) * 0.06 }}
+                    className="break-inside-avoid group cursor-pointer"
+                    onClick={() => openLightbox(index)}
+                    onMouseEnter={() => setHoveredId(item.id)}
+                    onMouseLeave={() => setHoveredId(null)}
+                  >
+                    <div className="relative overflow-hidden rounded-xl bg-gray-100 shadow-sm hover:shadow-xl transition-shadow duration-500">
                       <img
-                        src={item.thumbnail}
+                        src={item.url}
                         alt={item.title}
-                        className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700"
+                        className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                        loading="lazy"
                       />
-                      <div className="absolute inset-0 flex items-center justify-center bg-black/40">
-                        <div className="w-20 h-20 flex items-center justify-center bg-accent rounded-full shadow-[0_0_30px_rgba(212,175,55,0.8)] group-hover:scale-110 transition-transform duration-300">
-                          <i className="ri-play-fill text-4xl text-primary"></i>
-                        </div>
+
+                      {/* Hover gradient overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                      {/* Hover title overlay */}
+                      <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                        <p className="text-white font-bold text-base">{item.title}</p>
+                        <p className="text-white/80 text-sm mt-1 line-clamp-2">{item.description}</p>
+                      </div>
+
+                      {/* Category badge */}
+                      <div className="absolute top-3 right-3 px-3 py-1 bg-black/40 backdrop-blur-sm rounded-full text-white/90 text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        {categoryName}
                       </div>
                     </div>
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                  <h3 className="text-xl font-bold mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray-200 line-clamp-2">{item.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Lightbox Modal */}
-      {lightboxOpen && selectedMedia && (
+                    {/* Caption below image — auto-fades after page load, reappears on hover */}
+                    <div
+                      className={`mt-3 px-1 transition-all duration-1000 ${
+                        (showGridTitles || hoveredId === item.id)
+                          ? 'opacity-100 translate-y-0'
+                          : 'opacity-0 -translate-y-1'
+                      }`}
+                    >
+                      <p className="text-sm font-semibold text-[#0A2540]">{item.title}</p>
+                      <p className="text-xs text-gray-500 mt-0.5 line-clamp-2 leading-relaxed">{item.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {categoryImages.length === 0 && (
+                <div className="text-center py-20">
+                  <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="ri-image-line text-2xl text-gray-400"></i>
+                  </div>
+                  <p className="text-gray-500 text-lg">No photos found in this category.</p>
+                  <button
+                    onClick={backToOverview}
+                    className="mt-4 px-6 py-2.5 bg-[#0A2540] text-white rounded-full text-sm font-semibold hover:bg-[#1a4a7a] transition-colors cursor-pointer"
+                  >
+                    Back to Gallery Overview
+                  </button>
+                </div>
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* ═══════════════════════════════════════════════════════════════════
+          LIGHTBOX MODAL
+          Full-screen photo viewer with prev/next, keyboard, captions
+          ═══════════════════════════════════════════════════════════════════ */}
+      {lightboxOpen && selectedItem && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4"
+          className="fixed inset-0 z-50 bg-black/95 flex flex-col"
           onClick={closeLightbox}
         >
-          <button
-            onClick={closeLightbox}
-            className="absolute top-6 right-6 w-14 h-14 flex items-center justify-center bg-white/10 hover:bg-white/20 rounded-full text-white text-3xl transition-all cursor-pointer z-50"
-          >
-            <i className="ri-close-line"></i>
-          </button>
-          <div className="max-w-6xl w-full" onClick={(e) => e.stopPropagation()}>
-            {selectedMedia.type === 'image' ? (
-              <img
-                src={selectedMedia.url}
-                alt={selectedMedia.title}
-                className="w-full h-auto max-h-[85vh] object-contain rounded-lg"
-              />
-            ) : (
-              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-                <iframe
-                  src={selectedMedia.url}
-                  className="absolute inset-0 w-full h-full rounded-lg"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  title={selectedMedia.title}
-                ></iframe>
-              </div>
-            )}
-            <div className="mt-6 text-center text-white">
-              <h3 className="text-3xl font-bold mb-3">{selectedMedia.title}</h3>
-              <p className="text-lg text-gray-300">{selectedMedia.description}</p>
+          {/* Top bar */}
+          <div className="flex items-center justify-between px-4 md:px-6 py-4 text-white shrink-0">
+            <div className="flex items-center gap-3">
+              <span className="text-sm text-white/60 font-medium">
+                {lightboxIndex + 1} <span className="text-white/30">/</span> {categoryImages.length}
+              </span>
+              <span className="hidden sm:inline text-sm text-white/40">{selectedItem.title}</span>
             </div>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={(e) => { e.stopPropagation(); setShowLightboxCaption(p => !p); }}
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors cursor-pointer"
+                title="Toggle caption"
+              >
+                <i className={`${showLightboxCaption ? 'ri-chat-off-line' : 'ri-chat-1-line'} text-lg`}></i>
+              </button>
+              <button
+                onClick={(e) => { e.stopPropagation(); closeLightbox(); }}
+                className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors cursor-pointer"
+              >
+                <i className="ri-close-line text-xl"></i>
+              </button>
+            </div>
+          </div>
+
+          {/* Image area with click zones */}
+          <div
+            className="flex-1 flex items-center justify-center px-4 md:px-16 relative overflow-hidden"
+            onMouseMove={resetCaptionTimer}
+          >
+            {/* Left click zone */}
+            <div
+              className="absolute left-0 top-0 bottom-0 w-1/4 z-10 cursor-w-resize hidden md:block"
+              onClick={(e) => { e.stopPropagation(); goPrev(); }}
+              title="Previous image"
+            />
+
+            {/* Right click zone */}
+            <div
+              className="absolute right-0 top-0 bottom-0 w-1/4 z-10 cursor-e-resize hidden md:block"
+              onClick={(e) => { e.stopPropagation(); goNext(); }}
+              title="Next image"
+            />
+
+            {/* Prev arrow button */}
+            <button
+              onClick={(e) => { e.stopPropagation(); goPrev(); }}
+              className="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/25 text-white transition-all duration-300 hover:scale-110 cursor-pointer"
+            >
+              <i className="ri-arrow-left-s-line text-2xl md:text-3xl"></i>
+            </button>
+
+            {/* Image */}
+            <motion.img
+              key={selectedItem.id}
+              initial={{ opacity: 0, scale: 0.96 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3 }}
+              src={selectedItem.url}
+              alt={selectedItem.title}
+              className="max-w-full max-h-[72vh] object-contain rounded-lg select-none"
+              onClick={(e) => e.stopPropagation()}
+            />
+
+            {/* Next arrow button */}
+            <button
+              onClick={(e) => { e.stopPropagation(); goNext(); }}
+              className="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/25 text-white transition-all duration-300 hover:scale-110 cursor-pointer"
+            >
+              <i className="ri-arrow-right-s-line text-2xl md:text-3xl"></i>
+            </button>
+          </div>
+
+          {/* Caption — auto-fades after 4 seconds */}
+          <div
+            className={`shrink-0 px-6 py-5 text-center transition-opacity duration-700 ${
+              showLightboxCaption ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <h3 className="text-lg md:text-xl font-bold text-white mb-1">{selectedItem.title}</h3>
+            <p className="text-sm text-gray-400 max-w-2xl mx-auto leading-relaxed">{selectedItem.description}</p>
+            <p className="text-xs text-[#D4AF37] mt-2 font-medium uppercase tracking-wider">
+              {categoryName}
+            </p>
           </div>
         </div>
       )}

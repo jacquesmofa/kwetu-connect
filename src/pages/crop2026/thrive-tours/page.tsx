@@ -59,7 +59,7 @@ export default function ThriveToursPage() {
                 See the Land Through Eyes of Love
               </h2>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Thrive Tours is a premier <strong className="text-[#0A2540]">100% Indigenous-owned</strong> eco-cultural tour company based in Baawaating (Sault Ste. Marie, Ontario), providing exceptional guided tours that offer guests a unique and immersive experience to learn and engage with the rich culture and traditions of our people.
+                Thrive Tours is a <strong className="text-[#0A2540]">100% Indigenous-owned and led</strong> experiential tourism and education company, headquartered at Batchewana First Nation in Bawaating (Sault Ste. Marie, Ontario, Canada). Haudenosaunee-led and working in respectful partnership with Anishinaabe Knowledge Carriers on whose territory it operates, Thrive Tours is among Canada's most recognized Indigenous tourism companies, honoured for sustainability at the international, national, and provincial levels.
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
                 Our expert guides are highly trained and knowledgeable, focusing on our Indigenous teachings and traditions, to offer an unforgettable journey of discovery and appreciation for Mother Earth, each other, and how we are all connected.
@@ -127,18 +127,21 @@ export default function ThriveToursPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Brad Robinson */}
             <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-300">
-              <div className="h-48 overflow-hidden">
+              <div className="bg-gray-50 overflow-hidden">
                 <img
                   src="https://lirp.cdn-website.com/677be9c4/dms3rep/multi/opt/BRAD_THRIVETOURS_SSM_PHOTOBYTAYLORBURK0F1A3015+%281%29-719h.jpg"
                   alt="Brad Robinson"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-auto object-contain"
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-[#0A2540] mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>Brad Robinson</h3>
-                <p className="text-[#D4AF37] font-semibold text-sm mb-4">Owner &amp; Operator</p>
+                <p className="text-[#D4AF37] font-semibold text-sm mb-4">CEO & Cultural Programming Lead</p>
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  A proud member of the <strong>Oneida Nation of the Thames</strong>, part of the Haudenosaunee Confederacy, Brad is dedicated to sharing Indigenous knowledge, land-based learning, and sustainable outdoor education through authentic, guided experiences.
+                  Brad Robinson is the CEO of Thrive Tours and a Haudenosaunee leader from Oneida Nation of the Thames. Under his leadership, Thrive Tours earned sustainability recognition at every level in 2025, internationally from the Indigenous Tourism Association of Canada and, weeks apart, provincially and nationally with the Sustainable Tourism Award from the Tourism Industry Association of Ontario and the Tourism Industry Association of Canada. In 2026, Thrive Tours was named a Sustainable Tourism Global Winner for Authenticity and Eco Adventure at Global Islands: Leading Beyond 2030 in Madeira, Portugal.
+                </p>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  As CROP 2026's Canadian anchor partner and Cultural Programming Lead, Brad brings two decades of Indigenous tourism and facilitation work to the gathering.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-start gap-2 text-sm text-gray-600">
@@ -158,11 +161,11 @@ export default function ThriveToursPage() {
             </div>
             {/* Amanda Robinson */}
             <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden hover:shadow-2xl transition-all duration-300">
-              <div className="h-48 overflow-hidden">
+              <div className="bg-gray-50 overflow-hidden">
                 <img
                   src="https://lirp.cdn-website.com/677be9c4/dms3rep/multi/opt/Brad+-+Amanda+50th-479w.JPG"
                   alt="Amanda Robinson"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-auto object-contain"
                 />
               </div>
               <div className="p-6">
@@ -339,6 +342,18 @@ export default function ThriveToursPage() {
                 <p className="text-[#D4AF37] font-semibold text-sm">&mdash; {author}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ─── AS FEATURED IN ─── */}
+      <section className="py-12 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-flex items-center gap-3 bg-gradient-to-r from-[#0A2540] to-[#1a4a7a] text-white px-6 md:px-8 py-4 rounded-full shadow-lg">
+            <i className="ri-newspaper-line text-[#D4AF37] text-xl"></i>
+            <span className="text-sm md:text-base font-medium">
+              <span className="text-[#D4AF37] font-semibold">Thrive Tours</span> — As featured in the Toronto Star, Global Heroes, Destination Ontario, NationTalk, and an international documentary by EBS (South Korea)
+            </span>
           </div>
         </div>
       </section>

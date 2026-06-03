@@ -12,6 +12,8 @@ const ProgramsPage = () => {
       <meta property="og:title" content="Programs & Services | KWETU CONNECT | Cultural Resilience Australia" />
       <meta property="og:description" content="Comprehensive programs for cultural resilience, mental health, community chaplaincy, job opportunities, and seniors wisdom across Australia." />
       <meta property="og:url" content="https://kwetuconnect.com.au/programs" />
+      <meta property="og:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
+      <meta property="twitter:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
 
       <Navbar />
 

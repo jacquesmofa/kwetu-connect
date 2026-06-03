@@ -101,6 +101,8 @@ const AboutPage = () => {
       <meta property="og:title" content="About KWETU CONNECT | Cultural Resilience & Community Development" />
       <meta property="og:description" content="Australia's leading consultancy bridging communities, markets and institutions through cultural resilience, health equity, and sustainable development." />
       <meta property="og:url" content="https://kwetuconnect.com.au/about" />
+      <meta property="og:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
+      <meta property="twitter:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
 
       <Navbar />
 

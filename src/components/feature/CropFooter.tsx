@@ -62,9 +62,11 @@ export default function CropFooter() {
           <div>
             {/* CROP 2026 Brand */}
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-[#D4AF37] to-yellow-600 rounded-full flex items-center justify-center">
-                <i className="ri-global-line text-xl text-[#0A2540]"></i>
-              </div>
+              <img
+                src="https://res.cloudinary.com/dhjajm7ru/image/upload/v1779307755/Artboard_3_copy_nvqu2p.png"
+                alt="CROP 2026 Logo"
+                className="h-10 w-auto object-contain"
+              />
               <span className="font-bold text-xl" style={{ fontFamily: "'Playfair Display', serif" }}>CROP 2026</span>
             </div>
             <p className="text-[#D4AF37] text-sm font-semibold mb-2">Cultural Resilience, One Planet</p>
@@ -177,7 +179,7 @@ export default function CropFooter() {
                   Thrive Tours
                   <i className="ri-external-link-line text-xs opacity-60"></i>
                 </a>
-                <p className="text-gray-500 text-xs">Co-Organizer</p>
+                <p className="text-gray-500 text-xs">Co-Organizer — Award-winning Indigenous-led tourism, Canada</p>
               </div>
             </div>
 
@@ -267,22 +269,11 @@ export default function CropFooter() {
           <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
             <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
               <p className="text-white/60 text-sm">
-                © 2025 KWETU CONNECT PTY LTD &amp; Livelihood Development International Initiatives (LDII). All rights reserved.
-              </p>
-              <span className="hidden sm:block text-white/30">|</span>
-              <p className="text-white/60 text-sm">
-                © 2026 KWETU CONNECT. All rights reserved.
+                © {new Date().getFullYear()} KWETU CONNECT PTY LTD, Livelihood Development International Initiatives (LDII) &amp; Thrive Tours. All rights reserved.
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <Link to="/privacy-policy" className="text-white/60 hover:text-accent transition-all duration-300 text-sm whitespace-nowrap magnetic-button">
-                Privacy Policy
-              </Link>
-              <span className="text-white/30">|</span>
-              <Link to="/terms-of-service" className="text-white/60 hover:text-accent transition-all duration-300 text-sm whitespace-nowrap magnetic-button">
-                Terms of Service
-              </Link>
-            </div>
+          </div>
           </div>
         </div>
       </div>

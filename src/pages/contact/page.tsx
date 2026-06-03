@@ -44,6 +44,8 @@ const ContactPage = () => {
       <meta property="og:title" content="Contact KWETU CONNECT | Partnership Inquiries Sydney Australia" />
       <meta property="og:description" content="Reach out to KWETU CONNECT for partnership opportunities, CROP 2026 conference sponsorship, and community development collaborations." />
       <meta property="og:url" content="https://kwetuconnect.com.au/contact" />
+      <meta property="og:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
+      <meta property="twitter:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
 
       <Navbar />
 

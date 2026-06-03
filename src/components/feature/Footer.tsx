@@ -226,14 +226,7 @@ export default function Footer() {
               © {new Date().getFullYear()} KWETU CONNECT. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
-              <a href="/privacy-policy" className="text-white/60 hover:text-accent transition-all duration-300 text-sm whitespace-nowrap magnetic-button">
-                Privacy Policy
-              </a>
-              <span className="text-white/30">|</span>
-              <a href="/terms-of-service" className="text-white/60 hover:text-accent transition-all duration-300 text-sm whitespace-nowrap magnetic-button">
-                Terms of Service
-              </a>
-            </div>
+          </div>
           </div>
         </div>
       </div>
