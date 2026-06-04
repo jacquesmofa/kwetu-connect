@@ -154,25 +154,23 @@ export default function ProgrammePage() {
 
               {/*
                 ============================================================
-                PROGRAMME PDF — HOW TO UPDATE
+                PROGRAMME PDF — HOW TO UPDATE WHEN YOU HAVE A NEW VERSION
                 ============================================================
-                1. Upload your final PDF to Cloudinary (drag & drop into
-                   your Cloudinary Media Library).
+                1. Upload your updated PDF to Cloudinary (drag & drop into
+                   your Cloudinary Media Library at cloudinary.com).
                 2. After upload, click the PDF to open its details.
-                3. Copy the "URL" shown — it should look like:
-                   https://res.cloudinary.com/dzppzxpad/raw/upload/v1234567890/programme.pdf
-                4. Replace the PDF_URL constant value below with your copied URL.
-                5. Also update the "Download PDF" href below with the same URL.
-                ============================================================
-                NOTE: Do NOT use the Cloudinary console URL (console.cloudinary.com/...)
-                Use the public URL shown in the asset details panel (res.cloudinary.com/...).
+                3. Copy the URL — it should look like:
+                   https://res.cloudinary.com/dhjajm7ru/raw/upload/v.../filename.pdf
+                4. Replace the URL in BOTH places below:
+                   - The "Download PDF" href (line below)
+                   - The iframe src (inside the PDF viewer section)
                 ============================================================
               */}
 
               {/* Download & Zoom Controls */}
               <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
                 <a
-                  href="https://res.cloudinary.com/YOUR_CLOUD_NAME/raw/upload/YOUR_PDF_URL.pdf"
+                  href="https://res.cloudinary.com/dhjajm7ru/image/upload/v1780598012/CROP2026_Conference_Program_ti8rs3.pdf"
                   download
                   target="_blank"
                   rel="noopener noreferrer"
@@ -191,28 +189,22 @@ export default function ProgrammePage() {
             <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
               {/*
                 ============================================================
-                REPLACE THE src BELOW with your actual Cloudinary PDF URL
-                Example: src="https://res.cloudinary.com/dzppzxpad/raw/upload/v1234567890/crop2026-programme.pdf"
+                PDF IFRAME — TO UPDATE THE PDF:
+                1. Upload your updated PDF to Cloudinary
+                2. Copy the URL (image/upload/ path)
+                3. Replace BOTH: the Cloudinary URL in the Google Docs Viewer
+                   src below AND the Download button href above
+                The Google Docs Viewer proxy bypasses Chrome's cross-origin
+                iframe blocking so the PDF preview always works.
                 ============================================================
               */}
               <iframe
-                src="https://res.cloudinary.com/YOUR_CLOUD_NAME/raw/upload/YOUR_PDF_URL.pdf"
+                src="https://docs.google.com/viewer?url=https://res.cloudinary.com/dhjajm7ru/image/upload/v1780598012/CROP2026_Conference_Program_ti8rs3.pdf&embedded=true"
                 className="w-full"
                 style={{ height: '800px', border: 'none' }}
                 title="CROP Conference 2026 Programme PDF"
                 allowFullScreen
               />
-            </div>
-
-            {/* PDF placeholder / info box — shown until real PDF URL is provided */}
-            <div className="mt-10 bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/10">
-              <i className="ri-file-pdf-2-line text-6xl text-[#D4AF37] mb-4"></i>
-              <h3 className="text-xl font-bold text-white mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Programme PDF Coming Soon
-              </h3>
-              <p className="text-white/60 text-sm max-w-lg mx-auto leading-relaxed">
-                The full CROP Conference 2026 programme document will be available here as a downloadable PDF with full zoom and reading capabilities. Once the final PDF is ready, upload it to Cloudinary and update the URL in this page's code.
-              </p>
             </div>
           </div>
         </section>
