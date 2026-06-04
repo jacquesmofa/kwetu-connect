@@ -94,9 +94,9 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* SEO Metadata */}
-      <title>About KWETU CONNECT | Cultural Resilience & Community Development | Sydney Australia</title>
-      <meta name="description" content="Learn about KWETU CONNECT PTY LTD - Australia's leading consultancy for cultural resilience, health equity, sustainable trade, and community empowerment. Meet our founder Mr Morris Mukasa." />
-      <meta name="keywords" content="KWETU CONNECT, cultural resilience Australia, community development Sydney, Morris Mukasa, health equity consultancy, Indigenous community support" />
+      <title>About KWETU CONNECT | CROP CONFERENCE 2026 Organizer | Cultural Resilience & Community Development Australia</title>
+      <meta name="description" content="Learn about KWETU CONNECT PTY LTD — organizers of CROP CONFERENCE 2026 — Australia's leading consultancy for cultural resilience, health equity, sustainable trade, and community empowerment. Meet founder Mr Morris Mukasa." />
+      <meta name="keywords" content="KWETU CONNECT, CROP CONFERENCE, CROP 2026, cultural resilience Australia, community development Sydney, Morris Mukasa, health equity consultancy, Indigenous community support" />
       <link rel="canonical" href="https://kwetuconnect.com.au/about" />
       <meta property="og:title" content="About KWETU CONNECT | Cultural Resilience & Community Development" />
       <meta property="og:description" content="Australia's leading consultancy bridging communities, markets and institutions through cultural resilience, health equity, and sustainable development." />

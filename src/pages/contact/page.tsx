@@ -16,6 +16,7 @@ const ContactPage = () => {
     projectScope: '',
     contactMethod: 'email',
   });
+  const [submitted, setSubmitted] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -30,19 +31,37 @@ const ContactPage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Thank you for your inquiry! We will contact you within 24-48 hours.');
+    const form = e.target as HTMLFormElement;
+    const formDataToSend = new URLSearchParams();
+    // Add all form fields to the submission
+    formDataToSend.append('name', formData.name);
+    formDataToSend.append('email', formData.email);
+    formDataToSend.append('phone', formData.phone);
+    formDataToSend.append('organization', formData.organization);
+    formDataToSend.append('orgType', formData.orgType);
+    formDataToSend.append('website', formData.website);
+    formDataToSend.append('interests', formData.interests.join(', '));
+    formDataToSend.append('projectScope', formData.projectScope);
+    formDataToSend.append('contactMethod', formData.contactMethod);
+
+    fetch('https://readdy.ai/api/form/d8gscagb91vaa813drq0', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: formDataToSend.toString(),
+    })
+      .then(() => setSubmitted(true))
+      .catch(() => alert('Something went wrong. Please try again or email us directly at info@kwetuconnect.org.'));
   };
 
   return (
     <div className="min-h-screen bg-white">
       {/* SEO Metadata */}
       <title>Contact KWETU CONNECT | Partnership Inquiries | Sydney NSW Australia</title>
-      <meta name="description" content="Contact KWETU CONNECT PTY LTD for partnership inquiries, CROP 2026 sponsorship, and community development collaborations. Based in Sydney, NSW Australia. Call 02 4627 9742." />
-      <meta name="keywords" content="contact KWETU CONNECT, partnership inquiry Sydney, CROP 2026 sponsorship, community development partnership Australia" />
+      <meta name="description" content="Contact KWETU CONNECT PTY LTD for partnership inquiries, CROP CONFERENCE 2026 sponsorship, and community development collaborations. Based in Sydney, NSW Australia. Call 02 4627 9742." />
+      <meta name="keywords" content="contact KWETU CONNECT, CROP CONFERENCE, CROP 2026 sponsorship, partnership inquiry Sydney, CROP Conference 2026 sponsorship, community development partnership Australia" />
       <link rel="canonical" href="https://kwetuconnect.com.au/contact" />
-      <meta property="og:title" content="Contact KWETU CONNECT | Partnership Inquiries Sydney Australia" />
-      <meta property="og:description" content="Reach out to KWETU CONNECT for partnership opportunities, CROP 2026 conference sponsorship, and community development collaborations." />
+      <meta property="og:title" content="Contact KWETU CONNECT | CROP CONFERENCE 2026 Partnership Inquiries Sydney Australia" />
+      <meta property="og:description" content="Reach out to KWETU CONNECT for CROP CONFERENCE 2026 sponsorship, partnership opportunities, and community development collaborations in Sydney, Australia." />
       <meta property="og:url" content="https://kwetuconnect.com.au/contact" />
       <meta property="og:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
       <meta property="twitter:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
@@ -163,7 +182,34 @@ const ContactPage = () => {
               transition={{ duration: 0.8 }}
               className="lg:col-span-2"
             >
-              <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-lg">
+              {submitted ? (
+                <div className="bg-green-50 rounded-2xl p-10 text-center border border-green-100">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i className="ri-checkbox-circle-fill text-3xl text-green-600"></i>
+                  </div>
+                  <h2 className="text-2xl font-bold text-[#0A2540] mb-2">Thank You for Your Inquiry!</h2>
+                  <p className="text-gray-600 mb-4">We've received your partnership inquiry and will respond within 24-48 hours.</p>
+                  <button
+                    onClick={() => { setSubmitted(false); setFormData({ name: '', email: '', phone: '', organization: '', orgType: '', website: '', interests: [], projectScope: '', contactMethod: 'email' }); }}
+                    className="px-6 py-3 bg-[#0A2540] text-white rounded-lg font-semibold hover:bg-[#1a4a7a] transition-all cursor-pointer"
+                  >
+                    Submit Another Inquiry
+                  </button>
+                </div>
+              ) : (
+              <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-lg" data-readdy-form>
+                {/*
+                  ============================================================
+                  PARTNERSHIP INQUIRY FORM — EDITING INSTRUCTIONS
+                  ============================================================
+                  - Each field below has a "name" attribute used for submission.
+                  - To add a new field: copy an existing <div> block and change
+                    the name, label, and placeholder.
+                  - To remove a field: delete the entire <div> block.
+                  - The form submits to Readdy's form handler automatically.
+                  - After submission, the success message above is shown.
+                  ============================================================
+                */}
                 {/* Personal Information */}
                 <div className="mb-8">
                   <h3 className="text-2xl font-bold text-primary mb-6">Personal Information</h3>
@@ -344,6 +390,7 @@ const ContactPage = () => {
                   Submit Inquiry
                 </button>
               </form>
+              )}
             </motion.div>
 
             {/* Why Partner With Us */}
@@ -542,16 +589,35 @@ const ContactPage = () => {
             <p className="text-xl text-primary/80 mb-10">
               Subscribe to our newsletter for the latest news, events, and opportunities
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-2xl mx-auto">
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                const email = (e.target as HTMLFormElement).querySelector<HTMLInputElement>('input[name="email"]')?.value;
+                if (!email) return;
+                const formData = new URLSearchParams();
+                formData.append('email', email);
+                fetch('https://readdy.ai/api/form/d8gsdfgb91vaa813drr0', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                  body: formData.toString(),
+                })
+                  .then(() => alert('Thank you for subscribing!'))
+                  .catch(() => alert('Something went wrong. Please try again.'));
+              }}
+              className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-2xl mx-auto"
+              data-readdy-form
+            >
               <input
                 type="email"
+                name="email"
                 placeholder="Enter your email"
+                required
                 className="w-full sm:flex-1 px-6 py-4 rounded-full border-2 border-primary/20 focus:border-primary focus:outline-none text-lg"
               />
-              <button className="w-full sm:w-auto bg-primary hover:bg-primary-light text-white px-10 py-4 rounded-full text-lg font-bold transition-all hover:scale-105 whitespace-nowrap cursor-pointer">
+              <button type="submit" className="w-full sm:w-auto bg-primary hover:bg-primary-light text-white px-10 py-4 rounded-full text-lg font-bold transition-all hover:scale-105 whitespace-nowrap cursor-pointer">
                 Subscribe
               </button>
-            </div>
+            </form>
           </motion.div>
         </div>
       </section>

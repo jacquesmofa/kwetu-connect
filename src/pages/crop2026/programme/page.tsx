@@ -140,6 +140,83 @@ export default function ProgrammePage() {
           </div>
         </section>
 
+        {/* ─── DOWNLOAD FULL PROGRAMME PDF VIEWER ─── */}
+        <section className="py-20 bg-gradient-to-br from-[#0A2540] to-[#1a4a7a]">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <span className="text-[#D4AF37] font-semibold text-sm uppercase tracking-wider">Full Programme Document</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mt-3 mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
+                CROP Conference 2026 Programme
+              </h2>
+              <p className="text-white/70 text-base max-w-2xl mx-auto mb-8">
+                View, zoom, and download the complete CROP Conference 2026 programme. Use the viewer controls below to navigate through the document.
+              </p>
+
+              {/*
+                ============================================================
+                PROGRAMME PDF — HOW TO UPDATE
+                ============================================================
+                1. Upload your final PDF to Cloudinary (drag & drop into
+                   your Cloudinary Media Library).
+                2. After upload, click the PDF to open its details.
+                3. Copy the "URL" shown — it should look like:
+                   https://res.cloudinary.com/dzppzxpad/raw/upload/v1234567890/programme.pdf
+                4. Replace the PDF_URL constant value below with your copied URL.
+                5. Also update the "Download PDF" href below with the same URL.
+                ============================================================
+                NOTE: Do NOT use the Cloudinary console URL (console.cloudinary.com/...)
+                Use the public URL shown in the asset details panel (res.cloudinary.com/...).
+                ============================================================
+              */}
+
+              {/* Download & Zoom Controls */}
+              <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
+                <a
+                  href="https://res.cloudinary.com/YOUR_CLOUD_NAME/raw/upload/YOUR_PDF_URL.pdf"
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#D4AF37] text-[#0A2540] font-bold rounded-full hover:bg-[#C4A137] transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 whitespace-nowrap"
+                >
+                  <i className="ri-download-2-line text-lg"></i>Download PDF
+                </a>
+                <span className="text-white/50 text-sm flex items-center gap-2">
+                  <i className="ri-zoom-in-line"></i>
+                  Use browser controls (Ctrl + / Ctrl -) to zoom in and out of the document
+                </span>
+              </div>
+            </div>
+
+            {/* PDF Viewer iframe */}
+            <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+              {/*
+                ============================================================
+                REPLACE THE src BELOW with your actual Cloudinary PDF URL
+                Example: src="https://res.cloudinary.com/dzppzxpad/raw/upload/v1234567890/crop2026-programme.pdf"
+                ============================================================
+              */}
+              <iframe
+                src="https://res.cloudinary.com/YOUR_CLOUD_NAME/raw/upload/YOUR_PDF_URL.pdf"
+                className="w-full"
+                style={{ height: '800px', border: 'none' }}
+                title="CROP Conference 2026 Programme PDF"
+                allowFullScreen
+              />
+            </div>
+
+            {/* PDF placeholder / info box — shown until real PDF URL is provided */}
+            <div className="mt-10 bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/10">
+              <i className="ri-file-pdf-2-line text-6xl text-[#D4AF37] mb-4"></i>
+              <h3 className="text-xl font-bold text-white mb-2" style={{ fontFamily: "'Playfair Display', serif" }}>
+                Programme PDF Coming Soon
+              </h3>
+              <p className="text-white/60 text-sm max-w-lg mx-auto leading-relaxed">
+                The full CROP Conference 2026 programme document will be available here as a downloadable PDF with full zoom and reading capabilities. Once the final PDF is ready, upload it to Cloudinary and update the URL in this page's code.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* 3-Day Schedule */}
         <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -152,13 +229,15 @@ export default function ProgrammePage() {
               <p className="text-gray-500 text-sm mt-2">(Subject to updates)</p>
             </div>
 
+            {/* Quick link back to PDF viewer above */}
             <div className="text-center mb-8">
-              <Link
-                to="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#D4AF37] text-[#0A2540] font-semibold rounded-lg hover:bg-[#C4A137] transition-all duration-300 shadow-md whitespace-nowrap"
+              <a
+                href="#"
+                onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#D4AF37] text-[#0A2540] font-semibold rounded-lg hover:bg-[#C4A137] transition-all duration-300 shadow-md whitespace-nowrap cursor-pointer"
               >
-                <i className="ri-download-line text-lg"></i>Download Full Programme (PDF)
-              </Link>
+                <i className="ri-file-pdf-2-line text-lg"></i>View Programme PDF (Top of Page)
+              </a>
             </div>
 
             <div className="space-y-12">

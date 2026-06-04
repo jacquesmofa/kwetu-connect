@@ -151,9 +151,9 @@ const GalleryPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <title>Gallery | KWETU CONNECT | CROP 2026 Cultural Resilience Events & Community Programs</title>
-      <meta name="description" content="Browse the KWETU CONNECT gallery showcasing CROP 2026 conference highlights, cultural performances, community programs, team & partners, and venue photography across Australia." />
-      <meta name="keywords" content="KWETU CONNECT gallery, CROP 2026 photos, cultural events Australia, community programs gallery, Sydney conference photography, cultural resilience events" />
+      <title>Gallery | KWETU CONNECT | CROP CONFERENCE 2026 Cultural Resilience Events & Community Programs</title>
+      <meta name="description" content="Browse the KWETU CONNECT & CROP CONFERENCE 2026 gallery showcasing conference highlights, cultural performances, community programs, team & partners, and venue photography across Australia." />
+      <meta name="keywords" content="KWETU CONNECT gallery, CROP CONFERENCE, CROP 2026 photos, cultural events Australia, community programs gallery, Sydney conference photography, cultural resilience events" />
       <link rel="canonical" href="https://kwetuconnect.com.au/gallery" />
       <meta property="og:title" content="Gallery | KWETU CONNECT | CROP 2026 & Cultural Events" />
       <meta property="og:description" content="Visual highlights from CROP 2026 conference, cultural performances, community programs, and partnerships." />

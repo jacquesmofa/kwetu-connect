@@ -37,7 +37,27 @@ export default function RegisterPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    const formDataToSend = new URLSearchParams();
+    formDataToSend.append('firstName', formData.firstName);
+    formDataToSend.append('lastName', formData.lastName);
+    formDataToSend.append('email', formData.email);
+    formDataToSend.append('phone', formData.phone);
+    formDataToSend.append('organization', formData.organization);
+    formDataToSend.append('country', formData.country);
+    formDataToSend.append('registrationType', formData.registrationType);
+    formDataToSend.append('abstractSubmission', formData.abstractSubmission);
+    formDataToSend.append('thematicInterests', thematicInterests.join(', '));
+    formDataToSend.append('dietaryRequirements', formData.dietaryRequirements);
+    formDataToSend.append('accessibilityNeeds', formData.accessibilityNeeds);
+    formDataToSend.append('updatesConsent', String(formData.updatesConsent));
+
+    fetch('https://readdy.ai/api/form/d8gseu8b91vaa813drt0', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: formDataToSend.toString(),
+    })
+      .then(() => setSubmitted(true))
+      .catch(() => alert('Something went wrong. Please try again or contact us at info@kwetuconnect.org.'));
   };
 
   const themes = [
@@ -94,7 +114,17 @@ export default function RegisterPage() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="bg-gray-50 rounded-2xl p-8 md:p-10 border border-gray-100">
+              <form onSubmit={handleSubmit} className="bg-gray-50 rounded-2xl p-8 md:p-10 border border-gray-100" data-readdy-form>
+                {/*
+                  ============================================================
+                  CROP CONFERENCE 2026 — REGISTRATION FORM
+                  ============================================================
+                  - Each field has a "name" attribute for submission.
+                  - To add/remove fields: copy/delete <div> blocks.
+                  - To change thematic interest options: edit the "themes" array.
+                  - Form submits to Readdy's form handler automatically.
+                  ============================================================
+                */}
                 <h2 className="text-2xl font-bold text-[#0A2540] mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
                   Registration Form
                 </h2>

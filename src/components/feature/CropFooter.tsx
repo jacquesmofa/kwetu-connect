@@ -63,11 +63,11 @@ export default function CropFooter() {
             {/* CROP 2026 Brand */}
             <div className="flex items-center gap-3 mb-3">
               <img
-                src="https://res.cloudinary.com/dhjajm7ru/image/upload/v1779307755/Artboard_3_copy_nvqu2p.png"
-                alt="CROP 2026 Logo"
-                className="h-10 w-auto object-contain"
+                src="https://res.cloudinary.com/dzppzxpad/image/upload/q_auto/f_auto/v1780502472/Artboard_3_copy_2_2x_nxsxcz.png"
+                alt="CROP Conference 2026 Logo"
+                className="h-10 w-auto object-contain rounded-full"
               />
-              <span className="font-bold text-xl" style={{ fontFamily: "'Playfair Display', serif" }}>CROP 2026</span>
+              <span className="font-bold text-xl" style={{ fontFamily: "'Playfair Display', serif" }}>CROP CONFERENCE 2026</span>
             </div>
             <p className="text-[#D4AF37] text-sm font-semibold mb-2">Cultural Resilience, One Planet</p>
             <p className="text-gray-400 text-sm mb-6 leading-relaxed">
@@ -97,16 +97,35 @@ export default function CropFooter() {
             <p className="text-gray-400 text-sm mb-4 leading-relaxed">
               Bridging communities, markets, and institutions through cultural resilience and sustainable partnerships.
             </p>
-            <div className="flex flex-col sm:flex-row gap-2">
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                const email = (e.target as HTMLFormElement).querySelector<HTMLInputElement>('input[name="email"]')?.value;
+                if (!email) return;
+                const formData = new URLSearchParams();
+                formData.append('email', email);
+                fetch('https://readdy.ai/api/form/d8gsdfgb91vaa813drr0', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                  body: formData.toString(),
+                })
+                  .then(() => alert('Thank you for subscribing!'))
+                  .catch(() => alert('Something went wrong. Please try again.'));
+              }}
+              className="flex flex-col sm:flex-row gap-2"
+              data-readdy-form
+            >
               <input
                 type="email"
+                name="email"
                 placeholder="Your email"
+                required
                 className="flex-1 px-4 py-2.5 rounded-full glass-effect border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:glass-effect-gold text-sm transition-all duration-300"
               />
-              <button className="px-5 py-2.5 glass-effect-gold hover:bg-accent text-primary font-semibold rounded-full transition-all duration-500 whitespace-nowrap cursor-pointer text-sm magnetic-button volumetric-glow">
+              <button type="submit" className="px-5 py-2.5 glass-effect-gold hover:bg-accent text-primary font-semibold rounded-full transition-all duration-500 whitespace-nowrap cursor-pointer text-sm magnetic-button volumetric-glow">
                 Subscribe
               </button>
-            </div>
+            </form>
           </div>
 
           {/* Column 2 — Quick Links */}
