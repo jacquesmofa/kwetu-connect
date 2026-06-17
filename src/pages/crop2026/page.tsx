@@ -308,7 +308,7 @@ export default function Crop2026() {
             </a>
             <a href="https://ldiinitiatives.org/" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform duration-300">
               <img
-                src="https://res.cloudinary.com/dzppzxpad/image/upload/q_auto/f_auto/v1780503022/Artboard_4_copy_7_2x_fekl5w.png"
+                src="https://res.cloudinary.com/dzppzxpad/image/upload/q_auto/f_auto/v1781702619/Circular_LDII_bewv0j.png"
                 alt="LDII Logo"
                 className="h-14 md:h-20 w-auto object-contain drop-shadow-2xl bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2"
               />
@@ -609,7 +609,7 @@ export default function Crop2026() {
                 desc: 'A global organization committed to empowering vulnerable communities through sustainable livelihood programs, cultural preservation, and resilience-building initiatives.',
                 link: '/crop2026/ldii',
                 website: 'https://ldiinitiatives.org/',
-                logo: 'https://res.cloudinary.com/dzppzxpad/image/upload/q_auto/f_auto/v1780503022/Artboard_4_copy_7_2x_fekl5w.png',
+                logo: 'https://res.cloudinary.com/dzppzxpad/image/upload/q_auto/f_auto/v1781702619/Circular_LDII_bewv0j.png',
               },
             ].map(({ name, desc, link, website, logo }) => (
               <div key={name} className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 text-center">

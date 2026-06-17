@@ -6,7 +6,7 @@ interface CropConferenceLayoutProps {
   children: React.ReactNode;
 }
 
-const CROP_OG_IMAGE = 'https://res.cloudinary.com/dzppzxpad/image/upload/w_1200,q_auto,f_auto/v1780502472/Artboard_3_copy_2_2x_nxsxcz.png';
+const CROP_OG_IMAGE = 'https://res.cloudinary.com/dhjajm7ru/image/upload/v1781706372/Crop_rounded_big_zgkob2.png';
 const CROP_OG_TITLE = 'CROP CONFERENCE 2026 — Cultural Resilience, One Planet | Sydney, Australia | November 6-8, 2026';
 const CROP_OG_DESC = 'CROP CONFERENCE 2026 — Join 800+ global Indigenous & cultural leaders, policymakers, academics, and youth changemakers at The Dome, Sydney Showground. Three transformative days on cultural resilience, care transformation, and planetary sustainability. Co-organized by KWETU CONNECT, Thrive Tours & LDII.';
 const CROP_CANONICAL = 'https://kwetuconnect.org/crop2026';
