@@ -22,7 +22,7 @@ Australian consultancy (Sydney) on cultural heritage, health equity, sustainable
 - Routes: `/`, `/about`, `/contact`, `/crop2026`, `/crop2026/kwetu-connect`, `/crop2026/ldii`, `/crop2026/outcomes`, `/crop2026/partnership`, `/crop2026/pillars`, `/crop2026/programme`, `/crop2026/register`, `/crop2026/thrive-tours`, `/crop2026/venue`, `/crop2026/vision`, `/gallery`, `/health-recruitment`, `/privacy-policy`, `/programs`, `/terms-of-service`.
 
 ## Deploy
-- No deploy workflow. Add the studio FTP workflow once the host is known.
+- No deploy workflow. Add the studio FTP workflow (copy `jacquesmofa/SANKOFA/.github/workflows/deploy.yml`) once the host is known.
 
 ## Where things live
 - Pages: `src/pages/<page>/` (one folder per page, sections in `components/`). Routes: `src/router/`.
