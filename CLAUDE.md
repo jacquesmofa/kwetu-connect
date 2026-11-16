@@ -35,3 +35,8 @@ Australian consultancy (Sydney) on cultural heritage, health equity, sustainable
 - Duplicates the CROP 2026 conference that also has its own repo (`crop2026`). Decide which one is the source of truth.
 - CROP 2026 dates (6–8 Nov 2026) have now passed: event pages need a 'thank you / outcomes' update.
 - Design overlap with other clients: Navy + gold is shared with LDII (navy) and several gold sites. Must diverge.
+
+## Leadership profile (15 Nov 2026)
+- `src/content/founder.json` holds Mr Morris Kizito Mukasa's profile (his text, verbatim, in 8 chapters). `src/components/feature/FounderProfile.tsx` shows it chapter by chapter ("Read more" opens the next one; `preview` mode on the home page links to the full page `/about/morris-kizito-mukasa`). Edit the JSON, not the component.
+- Invented team members were removed from the About page. See PLACEHOLDERS.md.
+- `out/` is committed in this repo and there is still no deploy workflow: a push does not publish anything.

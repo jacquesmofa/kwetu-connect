@@ -4,6 +4,7 @@ import type { RouteObject } from 'react-router-dom';
 
 const HomePage = lazy(() => import('../pages/home/page'));
 const AboutPage = lazy(() => import('../pages/about/page'));
+const FounderPage = lazy(() => import('../pages/about/founder/page'));
 const ProgramsPage = lazy(() => import('../pages/programs/page'));
 const Crop2026Page = lazy(() => import('../pages/crop2026/page'));
 const Crop2026VisionPage = lazy(() => import('../pages/crop2026/vision/page'));
@@ -31,6 +32,10 @@ const routes: RouteObject[] = [
   {
     path: '/about',
     element: <AboutPage />,
+  },
+  {
+    path: '/about/morris-kizito-mukasa',
+    element: <FounderPage />,
   },
   {
     path: '/programs',

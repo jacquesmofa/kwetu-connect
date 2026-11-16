@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import founder from '../../content/founder.json';
 import Navbar from '../../components/feature/Navbar';
 import Footer from '../../components/feature/Footer';
 
@@ -57,33 +58,6 @@ const AboutPage = () => {
     },
   ];
 
-  const teamMembers = [
-    {
-      name: 'Mr Morris Mukasa',
-      role: 'Founder & Director',
-      image: 'https://storage.readdy-site.link/project_files/62382cf1-e612-4aa3-9bbe-3e19cc10d1a0/7124da38-127c-404e-bb3d-15d24652c871_Morris-Kisito.webp?v=1f34e2e27ac9ec24b6488ff406a2481b',
-      bio: 'Distinguished advocate, humanitarian, and community leader dedicated to promoting social justice, trauma recovery, and empowerment of marginalised communities',
-    },
-    {
-      name: 'James Chen',
-      role: 'Director of Partnerships',
-      image: 'https://readdy.ai/api/search-image?query=professional%20Asian%20man%20director%20executive%20portrait%20confident%20business%20attire%20simple%20clean%20background&width=400&height=400&seq=team2&orientation=squarish',
-      bio: 'Specialist in transnational partnerships and sustainable trade development',
-    },
-    {
-      name: 'Dr. Sarah Williams',
-      role: 'Head of Health Programs',
-      image: 'https://readdy.ai/api/search-image?query=professional%20woman%20doctor%20healthcare%20executive%20portrait%20warm%20smile%20medical%20professional%20simple%20clean%20background&width=400&height=400&seq=team3&orientation=squarish',
-      bio: 'Public health expert focused on health equity and community wellbeing',
-    },
-    {
-      name: 'Michael Nguyen',
-      role: 'Cultural Heritage Advisor',
-      image: 'https://readdy.ai/api/search-image?query=professional%20man%20cultural%20advisor%20portrait%20confident%20professional%20attire%20simple%20clean%20background&width=400&height=400&seq=team4&orientation=squarish',
-      bio: 'Cultural anthropologist specializing in heritage preservation and community engagement',
-    },
-  ];
-
   const stats = [
     { number: '500+', label: 'Communities Served' },
     { number: '50+', label: 'Partnerships' },
@@ -96,7 +70,7 @@ const AboutPage = () => {
       {/* SEO Metadata */}
       <title>About KWETU CONNECT | CROP CONFERENCE 2026 Organizer | Cultural Resilience & Community Development Australia</title>
       <meta name="description" content="Learn about KWETU CONNECT PTY LTD — organizers of CROP CONFERENCE 2026 — Australia's leading consultancy for cultural resilience, health equity, sustainable trade, and community empowerment. Meet founder Mr Morris Mukasa." />
-      <meta name="keywords" content="KWETU CONNECT, CROP CONFERENCE, CROP 2026, cultural resilience Australia, community development Sydney, Morris Mukasa, health equity consultancy, Indigenous community support" />
+      <meta name="keywords" content="KWETU CONNECT, CROP CONFERENCE, CROP 2026, cultural resilience Australia, community development Sydney, Morris Kizito Mukasa, health equity consultancy, Indigenous community support" />
       <link rel="canonical" href="https://kwetuconnect.com.au/about" />
       <meta property="og:title" content="About KWETU CONNECT | Cultural Resilience & Community Development" />
       <meta property="og:description" content="Australia's leading consultancy bridging communities, markets and institutions through cultural resilience, health equity, and sustainable development." />
@@ -254,44 +228,20 @@ const AboutPage = () => {
       {/* Team Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gray-50">
         <div className="container-custom">
-          <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4">
-              Our Leadership Team
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 px-4">
-              Experienced professionals driving transformative change
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-            {teamMembers.map((member, index) => (
-              <div
-                key={index}
-                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all"
-              >
-                <div className="relative overflow-hidden">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-64 sm:h-80 object-cover object-top group-hover:scale-110 transition-all duration-500"
-                  />
-                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/80 transition-all duration-500 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <a
-                      href="#"
-                      className="w-12 h-12 flex items-center justify-center bg-accent rounded-full hover:scale-110 transition-transform cursor-pointer"
-                      onClick={(e) => e.preventDefault()}
-                      aria-label={`LinkedIn profile of ${member.name}`}
-                    >
-                      <i className="ri-linkedin-fill text-xl text-primary"></i>
-                    </a>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-lg sm:text-xl font-bold text-primary mb-2">{member.name}</h3>
-                  <p className="text-accent font-semibold mb-3 text-sm sm:text-base">{member.role}</p>
-                  <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
-                </div>
-              </div>
-            ))}
+          <div className="max-w-5xl mx-auto bg-white shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-5 border-t-4 border-accent">
+            <div className="md:col-span-2 bg-navy-50">
+              <img src={founder.photo} alt={founder.photoAlt} className="w-full h-72 md:h-full object-cover object-top" />
+            </div>
+            <div className="md:col-span-3 p-8 sm:p-10">
+              <p className="text-[#8a6d10] text-sm font-semibold uppercase tracking-[0.18em]">Our leadership</p>
+              <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-primary font-['Playfair_Display']">{founder.name}</h2>
+              <p className="mt-2 text-gray-700 font-semibold">{founder.role}</p>
+              <p className="mt-5 text-gray-700 leading-relaxed">{founder.chapters[0].blocks[0].text}</p>
+              <Link to={founder.path} className="group mt-7 inline-flex items-center gap-2 bg-primary hover:bg-primary-light text-white px-6 py-3 rounded-sm font-semibold transition-colors">
+                Read the full profile
+                <i className="ri-arrow-right-line transition-transform group-hover:translate-x-1" aria-hidden="true"></i>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

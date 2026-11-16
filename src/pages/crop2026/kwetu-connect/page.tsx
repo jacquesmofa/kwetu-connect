@@ -153,25 +153,25 @@ export default function KwetuConnectPage() {
                 <div className="w-28 h-28 rounded-full overflow-hidden border-4 border-[#D4AF37] mb-4 shadow-lg">
                   <img
                     src="https://storage.readdy-site.link/project_files/62382cf1-e612-4aa3-9bbe-3e19cc10d1a0/7124da38-127c-404e-bb3d-15d24652c871_Morris-Kisito.webp?v=1f34e2e27ac9ec24b6488ff406a2481b"
-                    alt="Mr Morris Mukasa"
+                    alt="Portrait of Mr Morris Kizito Mukasa"
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>Mr Morris Mukasa</h3>
-                <p className="text-[#D4AF37] font-semibold text-sm">Founder &amp; Director</p>
+                <h3 className="text-xl font-bold text-white mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>Mr Morris Kizito Mukasa</h3>
+                <p className="text-[#D4AF37] font-semibold text-sm">Chief Executive Officer</p>
                 <p className="text-white/70 text-xs mt-2">KWETU CONNECT PTY LTD</p>
               </div>
               <div className="md:col-span-2 p-8">
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  Mr Morris Mukasa is a distinguished advocate, humanitarian, and community leader dedicated to promoting social justice, trauma recovery, utilising cultural &amp; religious values for empowerment of marginalised communities. With a career spanning multiple continents, he has been instrumental in bridging cultural understanding and fostering community resilience.
+                  Mr Morris Kizito Mukasa is a Ugandan-born Australian citizen, humanitarian, distinguished community leader and international advocate whose work spans social justice, cultural integration, trauma recovery, refugee support and the empowerment of marginalised communities.
                 </p>
                 <h4 className="text-lg font-bold text-[#0A2540] mb-4">Key Achievements</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {[
-                    'African Australian Community Service Award (2023 &amp; 2024)',
-                    'Community Transformative Award (2024)',
-                    'Sydney Archdiocese SYNOD Committee Member',
-                    "Oceania's Region King's Representative (Kabaka Foundation)",
+                    'African Australian Community Service Award (2024)',
+                    'Inaugural President, Australia African Nations Business Council (2026)',
+                    'Nominated to the Synod of the Archdiocese of Sydney for African CALD communities (2026)',
+                    'Appointed to promote the Kabaka Foundation of the Kingdom of Buganda in Australia (2020)',
                   ].map((item) => (
                     <div key={item} className="flex items-start gap-2">
                       <i className="ri-medal-line text-[#D4AF37] mt-0.5 flex-shrink-0"></i>
@@ -179,6 +179,9 @@ export default function KwetuConnectPage() {
                     </div>
                   ))}
                 </div>
+                <a href="/about/morris-kizito-mukasa" className="mt-6 inline-flex items-center gap-2 text-[#0A2540] font-semibold underline underline-offset-4 hover:text-[#b8941f]">
+                  Read the full profile <i className="ri-arrow-right-line" aria-hidden="true"></i>
+                </a>
               </div>
             </div>
           </div>

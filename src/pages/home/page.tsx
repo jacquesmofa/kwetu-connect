@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/feature/Navbar';
 import Footer from '../../components/feature/Footer';
+import FounderProfile from '../../components/feature/FounderProfile';
 
 const HomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [showFullBio, setShowFullBio] = useState(false);
 
   const heroImages = [
     'https://readdy.ai/api/search-image?query=diverse%20multicultural%20community%20members%20connecting%20hands%20together%20in%20modern%20Australian%20setting%20with%20professional%20business%20atmosphere%20representing%20unity%20and%20partnership%20collaboration%20warm%20natural%20lighting%20simple%20clean%20background&width=1920&height=1080&seq=hero1&orientation=landscape',
@@ -1027,83 +1027,13 @@ const HomePage = () => {
         <div className="container-custom">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4 font-['Playfair_Display']">
-              Meet Our Founder
+              Our Leadership
             </h2>
             <div className="w-24 h-1 bg-accent mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-6xl mx-auto">
-            {/* Founder Image */}
-            <div className="flex justify-center">
-              <div className="relative">
-                <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-2xl overflow-hidden shadow-2xl">
-                  <img
-                    src="https://storage.readdy-site.link/project_files/62382cf1-e612-4aa3-9bbe-3e19cc10d1a0/7124da38-127c-404e-bb3d-15d24652c871_Morris-Kisito.webp?v=1f34e2e27ac9ec24b6488ff406a2481b"
-                    alt="Mr Morris Mukasa"
-                    className="w-full h-full object-cover object-top"
-                  />
-                </div>
-                <div className="absolute -bottom-4 -right-4 bg-accent text-primary px-6 py-3 rounded-lg shadow-lg">
-                  <p className="font-bold text-sm">Founder & Director</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Founder Bio */}
-            <div>
-              <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-2">
-                Mr Morris Mukasa
-              </h3>
-              <p className="text-lg text-accent mb-6 font-semibold">
-                Founder & Director, KWETU CONNECT PTY LTD
-              </p>
-
-              <div className="text-base text-gray-700 leading-relaxed space-y-4">
-                <p>
-                  Mr Morris Mukasa is a distinguished advocate, humanitarian, and community leader dedicated to promoting social justice, trauma recovery, utilising cultural & religious values for empowerment of marginalised communities. With a career spanning multiple continents.
-                </p>
-
-                <p>
-                  Mr Mukasa has supported vulnerable groups such as refugees, asylum seekers, detainees, people with disabilities and marginalised individuals by using music, creative and performing arts, story telling, poems and cultural dialogue as therapeutic tools.
-                </p>
-
-                {showFullBio && (
-                  <>
-                    <p>
-                      Mr Mukasa is the Oceania's region King's representative (Kabaka Foundation) since 2020 and holds key roles with the Refugee Communities Advocacy Network as a consultant.
-                    </p>
-
-                    <p>
-                      Morris has worked extensively in crisis management, conflict resolution, and refugee support. He is also a Board member of Global Talent Pathways an organisation processing pathways for refugee and ensure and contributing to economic, peaceful settlement and reintegration.
-                    </p>
-
-                    <p>
-                      In Australia, Morris co-founded Kwetu 4 Communities Inc. a non-profit association that promotes cultural understanding and trauma healing. Through this organisation he established a company known as Kwetu Connect PTY LTD, (managing barriers and navigating Partnerships opportunities)
-                    </p>
-
-                    <p>
-                      Mr Mukasa has facilitated conflict resolution initiatives, served on policy reform committees, also as the business development manager for companies of people with disabilities and contributed to international dialogues on refugee support, including engagements with UN representatives in Australia.
-                    </p>
-
-                    <p>
-                      Mr. Mukasa's commitment to social justice has earned him several accolades, including the African Australian Community Service Award in 2023 & 2024, Community transformative Award in 2024, then of recent appointed to represent the African Nations Refugees at Sydney Archdiocese SYNOD Committee member.
-                    </p>
-
-                    <p className="italic">
-                      He is supported by his brimful wife Teddy Nakalembe and their children all involved in most of community projects as a complete Kwetu basset Family.
-                    </p>
-                  </>
-                )}
-              </div>
-
-              <button
-                onClick={() => setShowFullBio(!showFullBio)}
-                className="mt-6 inline-flex items-center gap-2 bg-accent hover:bg-accent-dark text-primary px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 whitespace-nowrap cursor-pointer"
-              >
-                {showFullBio ? 'Show Less' : 'Read More'}
-                <i className={`${showFullBio ? 'ri-arrow-up-s-line' : 'ri-arrow-down-s-line'}`}></i>
-              </button>
-            </div>
+          <div className="max-w-6xl mx-auto">
+            <FounderProfile preview />
           </div>
         </div>
       </section>
