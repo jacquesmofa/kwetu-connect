@@ -150,10 +150,10 @@ const HealthRecruitmentPage = () => {
       <title>Health Recruitment | KWETU CONNECT | CROP CONFERENCE 2026 | Healthcare Professionals Australia</title>
       <meta name="description" content="KWETU CONNECT health recruitment — organizers of CROP CONFERENCE 2026 — connecting skilled healthcare professionals with Australian care providers. Culturally sensitive recruitment for nurses, caregivers, and allied health workers." />
       <meta name="keywords" content="health recruitment Australia, CROP CONFERENCE, CROP 2026, healthcare professionals Sydney, caregiver recruitment, nursing jobs Australia, culturally sensitive healthcare recruitment" />
-      <link rel="canonical" href="https://kwetuconnect.com.au/health-recruitment" />
+      <link rel="canonical" href="https://kwetuconnect.org/health-recruitment" />
       <meta property="og:title" content="Health Recruitment | KWETU CONNECT | Healthcare Professionals Australia" />
       <meta property="og:description" content="Connecting skilled healthcare professionals with Australian care providers through culturally sensitive recruitment." />
-      <meta property="og:url" content="https://kwetuconnect.com.au/health-recruitment" />
+      <meta property="og:url" content="https://kwetuconnect.org/health-recruitment" />
       <meta property="og:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
       <meta property="twitter:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
       <Navbar />

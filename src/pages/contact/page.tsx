@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { sendForm } from '../../lib/forms';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Navbar from '../../components/feature/Navbar';
@@ -44,11 +45,7 @@ const ContactPage = () => {
     formDataToSend.append('projectScope', formData.projectScope);
     formDataToSend.append('contactMethod', formData.contactMethod);
 
-    fetch('https://readdy.ai/api/form/d8gscagb91vaa813drq0', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: formDataToSend.toString(),
-    })
+    sendForm('[CONTACT] Partnership inquiry', formDataToSend)
       .then(() => setSubmitted(true))
       .catch(() => alert('Something went wrong. Please try again or email us directly at info@kwetuconnect.org.'));
   };
@@ -59,10 +56,10 @@ const ContactPage = () => {
       <title>Contact KWETU CONNECT | Partnership Inquiries | Sydney NSW Australia</title>
       <meta name="description" content="Contact KWETU CONNECT PTY LTD for partnership inquiries, CROP CONFERENCE 2026 sponsorship, and community development collaborations. Based in Sydney, NSW Australia. Call 02 4627 9742." />
       <meta name="keywords" content="contact KWETU CONNECT, CROP CONFERENCE, CROP 2026 sponsorship, partnership inquiry Sydney, CROP Conference 2026 sponsorship, community development partnership Australia" />
-      <link rel="canonical" href="https://kwetuconnect.com.au/contact" />
+      <link rel="canonical" href="https://kwetuconnect.org/contact" />
       <meta property="og:title" content="Contact KWETU CONNECT | CROP CONFERENCE 2026 Partnership Inquiries Sydney Australia" />
       <meta property="og:description" content="Reach out to KWETU CONNECT for CROP CONFERENCE 2026 sponsorship, partnership opportunities, and community development collaborations in Sydney, Australia." />
-      <meta property="og:url" content="https://kwetuconnect.com.au/contact" />
+      <meta property="og:url" content="https://kwetuconnect.org/contact" />
       <meta property="og:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
       <meta property="twitter:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
 
@@ -197,7 +194,7 @@ const ContactPage = () => {
                   </button>
                 </div>
               ) : (
-              <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-lg" data-readdy-form>
+              <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-lg">
                 {/*
                   ============================================================
                   PARTNERSHIP INQUIRY FORM — EDITING INSTRUCTIONS
@@ -596,16 +593,12 @@ const ContactPage = () => {
                 if (!email) return;
                 const formData = new URLSearchParams();
                 formData.append('email', email);
-                fetch('https://readdy.ai/api/form/d8gsdfgb91vaa813drr0', {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                  body: formData.toString(),
-                })
+                sendForm('[NEWSLETTER] New subscriber', formData)
                   .then(() => alert('Thank you for subscribing!'))
                   .catch(() => alert('Something went wrong. Please try again.'));
               }}
               className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-2xl mx-auto"
-              data-readdy-form
+             
             >
               <input
                 type="email"

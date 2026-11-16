@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { sendForm } from '../../lib/forms';
 import { useEffect, useRef } from 'react';
 
 export default function CropFooter() {
@@ -104,16 +105,12 @@ export default function CropFooter() {
                 if (!email) return;
                 const formData = new URLSearchParams();
                 formData.append('email', email);
-                fetch('https://readdy.ai/api/form/d8gsdfgb91vaa813drr0', {
-                  method: 'POST',
-                  headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                  body: formData.toString(),
-                })
+                sendForm('[NEWSLETTER] New subscriber', formData)
                   .then(() => alert('Thank you for subscribing!'))
                   .catch(() => alert('Something went wrong. Please try again.'));
               }}
               className="flex flex-col sm:flex-row gap-2"
-              data-readdy-form
+             
             >
               <input
                 type="email"

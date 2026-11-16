@@ -10,11 +10,11 @@ export default function FounderPage() {
     <div className="min-h-screen bg-white">
       <title>Mr Morris Kizito Mukasa | Leadership | KWETU CONNECT</title>
       <meta name="description" content={description} />
-      <link rel="canonical" href={`https://kwetuconnect.com.au${founder.path}`} />
+      <link rel="canonical" href={`https://kwetuconnect.org${founder.path}`} />
       <meta property="og:title" content="Mr Morris Kizito Mukasa | KWETU CONNECT" />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="profile" />
-      <meta property="og:image" content={founder.photo} />
+      <meta property="og:image" content="https://kwetuconnect.org/media/morris-kizito-mukasa-share.jpg" />
 
       <Navbar />
 

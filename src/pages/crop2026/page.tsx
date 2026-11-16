@@ -269,10 +269,10 @@ export default function Crop2026() {
         "organizer": {
           "@type": "Organization",
           "name": "KWETU CONNECT PTY LTD",
-          "url": "https://kwetuconnect.com.au"
+          "url": "https://kwetuconnect.org"
         },
         "description": "Cultural Resilience, One Planet Conference 2026 - A global gathering of Indigenous leaders, policymakers, academics, and changemakers in Sydney, Australia.",
-        "url": "https://kwetuconnect.com.au/crop2026",
+        "url": "https://kwetuconnect.org/crop2026",
         "image": "https://res.cloudinary.com/dzppzxpad/image/upload/w_1200,q_auto,f_auto/v1780502472/Artboard_3_copy_2_2x_nxsxcz.png"
       })}</script>
 

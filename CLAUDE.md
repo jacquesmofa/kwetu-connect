@@ -2,8 +2,8 @@
 
 Australian consultancy (Sydney) on cultural heritage, health equity, sustainable trade and community resilience; also hosts CROP Conference 2026 pages.
 
-- Live domain: kwetuconnect.com / kwetuconnect.org / kwetu4communities.org all appear in code: confirm which is live
-- Host: ❓ not set up (no deploy workflow)
+- Live domain: https://kwetuconnect.org (the only one; confirmed 15 Nov 2026). kwetu4communities.org is the sister organisation.
+- Host: Hostinger. Contact and forms email: info@kwetuconnect.org
 - Design and audience: see `brand-dna.md`. Placeholders: `PLACEHOLDERS.md` (create it when you find one).
 
 ## Studio rules (Jacques' web studio: apply to every task)
@@ -22,7 +22,8 @@ Australian consultancy (Sydney) on cultural heritage, health equity, sustainable
 - Routes: `/`, `/about`, `/contact`, `/crop2026`, `/crop2026/kwetu-connect`, `/crop2026/ldii`, `/crop2026/outcomes`, `/crop2026/partnership`, `/crop2026/pillars`, `/crop2026/programme`, `/crop2026/register`, `/crop2026/thrive-tours`, `/crop2026/venue`, `/crop2026/vision`, `/gallery`, `/health-recruitment`, `/privacy-policy`, `/programs`, `/terms-of-service`.
 
 ## Deploy
-- No deploy workflow. Add the studio FTP workflow (copy `jacquesmofa/SANKOFA/.github/workflows/deploy.yml`) once the host is known.
+- `.github/workflows/deploy.yml` (studio standard, adapted to Hostinger): push to `main` → `npm ci && npm run build` → FTP upload of `out/` → live check of https://kwetuconnect.org. Secrets `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`; the workflow finds the site folder itself (`./`, `public_html/` or `domains/kwetuconnect.org/public_html/`). Optional variables: `SITE_URL`, `FTP_SERVER_DIR`, `FTP_PROTOCOL` (default ftp). Without the secrets it builds and uploads nothing.
+- `public/.htaccess`: simple SPA fallback (same rules as the studio's other Hostinger site, KWB).
 
 ## Where things live
 - Pages: `src/pages/<page>/` (one folder per page, sections in `components/`). Routes: `src/router/`.
@@ -31,7 +32,7 @@ Australian consultancy (Sydney) on cultural heritage, health equity, sustainable
 
 ## Known issues (found 10 Nov 2026)
 - 148 Readdy AI placeholder image URLs (`readdy.ai/api/search-image`) are still in the code. Replace them with real photos and track the rest in `PLACEHOLDERS.md`.
-- Some forms post to Readdy's form service (`readdy.ai/api/form`). Move them to Web3Forms with the client's email (studio standard) and test that a message actually arrives.
+- Forms: moved to Web3Forms on 15 Nov 2026 (`src/lib/forms.ts`, key for info@kwetuconnect.org). Test that a message arrives after the first deploy.
 - Duplicates the CROP 2026 conference that also has its own repo (`crop2026`). Decide which one is the source of truth.
 - CROP 2026 dates (6–8 Nov 2026) have now passed: event pages need a 'thank you / outcomes' update.
 - Design overlap with other clients: Navy + gold is shared with LDII (navy) and several gold sites. Must diverge.
@@ -39,4 +40,4 @@ Australian consultancy (Sydney) on cultural heritage, health equity, sustainable
 ## Leadership profile (15 Nov 2026)
 - `src/content/founder.json` holds Mr Morris Kizito Mukasa's profile (his text, verbatim, in 8 chapters). `src/components/feature/FounderProfile.tsx` shows it chapter by chapter ("Read more" opens the next one; `preview` mode on the home page links to the full page `/about/morris-kizito-mukasa`). Edit the JSON, not the component.
 - Invented team members were removed from the About page. See PLACEHOLDERS.md.
-- `out/` is committed in this repo and there is still no deploy workflow: a push does not publish anything.
+- `out/` is no longer committed (15 Nov); the workflow builds it.

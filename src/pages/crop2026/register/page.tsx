@@ -1,4 +1,5 @@
 import CropConferenceLayout from '../components/CropConferenceLayout';
+import { sendForm } from '../../../lib/forms';
 import { useState } from 'react';
 
 export default function RegisterPage() {
@@ -51,11 +52,7 @@ export default function RegisterPage() {
     formDataToSend.append('accessibilityNeeds', formData.accessibilityNeeds);
     formDataToSend.append('updatesConsent', String(formData.updatesConsent));
 
-    fetch('https://readdy.ai/api/form/d8gseu8b91vaa813drt0', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: formDataToSend.toString(),
-    })
+    sendForm('[CROP] Conference registration', formDataToSend)
       .then(() => setSubmitted(true))
       .catch(() => alert('Something went wrong. Please try again or contact us at info@kwetuconnect.org.'));
   };
@@ -114,7 +111,7 @@ export default function RegisterPage() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="bg-gray-50 rounded-2xl p-8 md:p-10 border border-gray-100" data-readdy-form>
+              <form onSubmit={handleSubmit} className="bg-gray-50 rounded-2xl p-8 md:p-10 border border-gray-100">
                 {/*
                   ============================================================
                   CROP CONFERENCE 2026 — REGISTRATION FORM

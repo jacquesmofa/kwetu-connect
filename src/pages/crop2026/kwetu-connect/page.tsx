@@ -152,7 +152,7 @@ export default function KwetuConnectPage() {
               <div className="bg-gradient-to-br from-[#0A2540] to-[#1a4a7a] p-8 flex flex-col items-center justify-center text-center">
                 <div className="w-28 h-28 rounded-full overflow-hidden border-4 border-[#D4AF37] mb-4 shadow-lg">
                   <img
-                    src="https://storage.readdy-site.link/project_files/62382cf1-e612-4aa3-9bbe-3e19cc10d1a0/7124da38-127c-404e-bb3d-15d24652c871_Morris-Kisito.webp?v=1f34e2e27ac9ec24b6488ff406a2481b"
+                    src="/media/morris-kizito-mukasa.webp"
                     alt="Portrait of Mr Morris Kizito Mukasa"
                     className="w-full h-full object-cover"
                   />

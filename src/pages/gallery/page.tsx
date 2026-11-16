@@ -154,10 +154,10 @@ const GalleryPage = () => {
       <title>Gallery | KWETU CONNECT | CROP CONFERENCE 2026 Cultural Resilience Events & Community Programs</title>
       <meta name="description" content="Browse the KWETU CONNECT & CROP CONFERENCE 2026 gallery showcasing conference highlights, cultural performances, community programs, team & partners, and venue photography across Australia." />
       <meta name="keywords" content="KWETU CONNECT gallery, CROP CONFERENCE, CROP 2026 photos, cultural events Australia, community programs gallery, Sydney conference photography, cultural resilience events" />
-      <link rel="canonical" href="https://kwetuconnect.com.au/gallery" />
+      <link rel="canonical" href="https://kwetuconnect.org/gallery" />
       <meta property="og:title" content="Gallery | KWETU CONNECT | CROP 2026 & Cultural Events" />
       <meta property="og:description" content="Visual highlights from CROP 2026 conference, cultural performances, community programs, and partnerships." />
-      <meta property="og:url" content="https://kwetuconnect.com.au/gallery" />
+      <meta property="og:url" content="https://kwetuconnect.org/gallery" />
       <meta property="og:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
       <meta property="twitter:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
 
