@@ -1,0 +1,2 @@
+const n="b231fd38-ebeb-445c-a43e-ca760b118db5";async function c(a,e){const s=e instanceof URLSearchParams?Object.fromEntries(e.entries()):e,t=await fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify({access_key:n,subject:a,from_name:"KWETU CONNECT website",replyto:s.email||void 0,...s})}),o=await t.json().catch(()=>null);if(!t.ok||!o?.success)throw new Error(o?.message||"The message could not be sent")}export{c as s};
+//# sourceMappingURL=forms-B1-j0d2d.js.map
