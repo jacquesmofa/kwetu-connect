@@ -67,7 +67,7 @@ export default function Footer() {
               {/* Logo Image */}
               <div className="w-12 h-12 glass-effect-gold rounded-lg flex items-center justify-center group-hover:bg-accent/30 transition-all duration-500 volumetric-glow">
                 <img 
-                  src="https://static.readdy.ai/image/2e117e8c7ffa34e61699363cecaf86d3/fc5ec43ccf97931d43a5fa168938a37f.png" 
+                  src="https://res.cloudinary.com/dhjajm7ru/image/upload/w_200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" 
                   alt="KWETU CONNECT Logo" 
                   className="w-10 h-10 object-contain"
                 />

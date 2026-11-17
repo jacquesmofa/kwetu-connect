@@ -56,7 +56,7 @@ export default function FounderProfile({ preview = false }: { preview?: boolean 
           </div>
 
           <ul className="mt-10 flex flex-wrap gap-x-3 gap-y-1 text-sm text-gray-600 justify-center lg:justify-start">
-            {founder.identity.map((line, i) => (
+            {(founder.identity || []).map((line, i) => (
               <li key={line} className="flex items-center gap-3">
                 {i > 0 && <span className="w-1 h-1 rounded-full bg-accent" aria-hidden="true" />}
                 {line}
@@ -88,7 +88,7 @@ export default function FounderProfile({ preview = false }: { preview?: boolean 
 
       {/* Chapters */}
       <div className="lg:col-span-8">
-        <p className="text-[#8a6d10] font-semibold tracking-wide text-sm uppercase">{founder.titles.join(' · ')}</p>
+        <p className="text-[#8a6d10] font-semibold tracking-wide text-sm uppercase">{(founder.titles || []).join(' · ')}</p>
         <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-primary font-['Playfair_Display'] leading-tight">{founder.name}</h2>
 
         <div className="mt-8 relative">
@@ -104,7 +104,7 @@ export default function FounderProfile({ preview = false }: { preview?: boolean 
               <span className="absolute left-0 top-1 w-6 h-6 rounded-full bg-white border-2 border-accent flex items-center justify-center text-[10px] font-bold text-primary" aria-hidden="true">{i + 1}</span>
               <h3 id={`profile-${c.id}-title`} tabIndex={-1} className="text-xl sm:text-2xl font-bold text-primary font-['Playfair_Display'] outline-none">{c.title}</h3>
               <div className="mt-4 space-y-4 text-gray-700 leading-relaxed text-base sm:text-[17px]">
-                {(c.blocks as Block[]).slice(0, preview ? 2 : undefined).map((b, k) =>
+                {((c.blocks || []) as Block[]).slice(0, preview ? 2 : undefined).map((b, k) =>
                   b.type === 'list' ? (
                     <ul key={k} className="space-y-2">
                       {(b.items || []).map((item) => (

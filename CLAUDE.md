@@ -48,3 +48,9 @@ Australian consultancy (Sydney) on cultural heritage, health equity, sustainable
 - Icons and the default share picture are the KWETU logo served by Cloudinary at the right sizes (`index.html`, `public/site.webmanifest`); CROP pages swap the browser icon in `App.tsx`.
 - Gallery (`src/mocks/gallery.ts`): real photos only, one album "Multicultural Mass 2022" (313 photos). Grids load small pictures (`w_640`), the viewer the large one. Never add AI or stock pictures as event photos.
 - Invented testimonials were removed from Home and Health Recruitment. See PLACEHOLDERS.md.
+
+## Editors (17 Nov 2026)
+- Pages CMS (`.pages.yml`) and Sveltia (`public/admin/`, https://kwetuconnect.org/admin/) edit `src/content/founder.json` and `src/content/seo.json`. BOTH GENERATED: `npm run cms:config` from the JSON + `scripts/cms-registry.mjs`; `npm run cms:check`. Never edit them by hand.
+- Sveltia sign-in: "Sign In Using Access Token" only (Hostinger publishes from the `live` branch, so no login secret can live on the server).
+- Not yet editable: page text (still in the components), gallery (`src/mocks/gallery.ts`). Next step: move them to `src/content/` (LDII is the model).
+- Logo in header and footers now comes from Cloudinary (it was on Readdy's servers).
