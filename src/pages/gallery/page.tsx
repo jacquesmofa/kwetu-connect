@@ -27,7 +27,7 @@ import { galleryCategories, galleryImages } from '../../mocks/gallery';
 const GalleryPage = () => {
   /* ─── STATE ─── */
   const [viewMode, setViewMode] = useState<'overview' | 'category'>('overview');
-  const [activeCategory, setActiveCategory] = useState<string>('conference');
+  const [activeCategory, setActiveCategory] = useState<string>(galleryCategories[0].id);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const [showGridTitles, setShowGridTitles] = useState(true);
@@ -151,15 +151,6 @@ const GalleryPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <title>Gallery | KWETU CONNECT | CROP CONFERENCE 2026 Cultural Resilience Events & Community Programs</title>
-      <meta name="description" content="Browse the KWETU CONNECT & CROP CONFERENCE 2026 gallery showcasing conference highlights, cultural performances, community programs, team & partners, and venue photography across Australia." />
-      <meta name="keywords" content="KWETU CONNECT gallery, CROP CONFERENCE, CROP 2026 photos, cultural events Australia, community programs gallery, Sydney conference photography, cultural resilience events" />
-      <link rel="canonical" href="https://kwetuconnect.org/gallery" />
-      <meta property="og:title" content="Gallery | KWETU CONNECT | CROP 2026 & Cultural Events" />
-      <meta property="og:description" content="Visual highlights from CROP 2026 conference, cultural performances, community programs, and partnerships." />
-      <meta property="og:url" content="https://kwetuconnect.org/gallery" />
-      <meta property="og:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
-      <meta property="twitter:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
 
       <Navbar />
 
@@ -168,8 +159,8 @@ const GalleryPage = () => {
           ═══════════════════════════════════════════════════════════════════ */}
       <section className="relative h-[45vh] md:h-[50vh] min-h-[300px] overflow-hidden">
         <img
-          src="https://readdy.ai/api/search-image?query=professional%20photo%20gallery%20exhibition%20modern%20elegant%20design%20warm%20lighting%20diverse%20community%20moments%20cultural%20heritage%20celebration%20memories%20display%20wall%20high%20quality%20photography%20simple%20clean%20background&width=1920&height=1080&seq=gallery-hero-main&orientation=landscape"
-          alt="KWETU CONNECT Gallery"
+          src="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1600,q_auto,f_auto/v1779237221/GPP2022_-_Multicultural_Mass-2_kmwutg.jpg"
+          alt="Multicultural Mass celebration, 2022"
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A2540]/80 via-[#0A2540]/70 to-[#0A2540]/80"></div>
@@ -319,7 +310,7 @@ const GalleryPage = () => {
                         >
                           <div className="relative overflow-hidden rounded-xl bg-gray-100 shadow-sm hover:shadow-lg transition-all duration-500">
                             <img
-                              src={item.url}
+                              src={thumb(item.url)}
                               alt={item.title}
                               className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
                               loading="lazy"
@@ -392,7 +383,7 @@ const GalleryPage = () => {
                   >
                     <div className="relative overflow-hidden rounded-xl bg-gray-100 shadow-sm hover:shadow-xl transition-shadow duration-500">
                       <img
-                        src={item.url}
+                        src={thumb(item.url)}
                         alt={item.title}
                         className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
                         loading="lazy"
@@ -514,7 +505,7 @@ const GalleryPage = () => {
               initial={{ opacity: 0, scale: 0.96 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3 }}
-              src={selectedItem.url}
+              src={selectedItem.url.replace('/w_1200,', '/w_1600,')}
               alt={selectedItem.title}
               className="max-w-full max-h-[72vh] object-contain rounded-lg select-none"
               onClick={(e) => e.stopPropagation()}
@@ -548,5 +539,8 @@ const GalleryPage = () => {
     </div>
   );
 };
+
+// Grid pictures are loaded small; the full-size picture opens in the viewer.
+const thumb = (url: string) => url.replace('/w_1200,', '/w_640,');
 
 export default GalleryPage;

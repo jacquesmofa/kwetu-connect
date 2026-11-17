@@ -53,15 +53,6 @@ const ContactPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* SEO Metadata */}
-      <title>Contact KWETU CONNECT | Partnership Inquiries | Sydney NSW Australia</title>
-      <meta name="description" content="Contact KWETU CONNECT PTY LTD for partnership inquiries, CROP CONFERENCE 2026 sponsorship, and community development collaborations. Based in Sydney, NSW Australia. Call 02 4627 9742." />
-      <meta name="keywords" content="contact KWETU CONNECT, CROP CONFERENCE, CROP 2026 sponsorship, partnership inquiry Sydney, CROP Conference 2026 sponsorship, community development partnership Australia" />
-      <link rel="canonical" href="https://kwetuconnect.org/contact" />
-      <meta property="og:title" content="Contact KWETU CONNECT | CROP CONFERENCE 2026 Partnership Inquiries Sydney Australia" />
-      <meta property="og:description" content="Reach out to KWETU CONNECT for CROP CONFERENCE 2026 sponsorship, partnership opportunities, and community development collaborations in Sydney, Australia." />
-      <meta property="og:url" content="https://kwetuconnect.org/contact" />
-      <meta property="og:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
-      <meta property="twitter:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
 
       <Navbar />
 

@@ -5,16 +5,8 @@ import FounderProfile from '../../../components/feature/FounderProfile';
 import founder from '../../../content/founder.json';
 
 export default function FounderPage() {
-  const description = 'Profile of Mr Morris Kizito Mukasa, Chief Executive Officer of KWETU CONNECT: humanitarian, cultural integration advocate and community leader.';
   return (
     <div className="min-h-screen bg-white">
-      <title>Mr Morris Kizito Mukasa | Leadership | KWETU CONNECT</title>
-      <meta name="description" content={description} />
-      <link rel="canonical" href={`https://kwetuconnect.org${founder.path}`} />
-      <meta property="og:title" content="Mr Morris Kizito Mukasa | KWETU CONNECT" />
-      <meta property="og:description" content={description} />
-      <meta property="og:type" content="profile" />
-      <meta property="og:image" content="https://kwetuconnect.org/media/morris-kizito-mukasa-share.jpg" />
 
       <Navbar />
 

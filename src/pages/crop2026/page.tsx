@@ -232,20 +232,6 @@ export default function Crop2026() {
 
   return (
     <div className="min-h-screen bg-white">
-      <title>CROP CONFERENCE 2026 | Cultural Resilience, One Planet | The Dome, Sydney Showground | November 6-8</title>
-      <meta name="description" content="CROP CONFERENCE 2026 — Cultural Resilience, One Planet. Join 800+ global Indigenous & cultural leaders, policymakers, academics, private sector innovators, and youth changemakers at The Dome, Sydney Showground, November 6-8, 2026. Co-organized by KWETU CONNECT, Thrive Tours & LDII." />
-      <meta name="keywords" content="CROP CONFERENCE, CROP 2026, Cultural Resilience One Planet, Sydney conference 2026, Sydney Showground, Indigenous conference Australia, KWETU CONNECT, Thrive Tours, LDII, cultural resilience conference" />
-      <link rel="canonical" href="https://kwetuconnect.org/crop2026" />
-      <meta property="og:title" content="CROP CONFERENCE 2026 — Cultural Resilience, One Planet | Sydney, Australia" />
-      <meta property="og:description" content="CROP CONFERENCE 2026 — Join 800+ global leaders at The Dome, Sydney Showground for three transformative days. November 6-8, 2026. Cultural Resilience, One Planet. Co-organized by KWETU CONNECT, Thrive Tours & LDII." />
-      <meta property="og:url" content="https://kwetuconnect.org/crop2026" />
-      <meta property="og:type" content="event" />
-      <meta property="og:site_name" content="CROP CONFERENCE 2026" />
-      <meta property="og:image" content="https://res.cloudinary.com/dzppzxpad/image/upload/w_1200,q_auto,f_auto/v1780502472/Artboard_3_copy_2_2x_nxsxcz.png" />
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:title" content="CROP CONFERENCE 2026 — Cultural Resilience, One Planet | Sydney" />
-      <meta property="twitter:description" content="Join 800+ global leaders at CROP CONFERENCE 2026. November 6-8, The Dome, Sydney Showground. Cultural Resilience, One Planet." />
-      <meta property="twitter:image" content="https://res.cloudinary.com/dzppzxpad/image/upload/w_1200,q_auto,f_auto/v1780502472/Artboard_3_copy_2_2x_nxsxcz.png" />
       <script type="application/ld+json">{JSON.stringify({
         "@context": "https://schema.org",
         "@type": "Event",

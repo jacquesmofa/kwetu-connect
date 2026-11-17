@@ -6,8 +6,6 @@ export default function ThriveToursPage() {
 
   return (
     <CropConferenceLayout>
-      <title>Thrive Tours | Co-Organizer CROP 2026</title>
-      <meta name="description" content="Thrive Tours - Co-Organizer of CROP 2026. 100% Indigenous-owned eco-cultural tour company offering authentic land-based experiences in Northern Ontario." />
 
       {/* ─── BACK NAVIGATION ─── */}
       <div className="bg-white border-b border-gray-100 pt-20">

@@ -6,8 +6,6 @@ export default function KwetuConnectPage() {
 
   return (
     <CropConferenceLayout>
-      <title>KWETU CONNECT PTY LTD | Co-Organizer CROP 2026</title>
-      <meta name="description" content="KWETU CONNECT PTY LTD - Co-Organizer of CROP 2026. Redefining cultural understanding of care among Indigenous communities." />
 
       {/* ─── BACK NAVIGATION ─── */}
       <div className="bg-white border-b border-gray-100 pt-20">

@@ -52,11 +52,7 @@
    The new tab will appear automatically on the gallery page.
    ──────────────────────────────────────────────────────────────────────── */
 export const galleryCategories = [
-  { id: 'conference', name: 'CROP 2026 Conference' },
-  { id: 'performances', name: 'Cultural Performances' },
-  { id: 'community', name: 'Community Programs' },
-  { id: 'team', name: 'Team & Partners' },
-  { id: 'venue', name: 'Venue & Location' },
+  { id: 'mass', name: 'Multicultural Mass 2022' },
 ];
 
 /* ──────────────────────────────────────────────────────────────────────────
@@ -103,7 +99,7 @@ export const galleryCategories = [
 
    {
      id: 'your-unique-id',
-     category: 'performances',     // <-- pick the right category id
+     category: 'mass',     // <-- pick the right category id
      title: 'Your Photo Title',
      description: 'A short sentence describing what is in this photo.',
      url: 'https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1234567890/folder/photo.jpg',
@@ -189,9 +185,7 @@ function mm(
   ver: string,
   code: string
 ): GalleryImage {
-  // idx % 2 === 0  →  'performances' category
-  // idx % 2 === 1  →  'community' category
-  const cat = idx % 2 === 0 ? 'performances' : 'community';
+  const cat = 'mass'; // one album: every photo here is from the same celebration
   return {
     id: `mm-${idx}`,
     category: cat,
@@ -219,7 +213,7 @@ function mm(
 
 export const galleryImages: GalleryImage[] = [
   /* ═══════════════════════════════════════════════════════════════════════
-     CATEGORY 1: CULTURAL PERFORMANCES
+     ALBUM: MULTICULTURAL MASS 2022 (part 1)
      ───────────────────────────────────────────────────────────────────────
      These photos appear under the "Cultural Performances" tab and in the
      Cultural Performances preview section on the overview page.
@@ -386,7 +380,7 @@ export const galleryImages: GalleryImage[] = [
   mm(314, 1, 'v1779237222', 'zzoif1'),
 
   /* ═══════════════════════════════════════════════════════════════════════
-     CATEGORY 2: COMMUNITY PROGRAMS
+     ALBUM: MULTICULTURAL MASS 2022 (part 2)
      ───────────────────────────────────────────────────────────────────────
      These photos appear under the "Community Programs" tab and in the
      Community Programs preview section on the overview page.
@@ -550,140 +544,6 @@ export const galleryImages: GalleryImage[] = [
   mm(309, 4, 'v1779237221', 'vpz1q7'),
 
   /* ═══════════════════════════════════════════════════════════════════════
-     CATEGORY 3: CROP 2026 CONFERENCE
-     ───────────────────────────────────────────────────────────────────────
-     These are placeholder / mock images for the CROP 2026 Conference
-     category. When you have real photos from the conference, replace
-     these URLs with your Cloudinary URLs.
-     ═══════════════════════════════════════════════════════════════════════ */
-  {
-    id: 'conf-01',
-    category: 'conference',
-    title: 'Opening Ceremony 2026',
-    description: 'Grand opening of CROP 2026 with keynote speakers and cultural welcome ceremony at The Dome, Sydney Showground.',
-    url: 'https://readdy.ai/api/search-image?query=international%20conference%20grand%20opening%20ceremony%20large%20auditorium%20stage%20professional%20lighting%20keynote%20speaker%20podium%20diverse%20audience%20seated%20elegant%20modern%20venue%20Sydney%20Australia%20high%20quality%20photography&width=1200&height=800&seq=gallery-conf-01&orientation=landscape',
-    aspectRatio: 'wide',
-  },
-  {
-    id: 'conf-02',
-    category: 'conference',
-    title: 'Panel Discussion Session',
-    description: 'Distinguished panel of Indigenous leaders, policymakers, and academics discussing cultural resilience frameworks.',
-    url: 'https://readdy.ai/api/search-image?query=diverse%20panel%20discussion%20international%20conference%20round%20table%20professional%20setting%20Indigenous%20leaders%20policymakers%20academics%20cultural%20resilience%20modern%20conference%20room%20microphones%20presentation%20screen&width=800&height=1000&seq=gallery-conf-02&orientation=portrait',
-    aspectRatio: 'tall',
-  },
-  {
-    id: 'conf-03',
-    category: 'conference',
-    title: 'Workshop in Progress',
-    description: 'Interactive workshop session on integrating traditional knowledge with modern sustainability practices.',
-    url: 'https://readdy.ai/api/search-image?query=interactive%20workshop%20session%20diverse%20participants%20collaborating%20around%20tables%20flip%20charts%20sticky%20notes%20modern%20conference%20room%20natural%20lighting%20engaged%20discussion%20cultural%20theme%20professional%20photography&width=1200&height=800&seq=gallery-conf-03&orientation=landscape',
-    aspectRatio: 'wide',
-  },
-  {
-    id: 'conf-04',
-    category: 'conference',
-    title: 'Delegate Networking',
-    description: 'International delegates connecting during the welcome reception at the conference foyer.',
-    url: 'https://readdy.ai/api/search-image?query=professional%20networking%20event%20conference%20foyer%20diverse%20international%20delegates%20shaking%20hands%20exchanging%20business%20cards%20elegant%20modern%20venue%20warm%20lighting%20cocktail%20reception&width=800&height=1000&seq=gallery-conf-04&orientation=portrait',
-    aspectRatio: 'tall',
-  },
-  {
-    id: 'conf-05',
-    category: 'conference',
-    title: 'Awards Gala Evening',
-    description: 'Evening gala celebrating outstanding contributions to cultural resilience and community care.',
-    url: 'https://readdy.ai/api/search-image?query=elegant%20gala%20dinner%20awards%20ceremony%20large%20ballroom%20round%20tables%20candlelight%20chandelier%20stage%20presentation%20formal%20evening%20event%20celebration%20professional%20photography&width=1200&height=800&seq=gallery-conf-05&orientation=landscape',
-    aspectRatio: 'wide',
-  },
-  {
-    id: 'conf-06',
-    category: 'conference',
-    title: 'Closing Plenary',
-    description: 'Final plenary session summarizing key outcomes and future commitments for cultural resilience.',
-    url: 'https://readdy.ai/api/search-image?query=large%20conference%20plenary%20session%20auditorium%20full%20audience%20speaker%20on%20stage%20presentation%20screen%20final%20session%20professional%20modern%20venue%20bright%20lighting%20diverse%20attendees&width=1200&height=800&seq=gallery-conf-06&orientation=landscape',
-    aspectRatio: 'wide',
-  },
-
-  /* ═══════════════════════════════════════════════════════════════════════
-     CATEGORY 4: TEAM & PARTNERS
-     ───────────────────────────────────────────────────────────────────────
-     Placeholder / mock images for the Team & Partners category.
-     Replace with real team photos when available on Cloudinary.
-     ═══════════════════════════════════════════════════════════════════════ */
-  {
-    id: 'team-01',
-    category: 'team',
-    title: 'KWETU Leadership Team',
-    description: 'The core leadership team behind CROP 2026 and KWETU CONNECT initiatives.',
-    url: 'https://readdy.ai/api/search-image?query=diverse%20professional%20leadership%20team%20group%20photo%20modern%20office%20setting%20confident%20business%20attire%20multicultural%20team%20corporate%20portrait%20natural%20lighting%20professional%20photography&width=1200&height=800&seq=gallery-team-01&orientation=landscape',
-    aspectRatio: 'wide',
-  },
-  {
-    id: 'team-02',
-    category: 'team',
-    title: 'International Partnership Meeting',
-    description: 'Meeting with UN agency representatives and international development partners.',
-    url: 'https://readdy.ai/api/search-image?query=international%20partnership%20meeting%20diverse%20delegates%20conference%20table%20formal%20agreement%20signing%20handshake%20professional%20setting%20modern%20boardroom%20UN%20agencies%20representatives%20professional%20photography&width=800&height=1000&seq=gallery-team-02&orientation=portrait',
-    aspectRatio: 'tall',
-  },
-  {
-    id: 'team-03',
-    category: 'team',
-    title: 'Organizers Group Photo',
-    description: 'Co-organizers from KWETU CONNECT, LDII, and Thrive Tours at CROP 2026.',
-    url: 'https://readdy.ai/api/search-image?query=diverse%20organizing%20committee%20group%20photo%20conference%20venue%20smiling%20team%20multicultural%20group%20professional%20event%20organizers%20name%20badges%20lanyards%20modern%20venue%20background&width=1200&height=800&seq=gallery-team-03&orientation=landscape',
-    aspectRatio: 'wide',
-  },
-  {
-    id: 'team-04',
-    category: 'team',
-    title: 'Volunteer Team',
-    description: 'Dedicated volunteers who made CROP 2026 possible through their commitment and energy.',
-    url: 'https://readdy.ai/api/search-image?query=diverse%20volunteer%20team%20group%20photo%20matching%20t-shirts%20community%20event%20helpers%20smiling%20energetic%20team%20outdoor%20venue%20professional%20photography%20natural%20lighting%20cheerful%20atmosphere&width=1200&height=800&seq=gallery-team-04&orientation=landscape',
-    aspectRatio: 'wide',
-  },
-
-  /* ═══════════════════════════════════════════════════════════════════════
-     CATEGORY 5: VENUE & LOCATION
-     ───────────────────────────────────────────────────────────────────────
-     Placeholder / mock images for the Venue & Location category.
-     Replace with real venue photos when available on Cloudinary.
-     ═══════════════════════════════════════════════════════════════════════ */
-  {
-    id: 'venue-01',
-    category: 'venue',
-    title: 'The Dome, Sydney Showground',
-    description: 'Exterior view of the iconic Dome venue hosting CROP 2026 conference proceedings.',
-    url: 'https://readdy.ai/api/search-image?query=Sydney%20Showground%20The%20Dome%20exterior%20modern%20architectural%20photography%20impressive%20dome%20structure%20blue%20sky%20professional%20event%20venue%20Sydney%20Olympic%20Park%20wide%20angle%20shot%20high%20quality&width=1200&height=800&seq=gallery-venue-01&orientation=landscape',
-    aspectRatio: 'wide',
-  },
-  {
-    id: 'venue-02',
-    category: 'venue',
-    title: 'Sydney Olympic Park Aerial',
-    description: 'Stunning aerial view of the Sydney Olympic Park precinct surrounding the conference venue.',
-    url: 'https://readdy.ai/api/search-image?query=Sydney%20Olympic%20Park%20aerial%20view%20precinct%20green%20parklands%20modern%20stadium%20facilities%20Homebush%20Bay%20NSW%20Australia%20dramatic%20sky%20professional%20drone%20photography%20wide%20panoramic%20high%20quality&width=1200&height=800&seq=gallery-venue-02&orientation=landscape',
-    aspectRatio: 'wide',
-  },
-  {
-    id: 'venue-03',
-    category: 'venue',
-    title: 'Sydney Opera House & Harbour',
-    description: 'Iconic Sydney Harbour featuring the Opera House and Harbour Bridge at golden hour.',
-    url: 'https://readdy.ai/api/search-image?query=Sydney%20Opera%20House%20Harbour%20Bridge%20golden%20hour%20sunset%20iconic%20Australian%20landmarks%20harbor%20view%20professional%20travel%20photography%20stunning%20sky%20reflection%20water%20high%20quality&width=800&height=1000&seq=gallery-venue-03&orientation=portrait',
-    aspectRatio: 'tall',
-  },
-  {
-    id: 'venue-04',
-    category: 'venue',
-    title: 'Conference Interior Setup',
-    description: 'Main auditorium prepared for plenary sessions with state-of-the-art AV and seating.',
-    url: 'https://readdy.ai/api/search-image?query=large%20conference%20auditorium%20interior%20modern%20venue%20stage%20setup%20professional%20lighting%20rows%20of%20seating%20presentation%20screens%20AV%20equipment%20elegant%20professional%20event%20space%20high%20quality%20photography&width=1200&height=800&seq=gallery-venue-04&orientation=landscape',
-    aspectRatio: 'wide',
-  },
-
-  /* ═══════════════════════════════════════════════════════════════════════
      👇 ADD NEW PHOTOS HERE 👇
      ───────────────────────────────────────────────────────────────────────
      To add a new photo, paste a new object right above this comment block.
@@ -693,7 +553,7 @@ export const galleryImages: GalleryImage[] = [
 
      {
        id: 'my-new-photo',
-       category: 'performances',
+       category: 'mass',
        title: 'My New Photo Title',
        description: 'A short description of what this photo shows.',
        url: 'https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1234567890/folder/photo.jpg',
@@ -701,6 +561,7 @@ export const galleryImages: GalleryImage[] = [
      },
 
      REMEMBER:
+     • Real photos only: never an AI-made or stock picture presented as an event photo.
      • The 'id' must be unique — never repeat an id.
      • The 'category' must match an id from galleryCategories above.
      • The URL must include w_1200,q_auto,f_auto for fast loading.

@@ -1,0 +1,157 @@
+{
+  "site": {
+    "name": "KWETU CONNECT",
+    "url": "https://kwetuconnect.org",
+    "image": "https://res.cloudinary.com/dhjajm7ru/image/upload/c_pad,w_1200,h_630,b_white,q_auto,f_jpg/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg",
+    "imageAlt": "KWETU CONNECT logo",
+    "locale": "en_AU"
+  },
+  "pages": [
+    {
+      "path": "/",
+      "title": "KWETU CONNECT | Culture, Health Equity and Community",
+      "description": "KWETU CONNECT PTY LTD is a Sydney consultancy working across cultural heritage, health equity, sustainable trade and community resilience."
+    },
+    {
+      "path": "/about",
+      "title": "About KWETU CONNECT | Sydney, Australia",
+      "description": "Who we are and how we work: a Sydney consultancy bridging communities, markets and institutions through culture, health equity and trade."
+    },
+    {
+      "path": "/about/morris-kizito-mukasa",
+      "title": "Mr Morris Kizito Mukasa | KWETU CONNECT",
+      "description": "The profile of Mr Morris Kizito Mukasa, Chief Executive Officer of KWETU CONNECT PTY LTD, in his own words.",
+      "image": "/media/morris-kizito-mukasa-share.jpg",
+      "imageAlt": "Mr Morris Kizito Mukasa"
+    },
+    {
+      "path": "/programs",
+      "title": "Programs and Services | KWETU CONNECT",
+      "description": "Mental health and wellbeing, cultural exchange, community chaplaincy, job opportunities, seniors and youth programs from KWETU CONNECT."
+    },
+    {
+      "path": "/health-recruitment",
+      "title": "Health Recruitment | KWETU CONNECT",
+      "description": "KWETU CONNECT connects skilled healthcare and care professionals with Australian care providers, with culturally sensitive support."
+    },
+    {
+      "path": "/gallery",
+      "title": "Gallery | KWETU CONNECT",
+      "description": "Photos from the 2022 Multicultural Mass celebration: more than 300 moments of music, culture and community."
+    },
+    {
+      "path": "/contact",
+      "title": "Contact KWETU CONNECT | Sydney NSW",
+      "description": "Contact KWETU CONNECT PTY LTD in Sydney, NSW for partnerships and community collaborations: info@kwetuconnect.org."
+    },
+    {
+      "path": "/crop2026",
+      "title": "CROP Conference 2026 | Cultural Resilience, One Planet",
+      "description": "CROP Conference 2026: Cultural Resilience, One Planet. The Dome, Sydney Showground, 6 to 8 November 2026, organised by KWETU CONNECT.",
+      "image": "https://res.cloudinary.com/dhjajm7ru/image/upload/v1781706372/Crop_rounded_big_zgkob2.png",
+      "imageAlt": "CROP Conference 2026 logo",
+      "imageWidth": 1200,
+      "imageHeight": 1200
+    },
+    {
+      "path": "/crop2026/vision",
+      "title": "Vision | CROP Conference 2026",
+      "description": "The vision behind CROP Conference 2026: cultural resilience as a foundation for one shared planet.",
+      "image": "https://res.cloudinary.com/dhjajm7ru/image/upload/v1781706372/Crop_rounded_big_zgkob2.png",
+      "imageAlt": "CROP Conference 2026 logo",
+      "imageWidth": 1200,
+      "imageHeight": 1200
+    },
+    {
+      "path": "/crop2026/pillars",
+      "title": "Pillars | CROP Conference 2026",
+      "description": "The thematic pillars of CROP Conference 2026: cultural heritage, climate action, Indigenous knowledge and community resilience.",
+      "image": "https://res.cloudinary.com/dhjajm7ru/image/upload/v1781706372/Crop_rounded_big_zgkob2.png",
+      "imageAlt": "CROP Conference 2026 logo",
+      "imageWidth": 1200,
+      "imageHeight": 1200
+    },
+    {
+      "path": "/crop2026/programme",
+      "title": "Programme | CROP Conference 2026",
+      "description": "The three-day programme of CROP Conference 2026 at The Dome, Sydney Showground, 6 to 8 November 2026.",
+      "image": "https://res.cloudinary.com/dhjajm7ru/image/upload/v1781706372/Crop_rounded_big_zgkob2.png",
+      "imageAlt": "CROP Conference 2026 logo",
+      "imageWidth": 1200,
+      "imageHeight": 1200
+    },
+    {
+      "path": "/crop2026/outcomes",
+      "title": "Outcomes | CROP Conference 2026",
+      "description": "The outcomes CROP Conference 2026 set out to achieve for communities, policy and partnerships.",
+      "image": "https://res.cloudinary.com/dhjajm7ru/image/upload/v1781706372/Crop_rounded_big_zgkob2.png",
+      "imageAlt": "CROP Conference 2026 logo",
+      "imageWidth": 1200,
+      "imageHeight": 1200
+    },
+    {
+      "path": "/crop2026/venue",
+      "title": "Venue | CROP Conference 2026",
+      "description": "The Dome at Sydney Showground, Sydney Olympic Park: the venue of CROP Conference 2026.",
+      "image": "https://res.cloudinary.com/dhjajm7ru/image/upload/v1781706372/Crop_rounded_big_zgkob2.png",
+      "imageAlt": "CROP Conference 2026 logo",
+      "imageWidth": 1200,
+      "imageHeight": 1200
+    },
+    {
+      "path": "/crop2026/partnership",
+      "title": "Partnership | CROP Conference 2026",
+      "description": "Partnership and sponsorship opportunities with CROP Conference 2026 and KWETU CONNECT.",
+      "image": "https://res.cloudinary.com/dhjajm7ru/image/upload/v1781706372/Crop_rounded_big_zgkob2.png",
+      "imageAlt": "CROP Conference 2026 logo",
+      "imageWidth": 1200,
+      "imageHeight": 1200
+    },
+    {
+      "path": "/crop2026/register",
+      "title": "Register | CROP Conference 2026",
+      "description": "Registration information for CROP Conference 2026: Cultural Resilience, One Planet, Sydney.",
+      "image": "https://res.cloudinary.com/dhjajm7ru/image/upload/v1781706372/Crop_rounded_big_zgkob2.png",
+      "imageAlt": "CROP Conference 2026 logo",
+      "imageWidth": 1200,
+      "imageHeight": 1200
+    },
+    {
+      "path": "/crop2026/kwetu-connect",
+      "title": "KWETU CONNECT | Co-Organizer, CROP 2026",
+      "description": "KWETU CONNECT PTY LTD, co-organizer of CROP Conference 2026, and its Chief Executive Officer Mr Morris Kizito Mukasa.",
+      "image": "https://res.cloudinary.com/dhjajm7ru/image/upload/v1781706372/Crop_rounded_big_zgkob2.png",
+      "imageAlt": "CROP Conference 2026 logo",
+      "imageWidth": 1200,
+      "imageHeight": 1200
+    },
+    {
+      "path": "/crop2026/ldii",
+      "title": "LDII | Co-Organizer, CROP 2026",
+      "description": "LDII, co-organizer of CROP Conference 2026: Cultural Resilience, One Planet.",
+      "image": "https://res.cloudinary.com/dhjajm7ru/image/upload/v1781706372/Crop_rounded_big_zgkob2.png",
+      "imageAlt": "CROP Conference 2026 logo",
+      "imageWidth": 1200,
+      "imageHeight": 1200
+    },
+    {
+      "path": "/crop2026/thrive-tours",
+      "title": "Thrive Tours | Co-Organizer, CROP 2026",
+      "description": "Thrive Tours, an Indigenous-owned eco-cultural tour company and co-organizer of CROP Conference 2026.",
+      "image": "https://res.cloudinary.com/dhjajm7ru/image/upload/v1781706372/Crop_rounded_big_zgkob2.png",
+      "imageAlt": "CROP Conference 2026 logo",
+      "imageWidth": 1200,
+      "imageHeight": 1200
+    },
+    {
+      "path": "/privacy-policy",
+      "title": "Privacy Policy | KWETU CONNECT",
+      "description": "How KWETU CONNECT PTY LTD collects, uses and protects personal information."
+    },
+    {
+      "path": "/terms-of-service",
+      "title": "Terms of Service | KWETU CONNECT",
+      "description": "The terms that apply to the use of the KWETU CONNECT website."
+    }
+  ]
+}

@@ -6,8 +6,6 @@ export default function LdiiPage() {
 
   return (
     <CropConferenceLayout>
-      <title>Livelihood Development International Initiatives (LDII) | Co-Organizer CROP 2026</title>
-      <meta name="description" content="LDII - Co-Organizer of CROP 2026. Empowering communities through sustainable livelihood programs, cultural preservation, and resilience-building initiatives." />
 
       {/* ─── BACK NAVIGATION ─── */}
       <div className="bg-white border-b border-gray-100 pt-20">

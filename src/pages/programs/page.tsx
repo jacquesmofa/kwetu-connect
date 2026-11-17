@@ -5,15 +5,6 @@ const ProgramsPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* SEO Metadata */}
-      <title>Programs & Services | KWETU CONNECT | CROP CONFERENCE 2026 | Community Wellbeing</title>
-      <meta name="description" content="Explore KWETU CONNECT's comprehensive programs — organizers of CROP CONFERENCE 2026 — including Mental Health & Wellbeing, Cultural Exchange, Community Chaplaincy, Job Opportunities, Seniors Wisdom, and community empowerment in Australia." />
-      <meta name="keywords" content="cultural resilience programs, CROP CONFERENCE, CROP 2026, community wellbeing Australia, mental health programs Sydney, cultural exchange programs, caregiver support Australia, seniors wisdom program" />
-      <link rel="canonical" href="https://kwetuconnect.org/programs" />
-      <meta property="og:title" content="Programs & Services | KWETU CONNECT | Cultural Resilience Australia" />
-      <meta property="og:description" content="Comprehensive programs for cultural resilience, mental health, community chaplaincy, job opportunities, and seniors wisdom across Australia." />
-      <meta property="og:url" content="https://kwetuconnect.org/programs" />
-      <meta property="og:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
-      <meta property="twitter:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
 
       <Navbar />
 

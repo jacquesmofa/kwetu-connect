@@ -68,15 +68,6 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* SEO Metadata */}
-      <title>About KWETU CONNECT | CROP CONFERENCE 2026 Organizer | Cultural Resilience & Community Development Australia</title>
-      <meta name="description" content="Learn about KWETU CONNECT PTY LTD — organizers of CROP CONFERENCE 2026 — Australia's leading consultancy for cultural resilience, health equity, sustainable trade, and community empowerment. Meet founder Mr Morris Mukasa." />
-      <meta name="keywords" content="KWETU CONNECT, CROP CONFERENCE, CROP 2026, cultural resilience Australia, community development Sydney, Morris Kizito Mukasa, health equity consultancy, Indigenous community support" />
-      <link rel="canonical" href="https://kwetuconnect.org/about" />
-      <meta property="og:title" content="About KWETU CONNECT | Cultural Resilience & Community Development" />
-      <meta property="og:description" content="Australia's leading consultancy bridging communities, markets and institutions through cultural resilience, health equity, and sustainable development." />
-      <meta property="og:url" content="https://kwetuconnect.org/about" />
-      <meta property="og:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
-      <meta property="twitter:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
 
       <Navbar />
 

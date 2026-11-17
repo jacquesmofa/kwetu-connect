@@ -84,27 +84,6 @@ const HealthRecruitmentPage = () => {
     },
   ];
 
-  const testimonials = [
-    {
-      quote: 'KWETU CONNECT helped me transition from overseas nursing to working in Australia. The support and guidance were exceptional.',
-      author: 'Grace Mwangi',
-      role: 'Registered Nurse',
-      avatar: 'https://readdy.ai/api/search-image?query=professional%20African%20female%20nurse%20in%20medical%20scrubs%20smiling%20confidently%20healthcare%20setting%20simple%20clean%20background&width=100&height=100&seq=nurse1&orientation=squarish',
-    },
-    {
-      quote: 'I found my dream job through KWETU CONNECT. They matched me with an organization that values cultural diversity and professional growth.',
-      author: 'Ahmed Hassan',
-      role: 'Disability Support Worker',
-      avatar: 'https://readdy.ai/api/search-image?query=professional%20male%20disability%20support%20worker%20portrait%20warm%20smile%20casual%20professional%20attire%20simple%20clean%20background&width=100&height=100&seq=worker1&orientation=squarish',
-    },
-    {
-      quote: 'The ongoing support and professional development opportunities have been incredible. I feel valued and empowered in my role.',
-      author: 'Maria Santos',
-      role: 'Personal Care Assistant',
-      avatar: 'https://readdy.ai/api/search-image?query=professional%20female%20care%20assistant%20portrait%20friendly%20smile%20healthcare%20uniform%20simple%20clean%20background&width=100&height=100&seq=care1&orientation=squarish',
-    },
-  ];
-
   const steps = [
     {
       number: '01',
@@ -147,15 +126,6 @@ const HealthRecruitmentPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* SEO Metadata */}
-      <title>Health Recruitment | KWETU CONNECT | CROP CONFERENCE 2026 | Healthcare Professionals Australia</title>
-      <meta name="description" content="KWETU CONNECT health recruitment — organizers of CROP CONFERENCE 2026 — connecting skilled healthcare professionals with Australian care providers. Culturally sensitive recruitment for nurses, caregivers, and allied health workers." />
-      <meta name="keywords" content="health recruitment Australia, CROP CONFERENCE, CROP 2026, healthcare professionals Sydney, caregiver recruitment, nursing jobs Australia, culturally sensitive healthcare recruitment" />
-      <link rel="canonical" href="https://kwetuconnect.org/health-recruitment" />
-      <meta property="og:title" content="Health Recruitment | KWETU CONNECT | Healthcare Professionals Australia" />
-      <meta property="og:description" content="Connecting skilled healthcare professionals with Australian care providers through culturally sensitive recruitment." />
-      <meta property="og:url" content="https://kwetuconnect.org/health-recruitment" />
-      <meta property="og:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
-      <meta property="twitter:image" content="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" />
       <Navbar />
 
       {/* Hero Section */}
@@ -391,48 +361,6 @@ const HealthRecruitmentPage = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">{step.title}</h3>
                 <p className="text-gray-200 leading-relaxed">{step.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 bg-white">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-4">
-              Success Stories from Our Healthcare Professionals
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Hear from those who've built rewarding careers through KWETU CONNECT
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
-              >
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <i key={i} className="ri-star-fill text-accent text-lg"></i>
-                  ))}
-                </div>
-                <p className="text-gray-700 italic text-lg mb-6 leading-relaxed">
-                  &quot;{testimonial.quote}&quot;
-                </p>
-                <div className="flex items-center">
-                  <img
-                    src={testimonial.avatar}
-                    alt={testimonial.author}
-                    className="w-14 h-14 rounded-full object-cover object-top mr-4"
-                  />
-                  <div>
-                    <div className="font-bold text-primary">{testimonial.author}</div>
-                    <div className="text-sm text-gray-600">{testimonial.role}</div>
-                  </div>
-                </div>
               </div>
             ))}
           </div>

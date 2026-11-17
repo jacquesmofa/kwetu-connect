@@ -60,27 +60,6 @@ const HomePage = () => {
     { number: '10+', label: 'Years of Excellence' },
   ];
 
-  const testimonials = [
-    {
-      quote: 'KWETU CONNECT has been instrumental in bridging our organization with communities across the Global South. Their expertise in cultural resilience is unmatched.',
-      author: 'Dr. Sarah Mitchell',
-      role: 'Director, Global Health Initiative',
-      avatar: 'https://readdy.ai/api/search-image?query=professional%20woman%20director%20healthcare%20executive%20portrait%20confident%20smile%20business%20attire%20simple%20clean%20background&width=100&height=100&seq=test1&orientation=squarish',
-    },
-    {
-      quote: 'The CROP 2026 Conference promises to be a landmark event. KWETU CONNECT\'s vision for cultural resilience is exactly what our world needs right now.',
-      author: 'Prof. James Okonkwo',
-      role: 'Cultural Studies, University of Sydney',
-      avatar: 'https://readdy.ai/api/search-image?query=professional%20male%20professor%20academic%20portrait%20warm%20smile%20business%20attire%20simple%20clean%20background&width=100&height=100&seq=test2&orientation=squarish',
-    },
-    {
-      quote: 'Their health recruitment program connected us with exceptional caregivers who truly understand community needs. A transformative partnership.',
-      author: 'Maria Rodriguez',
-      role: 'CEO, Community Care Services',
-      avatar: 'https://readdy.ai/api/search-image?query=professional%20woman%20CEO%20healthcare%20executive%20portrait%20confident%20professional%20attire%20simple%20clean%20background&width=100&height=100&seq=test3&orientation=squarish',
-    },
-  ];
-
   const newPrograms = [
     {
       title: 'Mental Health & Wellbeing',
@@ -1106,48 +1085,6 @@ const HomePage = () => {
                   title={partner.name}
                 />
               </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gray-50">
-        <div className="container-custom">
-          <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4">
-              Trusted by Leading Institutions
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 px-4">
-              Hear from our partners and collaborators
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
-              >
-                <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <i key={i} className="ri-star-fill text-accent text-lg"></i>
-                  ))}
-                </div>
-                <p className="text-gray-700 italic text-base sm:text-lg mb-6 leading-relaxed">
-                  &quot;{testimonial.quote}&quot;
-                </p>
-                <div className="flex items-center">
-                  <img
-                    src={testimonial.avatar}
-                    alt={testimonial.author}
-                    className="w-12 h-12 sm:w-14 sm:h-14 rounded-full object-cover object-top mr-4"
-                  />
-                  <div>
-                    <div className="font-bold text-primary">{testimonial.author}</div>
-                    <div className="text-sm text-gray-600">{testimonial.role}</div>
-                  </div>
-                </div>
-              </div>
             ))}
           </div>
         </div>
