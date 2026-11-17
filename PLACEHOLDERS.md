@@ -9,6 +9,6 @@
 
 ## Still to confirm
 - About page figures "500+ Communities Served, 50+ Partnerships, 15 Countries, 10+ Years Experience": kept for now at Jacques' request (15 Nov); still to be confirmed by the client.
-- Publishing: the only address is https://kwetuconnect.org on Hostinger (confirmed 15 Nov). The deploy workflow is in place and waits for the three FTP secrets.
+- Publishing: the only address is https://kwetuconnect.org on Hostinger (confirmed 15 Nov). Publishing is automatic since 17 Nov 2026 (GitHub `live` branch → Hostinger Git), no passwords.
 - Forms: all four go through Web3Forms to info@kwetuconnect.org (`src/lib/forms.ts`). Send one test from each after the first deploy.
 - 148 Readdy AI pictures remain across the site.

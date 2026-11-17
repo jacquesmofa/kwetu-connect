@@ -41,3 +41,4 @@ Australian consultancy (Sydney) on cultural heritage, health equity, sustainable
 - `src/content/founder.json` holds Mr Morris Kizito Mukasa's profile (his text, verbatim, in 8 chapters). `src/components/feature/FounderProfile.tsx` shows it chapter by chapter ("Read more" opens the next one; `preview` mode on the home page links to the full page `/about/morris-kizito-mukasa`). Edit the JSON, not the component.
 - Invented team members were removed from the About page. See PLACEHOLDERS.md.
 - `out/` is no longer committed (15 Nov); the workflow builds it.
+- 17 Nov 2026: kwetuconnect.org was a Hostinger "Web app" (ZIP uploads only, no Git). With Jacques' approval it was deleted and re-created as a PHP/HTML website, then connected in hPanel > Advanced > Git to the `live` branch with Auto-deployment on. Email DNS records (MX, SPF, DKIM, DMARC) were checked before and after: unchanged. First automatic publish verified the same day.
