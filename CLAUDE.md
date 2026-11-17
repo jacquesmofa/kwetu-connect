@@ -22,8 +22,8 @@ Australian consultancy (Sydney) on cultural heritage, health equity, sustainable
 - Routes: `/`, `/about`, `/contact`, `/crop2026`, `/crop2026/kwetu-connect`, `/crop2026/ldii`, `/crop2026/outcomes`, `/crop2026/partnership`, `/crop2026/pillars`, `/crop2026/programme`, `/crop2026/register`, `/crop2026/thrive-tours`, `/crop2026/venue`, `/crop2026/vision`, `/gallery`, `/health-recruitment`, `/privacy-policy`, `/programs`, `/terms-of-service`.
 
 ## Deploy
-- `.github/workflows/deploy.yml` (studio standard, adapted to Hostinger): push to `main` → `npm ci && npm run build` → FTP upload of `out/` → live check of https://kwetuconnect.org. Secrets `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`; the workflow finds the site folder itself (`./`, `public_html/` or `domains/kwetuconnect.org/public_html/`). Optional variables: `SITE_URL`, `FTP_SERVER_DIR`, `FTP_PROTOCOL` (default ftp). Without the secrets it builds and uploads nothing.
-- `public/.htaccess`: simple SPA fallback (same rules as the studio's other Hostinger site, KWB).
+- No passwords, no FTP (17 Nov 2026). `.github/workflows/deploy.yml`: push to `main` → `npm ci && npm run build` → the built site (`out/`) is saved to the `live` branch → Hostinger pulls that branch (hPanel > kwetuconnect.org > Advanced > Git, branch `live`, Auto deployment webhook) → the workflow checks kwetuconnect.org shows the new build.
+- Never edit the `live` branch by hand: it is rewritten on every publish. `public/.htaccess` (or `deployment/.htaccess`) carries the server rules.
 
 ## Where things live
 - Pages: `src/pages/<page>/` (one folder per page, sections in `components/`). Routes: `src/router/`.
