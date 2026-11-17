@@ -1,0 +1,697 @@
+{
+  "heroImages": [
+    "https://readdy.ai/api/search-image?query=Sydney%20Showground%20The%20Dome%20exterior%20modern%20event%20venue%20Sydney%20Olympic%20Park%20NSW%202127%20architectural%20photography%20clear%20blue%20sky%20professional%20conference%20facility%20large%20dome%20structure%20impressive%20building&width=1920&height=1080&seq=crop2026hero1v2&orientation=landscape",
+    "https://readdy.ai/api/search-image?query=Sydney%20Olympic%20Park%20precinct%20aerial%20view%20green%20parklands%20modern%20stadium%20facilities%20Homebush%20Bay%20NSW%20Australia%20professional%20photography%20vibrant%20daytime%20clear%20sky%20urban%20landscape&width=1920&height=1080&seq=crop2026hero2v2&orientation=landscape",
+    "https://readdy.ai/api/search-image?query=Sydney%20Opera%20House%20and%20Harbour%20Bridge%20at%20golden%20hour%20iconic%20Australian%20landmarks%20vibrant%20blue%20sky%20stunning%20harbor%20view%20professional%20travel%20photography%20high%20quality%20cityscape&width=1920&height=1080&seq=crop2026hero3v2&orientation=landscape",
+    "https://readdy.ai/api/search-image?query=Indigenous%20cultural%20celebration%20traditional%20dancers%20colorful%20ceremonial%20attire%20vibrant%20cultural%20patterns%20community%20gathering%20rich%20cultural%20heritage%20diverse%20people%20celebrating%20authentic%20expression%20warm%20lighting%20professional%20photography&width=1920&height=1080&seq=crop2026hero4v2&orientation=landscape",
+    "https://readdy.ai/api/search-image?query=International%20conference%20attendees%20diverse%20group%20professionals%20networking%20Indigenous%20leaders%20policymakers%20discussion%20modern%20conference%20setting%20collaborative%20atmosphere%20cultural%20diversity%20professional%20business%20environment%20bright%20natural%20lighting&width=1920&height=1080&seq=crop2026hero5v2&orientation=landscape"
+  ],
+  "agenda": [
+    {
+      "day": "Day 1",
+      "date": "November 6, 2026",
+      "theme": "Opening & Foundation",
+      "sessions": [
+        {
+          "time": "08:00 - 09:00",
+          "title": "Registration & Welcome Coffee",
+          "track": "General",
+          "location": "Main Foyer",
+          "description": "Welcome reception with refreshments and networking opportunities. Collect your conference materials and connect with fellow delegates."
+        },
+        {
+          "time": "09:00 - 10:30",
+          "title": "Opening Ceremony & Keynote Address",
+          "track": "Cultural",
+          "location": "Main Auditorium",
+          "speakers": "Co-organizers & Indigenous Leaders",
+          "description": "Welcome addresses from co-organizers, Indigenous acknowledgment, and keynote on cultural resilience and care transformation in the 21st century."
+        },
+        {
+          "time": "10:30 - 11:00",
+          "title": "Morning Tea & Networking",
+          "track": "General",
+          "location": "Exhibition Hall"
+        },
+        {
+          "time": "11:00 - 13:00",
+          "title": "Plenary Panel: Bridging Culture, Care & Climate",
+          "track": "Resilience",
+          "location": "Main Auditorium",
+          "speakers": "Global Leaders Panel",
+          "description": "Global leaders discuss integrating cultural perspectives into climate action and care industry transformation."
+        },
+        {
+          "time": "13:00 - 14:00",
+          "title": "Lunch & Cultural Exposition",
+          "track": "General",
+          "location": "Exhibition Hall"
+        },
+        {
+          "time": "14:00 - 16:00",
+          "title": "Parallel Thematic Workshops: Culture & Care Integration",
+          "track": "Cultural",
+          "location": "Multiple Rooms",
+          "description": "Deep-dive sessions on Climate Justice, Culture-Based Trade, and Cultural Approaches to Care."
+        },
+        {
+          "time": "16:00 - 16:30",
+          "title": "Afternoon Tea",
+          "track": "General",
+          "location": "Exhibition Hall"
+        },
+        {
+          "time": "16:30 - 18:00",
+          "title": "Community Roundtables: Care for Caregivers",
+          "track": "Health",
+          "location": "Multiple Rooms",
+          "description": "Grassroots leaders share community-led resilience initiatives and cultural heritage perspectives on care."
+        },
+        {
+          "time": "18:30 - 20:30",
+          "title": "Welcome Reception & Cultural Performance",
+          "track": "General",
+          "location": "Waterfront Terrace"
+        }
+      ]
+    },
+    {
+      "day": "Day 2",
+      "date": "November 7, 2026",
+      "theme": "Deep Dive & Innovation",
+      "sessions": [
+        {
+          "time": "09:00 - 10:30",
+          "title": "Plenary: Indigenous Knowledge & Care Systems",
+          "track": "Cultural",
+          "location": "Main Auditorium",
+          "speakers": "Indigenous Leaders",
+          "description": "Indigenous leaders present traditional knowledge as solutions to contemporary care and environmental challenges."
+        },
+        {
+          "time": "10:30 - 11:00",
+          "title": "Morning Tea",
+          "track": "General",
+          "location": "Exhibition Hall"
+        },
+        {
+          "time": "11:00 - 13:00",
+          "title": "Parallel Workshops: Redefining Care Industry",
+          "track": "Health",
+          "location": "Multiple Rooms",
+          "description": "Sessions on Cultural Transformative Values for Care, Senior Participation in Decision-Making, and Technology Integration."
+        },
+        {
+          "time": "13:00 - 14:00",
+          "title": "Lunch",
+          "track": "General",
+          "location": "Exhibition Hall"
+        },
+        {
+          "time": "14:00 - 16:00",
+          "title": "Youth Forum: Next Generation Leadership in Care",
+          "track": "Resilience",
+          "location": "Main Auditorium",
+          "description": "Young leaders present innovative approaches to cultural resilience and care transformation."
+        },
+        {
+          "time": "16:00 - 16:30",
+          "title": "Afternoon Tea",
+          "track": "General",
+          "location": "Exhibition Hall"
+        },
+        {
+          "time": "16:30 - 18:00",
+          "title": "Research Presentations: Culture Meets Care",
+          "track": "Cultural",
+          "location": "Innovation Hub",
+          "description": "Academic and community researchers share findings on cultural approaches to care industry innovation."
+        },
+        {
+          "time": "19:00 - 22:00",
+          "title": "Gala Dinner & Awards Ceremony",
+          "track": "General",
+          "location": "Grand Ballroom"
+        }
+      ]
+    },
+    {
+      "day": "Day 3",
+      "date": "November 8, 2026",
+      "theme": "Sydney Discovery & Cultural Immersion",
+      "sessions": [
+        {
+          "time": "09:00 - 10:30",
+          "title": "Optional: Working Group Sessions",
+          "track": "Resilience",
+          "location": "Multiple Rooms",
+          "description": "Final collaborative sessions for action planning and commitments."
+        },
+        {
+          "time": "10:30 - 11:00",
+          "title": "Morning Tea & Departure Preparation",
+          "track": "General",
+          "location": "Exhibition Hall"
+        },
+        {
+          "time": "11:00 - 17:00",
+          "title": "Sydney Cultural & Tourism Experience",
+          "track": "Cultural",
+          "location": "Sydney City",
+          "description": "Guided tours of Sydney's iconic landmarks: Opera House, Harbour Bridge, Royal Botanic Gardens, and cultural sites. Experience Australia's vibrant multicultural heritage."
+        },
+        {
+          "time": "17:00 - 18:00",
+          "title": "Optional: Sunset Harbour Cruise",
+          "track": "General",
+          "location": "Sydney Harbour",
+          "description": "Relaxing cruise on Sydney Harbour with networking opportunities."
+        },
+        {
+          "time": "18:30 - 20:00",
+          "title": "Farewell Dinner (Optional)",
+          "track": "General",
+          "location": "Waterfront Restaurant",
+          "description": "Closing celebration with Australian cuisine and cultural performances."
+        }
+      ]
+    }
+  ],
+  "sponsorshipTiers": [
+    {
+      "tier": "Platinum Partner",
+      "price": "AUD $50,000",
+      "color": "from-slate-400 to-slate-600",
+      "highlight": true,
+      "benefits": [
+        "Logo prominently featured on all event promotional emails",
+        "Advertisement with hyperlink on our dedicated Sponsors page",
+        "Logo inclusion in all event promotional videos",
+        "3x banners displayed at the event venue",
+        "Logo on all uniforms worn by the event crew",
+        "Premium Exhibition Stand at a prime event location",
+        "Ability to sell or distribute branded merchandise at the event",
+        "Acknowledgement and recognition by the MC throughout the event",
+        "Promotion across all social media channels: Facebook, Snapchat, Instagram, TikTok",
+        "Inclusion in all event media releases (radio, TV, and newspaper)"
+      ]
+    },
+    {
+      "tier": "Gold Partner",
+      "price": "AUD $30,000",
+      "color": "from-yellow-500 to-yellow-700",
+      "highlight": false,
+      "benefits": [
+        "Your logo on emails promoting the event",
+        "Advertisement with hyperlink on the sponsors' page",
+        "Logo inclusion in event promotional videos",
+        "Acknowledgement by the MC at the event",
+        "Personal introductions to our network and circles of influence",
+        "2x banners at the event",
+        "Ability to sell or give away branded merchandise at the event",
+        "Promotion via all social media channels",
+        "Premium location Exhibition stand at the event"
+      ]
+    },
+    {
+      "tier": "Silver Partner",
+      "price": "AUD $15,000",
+      "color": "from-gray-300 to-gray-500",
+      "highlight": false,
+      "benefits": [
+        "Your signage / banner on site at the event",
+        "Your logo on emails promoting the event",
+        "Advertisement with hyperlink on the sponsors' page",
+        "Logo inclusion in event promotional videos",
+        "Acknowledgement by the MC at the event",
+        "Promotion via all social media channels",
+        "Included Exhibition Stand at the event"
+      ]
+    },
+    {
+      "tier": "Bronze Partner",
+      "price": "AUD $10,000",
+      "color": "from-orange-400 to-orange-600",
+      "highlight": false,
+      "benefits": [
+        "Your signage / banner on site at the event",
+        "Your logo on emails promoting the event",
+        "Advertisement with hyperlink on the sponsor's page",
+        "Acknowledgement by the MC at the event",
+        "Inclusion – Exhibition Stand at the event"
+      ]
+    }
+  ],
+  "partners": [
+    {
+      "name": "UN Women",
+      "url": "https://www.unwomen.org/",
+      "seq": "unwomen"
+    },
+    {
+      "name": "UNHCR",
+      "url": "https://www.unhcr.org/",
+      "seq": "unhcr"
+    },
+    {
+      "name": "UNESCO",
+      "url": "https://www.unesco.org/",
+      "seq": "unesco"
+    },
+    {
+      "name": "UNDP",
+      "url": "https://www.undp.org/",
+      "seq": "undp"
+    },
+    {
+      "name": "UNICEF",
+      "url": "https://www.unicef.org/",
+      "seq": "unicef"
+    },
+    {
+      "name": "WHO",
+      "url": "https://www.who.int/",
+      "seq": "who"
+    },
+    {
+      "name": "ILO",
+      "url": "https://www.ilo.org/",
+      "seq": "ilo"
+    },
+    {
+      "name": "FAO",
+      "url": "https://www.fao.org/",
+      "seq": "fao"
+    },
+    {
+      "name": "UNEP",
+      "url": "https://www.unep.org/",
+      "seq": "unep"
+    },
+    {
+      "name": "IFAD",
+      "url": "https://www.ifad.org/",
+      "seq": "ifad"
+    },
+    {
+      "name": "WFP",
+      "url": "https://www.wfp.org/",
+      "seq": "wfp"
+    },
+    {
+      "name": "UNODC",
+      "url": "https://www.unodc.org/",
+      "seq": "unodc"
+    },
+    {
+      "name": "IOM",
+      "url": "https://www.iom.int/",
+      "seq": "iom"
+    },
+    {
+      "name": "UNIDO",
+      "url": "https://www.unido.org/",
+      "seq": "unido"
+    },
+    {
+      "name": "ITU",
+      "url": "https://www.itu.int/",
+      "seq": "itu"
+    },
+    {
+      "name": "WIPO",
+      "url": "https://www.wipo.int/",
+      "seq": "wipo"
+    },
+    {
+      "name": "WMO",
+      "url": "https://public.wmo.int/",
+      "seq": "wmo"
+    },
+    {
+      "name": "IMO",
+      "url": "https://www.imo.org/",
+      "seq": "imo"
+    },
+    {
+      "name": "ICAO",
+      "url": "https://www.icao.int/",
+      "seq": "icao"
+    },
+    {
+      "name": "UNWTO",
+      "url": "https://www.unwto.org/",
+      "seq": "unwto"
+    },
+    {
+      "name": "UPU",
+      "url": "https://www.upu.int/",
+      "seq": "upu"
+    },
+    {
+      "name": "The Salvation Army",
+      "url": "https://www.salvationarmy.org.au/",
+      "seq": "salvationarmy"
+    },
+    {
+      "name": "CCHR",
+      "url": "https://www.cchr.org/",
+      "seq": "cchr"
+    },
+    {
+      "name": "World Bank",
+      "url": "https://www.worldbank.org/",
+      "seq": "worldbank"
+    },
+    {
+      "name": "IMF",
+      "url": "https://www.imf.org/",
+      "seq": "imf"
+    },
+    {
+      "name": "OECD",
+      "url": "https://www.oecd.org/",
+      "seq": "oecd"
+    },
+    {
+      "name": "Commonwealth Secretariat",
+      "url": "https://thecommonwealth.org/",
+      "seq": "commonwealth"
+    },
+    {
+      "name": "African Union",
+      "url": "https://au.int/",
+      "seq": "africanunion"
+    },
+    {
+      "name": "ASEAN",
+      "url": "https://asean.org/",
+      "seq": "asean"
+    },
+    {
+      "name": "Pacific Islands Forum",
+      "url": "https://www.forumsec.org/",
+      "seq": "pacificforum"
+    }
+  ],
+  "hero": {
+    "url": "https://www.thrivetours.ca/",
+    "image": "https://res.cloudinary.com/dzppzxpad/image/upload/q_auto/f_auto/v1780500929/Thrive_Tours_Logo_2026_mp3vsr.png",
+    "imageAlt": "Thrive Tours Logo",
+    "url2": "https://kwetuconnect.org/crop2026",
+    "image2": "https://res.cloudinary.com/dzppzxpad/image/upload/q_auto/f_auto/v1780502472/Artboard_3_copy_2_2x_nxsxcz.png",
+    "imageAlt2": "CROP 2026 Conference Logo",
+    "url3": "https://ldiinitiatives.org/",
+    "image3": "https://res.cloudinary.com/dzppzxpad/image/upload/q_auto/f_auto/v1781702619/Circular_LDII_bewv0j.png",
+    "imageAlt3": "LDII Logo",
+    "label": "Sydney, Australia",
+    "title": "Cultural Resilience,",
+    "label2": "One Planet",
+    "text": "CROP Conference 2026",
+    "text2": "November 6th – 8th, 2026",
+    "label3": "The Dome, Sydney Showground • 1 Showground Road, Homebush Bay NSW 2127",
+    "text3": "\"One Planet One Resilience\"",
+    "text4": "Join ",
+    "bold": "800+",
+    "text5": " international Indigenous and cultural leaders, policymakers, academics, private sector innovators, and youth changemakers in shaping the future of cultural resilience, care transformation, and planetary sustainability.",
+    "link": "Register Interest",
+    "link2": "View Programme",
+    "link3": "Submit Abstract"
+  },
+  "countdown": {
+    "text": "Conference Begins In"
+  },
+  "statsBar": {
+    "label": "Thrive Tours:",
+    "text": " Recognized for sustainability internationally, nationally and provincially",
+    "text2": "In 2025, earned the Sustainable Tourism Award from the Tourism Industry Association of Ontario and the Tourism Industry Association of Canada. In 2026, named a Sustainable Tourism Global Winner for Authenticity and Eco Adventure at Global Islands: Leading Beyond 2030 in Madeira, Portugal."
+  },
+  "theVision": {
+    "label": "Our Mission",
+    "heading": "The Vision",
+    "text": "Bridging cultural actors with global sustainability agendas, protecting Indigenous knowledge, and promoting community resilience in the face of climate change and urbanization.",
+    "link": "Learn More About Our Vision "
+  },
+  "sixStrategicPillars": {
+    "label": "Conference Framework",
+    "heading": "Six Strategic Pillars",
+    "text": "Comprehensive frameworks addressing the intersection of culture, care, and global sustainability challenges.",
+    "link": "Explore All Pillars "
+  },
+  "countdownBannerWithFocusAreas": {
+    "image": "https://readdy.ai/api/search-image?query=Sydney%20Olympic%20Park%20aerial%20sunset%20golden%20hour%20dramatic%20sky%20vibrant%20colors%20beautiful%20landscape%20Australia%20professional%20photography%20wide%20angle%20panoramic%20view&width=1920&height=900&seq=cropbannerbg2026&orientation=landscape",
+    "imageAlt": "Sydney Showground precinct",
+    "label": "Annual Signature Initiative",
+    "label2": "CROP 2026 Conference",
+    "label3": "Cultural Resilience, One Planet",
+    "label4": "The Dome, Sydney Showground, Australia",
+    "label5": "November 6-8, 2026"
+  },
+  "focusAreas": {
+    "label": "Conference Focus Areas",
+    "link": "Register Now",
+    "link2": "Become a Sponsor",
+    "link3": "Call for Papers"
+  },
+  "coOrganizers": {
+    "label": "Collaboration",
+    "heading": "Co-Organizers",
+    "label2": "Learn More",
+    "label3": "Visit Official Website"
+  },
+  "asFeaturedIn": {
+    "label": "Thrive Tours",
+    "label2": " — As featured in the Toronto Star, Global Heroes, Destination Ontario, NationTalk, and an international documentary by EBS (South Korea)"
+  },
+  "collaborativePartners": {
+    "subheading": "Collaborative Partners",
+    "text": "Working together with leading international organizations, UN agencies, and civil society partners to advance cultural resilience globally.",
+    "text2": "Partnership opportunities available for organizations committed to cultural resilience and sustainability",
+    "link": "Become a Partner "
+  },
+  "venue": {
+    "label": "Conference Venue",
+    "heading": "The Dome, Sydney Showground",
+    "text": "Sydney Showground is one of Australia's premier event destinations, located in Homebush Bay, Sydney. The Dome is a world-class, flexible venue capable of hosting large-scale international conferences, exhibitions, and cultural events.",
+    "text2": "Website",
+    "url": "https://www.sydneyshowground.com.au",
+    "link": "www.sydneyshowground.com.au",
+    "text3": "Sydney Showground acknowledges the traditional custodians of the land and waters on which we meet. We pay our respects to Elders past and present.",
+    "image": "https://readdy.ai/api/search-image?query=Sydney%20Showground%20The%20Dome%20exterior%20large%20modern%20event%20venue%20Sydney%20Olympic%20Park%20NSW%20professional%20architectural%20photography%20clear%20blue%20sky%20impressive%20dome%20structure%20conference%20facility&width=800&height=500&seq=venue1showground&orientation=landscape",
+    "imageAlt": "The Dome, Sydney Showground exterior",
+    "image2": "https://readdy.ai/api/search-image?query=Sydney%20Olympic%20Park%20precinct%20green%20parklands%20modern%20facilities%20Homebush%20Bay%20aerial%20view%20professional%20photography%20vibrant%20daytime%20clear%20sky&width=400&height=300&seq=venue2olympic&orientation=landscape",
+    "imageAlt2": "Sydney Showground precinct",
+    "image3": "https://readdy.ai/api/search-image?query=Sydney%20Showground%20interior%20exhibition%20hall%20large%20conference%20setup%20professional%20event%20space%20modern%20architecture%20high%20ceiling%20warm%20lighting&width=400&height=300&seq=venue3interior&orientation=landscape",
+    "imageAlt3": "Sydney Showground interior",
+    "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.5!2d151.0694!3d-33.8469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12bae5e3c3c3c3%3A0x1234567890abcdef!2sSydney%20Showground%2C%201%20Showground%20Rd%2C%20Sydney%20Olympic%20Park%20NSW%202127!5e0!3m2!1sen!2sau!4v1234567890",
+    "title": "The Dome, Sydney Showground - CROP 2026 Venue"
+  },
+  "s3DayProgramme": {
+    "label": "Conference Schedule",
+    "heading": "3-Day Schedule",
+    "text": "Detailed programme timeline (subject to updates)",
+    "text2": "View Full Programme (PDF)"
+  },
+  "dayTabs": {
+    "text": "Theme: "
+  },
+  "openingCeremonyAndKeynoteSpeaker": {
+    "label": "Day 1 — 09:00 - 10:30",
+    "heading": "Opening Ceremony & Keynote Speaker",
+    "text": "Keynote",
+    "text2": "Brad Robinson",
+    "text3": "CEO, Thrive Tours",
+    "text4": "Brad Robinson is the CEO of Thrive Tours and a Haudenosaunee leader from Oneida Nation of the Thames. Under his leadership, Thrive Tours earned sustainability recognition at every level in 2025, internationally from the Indigenous Tourism Association of Canada and, weeks apart, provincially and nationally with the Sustainable Tourism Award from the Tourism Industry Association of Ontario and the Tourism Industry Association of Canada. In 2026, Thrive Tours was named a Sustainable Tourism Global Winner for Authenticity and Eco Adventure at Global Islands: Leading Beyond 2030 in Madeira, Portugal.",
+    "text5": "As CROP 2026's Canadian anchor partner and Cultural Programming Lead, Brad brings two decades of Indigenous tourism and facilitation work to the gathering. His keynote will explore how Indigenous knowledge systems can inform global approaches to cultural resilience, care transformation, and planetary stewardship."
+  },
+  "sponsorship": {
+    "label": "Partnership Opportunities",
+    "heading": "Sponsorship Tiers",
+    "text": "Flexible sponsorship packages designed to maximize your impact and visibility.",
+    "text2": "Most Impactful",
+    "link": "Proceed to Payment",
+    "text3": "Custom partnership packages available. Contact us to discuss tailored opportunities.",
+    "text4": "Contact Us for Custom Packages"
+  },
+  "bePartOfTheChange": {
+    "image": "https://readdy.ai/api/search-image?query=inspiring%20diverse%20people%20conference%20collaboration%20networking%20cultural%20resilience%20Sydney%20Australia%20professional%20setting%20warm%20golden%20lighting%20beautiful%20modern%20venue&width=1920&height=900&seq=cropctabg2026v2&orientation=landscape",
+    "imageAlt": "Be Part of the Change",
+    "heading": "Be Part of the Change",
+    "text": "Join us in Sydney for three transformative days of dialogue, collaboration, and action towards a culturally resilient and sustainable future.",
+    "link": "Register Your Interest",
+    "link2": "Partnership Opportunities"
+  },
+  "items": [
+    {
+      "icon": "ri-calendar-line",
+      "value": "3",
+      "label": "Days",
+      "sub": "November 6-8, 2026"
+    },
+    {
+      "icon": "ri-team-line",
+      "value": "800+",
+      "label": "Attendees",
+      "sub": "Global leaders & innovators"
+    },
+    {
+      "icon": "ri-global-line",
+      "value": "6",
+      "label": "Strategic Pillars",
+      "sub": "Comprehensive frameworks"
+    },
+    {
+      "icon": "ri-map-pin-line",
+      "value": "1",
+      "label": "Venue",
+      "sub": "The Dome, Sydney Showground"
+    }
+  ],
+  "items2": [
+    {
+      "icon": "ri-links-line",
+      "title": "Bridge the Gap",
+      "desc": "Connect cultural actors with global sustainability agendas and climate action frameworks."
+    },
+    {
+      "icon": "ri-volume-up-line",
+      "title": "Amplify Voices",
+      "desc": "Elevate Indigenous knowledge and community-led resilience strategies on the world stage."
+    },
+    {
+      "icon": "ri-team-line",
+      "title": "Co-create Strategies",
+      "desc": "Develop collaborative solutions for cultural preservation and environmental sustainability."
+    }
+  ],
+  "items3": [
+    {
+      "icon": "ri-store-line",
+      "color": "from-[#0A2540] to-[#1a4a7a]",
+      "title": "Culture, Trade, Economies & Sustainable Livelihoods",
+      "desc": "Fair trade frameworks, cultural entrepreneurship, and revitalization of traditional economies."
+    },
+    {
+      "icon": "ri-heart-pulse-line",
+      "color": "from-[#D4AF37] to-yellow-600",
+      "title": "Global Health Equity & Wellness Systems",
+      "desc": "Integrating traditional medicine, addressing health disparities, and promoting holistic wellbeing."
+    },
+    {
+      "icon": "ri-smartphone-line",
+      "color": "from-teal-500 to-teal-700",
+      "title": "Technology, Digital Innovation & Data Sovereignty",
+      "desc": "Digital tools for cultural preservation, AI for language revitalization, and Indigenous data sovereignty."
+    },
+    {
+      "icon": "ri-graduation-cap-line",
+      "color": "from-green-600 to-green-800",
+      "title": "Education, Research, Skills & Capacity Development",
+      "desc": "Integration of Indigenous knowledge, decolonizing research, and intergenerational knowledge transfer."
+    },
+    {
+      "icon": "ri-earth-line",
+      "color": "from-orange-500 to-orange-700",
+      "title": "Climate Justice, Cultural Governance & Planetary Stewardship",
+      "desc": "Indigenous knowledge for climate adaptation, cultural governance, and sustainable planetary stewardship."
+    },
+    {
+      "icon": "ri-hand-heart-line",
+      "color": "from-rose-500 to-rose-700",
+      "title": "Care Industry & Cultural Transformation",
+      "desc": "Redefining cultural transformative values for care, supporting caregivers, and empowering seniors in decision-making."
+    }
+  ],
+  "items4": [
+    {
+      "icon": "ri-store-3-line",
+      "label": "Culture & Trade",
+      "color": "from-orange-500 to-orange-600"
+    },
+    {
+      "icon": "ri-heart-pulse-line",
+      "label": "Health Equity",
+      "color": "from-green-500 to-green-600"
+    },
+    {
+      "icon": "ri-cpu-line",
+      "label": "Technology",
+      "color": "from-teal-500 to-teal-600"
+    },
+    {
+      "icon": "ri-graduation-cap-line",
+      "label": "Education",
+      "color": "from-red-500 to-red-600"
+    },
+    {
+      "icon": "ri-leaf-line",
+      "label": "Climate Justice",
+      "color": "from-emerald-500 to-emerald-600"
+    },
+    {
+      "icon": "ri-hand-heart-line",
+      "label": "Care Industry",
+      "color": "from-rose-500 to-rose-600"
+    }
+  ],
+  "items5": [
+    {
+      "name": "KWETU CONNECT PTY LTD",
+      "desc": "A pioneering organization dedicated to bridging cultural communities with sustainable development initiatives, redefining cultural understanding of care among Indigenous communities.",
+      "link": "/crop2026/kwetu-connect",
+      "website": "https://kwetuconnect.org/",
+      "logo": "https://res.cloudinary.com/dhjajm7ru/image/upload/v1780003947/Kwetu_connect_Logo_x6w26r.jpg"
+    },
+    {
+      "name": "Thrive Tours",
+      "desc": "Thrive Tours is a 100% Indigenous-owned and led experiential tourism and education company, headquartered at Batchewana First Nation in Bawaating (Sault Ste. Marie, Ontario, Canada). Haudenosaunee-led and working in respectful partnership with Anishinaabe Knowledge Carriers on whose territory it operates, Thrive Tours is among Canada’s most recognized Indigenous tourism companies, honoured for sustainability at the international, national, and provincial levels.",
+      "link": "/crop2026/thrive-tours",
+      "website": "https://www.thrivetours.ca/",
+      "logo": "https://res.cloudinary.com/dzppzxpad/image/upload/q_auto/f_auto/v1780500929/Thrive_Tours_Logo_2026_mp3vsr.png"
+    },
+    {
+      "name": "Livelihood Development International Initiatives (LDII)",
+      "desc": "A global organization committed to empowering vulnerable communities through sustainable livelihood programs, cultural preservation, and resilience-building initiatives.",
+      "link": "/crop2026/ldii",
+      "website": "https://ldiinitiatives.org/",
+      "logo": "https://res.cloudinary.com/dzppzxpad/image/upload/q_auto/f_auto/v1781702619/Circular_LDII_bewv0j.png"
+    }
+  ],
+  "items6": [
+    {
+      "icon": "ri-map-pin-2-line",
+      "label": "Address",
+      "val": "1 Showground Road, Homebush Bay NSW 2127"
+    },
+    {
+      "icon": "ri-phone-line",
+      "label": "Venue Contact",
+      "val": "+61 2 9704 1203"
+    },
+    {
+      "icon": "ri-train-line",
+      "label": "Getting There",
+      "val": "Showground Station (direct train from Sydney CBD, ~20 min)"
+    }
+  ],
+  "items7": [
+    {
+      "icon": "ri-file-text-line",
+      "color": "from-[#0A2540] to-[#1a4a7a]",
+      "title": "Submit Abstract",
+      "desc": "Share your research and insights with global experts"
+    },
+    {
+      "icon": "ri-hand-heart-line",
+      "color": "from-[#D4AF37] to-yellow-600",
+      "title": "Become a Sponsor",
+      "desc": "Support cultural resilience and sustainability initiatives"
+    },
+    {
+      "icon": "ri-megaphone-line",
+      "color": "from-teal-500 to-teal-700",
+      "title": "Media Partnership",
+      "desc": "Amplify the message of cultural and environmental resilience"
+    }
+  ]
+}

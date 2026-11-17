@@ -1,0 +1,99 @@
+{
+  "crop2026Brand": {
+    "image": "https://res.cloudinary.com/dzppzxpad/image/upload/q_auto/f_auto/v1780502472/Artboard_3_copy_2_2x_nxsxcz.png",
+    "imageAlt": "CROP Conference 2026 Logo",
+    "label": "CROP CONFERENCE 2026",
+    "text": "Cultural Resilience, One Planet",
+    "text2": "Bridging cultural actors with global sustainability agendas, protecting Indigenous knowledge, and promoting community resilience."
+  },
+  "kwetuConnectBrand": {
+    "image": "https://res.cloudinary.com/dhjajm7ru/image/upload/w_200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg",
+    "imageAlt": "KWETU CONNECT Logo",
+    "label": "KWETU",
+    "label2": "CONNECT",
+    "text": "Redefining Barriers, Navigating Opportunities",
+    "text2": "Bridging communities, markets, and institutions through cultural resilience and sustainable partnerships.",
+    "placeholder": "Your email",
+    "button": "Subscribe"
+  },
+  "column2QuickLinks": {
+    "subheading": "Explore",
+    "subheading2": "Conference",
+    "text": "The Vision",
+    "text2": "Thematic Pillars",
+    "text3": "Programme Overview",
+    "text4": "Expected Outcomes",
+    "text5": "Venue & Logistics",
+    "subheading3": "Website",
+    "text6": "About Us",
+    "text7": "Programs",
+    "text8": "CROP 2026",
+    "text9": "Health Recruitment",
+    "text10": "Gallery",
+    "text11": "Contact"
+  },
+  "column3OrganizersPrograms": {
+    "subheading": "Organizers",
+    "url": "https://kwetuconnect.org/",
+    "link": "KWETU CONNECT PTY LTD",
+    "text": "Co-Organizer",
+    "url2": "https://ldiinitiatives.org/",
+    "link2": "Livelihood Development International Initiatives (LDII)",
+    "text2": "Co-Organizer",
+    "url3": "https://www.thrivetours.ca/",
+    "link3": "Thrive Tours",
+    "text3": "Co-Organizer — Award-winning Indigenous-led tourism, Canada",
+    "subheading2": "Our Programs",
+    "text4": "Mental Health & Wellbeing",
+    "text5": "Cultural Exchange Programs",
+    "text6": "Community Chaplaincy",
+    "text7": "Job Opportunities & Care",
+    "text8": "Seniors Wisdom & Guidance",
+    "text9": "Turning Vulnerability to Opportunity",
+    "text10": "View All Programs →"
+  },
+  "column4ContactSocialSister": {
+    "subheading": "Get In Touch",
+    "label": "The Dome, Sydney Showground, NSW, Australia",
+    "emailLink": "mailto:info@kwetuconnect.org",
+    "link": "info@kwetuconnect.org",
+    "label2": "November 6-8, 2026",
+    "phoneLink": "tel:0246279742",
+    "link2": "02 4627 9742",
+    "label3": "58 Illyria Street, Rosemeadow, Sydney 2560 NSW, Australia",
+    "subheading2": "Follow Us",
+    "subheading3": "Sister Organization",
+    "url": "https://kwetu4communities.org/",
+    "link3": "Visit kwetu4communities →"
+  },
+  "bottomBar": {
+    "text": " KWETU CONNECT PTY LTD, Livelihood Development International Initiatives (LDII) & Thrive Tours. All rights reserved."
+  },
+  "items": [
+    {
+      "icon": "ri-facebook-fill",
+      "url": "https://facebook.com/crop2026",
+      "label": "Facebook"
+    },
+    {
+      "icon": "ri-youtube-fill",
+      "url": "https://youtube.com/crop2026",
+      "label": "YouTube"
+    },
+    {
+      "icon": "ri-instagram-fill",
+      "url": "https://instagram.com/crop2026",
+      "label": "Instagram"
+    },
+    {
+      "icon": "ri-twitter-x-line",
+      "url": "https://x.com/crop2026",
+      "label": "X"
+    },
+    {
+      "icon": "ri-linkedin-fill",
+      "url": "https://linkedin.com/company/crop2026",
+      "label": "LinkedIn"
+    }
+  ]
+}

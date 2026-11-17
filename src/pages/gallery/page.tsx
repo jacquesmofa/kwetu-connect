@@ -3,6 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from '../../components/feature/Navbar';
 import Footer from '../../components/feature/Footer';
 import { galleryCategories, galleryImages } from '../../mocks/gallery';
+import copy from '../../content/pages/gallery.json';
+// Text, images and links: src/content/pages/gallery.json (editable in the website editors).
 
 /* ──────────────────────────────────────────────────────────────────────────
    GALLERY PAGE  —  TWO VIEW MODES
@@ -27,7 +29,7 @@ import { galleryCategories, galleryImages } from '../../mocks/gallery';
 const GalleryPage = () => {
   /* ─── STATE ─── */
   const [viewMode, setViewMode] = useState<'overview' | 'category'>('overview');
-  const [activeCategory, setActiveCategory] = useState<string>(galleryCategories[0].id);
+  const [activeCategory, setActiveCategory] = useState<string>(galleryCategories[0]?.id ?? '');
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
   const [showGridTitles, setShowGridTitles] = useState(true);
@@ -159,8 +161,8 @@ const GalleryPage = () => {
           ═══════════════════════════════════════════════════════════════════ */}
       <section className="relative h-[45vh] md:h-[50vh] min-h-[300px] overflow-hidden">
         <img
-          src="https://res.cloudinary.com/dhjajm7ru/image/upload/w_1600,q_auto,f_auto/v1779237221/GPP2022_-_Multicultural_Mass-2_kmwutg.jpg"
-          alt="Multicultural Mass celebration, 2022"
+          src={copy.categoryTabComponent.image}
+          alt={copy.categoryTabComponent.imageAlt}
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A2540]/80 via-[#0A2540]/70 to-[#0A2540]/80"></div>
@@ -171,17 +173,13 @@ const GalleryPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4"
-            >
-              Gallery
-            </motion.h1>
+            >{copy.categoryTabComponent.text}</motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-lg md:text-xl text-white/90 font-light max-w-2xl mx-auto"
-            >
-              Moments of Impact, Stories of Transformation
-            </motion.p>
+            >{copy.categoryTabComponent.text2}</motion.p>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -189,7 +187,7 @@ const GalleryPage = () => {
               className="mt-5 inline-flex items-center gap-2 px-5 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white/80 text-sm"
             >
               <i className="ri-image-line"></i>
-              <span>{galleryImages.length}+ photographs across {galleryCategories.length} collections</span>
+              <span>{galleryImages.length}{copy.categoryTabComponent.label}{galleryCategories.length}{copy.categoryTabComponent.label2}</span>
             </motion.div>
           </div>
         </div>
@@ -212,9 +210,7 @@ const GalleryPage = () => {
                   onClick={backToOverview}
                   className="px-5 py-2.5 rounded-full text-sm font-semibold bg-[#D4AF37] text-[#0A2540] hover:bg-[#c4a030] transition-all duration-300 whitespace-nowrap cursor-pointer shadow-md flex items-center gap-2"
                 >
-                  <i className="ri-arrow-left-line"></i>
-                  Back to Overview
-                </motion.button>
+                  <i className="ri-arrow-left-line"></i>{copy.overviewTabOnlyVisibleWhen.text}</motion.button>
               )}
             </AnimatePresence>
 
@@ -227,17 +223,12 @@ const GalleryPage = () => {
           {/* Stats / breadcrumb bar */}
           <div className="mt-4 text-center">
             {viewMode === 'overview' ? (
-              <p className="text-sm text-gray-500">
-                Scroll down to explore each collection. Click "View All" to see the complete set.
-              </p>
+              <p className="text-sm text-gray-500">{copy.statsBreadcrumbBar.text}</p>
             ) : (
-              <p className="text-sm text-gray-600">
-                Showing <span className="font-semibold text-[#0A2540]">{categoryImages.length}</span> photos in{' '}
+              <p className="text-sm text-gray-600">{copy.statsBreadcrumbBar.text2}<span className="font-semibold text-[#0A2540]">{categoryImages.length}</span>{copy.statsBreadcrumbBar.text3}{' '}
                 <span className="font-semibold text-[#0A2540]">{categoryName}</span>
                 <span className="text-gray-400 mx-2">|</span>
-                <span className="text-xs text-gray-400 italic">
-                  Titles auto-hide after 4 seconds — hover any photo to reveal details
-                </span>
+                <span className="text-xs text-gray-400 italic">{copy.statsBreadcrumbBar.label}</span>
               </p>
             )}
           </div>
@@ -276,15 +267,12 @@ const GalleryPage = () => {
                           {cat.name}
                         </h2>
                         <p className="text-gray-500 text-sm">
-                          {count} {count === 1 ? 'photo' : 'photos'} — click any to preview
-                        </p>
+                          {count} {count === 1 ? 'photo' : 'photos'}{copy.sectionHeader.text}</p>
                       </div>
                       <button
                         onClick={() => enterCategory(cat.id)}
                         className="px-6 py-2.5 bg-[#0A2540] text-white rounded-full text-sm font-semibold hover:bg-[#1a4a7a] transition-all duration-300 cursor-pointer flex items-center gap-2 whitespace-nowrap shadow-sm hover:shadow-md"
-                      >
-                        View All {count} Photos
-                        <i className="ri-arrow-right-line"></i>
+                      >{copy.sectionHeader.button}{count}{copy.sectionHeader.button2}<i className="ri-arrow-right-line"></i>
                       </button>
                     </div>
 
@@ -329,9 +317,7 @@ const GalleryPage = () => {
                       <button
                         onClick={() => enterCategory(cat.id)}
                         className="px-6 py-2.5 bg-[#0A2540] text-white rounded-full text-sm font-semibold hover:bg-[#1a4a7a] transition-all duration-300 cursor-pointer"
-                      >
-                        View All {count} Photos
-                      </button>
+                      >{copy.viewAllBottomButtonMobile.button}{count}{copy.viewAllBottomButtonMobile.button2}</button>
                     </div>
                   </div>
                 </section>
@@ -363,8 +349,7 @@ const GalleryPage = () => {
                   {categoryName}
                 </h2>
                 <p className="text-gray-500 text-sm">
-                  {categoryImages.length} {categoryImages.length === 1 ? 'photo' : 'photos'} — click any to view full size
-                </p>
+                  {categoryImages.length} {categoryImages.length === 1 ? 'photo' : 'photos'}{copy.sectionTitle.text}</p>
               </div>
 
               {/* Masonry columns */}
@@ -424,13 +409,11 @@ const GalleryPage = () => {
                   <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <i className="ri-image-line text-2xl text-gray-400"></i>
                   </div>
-                  <p className="text-gray-500 text-lg">No photos found in this category.</p>
+                  <p className="text-gray-500 text-lg">{copy.categoryBadge.text}</p>
                   <button
                     onClick={backToOverview}
                     className="mt-4 px-6 py-2.5 bg-[#0A2540] text-white rounded-full text-sm font-semibold hover:bg-[#1a4a7a] transition-colors cursor-pointer"
-                  >
-                    Back to Gallery Overview
-                  </button>
+                  >{copy.categoryBadge.button}</button>
                 </div>
               )}
             </div>
@@ -459,7 +442,7 @@ const GalleryPage = () => {
               <button
                 onClick={(e) => { e.stopPropagation(); setShowLightboxCaption(p => !p); }}
                 className="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 transition-colors cursor-pointer"
-                title="Toggle caption"
+                title={copy.topBar.title}
               >
                 <i className={`${showLightboxCaption ? 'ri-chat-off-line' : 'ri-chat-1-line'} text-lg`}></i>
               </button>
@@ -481,14 +464,14 @@ const GalleryPage = () => {
             <div
               className="absolute left-0 top-0 bottom-0 w-1/4 z-10 cursor-w-resize hidden md:block"
               onClick={(e) => { e.stopPropagation(); goPrev(); }}
-              title="Previous image"
+              title={copy.leftClickZone.title}
             />
 
             {/* Right click zone */}
             <div
               className="absolute right-0 top-0 bottom-0 w-1/4 z-10 cursor-e-resize hidden md:block"
               onClick={(e) => { e.stopPropagation(); goNext(); }}
-              title="Next image"
+              title={copy.rightClickZone.title}
             />
 
             {/* Prev arrow button */}

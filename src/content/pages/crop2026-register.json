@@ -1,0 +1,81 @@
+{
+  "themes": [
+    "Climate Justice",
+    "Culture-Based Trade",
+    "Migration & Displacement",
+    "Urbanization",
+    "Youth & Technology",
+    "Indigenous Knowledge",
+    "Health & Wellbeing",
+    "Education",
+    "Conflict Resolution"
+  ],
+  "hero": {
+    "image": "https://readdy.ai/api/search-image?query=diverse%20conference%20attendees%20registration%20welcome%20desk%20professional%20event%20check-in%20modern%20venue%20cultural%20sustainability%20theme%20simple%20background&width=1920&height=700&seq=cropregisterhero&orientation=landscape",
+    "imageAlt": "Register Your Interest",
+    "label": "Join Us",
+    "title": "Register Your Interest",
+    "text": "Be part of the global movement for cultural resilience and planetary sustainability. Register now for CROP Conference 2026."
+  },
+  "form": {
+    "heading": "Thank You for Registering!",
+    "text": "We have received your interest and will be in touch with next steps soon.",
+    "button": "Register Another Person",
+    "heading2": "Registration Form"
+  },
+  "personalInformation": {
+    "subheading": "Personal Information",
+    "fieldLabel": "First Name *",
+    "fieldLabel2": "Last Name *",
+    "fieldLabel3": "Email Address *",
+    "fieldLabel4": "Phone Number"
+  },
+  "professionalInformation": {
+    "subheading": "Professional Information",
+    "fieldLabel": "Organization *",
+    "fieldLabel2": "Country *",
+    "fieldLabel3": "Registration Type *",
+    "option": "Select registration type",
+    "option2": "Conference Delegate",
+    "option3": "Speaker / Presenter",
+    "option4": "Researcher",
+    "option5": "Student",
+    "option6": "Media",
+    "option7": "Partner Organization"
+  },
+  "thematicInterests": {
+    "subheading": "Thematic Interests",
+    "text": "Select the thematic pillars you're most interested in:"
+  },
+  "abstractSubmission": {
+    "subheading": "Abstract Submission",
+    "text": "Would you like to submit an abstract for presentation?",
+    "label": "Yes",
+    "label2": "No"
+  },
+  "specialRequirements": {
+    "subheading": "Special Requirements",
+    "fieldLabel": "Dietary Requirements",
+    "placeholder": "e.g. Vegetarian, Halal, Gluten-free",
+    "fieldLabel2": "Accessibility Needs",
+    "placeholder2": "Any special requirements"
+  },
+  "consent": {
+    "label": "I would like to receive updates about CROP Conference 2026 and related events."
+  },
+  "submit": {
+    "button": "Submit Registration",
+    "text": "By submitting this form, you agree to our ",
+    "link": "privacy policy",
+    "text2": " and ",
+    "link2": "terms of use"
+  },
+  "infoCards": {
+    "subheading": "Early Bird Rates",
+    "text": "Register early for discounted rates",
+    "subheading2": "Group Discounts",
+    "text2": "Special rates for group registrations",
+    "subheading3": "Need Help?",
+    "text3": "Contact our registration team"
+  }
+}

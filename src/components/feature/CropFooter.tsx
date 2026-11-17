@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { sendForm } from '../../lib/forms';
 import { useEffect, useRef } from 'react';
+import copy from '../../content/layout/crop-footer.json';
+// Text, images and links: src/content/layout/crop-footer.json (editable in the website editors).
 
 export default function CropFooter() {
   const footerRef = useRef<HTMLElement>(null);
@@ -64,16 +66,14 @@ export default function CropFooter() {
             {/* CROP 2026 Brand */}
             <div className="flex items-center gap-3 mb-3">
               <img
-                src="https://res.cloudinary.com/dzppzxpad/image/upload/q_auto/f_auto/v1780502472/Artboard_3_copy_2_2x_nxsxcz.png"
-                alt="CROP Conference 2026 Logo"
+                src={copy.crop2026Brand.image}
+                alt={copy.crop2026Brand.imageAlt}
                 className="h-10 w-auto object-contain rounded-full"
               />
-              <span className="font-bold text-xl" style={{ fontFamily: "'Playfair Display', serif" }}>CROP CONFERENCE 2026</span>
+              <span className="font-bold text-xl" style={{ fontFamily: "'Playfair Display', serif" }}>{copy.crop2026Brand.label}</span>
             </div>
-            <p className="text-[#D4AF37] text-sm font-semibold mb-2">Cultural Resilience, One Planet</p>
-            <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-              Bridging cultural actors with global sustainability agendas, protecting Indigenous knowledge, and promoting community resilience.
-            </p>
+            <p className="text-[#D4AF37] text-sm font-semibold mb-2">{copy.crop2026Brand.text}</p>
+            <p className="text-gray-400 text-sm mb-6 leading-relaxed">{copy.crop2026Brand.text2}</p>
 
             {/* Divider */}
             <div className="border-t border-white/10 my-5"></div>
@@ -82,22 +82,18 @@ export default function CropFooter() {
             <Link to="/" className="flex items-center gap-3 mb-2 group cursor-pointer inline-flex">
               <div className="w-10 h-10 glass-effect-gold rounded-lg flex items-center justify-center group-hover:bg-accent/30 transition-all duration-500">
                 <img
-                  src="https://res.cloudinary.com/dhjajm7ru/image/upload/w_200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg"
-                  alt="KWETU CONNECT Logo"
+                  src={copy.kwetuConnectBrand.image}
+                  alt={copy.kwetuConnectBrand.imageAlt}
                   className="w-8 h-8 object-contain"
                 />
               </div>
               <div className="flex flex-col leading-tight">
-                <span className="font-display font-bold text-base text-white group-hover:text-accent transition-colors duration-300">KWETU</span>
-                <span className="text-accent font-bold text-base -mt-0.5 group-hover:text-accent-light transition-colors duration-300">CONNECT</span>
+                <span className="font-display font-bold text-base text-white group-hover:text-accent transition-colors duration-300">{copy.kwetuConnectBrand.label}</span>
+                <span className="text-accent font-bold text-base -mt-0.5 group-hover:text-accent-light transition-colors duration-300">{copy.kwetuConnectBrand.label2}</span>
               </div>
             </Link>
-            <p className="text-accent italic font-serif text-sm mb-2">
-              Redefining Barriers, Navigating Opportunities
-            </p>
-            <p className="text-gray-400 text-sm mb-4 leading-relaxed">
-              Bridging communities, markets, and institutions through cultural resilience and sustainable partnerships.
-            </p>
+            <p className="text-accent italic font-serif text-sm mb-2">{copy.kwetuConnectBrand.text}</p>
+            <p className="text-gray-400 text-sm mb-4 leading-relaxed">{copy.kwetuConnectBrand.text2}</p>
             <form
               onSubmit={(e) => {
                 e.preventDefault();
@@ -115,41 +111,37 @@ export default function CropFooter() {
               <input
                 type="email"
                 name="email"
-                placeholder="Your email"
+                placeholder={copy.kwetuConnectBrand.placeholder}
                 required
                 className="flex-1 px-4 py-2.5 rounded-full glass-effect border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:glass-effect-gold text-sm transition-all duration-300"
               />
-              <button type="submit" className="px-5 py-2.5 glass-effect-gold hover:bg-accent text-primary font-semibold rounded-full transition-all duration-500 whitespace-nowrap cursor-pointer text-sm magnetic-button volumetric-glow">
-                Subscribe
-              </button>
+              <button type="submit" className="px-5 py-2.5 glass-effect-gold hover:bg-accent text-primary font-semibold rounded-full transition-all duration-500 whitespace-nowrap cursor-pointer text-sm magnetic-button volumetric-glow">{copy.kwetuConnectBrand.button}</button>
             </form>
           </div>
 
           {/* Column 2 — Quick Links */}
           <div className="glass-effect-dark p-6 rounded-xl border border-accent/10">
             <h3 className="text-white font-bold text-base mb-4 flex items-center">
-              <i className="ri-compass-line text-accent mr-2"></i>
-              Explore
-            </h3>
+              <i className="ri-compass-line text-accent mr-2"></i>{copy.column2QuickLinks.subheading}</h3>
             <div className="mb-5">
-              <h4 className="text-xs font-bold text-[#D4AF37] uppercase tracking-wider mb-3">Conference</h4>
+              <h4 className="text-xs font-bold text-[#D4AF37] uppercase tracking-wider mb-3">{copy.column2QuickLinks.subheading2}</h4>
               <ul className="space-y-2 mb-5">
-                <li><Link to="/crop2026/vision" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer text-sm">The Vision</Link></li>
-                <li><Link to="/crop2026/pillars" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer text-sm">Thematic Pillars</Link></li>
-                <li><Link to="/crop2026/programme" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer text-sm">Programme Overview</Link></li>
-                <li><Link to="/crop2026/outcomes" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer text-sm">Expected Outcomes</Link></li>
-                <li><Link to="/crop2026/venue" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer text-sm">Venue &amp; Logistics</Link></li>
+                <li><Link to="/crop2026/vision" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer text-sm">{copy.column2QuickLinks.text}</Link></li>
+                <li><Link to="/crop2026/pillars" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer text-sm">{copy.column2QuickLinks.text2}</Link></li>
+                <li><Link to="/crop2026/programme" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer text-sm">{copy.column2QuickLinks.text3}</Link></li>
+                <li><Link to="/crop2026/outcomes" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer text-sm">{copy.column2QuickLinks.text4}</Link></li>
+                <li><Link to="/crop2026/venue" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer text-sm">{copy.column2QuickLinks.text5}</Link></li>
               </ul>
             </div>
             <div>
-              <h4 className="text-xs font-bold text-[#D4AF37] uppercase tracking-wider mb-3">Website</h4>
+              <h4 className="text-xs font-bold text-[#D4AF37] uppercase tracking-wider mb-3">{copy.column2QuickLinks.subheading3}</h4>
               <ul className="space-y-2">
-                <li><Link to="/about" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer text-sm">About Us</Link></li>
-                <li><Link to="/programs" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer text-sm">Programs</Link></li>
-                <li><Link to="/crop2026" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer text-sm">CROP 2026</Link></li>
-                <li><Link to="/health-recruitment" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer text-sm">Health Recruitment</Link></li>
-                <li><Link to="/gallery" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer text-sm">Gallery</Link></li>
-                <li><Link to="/contact" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer text-sm">Contact</Link></li>
+                <li><Link to="/about" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer text-sm">{copy.column2QuickLinks.text6}</Link></li>
+                <li><Link to="/programs" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer text-sm">{copy.column2QuickLinks.text7}</Link></li>
+                <li><Link to="/crop2026" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer text-sm">{copy.column2QuickLinks.text8}</Link></li>
+                <li><Link to="/health-recruitment" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer text-sm">{copy.column2QuickLinks.text9}</Link></li>
+                <li><Link to="/gallery" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer text-sm">{copy.column2QuickLinks.text10}</Link></li>
+                <li><Link to="/contact" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer text-sm">{copy.column2QuickLinks.text11}</Link></li>
               </ul>
             </div>
           </div>
@@ -157,64 +149,52 @@ export default function CropFooter() {
           {/* Column 3 — Organizers + Programs */}
           <div className="glass-effect-dark p-6 rounded-xl border border-accent/10">
             <h3 className="text-white font-bold text-base mb-4 flex items-center">
-              <i className="ri-hand-heart-line text-accent mr-2"></i>
-              Organizers
-            </h3>
+              <i className="ri-hand-heart-line text-accent mr-2"></i>{copy.column3OrganizersPrograms.subheading}</h3>
             <div className="space-y-3 mb-6">
               <div>
                 <a
-                  href="https://kwetuconnect.org/"
+                  href={copy.column3OrganizersPrograms.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-[#D4AF37] transition-colors duration-300 text-sm font-medium inline-flex items-center gap-1 cursor-pointer"
-                >
-                  KWETU CONNECT PTY LTD
-                  <i className="ri-external-link-line text-xs opacity-60"></i>
+                >{copy.column3OrganizersPrograms.link}<i className="ri-external-link-line text-xs opacity-60"></i>
                 </a>
-                <p className="text-gray-500 text-xs">Co-Organizer</p>
+                <p className="text-gray-500 text-xs">{copy.column3OrganizersPrograms.text}</p>
               </div>
               <div>
                 <a
-                  href="https://ldiinitiatives.org/"
+                  href={copy.column3OrganizersPrograms.url2}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-[#D4AF37] transition-colors duration-300 text-sm font-medium inline-flex items-center gap-1 cursor-pointer"
-                >
-                  Livelihood Development International Initiatives (LDII)
-                  <i className="ri-external-link-line text-xs opacity-60"></i>
+                >{copy.column3OrganizersPrograms.link2}<i className="ri-external-link-line text-xs opacity-60"></i>
                 </a>
-                <p className="text-gray-500 text-xs">Co-Organizer</p>
+                <p className="text-gray-500 text-xs">{copy.column3OrganizersPrograms.text2}</p>
               </div>
               <div>
                 <a
-                  href="https://www.thrivetours.ca/"
+                  href={copy.column3OrganizersPrograms.url3}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-[#D4AF37] transition-colors duration-300 text-sm font-medium inline-flex items-center gap-1 cursor-pointer"
-                >
-                  Thrive Tours
-                  <i className="ri-external-link-line text-xs opacity-60"></i>
+                >{copy.column3OrganizersPrograms.link3}<i className="ri-external-link-line text-xs opacity-60"></i>
                 </a>
-                <p className="text-gray-500 text-xs">Co-Organizer — Award-winning Indigenous-led tourism, Canada</p>
+                <p className="text-gray-500 text-xs">{copy.column3OrganizersPrograms.text3}</p>
               </div>
             </div>
 
             <div className="border-t border-white/10 pt-5">
               <h3 className="text-white font-bold text-base mb-3 flex items-center">
-                <i className="ri-service-line text-accent mr-2"></i>
-                Our Programs
-              </h3>
+                <i className="ri-service-line text-accent mr-2"></i>{copy.column3OrganizersPrograms.subheading2}</h3>
               <ul className="space-y-2">
-                <li><Link to="/programs#mental-health" className="text-gray-300 hover:text-accent transition-all duration-300 hover:underline cursor-pointer text-sm">Mental Health &amp; Wellbeing</Link></li>
-                <li><Link to="/programs#cultural-exchange" className="text-gray-300 hover:text-accent transition-all duration-300 hover:underline cursor-pointer text-sm">Cultural Exchange Programs</Link></li>
-                <li><Link to="/programs#chaplaincy" className="text-gray-300 hover:text-accent transition-all duration-300 hover:underline cursor-pointer text-sm">Community Chaplaincy</Link></li>
-                <li><Link to="/programs#job-opportunities" className="text-gray-300 hover:text-accent transition-all duration-300 hover:underline cursor-pointer text-sm">Job Opportunities &amp; Care</Link></li>
-                <li><Link to="/programs#seniors-wisdom" className="text-gray-300 hover:text-accent transition-all duration-300 hover:underline cursor-pointer text-sm">Seniors Wisdom &amp; Guidance</Link></li>
-                <li><Link to="/programs#vulnerability" className="text-gray-300 hover:text-accent transition-all duration-300 hover:underline cursor-pointer text-sm">Turning Vulnerability to Opportunity</Link></li>
+                <li><Link to="/programs#mental-health" className="text-gray-300 hover:text-accent transition-all duration-300 hover:underline cursor-pointer text-sm">{copy.column3OrganizersPrograms.text4}</Link></li>
+                <li><Link to="/programs#cultural-exchange" className="text-gray-300 hover:text-accent transition-all duration-300 hover:underline cursor-pointer text-sm">{copy.column3OrganizersPrograms.text5}</Link></li>
+                <li><Link to="/programs#chaplaincy" className="text-gray-300 hover:text-accent transition-all duration-300 hover:underline cursor-pointer text-sm">{copy.column3OrganizersPrograms.text6}</Link></li>
+                <li><Link to="/programs#job-opportunities" className="text-gray-300 hover:text-accent transition-all duration-300 hover:underline cursor-pointer text-sm">{copy.column3OrganizersPrograms.text7}</Link></li>
+                <li><Link to="/programs#seniors-wisdom" className="text-gray-300 hover:text-accent transition-all duration-300 hover:underline cursor-pointer text-sm">{copy.column3OrganizersPrograms.text8}</Link></li>
+                <li><Link to="/programs#vulnerability" className="text-gray-300 hover:text-accent transition-all duration-300 hover:underline cursor-pointer text-sm">{copy.column3OrganizersPrograms.text9}</Link></li>
                 <li className="mt-2">
-                  <Link to="/programs" className="text-accent hover:text-accent-light transition-all duration-300 hover:underline cursor-pointer text-sm font-medium">
-                    View All Programs →
-                  </Link>
+                  <Link to="/programs" className="text-accent hover:text-accent-light transition-all duration-300 hover:underline cursor-pointer text-sm font-medium">{copy.column3OrganizersPrograms.text10}</Link>
                 </li>
               </ul>
             </div>
@@ -223,41 +203,29 @@ export default function CropFooter() {
           {/* Column 4 — Contact + Social + Sister Org */}
           <div className="glass-effect-dark p-6 rounded-xl border border-accent/10">
             <h3 className="text-white font-bold text-base mb-4 flex items-center">
-              <i className="ri-customer-service-line text-accent mr-2"></i>
-              Get In Touch
-            </h3>
+              <i className="ri-customer-service-line text-accent mr-2"></i>{copy.column4ContactSocialSister.subheading}</h3>
             <div className="space-y-2 mb-5">
               <div className="flex items-start text-gray-300 text-sm">
                 <i className="ri-map-pin-line mr-2 text-accent mt-0.5 flex-shrink-0"></i>
-                <span>The Dome, Sydney Showground, NSW, Australia</span>
+                <span>{copy.column4ContactSocialSister.label}</span>
               </div>
-              <a href="mailto:info@kwetuconnect.org" className="flex items-center text-gray-300 hover:text-accent transition-all duration-300 cursor-pointer text-sm magnetic-button">
-                <i className="ri-mail-line mr-2 text-accent"></i>
-                info@kwetuconnect.org
-              </a>
+              <a href={copy.column4ContactSocialSister.emailLink} className="flex items-center text-gray-300 hover:text-accent transition-all duration-300 cursor-pointer text-sm magnetic-button">
+                <i className="ri-mail-line mr-2 text-accent"></i>{copy.column4ContactSocialSister.link}</a>
               <div className="flex items-center text-gray-300 text-sm">
                 <i className="ri-calendar-line mr-2 text-accent flex-shrink-0"></i>
-                <span>November 6-8, 2026</span>
+                <span>{copy.column4ContactSocialSister.label2}</span>
               </div>
-              <a href="tel:0246279742" className="flex items-center text-gray-300 hover:text-accent transition-all duration-300 cursor-pointer text-sm magnetic-button">
-                <i className="ri-phone-line mr-2 text-accent"></i>
-                02 4627 9742
-              </a>
+              <a href={copy.column4ContactSocialSister.phoneLink} className="flex items-center text-gray-300 hover:text-accent transition-all duration-300 cursor-pointer text-sm magnetic-button">
+                <i className="ri-phone-line mr-2 text-accent"></i>{copy.column4ContactSocialSister.link2}</a>
               <div className="flex items-start text-gray-300 text-sm">
                 <i className="ri-map-pin-2-line mr-2 text-accent mt-0.5 flex-shrink-0"></i>
-                <span>58 Illyria Street, Rosemeadow, Sydney 2560 NSW, Australia</span>
+                <span>{copy.column4ContactSocialSister.label3}</span>
               </div>
             </div>
 
-            <h4 className="text-white font-semibold text-sm mb-3">Follow Us</h4>
+            <h4 className="text-white font-semibold text-sm mb-3">{copy.column4ContactSocialSister.subheading2}</h4>
             <div className="flex items-center gap-2 mb-6">
-              {[
-                { icon: 'ri-facebook-fill', url: 'https://facebook.com/crop2026', label: 'Facebook' },
-                { icon: 'ri-youtube-fill', url: 'https://youtube.com/crop2026', label: 'YouTube' },
-                { icon: 'ri-instagram-fill', url: 'https://instagram.com/crop2026', label: 'Instagram' },
-                { icon: 'ri-twitter-x-line', url: 'https://x.com/crop2026', label: 'X' },
-                { icon: 'ri-linkedin-fill', url: 'https://linkedin.com/company/crop2026', label: 'LinkedIn' },
-              ].map(({ icon, url, label }) => (
+              {copy.items.map(({ icon, url, label }) => (
                 <a key={label} href={url} target="_blank" rel="noopener noreferrer"
                   className="w-8 h-8 bg-white/10 hover:bg-[#D4AF37] rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 cursor-pointer"
                   aria-label={label}>
@@ -266,15 +234,13 @@ export default function CropFooter() {
               ))}
             </div>
 
-            <h4 className="text-white font-semibold text-sm mb-2">Sister Organization</h4>
+            <h4 className="text-white font-semibold text-sm mb-2">{copy.column4ContactSocialSister.subheading3}</h4>
             <a
-              href="https://kwetu4communities.org/"
+              href={copy.column4ContactSocialSister.url}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block glass-effect-gold border-2 border-accent text-accent hover:bg-accent hover:text-primary px-4 py-2 rounded-full font-semibold transition-all duration-500 whitespace-nowrap cursor-pointer text-sm magnetic-button volumetric-glow"
-            >
-              Visit kwetu4communities →
-            </a>
+            >{copy.column4ContactSocialSister.link3}</a>
           </div>
         </div>
       </div>
@@ -285,8 +251,7 @@ export default function CropFooter() {
           <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
             <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
               <p className="text-white/60 text-sm">
-                © {new Date().getFullYear()} KWETU CONNECT PTY LTD, Livelihood Development International Initiatives (LDII) &amp; Thrive Tours. All rights reserved.
-              </p>
+                © {new Date().getFullYear()}{copy.bottomBar.text}</p>
             </div>
             <div className="flex items-center gap-4">
           </div>

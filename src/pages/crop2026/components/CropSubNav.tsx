@@ -1,19 +1,13 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import copy from '../../../content/layout/crop-subnav.json';
+// Text, images and links: src/content/layout/crop-subnav.json (editable in the website editors).
 
 const CropSubNav = () => {
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const subNavLinks = [
-    { name: 'Home', path: '/crop2026' },
-    { name: 'Vision', path: '/crop2026/vision' },
-    { name: 'Thematic Pillars', path: '/crop2026/pillars' },
-    { name: 'Programme', path: '/crop2026/programme' },
-    { name: 'Outcomes', path: '/crop2026/outcomes' },
-    { name: 'Venue & Logistics', path: '/crop2026/venue' },
-    { name: 'Partnership', path: '/crop2026/partnership' },
-  ];
+  const subNavLinks = copy.subNavLinks;
 
   const isActive = (path: string) => {
     if (path === '/crop2026') return location.pathname === '/crop2026';
@@ -42,19 +36,16 @@ const CropSubNav = () => {
             </div>
             <div className="hidden lg:flex items-center space-x-4">
               <span className="text-white/60 text-sm flex items-center gap-1">
-                <i className="ri-global-line"></i> EN
-              </span>
+                <i className="ri-global-line"></i>{copy.main.label}</span>
               <Link
                 to="/crop2026/register"
                 className="px-5 py-2 bg-[#D4AF37] hover:bg-[#C4A137] text-[#0A2540] rounded-lg font-semibold text-sm transition-all duration-300 whitespace-nowrap"
-              >
-                Register Interest
-              </Link>
+              >{copy.main.text}</Link>
             </div>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="lg:hidden text-white p-2 hover:bg-white/10 rounded-md transition-colors cursor-pointer"
-              aria-label="Toggle conference menu"
+              aria-label={copy.main.ariaLabel}
             >
               <i className={`text-xl ${mobileOpen ? 'ri-close-line' : 'ri-menu-line'}`}></i>
             </button>
@@ -82,9 +73,7 @@ const CropSubNav = () => {
                 to="/crop2026/register"
                 onClick={() => setMobileOpen(false)}
                 className="block mt-2 py-2 px-3 bg-[#D4AF37] text-[#0A2540] rounded-lg font-semibold text-center text-sm"
-              >
-                Register Interest
-              </Link>
+              >{copy.main.text2}</Link>
             </div>
           </div>
         )}

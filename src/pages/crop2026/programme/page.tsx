@@ -1,84 +1,11 @@
 import CropConferenceLayout from '../components/CropConferenceLayout';
 import { Link } from 'react-router-dom';
+import copy from '../../../content/pages/crop2026-programme.json';
+// Text, images and links: src/content/pages/crop2026-programme.json (editable in the website editors).
 
-const components = [
-  {
-    icon: 'ri-presentation-line',
-    title: 'Plenary Panels',
-    desc: 'High-level discussions featuring global leaders, policymakers, and cultural experts addressing critical intersections of culture and sustainability.',
-  },
-  {
-    icon: 'ri-team-line',
-    title: 'Community Roundtables',
-    desc: 'Grassroots-led sessions where community practitioners share lived experiences and locally-driven resilience strategies.',
-  },
-  {
-    icon: 'ri-gallery-line',
-    title: 'Cultural Expositions',
-    desc: 'Showcasing traditional arts, crafts, and cultural practices from diverse communities, celebrating cultural diversity and innovation.',
-  },
-  {
-    icon: 'ri-user-star-line',
-    title: 'Youth Forums',
-    desc: 'Dedicated spaces for young leaders to present innovative solutions and shape the future of cultural resilience.',
-  },
-  {
-    icon: 'ri-file-list-3-line',
-    title: 'Research Presentations',
-    desc: 'Academic and community-based research on cultural resilience, sustainability, and Indigenous knowledge systems.',
-  },
-  {
-    icon: 'ri-group-fill',
-    title: 'Thematic Working Groups',
-    desc: 'Collaborative sessions developing actionable strategies and commitments for each of the six thematic pillars.',
-  },
-];
+const components = copy.components;
 
-const schedule = [
-  {
-    day: 'Day 1',
-    date: 'November 6, 2026',
-    theme: 'Opening & Foundation',
-    sessions: [
-      { time: '08:00 - 09:00', title: 'Registration & Welcome Coffee', type: 'General', location: 'Main Foyer', desc: 'Welcome reception with refreshments and networking opportunities. Collect your conference materials and connect with fellow delegates.' },
-      { time: '09:00 - 10:30', title: 'Opening Ceremony & Keynote Address', type: 'Plenary', location: 'Main Auditorium', desc: 'Welcome addresses from co-organizers, Indigenous acknowledgment, and keynote on cultural resilience and care transformation in the 21st century.' },
-      { time: '10:30 - 11:00', title: 'Morning Tea & Networking', type: 'General', location: 'Exhibition Hall' },
-      { time: '11:00 - 13:00', title: 'Plenary Panel: Bridging Culture, Care & Climate', type: 'Plenary', location: 'Main Auditorium', desc: 'Global leaders discuss integrating cultural perspectives into climate action and care industry transformation.' },
-      { time: '13:00 - 14:00', title: 'Lunch & Cultural Exposition', type: 'General', location: 'Exhibition Hall' },
-      { time: '14:00 - 16:00', title: 'Parallel Thematic Workshops: Culture & Care Integration', type: 'Workshop', location: 'Multiple Rooms', desc: 'Deep-dive sessions on Climate Justice, Culture-Based Trade, and Cultural Approaches to Care.' },
-      { time: '16:00 - 16:30', title: 'Afternoon Tea', type: 'General', location: 'Exhibition Hall' },
-      { time: '16:30 - 18:00', title: 'Community Roundtables: Care for Caregivers', type: 'Roundtable', location: 'Multiple Rooms', desc: 'Grassroots leaders share community-led resilience initiatives and cultural heritage perspectives on care.' },
-      { time: '18:30 - 20:30', title: 'Welcome Reception & Cultural Performance', type: 'Social', location: 'Waterfront Terrace' },
-    ],
-  },
-  {
-    day: 'Day 2',
-    date: 'November 7, 2026',
-    theme: 'Deep Dive & Innovation',
-    sessions: [
-      { time: '09:00 - 10:30', title: 'Plenary: Indigenous Knowledge & Care Systems', type: 'Plenary', location: 'Main Auditorium', desc: 'Indigenous leaders present traditional knowledge as solutions to contemporary care and environmental challenges.' },
-      { time: '10:30 - 11:00', title: 'Morning Tea', type: 'General', location: 'Exhibition Hall' },
-      { time: '11:00 - 13:00', title: 'Parallel Workshops: Redefining Care Industry', type: 'Workshop', location: 'Multiple Rooms', desc: 'Sessions on Cultural Transformative Values for Care, Senior Participation in Decision-Making, and Technology Integration.' },
-      { time: '13:00 - 14:00', title: 'Lunch', type: 'General', location: 'Exhibition Hall' },
-      { time: '14:00 - 16:00', title: 'Youth Forum: Next Generation Leadership in Care', type: 'Youth', location: 'Main Auditorium', desc: 'Young leaders present innovative approaches to cultural resilience and care transformation.' },
-      { time: '16:00 - 16:30', title: 'Afternoon Tea', type: 'General', location: 'Exhibition Hall' },
-      { time: '16:30 - 18:00', title: 'Research Presentations: Culture Meets Care', type: 'Research', location: 'Innovation Hub', desc: 'Academic and community researchers share findings on cultural approaches to care industry innovation.' },
-      { time: '19:00 - 22:00', title: 'Gala Dinner & Awards Ceremony', type: 'Social', location: 'Grand Ballroom' },
-    ],
-  },
-  {
-    day: 'Day 3',
-    date: 'November 8, 2026',
-    theme: 'Sydney Discovery & Cultural Immersion',
-    sessions: [
-      { time: '09:00 - 10:30', title: 'Optional: Working Group Sessions', type: 'Workshop', location: 'Multiple Rooms', desc: 'Final collaborative sessions for action planning and commitments.' },
-      { time: '10:30 - 11:00', title: 'Morning Tea & Departure Preparation', type: 'General', location: 'Exhibition Hall' },
-      { time: '11:00 - 17:00', title: 'Sydney Cultural & Tourism Experience', type: 'Cultural', location: 'Sydney City', desc: "Guided tours of Sydney's iconic landmarks: Opera House, Harbour Bridge, Royal Botanic Gardens, and cultural sites. Experience Australia's vibrant multicultural heritage." },
-      { time: '17:00 - 18:00', title: 'Optional: Sunset Harbour Cruise', type: 'Social', location: 'Sydney Harbour', desc: 'Relaxing cruise on Sydney Harbour with networking opportunities.' },
-      { time: '18:30 - 20:00', title: 'Farewell Dinner (Optional)', type: 'Social', location: 'Waterfront Restaurant', desc: 'Closing celebration with Australian cuisine and cultural performances.' },
-    ],
-  },
-];
+const schedule = copy.schedule;
 
 const typeColors: Record<string, string> = {
   Plenary: 'bg-[#0A2540] text-white',
@@ -99,20 +26,16 @@ export default function ProgrammePage() {
         <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0">
             <img
-              src="https://readdy.ai/api/search-image?query=professional%20conference%20schedule%20planning%20modern%20event%20agenda%20elegant%20design%20cultural%20sustainability%20theme%20simple%20background&width=1920&height=700&seq=cropproghero&orientation=landscape"
-              alt="Programme Overview"
+              src={copy.hero.image}
+              alt={copy.hero.imageAlt}
               className="w-full h-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-[#0A2540]/90 to-[#0A2540]/70"></div>
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span className="text-[#D4AF37] font-semibold text-sm uppercase tracking-wider">Conference Schedule</span>
-            <h1 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Programme Overview
-            </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Three transformative days: two days of dialogue, collaboration, and action, plus one day exploring Sydney's vibrant culture and iconic landmarks.
-            </p>
+            <span className="text-[#D4AF37] font-semibold text-sm uppercase tracking-wider">{copy.hero.label}</span>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>{copy.hero.title}</h1>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">{copy.hero.text}</p>
           </div>
         </section>
 
@@ -120,11 +43,9 @@ export default function ProgrammePage() {
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <span className="text-[#0A2540] font-semibold text-sm uppercase tracking-wider">Programme Components</span>
+              <span className="text-[#0A2540] font-semibold text-sm uppercase tracking-wider">{copy.programmeComponents.label}</span>
               <div className="h-0.5 w-16 bg-[#D4AF37] mt-2 mx-auto mb-4"></div>
-              <h2 className="text-3xl font-bold text-[#0A2540]" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Diverse Formats for Maximum Impact
-              </h2>
+              <h2 className="text-3xl font-bold text-[#0A2540]" style={{ fontFamily: "'Playfair Display', serif" }}>{copy.programmeComponents.heading}</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {components.map((item) => (
@@ -144,13 +65,9 @@ export default function ProgrammePage() {
         <section className="py-20 bg-gradient-to-br from-[#0A2540] to-[#1a4a7a]">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10">
-              <span className="text-[#D4AF37] font-semibold text-sm uppercase tracking-wider">Full Programme Document</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mt-3 mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-                CROP Conference 2026 Programme
-              </h2>
-              <p className="text-white/70 text-base max-w-2xl mx-auto mb-8">
-                View, zoom, and download the complete CROP Conference 2026 programme. Use the viewer controls below to navigate through the document.
-              </p>
+              <span className="text-[#D4AF37] font-semibold text-sm uppercase tracking-wider">{copy.downloadFullProgrammePdfViewer.label}</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mt-3 mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>{copy.downloadFullProgrammePdfViewer.heading}</h2>
+              <p className="text-white/70 text-base max-w-2xl mx-auto mb-8">{copy.downloadFullProgrammePdfViewer.text}</p>
 
               {/*
                 ============================================================
@@ -170,18 +87,15 @@ export default function ProgrammePage() {
               {/* Download & Zoom Controls */}
               <div className="flex flex-wrap items-center justify-center gap-4 mb-8">
                 <a
-                  href="https://res.cloudinary.com/dhjajm7ru/image/upload/v1780598012/CROP2026_Conference_Program_ti8rs3.pdf"
+                  href={copy.downloadAndZoomControls.url}
                   download
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-[#D4AF37] text-[#0A2540] font-bold rounded-full hover:bg-[#C4A137] transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 whitespace-nowrap"
                 >
-                  <i className="ri-download-2-line text-lg"></i>Download PDF
-                </a>
+                  <i className="ri-download-2-line text-lg"></i>{copy.downloadAndZoomControls.link}</a>
                 <span className="text-white/50 text-sm flex items-center gap-2">
-                  <i className="ri-zoom-in-line"></i>
-                  Use browser controls (Ctrl + / Ctrl -) to zoom in and out of the document
-                </span>
+                  <i className="ri-zoom-in-line"></i>{copy.downloadAndZoomControls.label}</span>
               </div>
             </div>
 
@@ -199,10 +113,10 @@ export default function ProgrammePage() {
                 ============================================================
               */}
               <iframe
-                src="https://docs.google.com/viewer?url=https://res.cloudinary.com/dhjajm7ru/image/upload/v1780598012/CROP2026_Conference_Program_ti8rs3.pdf&embedded=true"
+                src={copy.pdfViewerIframe.embedUrl}
                 className="w-full"
                 style={{ height: '800px', border: 'none' }}
-                title="CROP Conference 2026 Programme PDF"
+                title={copy.pdfViewerIframe.title}
                 allowFullScreen
               />
             </div>
@@ -213,12 +127,10 @@ export default function ProgrammePage() {
         <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <span className="text-[#0A2540] font-semibold text-sm uppercase tracking-wider">3-Day Schedule</span>
+              <span className="text-[#0A2540] font-semibold text-sm uppercase tracking-wider">{copy.s3DaySchedule.label}</span>
               <div className="h-0.5 w-16 bg-[#D4AF37] mt-2 mx-auto mb-4"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#0A2540]" style={{ fontFamily: "'Playfair Display', serif" }}>
-                Detailed Programme Timeline
-              </h2>
-              <p className="text-gray-500 text-sm mt-2">(Subject to updates)</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#0A2540]" style={{ fontFamily: "'Playfair Display', serif" }}>{copy.s3DaySchedule.heading}</h2>
+              <p className="text-gray-500 text-sm mt-2">{copy.s3DaySchedule.text}</p>
             </div>
 
             {/* Quick link back to PDF viewer above */}
@@ -228,8 +140,7 @@ export default function ProgrammePage() {
                 onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                 className="inline-flex items-center gap-2 px-6 py-3 bg-[#D4AF37] text-[#0A2540] font-semibold rounded-lg hover:bg-[#C4A137] transition-all duration-300 shadow-md whitespace-nowrap cursor-pointer"
               >
-                <i className="ri-file-pdf-2-line text-lg"></i>View Programme PDF (Top of Page)
-              </a>
+                <i className="ri-file-pdf-2-line text-lg"></i>{copy.quickLinkBackToPdf.link}</a>
             </div>
 
             <div className="space-y-12">
@@ -241,7 +152,7 @@ export default function ProgrammePage() {
                         <h3 className="text-2xl font-bold text-white" style={{ fontFamily: "'Playfair Display', serif" }}>
                           {day.day}: {day.date}
                         </h3>
-                        <p className="text-[#D4AF37] font-semibold">Theme: {day.theme}</p>
+                        <p className="text-[#D4AF37] font-semibold">{copy.quickLinkBackToPdf.text}{day.theme}</p>
                       </div>
                     </div>
                   </div>
@@ -275,25 +186,19 @@ export default function ProgrammePage() {
         {/* CTA */}
         <section className="py-16 bg-gradient-to-br from-[#0A2540] to-[#1a4a7a]">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl font-bold text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>
-              Secure Your Place
-            </h2>
-            <p className="text-lg text-white/80 mb-8">
-              Early bird registration is now open. Join us for three transformative days.
-            </p>
+            <h2 className="text-3xl font-bold text-white mb-4" style={{ fontFamily: "'Playfair Display', serif" }}>{copy.cta.heading}</h2>
+            <p className="text-lg text-white/80 mb-8">{copy.cta.text}</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 to="/crop2026/register"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-[#D4AF37] text-[#0A2540] font-bold rounded-full hover:bg-[#C4A137] transition-all duration-300 shadow-2xl hover:scale-105 whitespace-nowrap"
               >
-                <i className="ri-user-add-line text-lg"></i>Register Now
-              </Link>
+                <i className="ri-user-add-line text-lg"></i>{copy.cta.text2}</Link>
               <Link
                 to="/crop2026/outcomes"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-full border-2 border-white/30 hover:bg-white/20 transition-all duration-300 hover:scale-105 whitespace-nowrap"
               >
-                <i className="ri-award-line text-lg"></i>Expected Outcomes
-              </Link>
+                <i className="ri-award-line text-lg"></i>{copy.cta.text3}</Link>
             </div>
           </div>
         </section>

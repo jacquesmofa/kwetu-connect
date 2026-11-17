@@ -1,0 +1,138 @@
+{
+  "primaryOutcomes": [
+    {
+      "icon": "ri-file-text-line",
+      "color": "from-[#0A2540] to-[#1a4a7a]",
+      "title": "The Sydney Declaration on Cultural Resilience",
+      "desc": "A landmark global statement affirming the centrality of culture in sustainability agendas, climate action, and community resilience.",
+      "components": [
+        "Principles for integrating cultural perspectives into climate policy",
+        "Commitments to protect Indigenous knowledge and cultural rights",
+        "Framework for culture-based sustainable development",
+        "Call to action for governments, organizations, and communities"
+      ],
+      "impact": "This declaration will serve as a foundational document for advocacy, policy development, and international collaboration on cultural resilience."
+    },
+    {
+      "icon": "ri-book-2-line",
+      "color": "from-[#D4AF37] to-yellow-600",
+      "title": "Compendium of Research and Best Practices",
+      "desc": "A comprehensive collection of cultural resilience strategies from around the world.",
+      "components": [
+        "Peer-reviewed research papers from conference presentations",
+        "Documented case studies from diverse global contexts",
+        "Practical toolkits and implementation guides",
+        "Video documentation of community practices"
+      ],
+      "impact": "This resource will be freely accessible to researchers, practitioners, and communities worldwide, advancing knowledge and practice."
+    },
+    {
+      "icon": "ri-team-line",
+      "color": "from-teal-500 to-teal-700",
+      "title": "Thematic Working Groups",
+      "desc": "Ongoing collaborative networks focused on each of the six thematic pillars, driving sustained action beyond the conference.",
+      "components": [
+        "Multi-stakeholder groups for each thematic pillar",
+        "Action plans with clear objectives and timelines",
+        "Regular virtual convenings and knowledge exchange",
+        "Annual progress reporting and accountability mechanisms"
+      ],
+      "impact": "These working groups will ensure conference outcomes translate into tangible, long-term impact across all thematic areas."
+    }
+  ],
+  "additionalOutputs": [
+    {
+      "icon": "ri-film-line",
+      "title": "Documentary Film",
+      "desc": "Professional documentation of conference highlights, key messages, and participant voices."
+    },
+    {
+      "icon": "ri-global-line",
+      "title": "Digital Platform",
+      "desc": "Online hub for ongoing collaboration, resource sharing, and community engagement."
+    },
+    {
+      "icon": "ri-newspaper-line",
+      "title": "Media Coverage",
+      "desc": "Extensive media outreach to amplify conference messages and outcomes globally."
+    },
+    {
+      "icon": "ri-trophy-line",
+      "title": "Recognition Awards",
+      "desc": "Honoring outstanding contributions to cultural resilience and sustainability."
+    },
+    {
+      "icon": "ri-map-pin-line",
+      "title": "Regional Networks",
+      "desc": "Establishment of regional hubs for localized action and collaboration."
+    },
+    {
+      "icon": "ri-calendar-event-line",
+      "title": "Follow-up Events",
+      "desc": "Series of regional and thematic convenings building on conference momentum."
+    }
+  ],
+  "timeline": [
+    {
+      "phase": "During Conference",
+      "items": [
+        "Launch of Sydney Declaration",
+        "Formation of Working Groups",
+        "Research presentations and documentation"
+      ]
+    },
+    {
+      "phase": "3 Months Post-Conference",
+      "items": [
+        "Publication of Compendium",
+        "First Working Group meetings",
+        "Digital platform launch"
+      ]
+    },
+    {
+      "phase": "6-12 Months",
+      "items": [
+        "Regional follow-up events",
+        "Working Group action plans implementation",
+        "Documentary film release"
+      ]
+    },
+    {
+      "phase": "Ongoing",
+      "items": [
+        "Annual progress reports",
+        "Continuous knowledge exchange",
+        "Sustained advocacy and collaboration"
+      ]
+    }
+  ],
+  "hero": {
+    "image": "https://readdy.ai/api/search-image?query=global%20impact%20sustainability%20goals%20achievement%20cultural%20resilience%20success%20diverse%20hands%20together%20professional%20setting%20warm%20lighting%20simple%20background&width=1920&height=700&seq=cropoutcomeshero&orientation=landscape",
+    "imageAlt": "Expected Outcomes",
+    "label": "Conference Impact",
+    "title": "Expected Outcomes",
+    "text": "Tangible deliverables and lasting impact from three days of global collaboration and dialogue."
+  },
+  "primaryOutcomesSection": {
+    "label": "Primary Outcomes",
+    "heading": "Three Flagship Deliverables",
+    "text": "These deliverables will shape the future of cultural resilience globally.",
+    "subheading": "Key Components",
+    "subheading2": "Expected Impact"
+  },
+  "additionalOutputsSection": {
+    "label": "Additional Outputs",
+    "heading": "Supporting Deliverables",
+    "text": "Supporting deliverables that amplify and sustain conference impact."
+  },
+  "impactTimeline": {
+    "label": "Impact Timeline",
+    "heading": "How Outcomes Will Unfold"
+  },
+  "cta": {
+    "heading": "Help Shape These Outcomes",
+    "text": "Your participation directly contributes to these global deliverables.",
+    "text2": "Register Your Interest",
+    "text3": "Become a Partner"
+  }
+}

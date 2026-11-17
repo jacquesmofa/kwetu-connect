@@ -1,0 +1,161 @@
+{
+  "heroSection": {
+    "image": "https://readdy.ai/api/search-image?query=abstract%20handshake%20partnership%20collaboration%20modern%20professional%20design%20connecting%20hands%20diverse%20business%20people%20simple%20background&width=1920&height=1080&seq=contacthero&orientation=landscape",
+    "imageAlt": "Contact & Partnership",
+    "text": "LET'S BUILD SOMETHING",
+    "text2": "TRANSFORMATIVE TOGETHER",
+    "text3": "Reach out to explore partnership opportunities"
+  },
+  "partnershipInquiryForm": {
+    "heading": "Partnership Inquiry Form",
+    "text": "Tell us about your organization and how we can collaborate"
+  },
+  "form": {
+    "heading": "Thank You for Your Inquiry!",
+    "text": "We've received your partnership inquiry and will respond within 24-48 hours.",
+    "button": "Submit Another Inquiry"
+  },
+  "personalInformation": {
+    "subheading": "Personal Information",
+    "fieldLabel": "Full Name ",
+    "placeholder": "John Doe",
+    "fieldLabel2": "Email ",
+    "placeholder2": "john@example.com",
+    "fieldLabel3": "Phone ",
+    "placeholder3": "+61 2 1234 5678"
+  },
+  "organizationDetails": {
+    "subheading": "Organization Details",
+    "fieldLabel": "Organization Name ",
+    "placeholder": "Your Organization",
+    "fieldLabel2": "Organization Type ",
+    "option": "Select Type",
+    "option2": "Government Agency",
+    "option3": "NGO/Non-Profit",
+    "option4": "Corporation",
+    "option5": "Academic Institution",
+    "option6": "Healthcare Facility",
+    "option7": "Cultural Organization",
+    "option8": "Other",
+    "fieldLabel3": "Website",
+    "placeholder2": "https://www.example.com"
+  },
+  "partnershipInterest": {
+    "subheading": "Partnership Interest",
+    "fieldLabel": "Select all that apply "
+  },
+  "projectScope": {
+    "fieldLabel": "Project Scope / Message ",
+    "placeholder": "Tell us about your partnership goals, project scope, or inquiry...",
+    "text": "/500 characters"
+  },
+  "preferredContactMethod": {
+    "fieldLabel": "Preferred Contact Method "
+  },
+  "submitButton": {
+    "button": "Submit Inquiry"
+  },
+  "whyPartnerWithUs": {
+    "image": "https://readdy.ai/api/search-image?query=successful%20business%20partnership%20collaboration%20diverse%20professionals%20working%20together%20strategic%20alliance%20proven%20track%20record%20modern%20office%20setting%20professional%20environment%20bright%20natural%20lighting%20high%20quality%20photography&width=1200&height=800&seq=whypartnerbg&orientation=landscape",
+    "imageAlt": "Why Partner Background",
+    "heading": "Why Partner With Us",
+    "label": "Proven track record of successful partnerships",
+    "label2": "Access to diverse communities and networks",
+    "label3": "Innovative and evidence-based approaches",
+    "label4": "Comprehensive support and collaboration",
+    "label5": "Measurable impact and transparent reporting",
+    "subheading": "Response Time",
+    "text": "We aim to respond to all inquiries within 24-48 hours during business days.",
+    "subheading2": "Privacy Policy",
+    "text2": "Your information is secure and will only be used to respond to your inquiry. We respect your privacy."
+  },
+  "officeLocationMap": {
+    "heading": "Our Location",
+    "text": "Visit us in Sydney, Australia",
+    "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.6858!2d151.2073!3d-33.8688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDUyJzA3LjciUyAxNTHCsDEyJzI2LjMiRQ!5e0!3m2!1sen!2sau!4v1234567890",
+    "title": "Office Location Map",
+    "subheading": "KWETU CONNECT PTY LTD",
+    "text2": "Address",
+    "text3": "58 Illyria Street, Rosemeadow",
+    "text4": "Sydney 2560 NSW, Australia",
+    "text5": "Phone",
+    "phoneLink": "tel:0246279742",
+    "link": "02 4627 9742",
+    "text6": "Email",
+    "emailLink": "mailto:info@kwetuconnect.org",
+    "link2": "info@kwetuconnect.org",
+    "text7": "Business Hours",
+    "text8": "Monday - Friday: 9:00 AM - 5:00 PM AEST",
+    "text9": "Saturday - Sunday: Closed",
+    "subheading2": "Connect With Us"
+  },
+  "backgroundImageWithOverlay": {
+    "image": "https://readdy.ai/api/search-image?query=newsletter%20subscription%20modern%20professional%20design%20people%20connecting%20digital%20communication%20email%20marketing%20beautiful%20workspace%20simple%20clean%20background&width=1920&height=1080&seq=newsletterbg&orientation=landscape",
+    "imageAlt": "Newsletter Background",
+    "heading": "Stay Updated",
+    "text": "Subscribe to our newsletter for the latest news, events, and opportunities",
+    "placeholder": "Enter your email",
+    "button": "Subscribe"
+  },
+  "methods": [
+    {
+      "icon": "ri-phone-line",
+      "title": "Phone",
+      "content": "02 4627 9742",
+      "action": "Call Us",
+      "link": "tel:0246279742",
+      "color": "bg-teal"
+    },
+    {
+      "icon": "ri-mail-line",
+      "title": "Email",
+      "content": "info@kwetuconnect.org",
+      "action": "Send Email",
+      "link": "mailto:info@kwetuconnect.org",
+      "color": "bg-accent"
+    },
+    {
+      "icon": "ri-map-pin-line",
+      "title": "Office",
+      "content": "Sydney, NSW, Australia",
+      "action": "Get Directions",
+      "link": "#map",
+      "color": "bg-primary"
+    }
+  ],
+  "interests": [
+    "CROP 2026 Sponsorship",
+    "Program Collaboration",
+    "Service Inquiry",
+    "Event Partnership",
+    "Research Partnership",
+    "Funding Opportunity"
+  ],
+  "methods2": [
+    "email",
+    "phone",
+    "video-call"
+  ],
+  "socials": [
+    {
+      "icon": "ri-linkedin-fill",
+      "link": "#"
+    },
+    {
+      "icon": "ri-twitter-x-fill",
+      "link": "#"
+    },
+    {
+      "icon": "ri-facebook-fill",
+      "link": "#"
+    },
+    {
+      "icon": "ri-instagram-fill",
+      "link": "#"
+    },
+    {
+      "icon": "ri-youtube-fill",
+      "link": "#"
+    }
+  ]
+}

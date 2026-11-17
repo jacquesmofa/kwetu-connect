@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useEffect, useRef } from 'react';
+import copy from '../../content/layout/footer.json';
+// Text, images and links: src/content/layout/footer.json (editable in the website editors).
 
 export default function Footer() {
   const footerRef = useRef<HTMLElement>(null);
@@ -67,73 +69,53 @@ export default function Footer() {
               {/* Logo Image */}
               <div className="w-12 h-12 glass-effect-gold rounded-lg flex items-center justify-center group-hover:bg-accent/30 transition-all duration-500 volumetric-glow">
                 <img 
-                  src="https://res.cloudinary.com/dhjajm7ru/image/upload/w_200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" 
-                  alt="KWETU CONNECT Logo" 
+                  src={copy.logoImage.image} 
+                  alt={copy.logoImage.imageAlt} 
                   className="w-10 h-10 object-contain"
                 />
               </div>
               {/* Brand Text */}
               <div className="flex flex-col leading-tight">
-                <span className="font-display font-bold text-lg text-white group-hover:text-accent transition-colors duration-300">KWETU</span>
-                <span className="text-accent font-bold text-lg -mt-1 group-hover:text-accent-light transition-colors duration-300">CONNECT</span>
+                <span className="font-display font-bold text-lg text-white group-hover:text-accent transition-colors duration-300">{copy.brandText.label}</span>
+                <span className="text-accent font-bold text-lg -mt-1 group-hover:text-accent-light transition-colors duration-300">{copy.brandText.label2}</span>
               </div>
             </Link>
-            <p className="text-accent italic font-serif text-base mb-3">
-              Redefining Barriers, Navigating Opportunities
-            </p>
-            <p className="text-gray-300 text-sm mb-6 leading-relaxed">
-              Bridging communities, markets, and institutions through cultural resilience and sustainable partnerships.
-            </p>
+            <p className="text-accent italic font-serif text-base mb-3">{copy.brandText.text}</p>
+            <p className="text-gray-300 text-sm mb-6 leading-relaxed">{copy.brandText.text2}</p>
             <div className="flex flex-col sm:flex-row gap-2">
               <input
                 type="email"
-                placeholder="Your email"
+                placeholder={copy.brandText.placeholder}
                 className="flex-1 px-4 py-2.5 rounded-full glass-effect border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-accent focus:glass-effect-gold text-sm transition-all duration-300"
               />
-              <button className="px-6 py-2.5 glass-effect-gold hover:bg-accent text-primary font-semibold rounded-full transition-all duration-500 whitespace-nowrap cursor-pointer text-sm magnetic-button volumetric-glow">
-                Subscribe
-              </button>
+              <button className="px-6 py-2.5 glass-effect-gold hover:bg-accent text-primary font-semibold rounded-full transition-all duration-500 whitespace-nowrap cursor-pointer text-sm magnetic-button volumetric-glow">{copy.brandText.button}</button>
             </div>
           </div>
 
           {/* Quick Links */}
           <div className="glass-effect-dark p-6 rounded-xl border border-accent/10">
             <h3 className="text-white font-bold text-base mb-4 flex items-center">
-              <i className="ri-compass-line text-accent mr-2"></i>
-              Explore
-            </h3>
+              <i className="ri-compass-line text-accent mr-2"></i>{copy.quickLinks.subheading}</h3>
             <div>
-              <h4 className="text-lg font-bold text-white mb-6">Quick Links</h4>
+              <h4 className="text-lg font-bold text-white mb-6">{copy.quickLinks.subheading2}</h4>
               <ul className="space-y-3">
                 <li>
-                  <Link to="/about" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer">
-                    About Us
-                  </Link>
+                  <Link to="/about" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer">{copy.quickLinks.text}</Link>
                 </li>
                 <li>
-                  <Link to="/programs" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer">
-                    Programs
-                  </Link>
+                  <Link to="/programs" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer">{copy.quickLinks.text2}</Link>
                 </li>
                 <li>
-                  <Link to="/crop2026" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer">
-                    CROP 2026
-                  </Link>
+                  <Link to="/crop2026" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer">{copy.quickLinks.text3}</Link>
                 </li>
                 <li>
-                  <Link to="/health-recruitment" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer">
-                    Health Recruitment
-                  </Link>
+                  <Link to="/health-recruitment" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer">{copy.quickLinks.text4}</Link>
                 </li>
                 <li>
-                  <Link to="/gallery" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer">
-                    Gallery
-                  </Link>
+                  <Link to="/gallery" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer">{copy.quickLinks.text5}</Link>
                 </li>
                 <li>
-                  <Link to="/contact" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer">
-                    Contact
-                  </Link>
+                  <Link to="/contact" className="text-gray-300 hover:text-accent transition-colors duration-300 cursor-pointer">{copy.quickLinks.text6}</Link>
                 </li>
               </ul>
             </div>
@@ -142,44 +124,28 @@ export default function Footer() {
           {/* Programs */}
           <div className="glass-effect-dark p-6 rounded-xl border border-accent/10">
             <h3 className="text-white font-bold text-base mb-4 flex items-center">
-              <i className="ri-service-line text-accent mr-2"></i>
-              Our Programs
-            </h3>
+              <i className="ri-service-line text-accent mr-2"></i>{copy.programs.subheading}</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/programs#mental-health" className="text-gray-300 hover:text-accent transition-all duration-300 hover:underline cursor-pointer text-sm magnetic-button inline-block">
-                  Mental Health & Wellbeing
-                </Link>
+                <Link to="/programs#mental-health" className="text-gray-300 hover:text-accent transition-all duration-300 hover:underline cursor-pointer text-sm magnetic-button inline-block">{copy.programs.text}</Link>
               </li>
               <li>
-                <Link to="/programs#cultural-exchange" className="text-gray-300 hover:text-accent transition-all duration-300 hover:underline cursor-pointer text-sm magnetic-button inline-block">
-                  Cultural Exchange Programs
-                </Link>
+                <Link to="/programs#cultural-exchange" className="text-gray-300 hover:text-accent transition-all duration-300 hover:underline cursor-pointer text-sm magnetic-button inline-block">{copy.programs.text2}</Link>
               </li>
               <li>
-                <Link to="/programs#chaplaincy" className="text-gray-300 hover:text-accent transition-all duration-300 hover:underline cursor-pointer text-sm magnetic-button inline-block">
-                  Community Chaplaincy
-                </Link>
+                <Link to="/programs#chaplaincy" className="text-gray-300 hover:text-accent transition-all duration-300 hover:underline cursor-pointer text-sm magnetic-button inline-block">{copy.programs.text3}</Link>
               </li>
               <li>
-                <Link to="/programs#job-opportunities" className="text-gray-300 hover:text-accent transition-all duration-300 hover:underline cursor-pointer text-sm magnetic-button inline-block">
-                  Job Opportunities & Care
-                </Link>
+                <Link to="/programs#job-opportunities" className="text-gray-300 hover:text-accent transition-all duration-300 hover:underline cursor-pointer text-sm magnetic-button inline-block">{copy.programs.text4}</Link>
               </li>
               <li>
-                <Link to="/programs#seniors-wisdom" className="text-gray-300 hover:text-accent transition-all duration-300 hover:underline cursor-pointer text-sm magnetic-button inline-block">
-                  Seniors Wisdom & Guidance
-                </Link>
+                <Link to="/programs#seniors-wisdom" className="text-gray-300 hover:text-accent transition-all duration-300 hover:underline cursor-pointer text-sm magnetic-button inline-block">{copy.programs.text5}</Link>
               </li>
               <li>
-                <Link to="/programs#vulnerability" className="text-gray-300 hover:text-accent transition-all duration-300 hover:underline cursor-pointer text-sm magnetic-button inline-block">
-                  Turning Vulnerability to Opportunity
-                </Link>
+                <Link to="/programs#vulnerability" className="text-gray-300 hover:text-accent transition-all duration-300 hover:underline cursor-pointer text-sm magnetic-button inline-block">{copy.programs.text6}</Link>
               </li>
               <li className="mt-3">
-                <Link to="/programs" className="text-accent hover:text-accent-light transition-all duration-300 hover:underline cursor-pointer text-sm font-medium magnetic-button inline-block">
-                  View All Programs →
-                </Link>
+                <Link to="/programs" className="text-accent hover:text-accent-light transition-all duration-300 hover:underline cursor-pointer text-sm font-medium magnetic-button inline-block">{copy.programs.text7}</Link>
               </li>
             </ul>
           </div>
@@ -187,33 +153,25 @@ export default function Footer() {
           {/* Contact & Sister Org */}
           <div className="glass-effect-dark p-6 rounded-xl border border-accent/10">
             <h3 className="text-white font-bold text-base mb-4 flex items-center">
-              <i className="ri-customer-service-line text-accent mr-2"></i>
-              Get In Touch
-            </h3>
+              <i className="ri-customer-service-line text-accent mr-2"></i>{copy.contactAndSisterOrg.subheading}</h3>
             <div className="space-y-2 mb-6">
-              <a href="tel:0246279742" className="flex items-center text-gray-300 hover:text-accent transition-all duration-300 cursor-pointer text-sm magnetic-button">
-                <i className="ri-phone-line mr-2 text-accent"></i>
-                02 4627 9742
-              </a>
-              <a href="mailto:info@kwetuconnect.org" className="flex items-center text-gray-300 hover:text-accent transition-all duration-300 cursor-pointer text-sm magnetic-button">
-                <i className="ri-mail-line mr-2 text-accent"></i>
-                info@kwetuconnect.org
-              </a>
+              <a href={copy.contactAndSisterOrg.phoneLink} className="flex items-center text-gray-300 hover:text-accent transition-all duration-300 cursor-pointer text-sm magnetic-button">
+                <i className="ri-phone-line mr-2 text-accent"></i>{copy.contactAndSisterOrg.link}</a>
+              <a href={copy.contactAndSisterOrg.emailLink} className="flex items-center text-gray-300 hover:text-accent transition-all duration-300 cursor-pointer text-sm magnetic-button">
+                <i className="ri-mail-line mr-2 text-accent"></i>{copy.contactAndSisterOrg.link2}</a>
               <div className="flex items-start text-gray-300 text-sm">
                 <i className="ri-map-pin-line mr-2 text-accent mt-0.5"></i>
-                <span>58 Illyria Street, Rosemeadow, Sydney 2560 NSW, Australia</span>
+                <span>{copy.contactAndSisterOrg.label}</span>
               </div>
             </div>
 
-            <h4 className="text-white font-semibold text-sm mb-3">Sister Organization</h4>
+            <h4 className="text-white font-semibold text-sm mb-3">{copy.contactAndSisterOrg.subheading2}</h4>
             <a
-              href="https://kwetu4communities.org/"
+              href={copy.contactAndSisterOrg.url}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block glass-effect-gold border-2 border-accent text-accent hover:bg-accent hover:text-primary px-5 py-2 rounded-full font-semibold transition-all duration-500 whitespace-nowrap cursor-pointer text-sm magnetic-button volumetric-glow"
-            >
-              Visit kwetu4communities →
-            </a>
+            >{copy.contactAndSisterOrg.link3}</a>
           </div>
         </div>
       </div>
@@ -223,8 +181,7 @@ export default function Footer() {
         <div className="container-custom py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/60 text-sm">
-              © {new Date().getFullYear()} KWETU CONNECT. All rights reserved.
-            </p>
+              © {new Date().getFullYear()}{copy.bottomBar.text}</p>
             <div className="flex items-center gap-6">
           </div>
           </div>

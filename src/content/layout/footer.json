@@ -1,0 +1,48 @@
+{
+  "logoImage": {
+    "image": "https://res.cloudinary.com/dhjajm7ru/image/upload/w_200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg",
+    "imageAlt": "KWETU CONNECT Logo"
+  },
+  "brandText": {
+    "label": "KWETU",
+    "label2": "CONNECT",
+    "text": "Redefining Barriers, Navigating Opportunities",
+    "text2": "Bridging communities, markets, and institutions through cultural resilience and sustainable partnerships.",
+    "placeholder": "Your email",
+    "button": "Subscribe"
+  },
+  "quickLinks": {
+    "subheading": "Explore",
+    "subheading2": "Quick Links",
+    "text": "About Us",
+    "text2": "Programs",
+    "text3": "CROP 2026",
+    "text4": "Health Recruitment",
+    "text5": "Gallery",
+    "text6": "Contact"
+  },
+  "programs": {
+    "subheading": "Our Programs",
+    "text": "Mental Health & Wellbeing",
+    "text2": "Cultural Exchange Programs",
+    "text3": "Community Chaplaincy",
+    "text4": "Job Opportunities & Care",
+    "text5": "Seniors Wisdom & Guidance",
+    "text6": "Turning Vulnerability to Opportunity",
+    "text7": "View All Programs →"
+  },
+  "contactAndSisterOrg": {
+    "subheading": "Get In Touch",
+    "phoneLink": "tel:0246279742",
+    "link": "02 4627 9742",
+    "emailLink": "mailto:info@kwetuconnect.org",
+    "link2": "info@kwetuconnect.org",
+    "label": "58 Illyria Street, Rosemeadow, Sydney 2560 NSW, Australia",
+    "subheading2": "Sister Organization",
+    "url": "https://kwetu4communities.org/",
+    "link3": "Visit kwetu4communities →"
+  },
+  "bottomBar": {
+    "text": " KWETU CONNECT. All rights reserved."
+  }
+}

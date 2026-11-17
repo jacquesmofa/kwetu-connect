@@ -1,0 +1,219 @@
+{
+  "categories": [
+    {
+      "icon": "ri-building-2-line",
+      "title": "Corporate Sponsorship",
+      "desc": "Support cultural resilience while enhancing your organization's visibility and demonstrating commitment to sustainability and social impact.",
+      "opportunities": [
+        "Conference title sponsorship",
+        "Session and workshop sponsorship",
+        "Networking event sponsorship",
+        "Technology and innovation showcase"
+      ]
+    },
+    {
+      "icon": "ri-government-line",
+      "title": "Government & Institutional Partners",
+      "desc": "Collaborate with us to advance policy objectives, support cultural preservation, and demonstrate leadership in sustainability.",
+      "opportunities": [
+        "Thematic pillar partnership",
+        "Research and publication support",
+        "Youth forum sponsorship",
+        "Working group facilitation"
+      ]
+    },
+    {
+      "icon": "ri-earth-line",
+      "title": "International Organizations",
+      "desc": "Partner with us to amplify global reach and connect with diverse communities committed to cultural resilience.",
+      "opportunities": [
+        "Community roundtable support",
+        "Scholarship programme for delegates",
+        "Documentation and media partnership",
+        "Post-conference network support"
+      ]
+    },
+    {
+      "icon": "ri-megaphone-line",
+      "title": "Media Partnership",
+      "desc": "Gain exclusive access to conference content while helping amplify messages of cultural resilience and sustainability globally.",
+      "opportunities": [
+        "Exclusive interview access",
+        "Content sharing agreements",
+        "Live coverage opportunities",
+        "Documentary collaboration"
+      ]
+    }
+  ],
+  "tiers": [
+    {
+      "name": "Platinum Partner",
+      "price": "$50,000",
+      "color": "from-slate-400 to-slate-600",
+      "highlight": true,
+      "benefits": [
+        "Logo prominently featured on all event promotional emails",
+        "Advertisement with hyperlink on our dedicated Sponsors page",
+        "Logo inclusion in all event promotional videos",
+        "3x banners displayed at the event venue",
+        "Logo on all uniforms worn by the event crew",
+        "Premium Exhibition Stand at a prime event location",
+        "Ability to sell or distribute branded merchandise at the event",
+        "Acknowledgement and recognition by the MC throughout the event",
+        "Promotion across all social media channels: Facebook, Snapchat, Instagram, TikTok",
+        "Inclusion in all event media releases (radio, TV, and newspaper)",
+        "Personal introductions to our network to connect you with potential clients and referral partners"
+      ]
+    },
+    {
+      "name": "Gold Partner",
+      "price": "$30,000",
+      "color": "from-yellow-500 to-yellow-700",
+      "highlight": false,
+      "benefits": [
+        "Your logo on emails promoting the event",
+        "An advertisement with hyperlink to your website on the sponsors' page",
+        "Logo inclusion in event promotional videos",
+        "Acknowledgement by the MC at the event",
+        "Personal Introductions to our contacts and circles of influence",
+        "2x banners at the event",
+        "Ability to sell or give away branded merchandise at the event",
+        "Promotion via all social media channels the event is promoted on",
+        "Premium location Exhibition stand at the event"
+      ]
+    },
+    {
+      "name": "Silver Partner",
+      "price": "$15,000",
+      "color": "from-gray-300 to-gray-500",
+      "highlight": false,
+      "benefits": [
+        "Your signage/banner on site at the event",
+        "Your logo on emails promoting the event",
+        "An advertisement with hyperlink to your website on the sponsors' page",
+        "Logo inclusion in event promotional videos",
+        "Acknowledgement by the MC at the event",
+        "Promotion via all social media channels the event is promoted on",
+        "Included Exhibition Stand at the event"
+      ]
+    },
+    {
+      "name": "Bronze Partner",
+      "price": "$10,000",
+      "color": "from-orange-400 to-orange-600",
+      "highlight": false,
+      "benefits": [
+        "Your signage/banner on site at the event",
+        "Your logo on emails promoting the event",
+        "An advertisement with hyperlink on the sponsor's page",
+        "Acknowledgement by the MC at the event",
+        "Inclusion – Exhibition Stand at the event"
+      ]
+    }
+  ],
+  "extras": [
+    {
+      "name": "Exhibition Stand Only",
+      "price": "$5,000",
+      "desc": "3x2 stand at the event venue"
+    },
+    {
+      "name": "Basic Exhibition Stand",
+      "price": "$1,000",
+      "desc": "3x2 stand at the event venue"
+    }
+  ],
+  "whyPartner": [
+    {
+      "icon": "ri-eye-line",
+      "title": "Global Visibility",
+      "desc": "Reach 800+ international delegates and extensive media coverage."
+    },
+    {
+      "icon": "ri-shake-hands-line",
+      "title": "Strategic Networking",
+      "desc": "Connect with global leaders, policymakers, and cultural innovators."
+    },
+    {
+      "icon": "ri-lightbulb-line",
+      "title": "Thought Leadership",
+      "desc": "Position your organization at the forefront of cultural resilience."
+    },
+    {
+      "icon": "ri-heart-3-line",
+      "title": "Social Impact",
+      "desc": "Demonstrate commitment to cultural preservation and sustainability."
+    },
+    {
+      "icon": "ri-book-read-line",
+      "title": "Research Access",
+      "desc": "Early access to conference research and best practices documentation."
+    },
+    {
+      "icon": "ri-links-line",
+      "title": "Long-term Engagement",
+      "desc": "Ongoing involvement through thematic working groups and networks."
+    }
+  ],
+  "inKind": [
+    {
+      "icon": "ri-computer-line",
+      "title": "Technology & Equipment",
+      "desc": "AV equipment, software licenses, digital platforms"
+    },
+    {
+      "icon": "ri-printer-line",
+      "title": "Printing & Materials",
+      "desc": "Conference materials, signage, publications"
+    },
+    {
+      "icon": "ri-briefcase-line",
+      "title": "Professional Services",
+      "desc": "Design, translation, documentation services"
+    },
+    {
+      "icon": "ri-user-heart-line",
+      "title": "Delegate Support",
+      "desc": "Accommodation, travel, catering contributions"
+    }
+  ],
+  "hero": {
+    "image": "https://readdy.ai/api/search-image?query=professional%20business%20partnership%20handshake%20collaboration%20diverse%20executives%20corporate%20meeting%20cultural%20sustainability%20theme%20modern%20office%20setting%20simple%20background&width=1920&height=700&seq=croppartnerhero&orientation=landscape",
+    "imageAlt": "Partnership Opportunities",
+    "label": "Collaborate With Us",
+    "title": "Partnership Opportunities",
+    "text": "Join us as a partner in advancing cultural resilience and planetary sustainability. Together, we can create lasting impact."
+  },
+  "partnershipCategories": {
+    "label": "Partnership Categories",
+    "heading": "Diverse Partnership Opportunities",
+    "text": "Opportunities Include:"
+  },
+  "sponsorshipTiers": {
+    "label": "Sponsorship Packages",
+    "heading": "Sponsorship Tiers",
+    "text": "Flexible sponsorship packages designed to maximize your impact and visibility.",
+    "text2": "Most Impactful",
+    "text3": "Proceed to Payment"
+  },
+  "exhibitionExtras": {
+    "text": "Select",
+    "text2": "Custom partnership packages available. Contact us to discuss tailored opportunities.",
+    "text3": "Contact Us for Custom Packages"
+  },
+  "whyPartnerSection": {
+    "label": "Strategic Benefits",
+    "heading": "Why Partner With Us?"
+  },
+  "inKindSection": {
+    "label": "In-Kind Contributions",
+    "heading": "Non-Financial Support Welcome",
+    "text": "We welcome in-kind support that enhances the conference experience and extends our impact."
+  },
+  "cta": {
+    "heading": "Let's Create Impact Together",
+    "text": "Our partnership team is ready to discuss how we can collaborate to advance cultural resilience and sustainability.",
+    "text2": "Email Partnership Team",
+    "text3": "Download Sponsorship Pack"
+  }
+}

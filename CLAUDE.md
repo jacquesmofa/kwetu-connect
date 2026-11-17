@@ -52,5 +52,9 @@ Australian consultancy (Sydney) on cultural heritage, health equity, sustainable
 ## Editors (17 Nov 2026)
 - Pages CMS (`.pages.yml`) and Sveltia (`public/admin/`, https://kwetuconnect.org/admin/) edit `src/content/founder.json` and `src/content/seo.json`. BOTH GENERATED: `npm run cms:config` from the JSON + `scripts/cms-registry.mjs`; `npm run cms:check`. Never edit them by hand.
 - Sveltia sign-in: "Sign In Using Access Token" only (Hostinger publishes from the `live` branch, so no login secret can live on the server).
-- Not yet editable: page text (still in the components), gallery (`src/mocks/gallery.ts`). Next step: move them to `src/content/` (LDII is the model).
 - Logo in header and footers now comes from Cloudinary (it was on Readdy's servers).
+
+## Everything editable (17 Nov 2026)
+- All visible text, pictures and links of the 20 pages are in `src/content/pages/<page>.json` (CROP pages: `crop2026-<page>.json`); menus and footers in `src/content/layout/*.json`; gallery albums and photos in `src/content/gallery.json` (`src/mocks/gallery.ts` only loads it). Before/after snapshots of all 21 addresses: same text, pictures and links (only the randomly placed decorative stars differ).
+- Rule from now on: no new hard-coded text, pictures or links in components. New file → `scripts/cms-registry.mjs` → `npm run cms:config` → commit.
+- Tools: `scripts/studio-tools/` (extract, extract2, snapshot, compare).

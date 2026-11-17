@@ -1,0 +1,222 @@
+{
+  "benefits": [
+    {
+      "icon": "ri-heart-pulse-line",
+      "title": "Competitive Compensation",
+      "description": "Industry-leading salary packages with comprehensive benefits and performance incentives"
+    },
+    {
+      "icon": "ri-graduation-cap-line",
+      "title": "Professional Development",
+      "description": "Continuous training, certification support, and career advancement opportunities"
+    },
+    {
+      "icon": "ri-team-line",
+      "title": "Supportive Community",
+      "description": "Join a diverse, inclusive team with mentorship programs and peer support networks"
+    },
+    {
+      "icon": "ri-calendar-check-line",
+      "title": "Flexible Scheduling",
+      "description": "Work-life balance with flexible shifts, part-time and full-time options available"
+    },
+    {
+      "icon": "ri-shield-check-line",
+      "title": "Comprehensive Insurance",
+      "description": "Health, dental, vision coverage plus professional liability insurance"
+    },
+    {
+      "icon": "ri-hand-heart-line",
+      "title": "Wellbeing Support",
+      "description": "Mental health resources, wellness programs, and caregiver support services"
+    }
+  ],
+  "positions": [
+    {
+      "title": "Registered Nurses (RN)",
+      "type": "Full-time / Part-time",
+      "location": "Sydney & Regional NSW",
+      "description": "Provide compassionate care in aged care facilities, hospitals, and community health settings",
+      "requirements": [
+        "Current AHPRA registration",
+        "2+ years clinical experience",
+        "Cultural competency"
+      ]
+    },
+    {
+      "title": "Enrolled Nurses (EN)",
+      "type": "Full-time / Part-time",
+      "location": "Multiple Locations",
+      "description": "Support registered nurses in delivering quality patient care across diverse healthcare settings",
+      "requirements": [
+        "Current AHPRA registration",
+        "Diploma of Nursing",
+        "Medication administration certification"
+      ]
+    },
+    {
+      "title": "Personal Care Assistants",
+      "type": "Casual / Part-time / Full-time",
+      "location": "Sydney Metro & Regional",
+      "description": "Assist clients with daily living activities, personal care, and companionship",
+      "requirements": [
+        "Certificate III in Individual Support",
+        "First Aid & CPR",
+        "NDIS Worker Screening"
+      ]
+    },
+    {
+      "title": "Disability Support Workers",
+      "type": "Full-time / Part-time",
+      "location": "Sydney & Surrounding Areas",
+      "description": "Empower individuals with disabilities to live independently and achieve their goals",
+      "requirements": [
+        "Certificate IV in Disability",
+        "NDIS registration",
+        "Valid driver's license"
+      ]
+    },
+    {
+      "title": "Allied Health Professionals",
+      "type": "Contract / Permanent",
+      "location": "Various Locations",
+      "description": "Physiotherapists, occupational therapists, speech pathologists, and social workers needed",
+      "requirements": [
+        "Relevant tertiary qualification",
+        "AHPRA registration (where applicable)",
+        "Experience in community health"
+      ]
+    },
+    {
+      "title": "Mental Health Support Workers",
+      "type": "Full-time / Part-time",
+      "location": "Sydney & Regional NSW",
+      "description": "Provide culturally sensitive mental health support and crisis intervention services",
+      "requirements": [
+        "Mental health qualification",
+        "Trauma-informed care training",
+        "Cultural awareness"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "number": "01",
+      "title": "Submit Application",
+      "description": "Complete our online application form with your qualifications and experience",
+      "icon": "ri-file-text-line"
+    },
+    {
+      "number": "02",
+      "title": "Initial Screening",
+      "description": "Our team reviews your application and conducts a preliminary phone interview",
+      "icon": "ri-phone-line"
+    },
+    {
+      "number": "03",
+      "title": "Skills Assessment",
+      "description": "Participate in competency evaluation and cultural fit assessment",
+      "icon": "ri-checkbox-multiple-line"
+    },
+    {
+      "number": "04",
+      "title": "Placement Matching",
+      "description": "We match you with suitable positions based on your skills and preferences",
+      "icon": "ri-user-search-line"
+    },
+    {
+      "number": "05",
+      "title": "Onboarding & Training",
+      "description": "Comprehensive orientation, compliance training, and ongoing support",
+      "icon": "ri-graduation-cap-line"
+    },
+    {
+      "number": "06",
+      "title": "Start Your Career",
+      "description": "Begin your rewarding healthcare career with continuous professional support",
+      "icon": "ri-rocket-line"
+    }
+  ],
+  "heroSection": {
+    "image": "https://readdy.ai/api/search-image?query=diverse%20healthcare%20professionals%20team%20doctors%20nurses%20caregivers%20standing%20together%20in%20modern%20hospital%20setting%20professional%20medical%20environment%20warm%20welcoming%20atmosphere%20representing%20health%20equity%20and%20community%20care%20simple%20clean%20background&width=1920&height=1080&seq=healthhero1&orientation=landscape",
+    "imageAlt": "Healthcare Professionals",
+    "label": "Join Our Healthcare Network",
+    "title": "Build Your Healthcare Career",
+    "label2": "With Purpose & Impact",
+    "text": "Connecting passionate healthcare professionals with meaningful opportunities across Australia",
+    "link": "View Open Positions",
+    "link2": "Apply Now"
+  },
+  "overviewSection": {
+    "label": "Health Equity & Wellbeing",
+    "heading": "Connecting Communities with Quality Healthcare",
+    "text": "KWETU CONNECT's Health Recruitment program bridges the gap between skilled healthcare professionals and communities in need. We specialize in recruiting culturally competent caregivers, nurses, and allied health professionals who understand the unique needs of diverse communities.",
+    "text2": "Our comprehensive approach ensures that both healthcare workers and care recipients benefit from meaningful, sustainable partnerships that promote health equity and community wellbeing.",
+    "label2": "Cultural Competency",
+    "label3": "Professional Excellence",
+    "label4": "Community Care",
+    "image": "https://readdy.ai/api/search-image?query=compassionate%20nurse%20caring%20for%20elderly%20patient%20in%20home%20care%20setting%20warm%20natural%20lighting%20professional%20healthcare%20environment%20representing%20quality%20community%20health%20services%20simple%20clean%20background&width=800&height=600&seq=healthcare2&orientation=landscape",
+    "imageAlt": "Healthcare Professional",
+    "text3": "500+",
+    "text4": "Healthcare Professionals Placed"
+  },
+  "videoSection": {
+    "heading": "See Our Impact in Action",
+    "text": "Watch how KWETU CONNECT is transforming healthcare delivery through culturally responsive recruitment",
+    "embedUrl": "https://www.youtube.com/embed/i8DuRLLgSAo",
+    "title": "KWETU CONNECT Health Recruitment"
+  },
+  "benefitsSection": {
+    "heading": "Why Choose KWETU CONNECT?",
+    "text": "We offer more than just a job – we provide a pathway to a fulfilling healthcare career"
+  },
+  "openPositionsSection": {
+    "heading": "Current Opportunities",
+    "text": "Explore our open positions and find your perfect healthcare role",
+    "link": "Apply Now"
+  },
+  "backgroundImageWithOverlay": {
+    "image": "https://readdy.ai/api/search-image?query=healthcare%20career%20journey%20professional%20development%20medical%20training%20diverse%20healthcare%20workers%20success%20pathway%20beautiful%20professional%20setting%20warm%20lighting%20simple%20clean%20background&width=1920&height=1080&seq=healthprocessbg&orientation=landscape",
+    "imageAlt": "Application Process Background",
+    "heading": "Your Journey to Healthcare Excellence",
+    "text": "Our streamlined recruitment process ensures you're supported every step of the way",
+    "image2": "https://readdy.ai/api/search-image?query=healthcare%20professionals%20celebrating%20success%20diverse%20team%20meaningful%20career%20transformation%20beautiful%20professional%20setting%20warm%20lighting%20simple%20clean%20background&width=1920&height=1080&seq=healthctabg&orientation=landscape",
+    "imageAlt2": "Healthcare CTA Background",
+    "heading2": "Ready to Start Your Healthcare Journey?",
+    "text2": "Join hundreds of healthcare professionals who've found meaningful careers through KWETU CONNECT",
+    "text3": "Apply Now",
+    "text4": "Contact Our Team"
+  },
+  "connectionToProgramsSection": {
+    "heading": "Part of Our Comprehensive Approach",
+    "text": "Health Recruitment connects seamlessly with our other programs and pillars",
+    "subheading": "Mental Health & Wellbeing",
+    "text2": "Supporting healthcare workers' mental health and wellbeing",
+    "label": "Learn More ",
+    "subheading2": "Job Opportunities & Care for Caregivers",
+    "text3": "Career pathways and support for healthcare professionals",
+    "label2": "Learn More ",
+    "subheading3": "Cultural Exchange Programs",
+    "text4": "Culturally competent care through exchange and learning",
+    "label3": "Learn More ",
+    "subheading4": "Seniors Wisdom & Guidance",
+    "text5": "Honoring elders through quality aged care services",
+    "label4": "Learn More "
+  },
+  "imageGallerySection": {
+    "heading": "Our Healthcare Community",
+    "text": "See the diverse, passionate professionals making a difference every day",
+    "image": "https://readdy.ai/api/search-image?query=diverse%20team%20of%20nurses%20and%20doctors%20collaborating%20in%20modern%20hospital%20setting%20professional%20healthcare%20environment%20teamwork%20simple%20clean%20background&width=600&height=800&seq=gallery1&orientation=portrait",
+    "imageAlt": "Healthcare Team",
+    "image2": "https://readdy.ai/api/search-image?query=personal%20care%20assistant%20helping%20elderly%20person%20with%20daily%20activities%20warm%20home%20care%20setting%20compassionate%20care%20simple%20clean%20background&width=600&height=800&seq=gallery2&orientation=portrait",
+    "imageAlt2": "Personal Care",
+    "image3": "https://readdy.ai/api/search-image?query=disability%20support%20worker%20engaging%20with%20client%20in%20community%20setting%20inclusive%20environment%20empowerment%20simple%20clean%20background&width=600&height=800&seq=gallery3&orientation=portrait",
+    "imageAlt3": "Disability Support",
+    "image4": "https://readdy.ai/api/search-image?query=allied%20health%20professional%20physiotherapist%20working%20with%20patient%20in%20clinic%20modern%20healthcare%20facility%20professional%20setting%20simple%20clean%20background&width=600&height=800&seq=gallery4&orientation=portrait",
+    "imageAlt4": "Allied Health",
+    "image5": "https://readdy.ai/api/search-image?query=mental%20health%20counselor%20in%20supportive%20therapy%20session%20warm%20welcoming%20environment%20professional%20care%20simple%20clean%20background&width=600&height=800&seq=gallery5&orientation=portrait",
+    "imageAlt5": "Mental Health Support",
+    "image6": "https://readdy.ai/api/search-image?query=healthcare%20professionals%20celebrating%20success%20diverse%20team%20multicultural%20environment%20positive%20workplace%20culture%20simple%20clean%20background&width=600&height=800&seq=gallery6&orientation=portrait",
+    "imageAlt6": "Team Success"
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "pillars": [
+    {
+      "num": 1,
+      "icon": "ri-store-line",
+      "color": "from-[#0A2540] to-[#1a4a7a]",
+      "accent": "#0A2540",
+      "title": "Culture, Trade, Economies & Sustainable Livelihoods",
+      "subtitle": "Exploring sustainable economic models rooted in cultural practices, traditional crafts, and community-based enterprises that support livelihoods while preserving heritage.",
+      "focus": [
+        "Fair trade frameworks for cultural products",
+        "Cultural entrepreneurship and innovation",
+        "Revitalization of traditional economies",
+        "Ethical cultural tourism development"
+      ],
+      "outcomes": [
+        "Establishment of Culture-Based Economy Working Group",
+        "Fair trade certification guidelines for cultural products",
+        "Cross-sector partnership frameworks for cultural enterprises"
+      ],
+      "image": "https://readdy.ai/api/search-image?query=traditional%20cultural%20marketplace%20artisans%20crafting%20handmade%20goods%20vibrant%20cultural%20products%20fair%20trade%20setting%20diverse%20community%20warm%20lighting%20professional%20photography%20simple%20background&width=800&height=500&seq=pillar1detail&orientation=landscape"
+    },
+    {
+      "num": 2,
+      "icon": "ri-heart-pulse-line",
+      "color": "from-[#D4AF37] to-yellow-600",
+      "accent": "#D4AF37",
+      "title": "Global Health Equity & Wellness Systems",
+      "subtitle": "Integrating traditional medicine, addressing health disparities, and promoting holistic wellbeing across diverse cultural communities.",
+      "focus": [
+        "Integrating traditional medicine into health systems",
+        "Addressing health disparities in cultural communities",
+        "Mental health frameworks rooted in cultural practices",
+        "One Health approach and pandemic preparedness"
+      ],
+      "outcomes": [
+        "Framework for integrating traditional medicine into national health systems",
+        "Guidelines for culturally safe healthcare delivery",
+        "Community wellness program templates"
+      ],
+      "image": "https://readdy.ai/api/search-image?query=holistic%20healthcare%20wellness%20traditional%20medicine%20integration%20diverse%20healers%20community%20health%20setting%20cultural%20healing%20practices%20warm%20professional%20environment%20simple%20background&width=800&height=500&seq=pillar2detail&orientation=landscape"
+    },
+    {
+      "num": 3,
+      "icon": "ri-smartphone-line",
+      "color": "from-teal-500 to-teal-700",
+      "accent": "#14b8a6",
+      "title": "Technology, Digital Innovation & Data Sovereignty",
+      "subtitle": "Harnessing digital tools for cultural preservation, AI for language revitalization, and ensuring Indigenous data sovereignty.",
+      "focus": [
+        "Digital tools for cultural preservation",
+        "AI applications for language revitalization",
+        "Indigenous data sovereignty frameworks",
+        "Preventing digital colonialism",
+        "Youth-led technological innovation"
+      ],
+      "outcomes": [
+        "Launch of Youth Cultural Innovation Lab",
+        "Data sovereignty frameworks and protocols",
+        "Digital cultural preservation toolkit"
+      ],
+      "image": "https://readdy.ai/api/search-image?query=digital%20innovation%20technology%20Indigenous%20language%20preservation%20youth%20coding%20cultural%20data%20sovereignty%20modern%20tech%20setting%20diverse%20professionals%20simple%20background&width=800&height=500&seq=pillar3detail&orientation=landscape"
+    },
+    {
+      "num": 4,
+      "icon": "ri-graduation-cap-line",
+      "color": "from-green-600 to-green-800",
+      "accent": "#16a34a",
+      "title": "Education, Research, Skills & Capacity Development",
+      "subtitle": "Integrating Indigenous knowledge into formal education, decolonizing research, and enabling intergenerational knowledge transfer.",
+      "focus": [
+        "Integration of Indigenous knowledge into formal education",
+        "Decolonizing research methodologies",
+        "Intergenerational knowledge transfer",
+        "Social entrepreneurship and capacity building"
+      ],
+      "outcomes": [
+        "Global Cultural Research Network establishment",
+        "Educational toolkit integrating cultural knowledge into curricula",
+        "Intergenerational mentorship framework"
+      ],
+      "image": "https://readdy.ai/api/search-image?query=Indigenous%20education%20knowledge%20transfer%20elders%20teaching%20youth%20traditional%20learning%20intergenerational%20cultural%20wisdom%20modern%20classroom%20setting%20simple%20background&width=800&height=500&seq=pillar4detail&orientation=landscape"
+    },
+    {
+      "num": 5,
+      "icon": "ri-earth-line",
+      "color": "from-orange-500 to-orange-700",
+      "accent": "#f97316",
+      "title": "Climate Justice, Cultural Governance & Planetary Stewardship",
+      "subtitle": "Applying Indigenous knowledge for climate adaptation, strengthening cultural governance, and advancing sustainable planetary stewardship.",
+      "focus": [
+        "Indigenous knowledge for climate adaptation",
+        "Cultural governance and rights frameworks",
+        "Migration and cultural continuity",
+        "Participatory urban planning"
+      ],
+      "outcomes": [
+        "Multi-stakeholder Sydney Declaration on Cultural Resilience",
+        "Indigenous Climate Knowledge Network establishment",
+        "Urban cultural resilience toolkit"
+      ],
+      "image": "https://readdy.ai/api/search-image?query=Indigenous%20climate%20stewardship%20environmental%20justice%20traditional%20ecological%20knowledge%20community-led%20conservation%20sustainable%20land%20management%20nature%20setting%20simple%20background&width=800&height=500&seq=pillar5detail&orientation=landscape"
+    },
+    {
+      "num": 6,
+      "icon": "ri-hand-heart-line",
+      "color": "from-rose-500 to-rose-700",
+      "accent": "#e11d48",
+      "title": "Care Industry & Cultural Transformation",
+      "subtitle": "Redefining cultural transformative values for care, supporting caregivers, and empowering seniors in decision-making.",
+      "focus": [
+        "How culture can transform and improve the care industry",
+        "Redefining cultural transformative values for care in the new era",
+        "Care for caregivers in cultural heritage perspective",
+        "Bringing seniors to partake in decision-making",
+        "Cultural approaches to aged care and disability support"
+      ],
+      "outcomes": [
+        "Framework for culturally-informed care practices",
+        "Guidelines for senior participation in care governance",
+        "Caregiver support programs rooted in cultural values"
+      ],
+      "image": "https://readdy.ai/api/search-image?query=cultural%20care%20transformation%20diverse%20caregivers%20elderly%20care%20community%20support%20cultural%20values%20in%20healthcare%20warm%20compassionate%20environment%20professional%20simple%20background&width=800&height=500&seq=pillar6detail&orientation=landscape"
+    }
+  ],
+  "hero": {
+    "image": "https://readdy.ai/api/search-image?query=six%20pillars%20concept%20abstract%20architectural%20columns%20representing%20cultural%20sustainability%20modern%20artistic%20interpretation%20dramatic%20lighting%20simple%20background&width=1920&height=700&seq=croppillarshero&orientation=landscape",
+    "imageAlt": "Six Strategic Pillars",
+    "label": "Conference Framework",
+    "title": "Six Strategic Pillars",
+    "text": "Comprehensive frameworks addressing the intersection of culture, care, and global sustainability challenges."
+  },
+  "pillarsDetailed": {
+    "label": "Pillar ",
+    "subheading": "Key Focus Areas",
+    "subheading2": "Expected Outcomes"
+  },
+  "cta": {
+    "heading": "Explore the Full Programme",
+    "text": "Dive deeper into how these pillars shape our conference sessions and workshops.",
+    "text2": "View Programme",
+    "text3": "Register Interest"
+  }
+}

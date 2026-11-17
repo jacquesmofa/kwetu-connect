@@ -1,0 +1,441 @@
+{
+  "heroImages": [
+    "https://readdy.ai/api/search-image?query=diverse%20multicultural%20community%20members%20connecting%20hands%20together%20in%20modern%20Australian%20setting%20with%20professional%20business%20atmosphere%20representing%20unity%20and%20partnership%20collaboration%20warm%20natural%20lighting%20simple%20clean%20background&width=1920&height=1080&seq=hero1&orientation=landscape",
+    "https://readdy.ai/api/search-image?query=stunning%20Australian%20landscape%20meeting%20global%20cultural%20elements%20abstract%20artistic%20representation%20of%20bridges%20connecting%20continents%20professional%20consulting%20atmosphere%20vibrant%20colors%20simple%20background&width=1920&height=1080&seq=hero2&orientation=landscape",
+    "https://readdy.ai/api/search-image?query=professional%20international%20conference%20setting%20with%20diverse%20speakers%20and%20engaged%20audience%20modern%20venue%20sophisticated%20lighting%20representing%20global%20partnership%20opportunities%20simple%20background&width=1920&height=1080&seq=hero3&orientation=landscape",
+    "https://readdy.ai/api/search-image?query=healthcare%20workers%20and%20caregivers%20in%20professional%20setting%20diverse%20team%20collaboration%20modern%20medical%20environment%20representing%20health%20equity%20and%20community%20wellbeing%20simple%20background&width=1920&height=1080&seq=hero4&orientation=landscape",
+    "https://readdy.ai/api/search-image?query=sustainable%20trade%20and%20commerce%20abstract%20visualization%20with%20cultural%20heritage%20elements%20modern%20professional%20design%20representing%20economic%20empowerment%20and%20transnational%20partnerships%20simple%20background&width=1920&height=1080&seq=hero5&orientation=landscape"
+  ],
+  "pillars": [
+    {
+      "icon": "ri-ancient-gate-line",
+      "title": "Cultural Resilience & Heritage",
+      "description": "Preserving and promoting cultural heritage as economic and social capital for community empowerment and sustainable development",
+      "bgColor": "bg-primary",
+      "hoverBg": "hover:bg-primary-light"
+    },
+    {
+      "icon": "ri-heart-pulse-line",
+      "title": "Health Equity & Wellbeing",
+      "description": "Connecting communities with quality health and care services for sustainable community development and improved quality of life",
+      "bgColor": "bg-accent",
+      "hoverBg": "hover:bg-accent-dark"
+    },
+    {
+      "icon": "ri-global-line",
+      "title": "Sustainable Trade & Livelihood",
+      "description": "Facilitating transnational partnerships for economic empowerment, sustainable livelihoods, and market access",
+      "bgColor": "bg-primary",
+      "hoverBg": "hover:bg-primary-light"
+    },
+    {
+      "icon": "ri-community-line",
+      "title": "Community Resilience",
+      "description": "Building resilient communities through integrated programs, strategic partnerships, and capacity building initiatives",
+      "bgColor": "bg-accent",
+      "hoverBg": "hover:bg-accent-dark"
+    }
+  ],
+  "stats": [
+    {
+      "number": "500+",
+      "label": "Communities Served"
+    },
+    {
+      "number": "50+",
+      "label": "Strategic Partnerships"
+    },
+    {
+      "number": "15",
+      "label": "Countries Reached"
+    },
+    {
+      "number": "10+",
+      "label": "Years of Excellence"
+    }
+  ],
+  "newPrograms": [
+    {
+      "title": "Mental Health & Wellbeing",
+      "description": "Redefining and addressing mental health challenges within communities through culturally sensitive support, professional services, and community-based wellness programs.",
+      "icon": "ri-mental-health-line",
+      "link": "/programs#mental-health"
+    },
+    {
+      "title": "Cultural Exchange Programs",
+      "description": "Building bridges through authentic cultural experiences, knowledge sharing, and collaborative partnerships that promote mutual understanding and preserve heritage.",
+      "icon": "ri-earth-line",
+      "link": "/programs#cultural-exchange"
+    },
+    {
+      "title": "Community Chaplaincy",
+      "description": "Supporting reintegration and transformation through compassionate care, mentoring, and holistic rehabilitation services for individuals and families.",
+      "icon": "ri-hand-heart-line",
+      "link": "/programs#chaplaincy"
+    },
+    {
+      "title": "Job Opportunities & Care for Caregivers",
+      "description": "Navigating career pathways for caregivers while providing comprehensive support, training, and wellbeing programs for those who care for others.",
+      "icon": "ri-briefcase-line",
+      "link": "/programs#job-opportunities"
+    },
+    {
+      "title": "Seniors Wisdom & Guidance",
+      "description": "Promoting sense of belonging and guidance by honoring elders and harnessing their wisdom for intergenerational connection and community strength.",
+      "icon": "ri-user-star-line",
+      "link": "/programs#seniors-wisdom"
+    },
+    {
+      "title": "Turning Vulnerability into Opportunity",
+      "description": "Transforming challenges into pathways for empowerment, helping individuals and communities convert barriers into catalysts for growth and positive change.",
+      "icon": "ri-seedling-line",
+      "link": "/programs#vulnerability"
+    }
+  ],
+  "programs": [
+    {
+      "title": "Cultural Resilience & Heritage Promotion",
+      "description": "Comprehensive programs preserving cultural identity while creating economic opportunities through heritage tourism, cultural enterprises, and traditional knowledge systems.",
+      "icon": "ri-ancient-pavilion-line",
+      "features": [
+        "Heritage Tourism Development",
+        "Cultural Enterprise Support",
+        "Traditional Knowledge Preservation",
+        "Community Cultural Centers"
+      ]
+    },
+    {
+      "title": "Health Equity & Community Wellbeing",
+      "description": "Connecting underserved communities with quality healthcare services, mental health support, and wellness programs through strategic partnerships.",
+      "icon": "ri-hospital-line",
+      "features": [
+        "Healthcare Access Programs",
+        "Mental Health Support",
+        "Caregiver Recruitment",
+        "Community Health Education"
+      ]
+    },
+    {
+      "title": "Sustainable Trade & Livelihood Empowerment",
+      "description": "Facilitating market access, trade partnerships, and economic empowerment through capacity building and transnational business connections.",
+      "icon": "ri-exchange-line",
+      "features": [
+        "Market Access Support",
+        "Trade Partnership Facilitation",
+        "Business Capacity Building",
+        "Export Development"
+      ]
+    }
+  ],
+  "heroContent": {
+    "title": "REDEFINING BARRIERS,",
+    "title2": "NAVIGATING OPPORTUNITIES",
+    "text": "Dynamic Australian Consultancy Bridging Communities, Markets & Institutions",
+    "link": "Explore Our Pillars",
+    "text2": "CROP 2026 Conference"
+  },
+  "executiveSummarySection": {
+    "label": "Who We Are",
+    "heading": "Transforming Vulnerabilities into Pathways for Opportunities and Empowerment",
+    "text": "KWETU CONNECT PTY LTD is a dynamic Australian consultancy dedicated to redefining barriers and navigating opportunities across cultural heritage, health equity, sustainable trade, and community resilience. We serve as a bridge between communities, institutions, and markets, transforming challenges into sustainable solutions through strategic partnerships and innovative programs.",
+    "text2": "Our approach is rooted in community-centered values, integrity, equity, and innovation. We work with governments, NGOs, private sector partners, and community organizations to create lasting impact and drive transformative change across the Global South and beyond.",
+    "label2": "Community-Centered",
+    "label3": "Integrity",
+    "label4": "Equity",
+    "label5": "Innovation"
+  },
+  "fourCorePillars": {
+    "heading": "Our Four Core Pillars",
+    "text": "Comprehensive solutions driving transformative impact across communities, markets, and institutions"
+  },
+  "pillar1Navy": {
+    "image": "https://readdy.ai/api/search-image?query=cultural%20heritage%20preservation%20traditional%20artifacts%20indigenous%20art%20museum%20display%20cultural%20identity%20community%20empowerment%20beautiful%20professional%20setting%20warm%20lighting%20high%20quality%20detailed%20photography&width=800&height=600&seq=pillar1bg&orientation=landscape",
+    "imageAlt": "Cultural Resilience Background",
+    "subheading": "Cultural Resilience & Heritage",
+    "text": "Preserving and promoting cultural heritage as economic and social capital for community empowerment and sustainable development",
+    "text2": "Learn More "
+  },
+  "pillar2Gold": {
+    "image": "https://readdy.ai/api/search-image?query=healthcare%20equity%20community%20wellbeing%20diverse%20medical%20professionals%20caring%20for%20patients%20quality%20health%20services%20hospital%20clinic%20setting%20compassionate%20care%20professional%20medical%20environment%20warm%20lighting&width=800&height=600&seq=pillar2bg&orientation=landscape",
+    "imageAlt": "Health Equity Background",
+    "subheading": "Health Equity & Wellbeing",
+    "text": "Connecting communities with quality health and care services for sustainable community development and improved quality of life",
+    "text2": "Learn More "
+  },
+  "pillar3Navy": {
+    "image": "https://readdy.ai/api/search-image?query=sustainable%20trade%20business%20partnership%20international%20commerce%20market%20access%20economic%20empowerment%20professional%20business%20meeting%20diverse%20entrepreneurs%20collaboration%20modern%20office%20setting%20bright%20lighting&width=800&height=600&seq=pillar3bg&orientation=landscape",
+    "imageAlt": "Sustainable Trade Background",
+    "subheading": "Sustainable Trade & Livelihood",
+    "text": "Facilitating transnational partnerships for economic empowerment, sustainable livelihoods, and market access",
+    "text2": "Learn More "
+  },
+  "pillar4Gold": {
+    "image": "https://readdy.ai/api/search-image?query=community%20resilience%20diverse%20people%20working%20together%20capacity%20building%20strategic%20partnerships%20integrated%20programs%20community%20development%20collaboration%20teamwork%20empowerment%20warm%20professional%20setting%20natural%20lighting&width=800&height=600&seq=pillar4bg&orientation=landscape",
+    "imageAlt": "Community Resilience Background",
+    "subheading": "Community Resilience",
+    "text": "Building resilient communities through integrated programs, strategic partnerships, and capacity building initiatives",
+    "text2": "Learn More "
+  },
+  "programConnectionCards": {
+    "heading": "Connecting Communities to Care",
+    "text": "Bridging the gap between healthcare professionals and communities in need"
+  },
+  "card1Navy": {
+    "image": "https://readdy.ai/api/search-image?query=mental%20health%20wellbeing%20healthcare%20workers%20support%20counseling%20therapy%20peaceful%20calming%20environment%20professional%20medical%20setting%20compassionate%20care%20warm%20lighting%20high%20quality%20photography&width=600&height=400&seq=connection1bg&orientation=landscape",
+    "imageAlt": "Mental Health Background",
+    "subheading": "Mental Health & Wellbeing",
+    "text": "Supporting healthcare workers' mental health and wellbeing",
+    "text2": "Learn More "
+  },
+  "card2Gold": {
+    "image": "https://readdy.ai/api/search-image?query=job%20opportunities%20career%20pathways%20healthcare%20professionals%20medical%20training%20professional%20development%20hospital%20clinic%20setting%20diverse%20medical%20staff%20bright%20professional%20environment&width=600&height=400&seq=connection2bg&orientation=landscape",
+    "imageAlt": "Job Opportunities Background",
+    "subheading": "Job Opportunities & Care for Caregivers",
+    "text": "Career pathways and support for healthcare professionals",
+    "text2": "Learn More "
+  },
+  "card3Navy": {
+    "image": "https://readdy.ai/api/search-image?query=cultural%20exchange%20programs%20international%20healthcare%20collaboration%20diverse%20medical%20professionals%20learning%20together%20cross%20cultural%20training%20modern%20educational%20setting%20bright%20collaborative%20environment&width=600&height=400&seq=connection3bg&orientation=landscape",
+    "imageAlt": "Cultural Exchange Background",
+    "subheading": "Cultural Exchange Programs",
+    "text": "Culturally competent care through exchange and learning",
+    "text2": "Learn More "
+  },
+  "card4Gold": {
+    "image": "https://readdy.ai/api/search-image?query=seniors%20wisdom%20elderly%20care%20aged%20care%20services%20quality%20healthcare%20for%20elders%20compassionate%20caregivers%20honoring%20elders%20peaceful%20care%20facility%20warm%20professional%20setting%20natural%20lighting&width=600&height=400&seq=connection4bg&orientation=landscape",
+    "imageAlt": "Seniors Wisdom Background",
+    "subheading": "Seniors Wisdom & Guidance",
+    "text": "Honoring elders through quality aged care services",
+    "text2": "Learn More "
+  },
+  "detailedProgramsOverview": {
+    "heading": "Integrated Programs & Services",
+    "text": "Comprehensive solutions tailored to address complex challenges and create sustainable impact"
+  },
+  "s1CulturalResilienceAndHeritage": {
+    "subheading": "Cultural Resilience & Heritage Promotion",
+    "text": "Comprehensive programs preserving cultural identity while creating economic opportunities through heritage tourism, cultural enterprises, and traditional knowledge systems.",
+    "label": "Heritage Tourism Development",
+    "label2": "Cultural Enterprise Support",
+    "label3": "Traditional Knowledge Preservation",
+    "label4": "Community Cultural Centers",
+    "image": "https://readdy.ai/api/search-image?query=cultural%20heritage%20preservation%20traditional%20artifacts%20museum%20display%20diverse%20community%20members%20celebrating%20cultural%20identity%20professional%20setting%20simple%20clean%20background&width=800&height=600&seq=intprog1&orientation=landscape",
+    "imageAlt": "Cultural Resilience & Heritage Promotion"
+  },
+  "s2HealthEquityAndCommunity": {
+    "subheading": "Health Equity & Community Wellbeing",
+    "text": "Connecting underserved communities with quality healthcare services, mental health support, and wellness programs through strategic partnerships.",
+    "label": "Healthcare Access Programs",
+    "label2": "Mental Health Support",
+    "label3": "Caregiver Recruitment",
+    "label4": "Community Health Education",
+    "image": "https://readdy.ai/api/search-image?query=healthcare%20professionals%20diverse%20team%20providing%20community%20health%20services%20medical%20consultation%20wellness%20programs%20professional%20setting%20simple%20clean%20background&width=800&height=600&seq=intprog2&orientation=landscape",
+    "imageAlt": "Health Equity & Community Wellbeing"
+  },
+  "s3SustainableTradeAndLivelihood": {
+    "subheading": "Sustainable Trade & Livelihood Empowerment",
+    "text": "Facilitating market access, trade partnerships, and economic empowerment through capacity building and transnational business connections.",
+    "label": "Market Access Support",
+    "label2": "Trade Partnership Facilitation",
+    "label3": "Business Capacity Building",
+    "label4": "Export Development",
+    "image": "https://readdy.ai/api/search-image?query=sustainable%20trade%20business%20partnership%20diverse%20entrepreneurs%20market%20access%20economic%20empowerment%20professional%20setting%20simple%20clean%20background&width=800&height=600&seq=intprog3&orientation=landscape",
+    "imageAlt": "Sustainable Trade & Livelihood Empowerment"
+  },
+  "s4MentalHealthAndWellbeing": {
+    "subheading": "Mental Health & Wellbeing",
+    "text": "Redefining and addressing mental health challenges within communities through culturally sensitive support, professional services, and community-based wellness programs.",
+    "label": "Community-based Support Networks",
+    "label2": "Early-intervention Workshops",
+    "label3": "Holistic Wellness Programmes",
+    "label4": "Digital Self-care Platforms",
+    "image": "https://readdy.ai/api/search-image?query=mental%20health%20counseling%20support%20group%20diverse%20people%20wellness%20therapy%20session%20professional%20setting%20simple%20clean%20background&width=800&height=600&seq=intprog4&orientation=landscape",
+    "imageAlt": "Mental Health & Wellbeing"
+  },
+  "s5CulturalExchangePrograms": {
+    "subheading": "Cultural Exchange & Partnerships",
+    "text": "Building bridges through authentic cultural experiences, knowledge sharing, and collaborative partnerships that promote mutual understanding and preserve heritage.",
+    "label": "Immersive Cultural Immersion Trips",
+    "label2": "Reciprocal Learning Partnerships",
+    "label3": "Artistic Collaborations and Festivals",
+    "label4": "Education Exchange Scholarships",
+    "image": "https://readdy.ai/api/search-image?query=cultural%20exchange%20program%20diverse%20people%20traditional%20clothing%20sharing%20knowledge%20international%20partnership%20professional%20setting%20simple%20clean%20background&width=800&height=600&seq=intprog5&orientation=landscape",
+    "imageAlt": "Cultural Exchange & Partnerships"
+  },
+  "s6CommunityChaplaincyRehabilitation": {
+    "subheading": "Community Chaplaincy Rehabilitation Services",
+    "text": "Supporting reintegration and transformation through compassionate care, mentoring, and holistic rehabilitation services for individuals and families.",
+    "label": "Spiritual Counseling and Guidance",
+    "label2": "Mentoring Programmes for Reintegration",
+    "label3": "Family Reconciliation Support",
+    "label4": "Employment and Skills Development",
+    "image": "https://readdy.ai/api/search-image?query=community%20chaplaincy%20mentoring%20counseling%20support%20rehabilitation%20services%20professional%20setting%20simple%20clean%20background&width=800&height=600&seq=intprog6&orientation=landscape",
+    "imageAlt": "Community Chaplaincy Rehabilitation Services"
+  },
+  "s7SeniorsWisdomAndGuidance": {
+    "subheading": "Promoting Belonging Through Seniors' Wisdom",
+    "text": "Honoring elders and harnessing their wisdom for intergenerational connection, cultural preservation, and community strength.",
+    "label": "Intergenerational Mentorship Circles",
+    "label2": "Story-telling Archives and Digital Heritage",
+    "label3": "Active Ageing Community Hubs",
+    "label4": "Leadership Roles for Elder Advisors",
+    "image": "https://readdy.ai/api/search-image?query=seniors%20elders%20sharing%20wisdom%20with%20youth%20intergenerational%20mentorship%20community%20gathering%20professional%20setting%20simple%20clean%20background&width=800&height=600&seq=intprog7&orientation=landscape",
+    "imageAlt": "Promoting Belonging Through Seniors' Wisdom"
+  },
+  "s8TurningVulnerabilityIntoOpportunities": {
+    "subheading": "Turning Vulnerability into Opportunities",
+    "text": "Transforming challenges into pathways for empowerment, helping individuals and communities convert barriers into catalysts for growth and positive change.",
+    "label": "Asset-mapping and Community Co-design",
+    "label2": "Micro-grant and Seed-fund Programmes",
+    "label3": "Advocacy for Policy Change",
+    "label4": "Impact Measurement and Storytelling",
+    "image": "https://readdy.ai/api/search-image?query=community%20empowerment%20transformation%20growth%20diverse%20people%20collaborating%20innovative%20solutions%20professional%20setting%20simple%20clean%20background&width=800&height=600&seq=intprog8&orientation=landscape",
+    "imageAlt": "Turning Vulnerability into Opportunities"
+  },
+  "backgroundImageWithOverlay": {
+    "image": "https://readdy.ai/api/search-image?query=grassroots%20community%20empowerment%20Global%20South%20sustainable%20development%20cultural%20preservation%20beautiful%20landscape%20warm%20natural%20lighting%20professional%20photography%20simple%20clean%20background&width=1920&height=1080&seq=homesisterbg&orientation=landscape",
+    "imageAlt": "Sister Organization Background",
+    "heading": "Our Sister Organization",
+    "text": "kwetu4communities",
+    "text2": "Our sister organization empowering grassroots communities across the Global South through sustainable development initiatives, cultural preservation programs, and community-led solutions. Together, we create lasting impact through integrated approaches to community resilience and empowerment.",
+    "text3": "kwetu4communities focuses on direct community engagement, implementing programs that address immediate needs while building long-term capacity. Through this partnership, we ensure that our consultancy work is grounded in real community experiences and needs.",
+    "url": "https://kwetu4communities.org/",
+    "link": "Visit kwetu4communities →",
+    "image2": "https://readdy.ai/api/search-image?query=grassroots%20community%20members%20working%20together%20in%20Global%20South%20village%20setting%20collaborative%20development%20project%20warm%20natural%20lighting%20simple%20clean%20background&width=400&height=500&seq=sister1&orientation=portrait",
+    "imageAlt2": "Community empowerment",
+    "image3": "https://readdy.ai/api/search-image?query=cultural%20preservation%20traditional%20heritage%20celebration%20diverse%20community%20members%20colorful%20authentic%20setting%20simple%20clean%20background&width=400&height=240&seq=sister2&orientation=landscape",
+    "imageAlt3": "Cultural preservation",
+    "image4": "https://readdy.ai/api/search-image?query=sustainable%20development%20community-led%20solutions%20people%20collaborating%20on%20local%20projects%20empowerment%20simple%20clean%20background&width=400&height=240&seq=sister3&orientation=landscape",
+    "imageAlt4": "Sustainable development",
+    "image5": "https://readdy.ai/api/search-image?query=global%20network%20connections%20world%20map%20international%20partnerships%20diverse%20communities%20worldwide%20collaboration%20beautiful%20visualization%20professional%20design%20simple%20clean%20background&width=1920&height=1080&seq=homeimpactbg&orientation=landscape",
+    "imageAlt5": "Global Impact Background",
+    "heading2": "Our Global Impact",
+    "text4": "Transforming communities and building partnerships worldwide",
+    "image6": "https://readdy.ai/api/search-image?query=inspiring%20transformation%20opportunity%20growth%20diverse%20people%20collaborating%20success%20partnership%20beautiful%20professional%20setting%20warm%20lighting%20simple%20clean%20background&width=1920&height=1080&seq=homectabg&orientation=landscape",
+    "imageAlt6": "CTA Background",
+    "heading3": "Ready to Transform Barriers into Opportunities?",
+    "text5": "Partner with Australia's leading consultancy in cultural resilience and sustainable development",
+    "text6": "Start a Conversation"
+  },
+  "featuredProgramCrop2026": {
+    "image": "https://readdy.ai/api/search-image?query=international%20conference%20diverse%20speakers%20on%20stage%20engaged%20audience%20modern%20professional%20venue%20sophisticated%20lighting%20cultural%20resilience%20theme%20simple%20clean%20background&width=1200&height=800&seq=crop1&orientation=landscape",
+    "imageAlt": "CROP 2026 Conference",
+    "label": "Flagship Event 2026",
+    "subheading": "Cultural Resilience, One Planet Conference",
+    "text": "Sydney, Australia | November 6-8, 2026",
+    "label2": "Global thought leaders and cultural experts",
+    "label3": "Innovative solutions for cultural preservation",
+    "label4": "Networking with international partners",
+    "text2": "Register Interest",
+    "text3": "View Full Details"
+  },
+  "founderSection": {
+    "heading": "Our Leadership"
+  },
+  "partnersSection": {
+    "heading": "Our Trusted Partners",
+    "text": "Collaborating with leading organizations to create lasting impact"
+  },
+  "partners": [
+    {
+      "name": "United Nations",
+      "url": "https://www.un.org",
+      "logo": "https://readdy.ai/api/search-image?query=United%20Nations%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner1&orientation=squarish"
+    },
+    {
+      "name": "World Health Organization",
+      "url": "https://www.who.int",
+      "logo": "https://readdy.ai/api/search-image?query=World%20Health%20Organization%20WHO%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner2&orientation=squarish"
+    },
+    {
+      "name": "Australian Government",
+      "url": "https://www.australia.gov.au",
+      "logo": "https://readdy.ai/api/search-image?query=Australian%20Government%20official%20logo%20coat%20of%20arms%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner3&orientation=squarish"
+    },
+    {
+      "name": "NSW Health",
+      "url": "https://www.health.nsw.gov.au",
+      "logo": "https://readdy.ai/api/search-image?query=NSW%20Health%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner4&orientation=squarish"
+    },
+    {
+      "name": "University of Sydney",
+      "url": "https://www.sydney.edu.au",
+      "logo": "https://readdy.ai/api/search-image?query=University%20of%20Sydney%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner5&orientation=squarish"
+    },
+    {
+      "name": "Red Cross Australia",
+      "url": "https://www.redcross.org.au",
+      "logo": "https://readdy.ai/api/search-image?query=Red%20Cross%20Australia%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner6&orientation=squarish"
+    },
+    {
+      "name": "UNICEF Australia",
+      "url": "https://www.unicef.org.au",
+      "logo": "https://readdy.ai/api/search-image?query=UNICEF%20Australia%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner7&orientation=squarish"
+    },
+    {
+      "name": "Refugee Council",
+      "url": "https://www.refugeecouncil.org.au",
+      "logo": "https://readdy.ai/api/search-image?query=Refugee%20Council%20of%20Australia%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner8&orientation=squarish"
+    },
+    {
+      "name": "Multicultural NSW",
+      "url": "https://www.multiculturalnsw.id.au",
+      "logo": "https://readdy.ai/api/search-image?query=Multicultural%20NSW%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner9&orientation=squarish"
+    },
+    {
+      "name": "Settlement Services",
+      "url": "https://www.ssi.org.au",
+      "logo": "https://readdy.ai/api/search-image?query=Settlement%20Services%20International%20SSI%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner10&orientation=squarish"
+    },
+    {
+      "name": "African Communities",
+      "url": "#",
+      "logo": "https://readdy.ai/api/search-image?query=African%20Communities%20Council%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner11&orientation=squarish"
+    },
+    {
+      "name": "Global Health Alliance",
+      "url": "#",
+      "logo": "https://readdy.ai/api/search-image?query=Global%20Health%20Alliance%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner12&orientation=squarish"
+    },
+    {
+      "name": "Cultural Heritage Foundation",
+      "url": "#",
+      "logo": "https://readdy.ai/api/search-image?query=Cultural%20Heritage%20Foundation%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner13&orientation=squarish"
+    },
+    {
+      "name": "Sydney Showground",
+      "url": "https://www.sydneyshowground.com.au",
+      "logo": "https://readdy.ai/api/search-image?query=Sydney%20Showground%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner14&orientation=squarish"
+    },
+    {
+      "name": "Community Care Alliance",
+      "url": "#",
+      "logo": "https://readdy.ai/api/search-image?query=Community%20Care%20Alliance%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner15&orientation=squarish"
+    },
+    {
+      "name": "Indigenous Health Network",
+      "url": "#",
+      "logo": "https://readdy.ai/api/search-image?query=Indigenous%20Health%20Network%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner16&orientation=squarish"
+    },
+    {
+      "name": "Trade Development Council",
+      "url": "#",
+      "logo": "https://readdy.ai/api/search-image?query=Trade%20Development%20Council%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner17&orientation=squarish"
+    },
+    {
+      "name": "Mental Health Australia",
+      "url": "https://mhaustralia.org",
+      "logo": "https://readdy.ai/api/search-image?query=Mental%20Health%20Australia%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner18&orientation=squarish"
+    },
+    {
+      "name": "Aged Care Quality",
+      "url": "https://www.agedcarequality.gov.au",
+      "logo": "https://readdy.ai/api/search-image?query=Aged%20Care%20Quality%20and%20Safety%20Commission%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner19&orientation=squarish"
+    },
+    {
+      "name": "Global Partnerships Forum",
+      "url": "#",
+      "logo": "https://readdy.ai/api/search-image?query=Global%20Partnerships%20Forum%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner20&orientation=squarish"
+    }
+  ]
+}

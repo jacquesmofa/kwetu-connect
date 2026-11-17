@@ -3,17 +3,13 @@ import { Link } from 'react-router-dom';
 import Navbar from '../../components/feature/Navbar';
 import Footer from '../../components/feature/Footer';
 import FounderProfile from '../../components/feature/FounderProfile';
+import copy from '../../content/pages/home.json';
+// Text, images and links: src/content/pages/home.json (editable in the website editors).
 
 const HomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const heroImages = [
-    'https://readdy.ai/api/search-image?query=diverse%20multicultural%20community%20members%20connecting%20hands%20together%20in%20modern%20Australian%20setting%20with%20professional%20business%20atmosphere%20representing%20unity%20and%20partnership%20collaboration%20warm%20natural%20lighting%20simple%20clean%20background&width=1920&height=1080&seq=hero1&orientation=landscape',
-    'https://readdy.ai/api/search-image?query=stunning%20Australian%20landscape%20meeting%20global%20cultural%20elements%20abstract%20artistic%20representation%20of%20bridges%20connecting%20continents%20professional%20consulting%20atmosphere%20vibrant%20colors%20simple%20background&width=1920&height=1080&seq=hero2&orientation=landscape',
-    'https://readdy.ai/api/search-image?query=professional%20international%20conference%20setting%20with%20diverse%20speakers%20and%20engaged%20audience%20modern%20venue%20sophisticated%20lighting%20representing%20global%20partnership%20opportunities%20simple%20background&width=1920&height=1080&seq=hero3&orientation=landscape',
-    'https://readdy.ai/api/search-image?query=healthcare%20workers%20and%20caregivers%20in%20professional%20setting%20diverse%20team%20collaboration%20modern%20medical%20environment%20representing%20health%20equity%20and%20community%20wellbeing%20simple%20background&width=1920&height=1080&seq=hero4&orientation=landscape',
-    'https://readdy.ai/api/search-image?query=sustainable%20trade%20and%20commerce%20abstract%20visualization%20with%20cultural%20heritage%20elements%20modern%20professional%20design%20representing%20economic%20empowerment%20and%20transnational%20partnerships%20simple%20background&width=1920&height=1080&seq=hero5&orientation=landscape',
-  ];
+  const heroImages = copy.heroImages;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -22,103 +18,13 @@ const HomePage = () => {
     return () => clearInterval(interval);
   }, [heroImages.length]);
 
-  const pillars = [
-    {
-      icon: 'ri-ancient-gate-line',
-      title: 'Cultural Resilience & Heritage',
-      description: 'Preserving and promoting cultural heritage as economic and social capital for community empowerment and sustainable development',
-      bgColor: 'bg-primary',
-      hoverBg: 'hover:bg-primary-light',
-    },
-    {
-      icon: 'ri-heart-pulse-line',
-      title: 'Health Equity & Wellbeing',
-      description: 'Connecting communities with quality health and care services for sustainable community development and improved quality of life',
-      bgColor: 'bg-accent',
-      hoverBg: 'hover:bg-accent-dark',
-    },
-    {
-      icon: 'ri-global-line',
-      title: 'Sustainable Trade & Livelihood',
-      description: 'Facilitating transnational partnerships for economic empowerment, sustainable livelihoods, and market access',
-      bgColor: 'bg-primary',
-      hoverBg: 'hover:bg-primary-light',
-    },
-    {
-      icon: 'ri-community-line',
-      title: 'Community Resilience',
-      description: 'Building resilient communities through integrated programs, strategic partnerships, and capacity building initiatives',
-      bgColor: 'bg-accent',
-      hoverBg: 'hover:bg-accent-dark',
-    },
-  ];
+  const pillars = copy.pillars;
 
-  const stats = [
-    { number: '500+', label: 'Communities Served' },
-    { number: '50+', label: 'Strategic Partnerships' },
-    { number: '15', label: 'Countries Reached' },
-    { number: '10+', label: 'Years of Excellence' },
-  ];
+  const stats = copy.stats;
 
-  const newPrograms = [
-    {
-      title: 'Mental Health & Wellbeing',
-      description: 'Redefining and addressing mental health challenges within communities through culturally sensitive support, professional services, and community-based wellness programs.',
-      icon: 'ri-mental-health-line',
-      link: '/programs#mental-health',
-    },
-    {
-      title: 'Cultural Exchange Programs',
-      description: 'Building bridges through authentic cultural experiences, knowledge sharing, and collaborative partnerships that promote mutual understanding and preserve heritage.',
-      icon: 'ri-earth-line',
-      link: '/programs#cultural-exchange',
-    },
-    {
-      title: 'Community Chaplaincy',
-      description: 'Supporting reintegration and transformation through compassionate care, mentoring, and holistic rehabilitation services for individuals and families.',
-      icon: 'ri-hand-heart-line',
-      link: '/programs#chaplaincy',
-    },
-    {
-      title: 'Job Opportunities & Care for Caregivers',
-      description: 'Navigating career pathways for caregivers while providing comprehensive support, training, and wellbeing programs for those who care for others.',
-      icon: 'ri-briefcase-line',
-      link: '/programs#job-opportunities',
-    },
-    {
-      title: 'Seniors Wisdom & Guidance',
-      description: 'Promoting sense of belonging and guidance by honoring elders and harnessing their wisdom for intergenerational connection and community strength.',
-      icon: 'ri-user-star-line',
-      link: '/programs#seniors-wisdom',
-    },
-    {
-      title: 'Turning Vulnerability into Opportunity',
-      description: 'Transforming challenges into pathways for empowerment, helping individuals and communities convert barriers into catalysts for growth and positive change.',
-      icon: 'ri-seedling-line',
-      link: '/programs#vulnerability',
-    },
-  ];
+  const newPrograms = copy.newPrograms;
 
-  const programs = [
-    {
-      title: 'Cultural Resilience & Heritage Promotion',
-      description: 'Comprehensive programs preserving cultural identity while creating economic opportunities through heritage tourism, cultural enterprises, and traditional knowledge systems.',
-      icon: 'ri-ancient-pavilion-line',
-      features: ['Heritage Tourism Development', 'Cultural Enterprise Support', 'Traditional Knowledge Preservation', 'Community Cultural Centers'],
-    },
-    {
-      title: 'Health Equity & Community Wellbeing',
-      description: 'Connecting underserved communities with quality healthcare services, mental health support, and wellness programs through strategic partnerships.',
-      icon: 'ri-hospital-line',
-      features: ['Healthcare Access Programs', 'Mental Health Support', 'Caregiver Recruitment', 'Community Health Education'],
-    },
-    {
-      title: 'Sustainable Trade & Livelihood Empowerment',
-      description: 'Facilitating market access, trade partnerships, and economic empowerment through capacity building and transnational business connections.',
-      icon: 'ri-exchange-line',
-      features: ['Market Access Support', 'Trade Partnership Facilitation', 'Business Capacity Building', 'Export Development'],
-    },
-  ];
+  const programs = copy.programs;
 
   return (
     <div className="min-h-screen bg-white">
@@ -148,27 +54,17 @@ const HomePage = () => {
         {/* Hero Content */}
         <div className="relative h-full flex items-center justify-center">
           <div className="container-custom text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-wide px-4">
-              REDEFINING BARRIERS,
-              <br />
-              NAVIGATING OPPORTUNITIES
-            </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-12 font-light max-w-4xl mx-auto px-4">
-              Dynamic Australian Consultancy Bridging Communities, Markets & Institutions
-            </p>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight tracking-wide px-4">{copy.heroContent.title}<br />{copy.heroContent.title2}</h1>
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-12 font-light max-w-4xl mx-auto px-4">{copy.heroContent.text}</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 px-4">
               <a
                 href="#pillars"
                 className="w-full sm:w-auto bg-accent hover:bg-accent-dark text-primary px-8 py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl whitespace-nowrap cursor-pointer"
-              >
-                Explore Our Pillars
-              </a>
+              >{copy.heroContent.link}</a>
               <Link
                 to="/crop2026"
                 className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-primary px-8 py-4 rounded-lg text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-xl whitespace-nowrap cursor-pointer"
-              >
-                CROP 2026 Conference
-              </Link>
+              >{copy.heroContent.text2}</Link>
             </div>
           </div>
         </div>
@@ -201,31 +97,17 @@ const HomePage = () => {
         <div className="container-custom relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
-              <span className="text-accent text-sm font-bold uppercase tracking-wider">Who We Are</span>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mt-4 mb-6 leading-tight">
-                Transforming Vulnerabilities into Pathways for Opportunities and Empowerment
-              </h2>
+              <span className="text-accent text-sm font-bold uppercase tracking-wider">{copy.executiveSummarySection.label}</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mt-4 mb-6 leading-tight">{copy.executiveSummarySection.heading}</h2>
             </div>
             <div>
-              <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
-                KWETU CONNECT PTY LTD is a dynamic Australian consultancy dedicated to redefining barriers and navigating opportunities across cultural heritage, health equity, sustainable trade, and community resilience. We serve as a bridge between communities, institutions, and markets, transforming challenges into sustainable solutions through strategic partnerships and innovative programs.
-              </p>
-              <p className="text-base sm:text-lg text-gray-700 mb-8 leading-relaxed">
-                Our approach is rooted in community-centered values, integrity, equity, and innovation. We work with governments, NGOs, private sector partners, and community organizations to create lasting impact and drive transformative change across the Global South and beyond.
-              </p>
+              <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">{copy.executiveSummarySection.text}</p>
+              <p className="text-base sm:text-lg text-gray-700 mb-8 leading-relaxed">{copy.executiveSummarySection.text2}</p>
               <div className="flex flex-wrap gap-3">
-                <span className="px-4 py-2 bg-primary/5 text-primary border border-primary/20 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 hover:bg-primary/10">
-                  Community-Centered
-                </span>
-                <span className="px-4 py-2 bg-primary/5 text-primary border border-primary/20 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 hover:bg-primary/10">
-                  Integrity
-                </span>
-                <span className="px-4 py-2 bg-primary/5 text-primary border border-primary/20 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 hover:bg-primary/10">
-                  Equity
-                </span>
-                <span className="px-4 py-2 bg-primary/5 text-primary border border-primary/20 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 hover:bg-primary/10">
-                  Innovation
-                </span>
+                <span className="px-4 py-2 bg-primary/5 text-primary border border-primary/20 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 hover:bg-primary/10">{copy.executiveSummarySection.label2}</span>
+                <span className="px-4 py-2 bg-primary/5 text-primary border border-primary/20 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 hover:bg-primary/10">{copy.executiveSummarySection.label3}</span>
+                <span className="px-4 py-2 bg-primary/5 text-primary border border-primary/20 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 hover:bg-primary/10">{copy.executiveSummarySection.label4}</span>
+                <span className="px-4 py-2 bg-primary/5 text-primary border border-primary/20 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-300 hover:bg-primary/10">{copy.executiveSummarySection.label5}</span>
               </div>
             </div>
           </div>
@@ -236,21 +118,17 @@ const HomePage = () => {
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 font-['Playfair_Display']">
-              Our Four Core Pillars
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 font-['Playfair_Display']">{copy.fourCorePillars.heading}</h2>
             <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Comprehensive solutions driving transformative impact across communities, markets, and institutions
-            </p>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">{copy.fourCorePillars.text}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Pillar 1 - Navy */}
             <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer h-96">
               <img
-                src="https://readdy.ai/api/search-image?query=cultural%20heritage%20preservation%20traditional%20artifacts%20indigenous%20art%20museum%20display%20cultural%20identity%20community%20empowerment%20beautiful%20professional%20setting%20warm%20lighting%20high%20quality%20detailed%20photography&width=800&height=600&seq=pillar1bg&orientation=landscape"
-                alt="Cultural Resilience Background"
+                src={copy.pillar1Navy.image}
+                alt={copy.pillar1Navy.imageAlt}
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/85 to-[#1a3a5a]/85"></div>
@@ -259,16 +137,13 @@ const HomePage = () => {
                   <div className="w-16 h-16 bg-[#D4AF37] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                     <i className="ri-ancient-gate-line text-3xl text-[#0A2540]"></i>
                   </div>
-                  <h3 className="text-2xl font-bold mb-4">Cultural Resilience & Heritage</h3>
-                  <p className="text-white/90 leading-relaxed">
-                    Preserving and promoting cultural heritage as economic and social capital for community empowerment and sustainable development
-                  </p>
+                  <h3 className="text-2xl font-bold mb-4">{copy.pillar1Navy.subheading}</h3>
+                  <p className="text-white/90 leading-relaxed">{copy.pillar1Navy.text}</p>
                 </div>
                 <Link
                   to="/programs#cultural-heritage"
                   className="inline-flex items-center text-[#D4AF37] hover:text-[#E5C047] font-semibold transition-colors duration-300"
-                >
-                  Learn More <i className="ri-arrow-right-line ml-2"></i>
+                >{copy.pillar1Navy.text2}<i className="ri-arrow-right-line ml-2"></i>
                 </Link>
               </div>
             </div>
@@ -276,8 +151,8 @@ const HomePage = () => {
             {/* Pillar 2 - Gold */}
             <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer h-96">
               <img
-                src="https://readdy.ai/api/search-image?query=healthcare%20equity%20community%20wellbeing%20diverse%20medical%20professionals%20caring%20for%20patients%20quality%20health%20services%20hospital%20clinic%20setting%20compassionate%20care%20professional%20medical%20environment%20warm%20lighting&width=800&height=600&seq=pillar2bg&orientation=landscape"
-                alt="Health Equity Background"
+                src={copy.pillar2Gold.image}
+                alt={copy.pillar2Gold.imageAlt}
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/85 to-[#C4A137]/85"></div>
@@ -286,16 +161,13 @@ const HomePage = () => {
                   <div className="w-16 h-16 bg-[#0A2540] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                     <i className="ri-heart-pulse-line text-3xl text-[#D4AF37]"></i>
                   </div>
-                  <h3 className="text-2xl font-bold mb-4">Health Equity & Wellbeing</h3>
-                  <p className="text-white/90 leading-relaxed">
-                    Connecting communities with quality health and care services for sustainable community development and improved quality of life
-                  </p>
+                  <h3 className="text-2xl font-bold mb-4">{copy.pillar2Gold.subheading}</h3>
+                  <p className="text-white/90 leading-relaxed">{copy.pillar2Gold.text}</p>
                 </div>
                 <Link
                   to="/programs#health-equity"
                   className="inline-flex items-center text-[#0A2540] hover:text-[#1a3a5a] font-semibold transition-colors duration-300"
-                >
-                  Learn More <i className="ri-arrow-right-line ml-2"></i>
+                >{copy.pillar2Gold.text2}<i className="ri-arrow-right-line ml-2"></i>
                 </Link>
               </div>
             </div>
@@ -303,8 +175,8 @@ const HomePage = () => {
             {/* Pillar 3 - Navy */}
             <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer h-96">
               <img
-                src="https://readdy.ai/api/search-image?query=sustainable%20trade%20business%20partnership%20international%20commerce%20market%20access%20economic%20empowerment%20professional%20business%20meeting%20diverse%20entrepreneurs%20collaboration%20modern%20office%20setting%20bright%20lighting&width=800&height=600&seq=pillar3bg&orientation=landscape"
-                alt="Sustainable Trade Background"
+                src={copy.pillar3Navy.image}
+                alt={copy.pillar3Navy.imageAlt}
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/85 to-[#1a3a5a]/85"></div>
@@ -313,16 +185,13 @@ const HomePage = () => {
                   <div className="w-16 h-16 bg-[#D4AF37] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                     <i className="ri-global-line text-3xl text-[#0A2540]"></i>
                   </div>
-                  <h3 className="text-2xl font-bold mb-4">Sustainable Trade & Livelihood</h3>
-                  <p className="text-white/90 leading-relaxed">
-                    Facilitating transnational partnerships for economic empowerment, sustainable livelihoods, and market access
-                  </p>
+                  <h3 className="text-2xl font-bold mb-4">{copy.pillar3Navy.subheading}</h3>
+                  <p className="text-white/90 leading-relaxed">{copy.pillar3Navy.text}</p>
                 </div>
                 <Link
                   to="/programs#sustainable-trade"
                   className="inline-flex items-center text-[#D4AF37] hover:text-[#E5C047] font-semibold transition-colors duration-300"
-                >
-                  Learn More <i className="ri-arrow-right-line ml-2"></i>
+                >{copy.pillar3Navy.text2}<i className="ri-arrow-right-line ml-2"></i>
                 </Link>
               </div>
             </div>
@@ -330,8 +199,8 @@ const HomePage = () => {
             {/* Pillar 4 - Gold */}
             <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer h-96">
               <img
-                src="https://readdy.ai/api/search-image?query=community%20resilience%20diverse%20people%20working%20together%20capacity%20building%20strategic%20partnerships%20integrated%20programs%20community%20development%20collaboration%20teamwork%20empowerment%20warm%20professional%20setting%20natural%20lighting&width=800&height=600&seq=pillar4bg&orientation=landscape"
-                alt="Community Resilience Background"
+                src={copy.pillar4Gold.image}
+                alt={copy.pillar4Gold.imageAlt}
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/85 to-[#C4A137]/85"></div>
@@ -340,16 +209,13 @@ const HomePage = () => {
                   <div className="w-16 h-16 bg-[#0A2540] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                     <i className="ri-team-line text-3xl text-[#D4AF37]"></i>
                   </div>
-                  <h3 className="text-2xl font-bold mb-4">Community Resilience</h3>
-                  <p className="text-white/90 leading-relaxed">
-                    Building resilient communities through integrated programs, strategic partnerships, and capacity building initiatives
-                  </p>
+                  <h3 className="text-2xl font-bold mb-4">{copy.pillar4Gold.subheading}</h3>
+                  <p className="text-white/90 leading-relaxed">{copy.pillar4Gold.text}</p>
                 </div>
                 <Link
                   to="/programs#community-resilience"
                   className="inline-flex items-center text-[#0A2540] hover:text-[#1a3a5a] font-semibold transition-colors duration-300"
-                >
-                  Learn More <i className="ri-arrow-right-line ml-2"></i>
+                >{copy.pillar4Gold.text2}<i className="ri-arrow-right-line ml-2"></i>
                 </Link>
               </div>
             </div>
@@ -361,21 +227,17 @@ const HomePage = () => {
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 font-['Playfair_Display']">
-              Connecting Communities to Care
-            </h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6 font-['Playfair_Display']">{copy.programConnectionCards.heading}</h2>
             <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Bridging the gap between healthcare professionals and communities in need
-            </p>
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">{copy.programConnectionCards.text}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Card 1 - Navy */}
             <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer">
               <img
-                src="https://readdy.ai/api/search-image?query=mental%20health%20wellbeing%20healthcare%20workers%20support%20counseling%20therapy%20peaceful%20calming%20environment%20professional%20medical%20setting%20compassionate%20care%20warm%20lighting%20high%20quality%20photography&width=600&height=400&seq=connection1bg&orientation=landscape"
-                alt="Mental Health Background"
+                src={copy.card1Navy.image}
+                alt={copy.card1Navy.imageAlt}
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/85 to-[#1a3a5a]/85"></div>
@@ -384,16 +246,13 @@ const HomePage = () => {
                   <div className="w-14 h-14 bg-[#D4AF37] rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
                     <i className="ri-mental-health-line text-2xl text-[#0A2540]"></i>
                   </div>
-                  <h3 className="text-xl font-bold mb-3">Mental Health & Wellbeing</h3>
-                  <p className="text-white/90 text-sm leading-relaxed">
-                    Supporting healthcare workers' mental health and wellbeing
-                  </p>
+                  <h3 className="text-xl font-bold mb-3">{copy.card1Navy.subheading}</h3>
+                  <p className="text-white/90 text-sm leading-relaxed">{copy.card1Navy.text}</p>
                 </div>
                 <Link
                   to="/programs#mental-health"
                   className="inline-flex items-center text-[#D4AF37] hover:text-[#E5C047] font-semibold text-sm transition-colors duration-300"
-                >
-                  Learn More <i className="ri-arrow-right-line ml-2"></i>
+                >{copy.card1Navy.text2}<i className="ri-arrow-right-line ml-2"></i>
                 </Link>
               </div>
             </div>
@@ -401,8 +260,8 @@ const HomePage = () => {
             {/* Card 2 - Gold */}
             <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer">
               <img
-                src="https://readdy.ai/api/search-image?query=job%20opportunities%20career%20pathways%20healthcare%20professionals%20medical%20training%20professional%20development%20hospital%20clinic%20setting%20diverse%20medical%20staff%20bright%20professional%20environment&width=600&height=400&seq=connection2bg&orientation=landscape"
-                alt="Job Opportunities Background"
+                src={copy.card2Gold.image}
+                alt={copy.card2Gold.imageAlt}
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/85 to-[#C4A137]/85"></div>
@@ -411,16 +270,13 @@ const HomePage = () => {
                   <div className="w-14 h-14 bg-[#0A2540] rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
                     <i className="ri-briefcase-line text-2xl text-[#D4AF37]"></i>
                   </div>
-                  <h3 className="text-xl font-bold mb-3">Job Opportunities & Care for Caregivers</h3>
-                  <p className="text-white/90 text-sm leading-relaxed">
-                    Career pathways and support for healthcare professionals
-                  </p>
+                  <h3 className="text-xl font-bold mb-3">{copy.card2Gold.subheading}</h3>
+                  <p className="text-white/90 text-sm leading-relaxed">{copy.card2Gold.text}</p>
                 </div>
                 <Link
                   to="/programs#job-opportunities"
                   className="inline-flex items-center text-[#0A2540] hover:text-[#1a3a5a] font-semibold text-sm transition-colors duration-300"
-                >
-                  Learn More <i className="ri-arrow-right-line ml-2"></i>
+                >{copy.card2Gold.text2}<i className="ri-arrow-right-line ml-2"></i>
                 </Link>
               </div>
             </div>
@@ -428,8 +284,8 @@ const HomePage = () => {
             {/* Card 3 - Navy */}
             <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer">
               <img
-                src="https://readdy.ai/api/search-image?query=cultural%20exchange%20programs%20international%20healthcare%20collaboration%20diverse%20medical%20professionals%20learning%20together%20cross%20cultural%20training%20modern%20educational%20setting%20bright%20collaborative%20environment&width=600&height=400&seq=connection3bg&orientation=landscape"
-                alt="Cultural Exchange Background"
+                src={copy.card3Navy.image}
+                alt={copy.card3Navy.imageAlt}
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-[#0A2540]/85 to-[#1a3a5a]/85"></div>
@@ -438,16 +294,13 @@ const HomePage = () => {
                   <div className="w-14 h-14 bg-[#D4AF37] rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
                     <i className="ri-earth-line text-2xl text-[#0A2540]"></i>
                   </div>
-                  <h3 className="text-xl font-bold mb-3">Cultural Exchange Programs</h3>
-                  <p className="text-white/90 text-sm leading-relaxed">
-                    Culturally competent care through exchange and learning
-                  </p>
+                  <h3 className="text-xl font-bold mb-3">{copy.card3Navy.subheading}</h3>
+                  <p className="text-white/90 text-sm leading-relaxed">{copy.card3Navy.text}</p>
                 </div>
                 <Link
                   to="/programs#cultural-exchange"
                   className="inline-flex items-center text-[#D4AF37] hover:text-[#E5C047] font-semibold text-sm transition-colors duration-300"
-                >
-                  Learn More <i className="ri-arrow-right-line ml-2"></i>
+                >{copy.card3Navy.text2}<i className="ri-arrow-right-line ml-2"></i>
                 </Link>
               </div>
             </div>
@@ -455,8 +308,8 @@ const HomePage = () => {
             {/* Card 4 - Gold */}
             <div className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:scale-105 cursor-pointer">
               <img
-                src="https://readdy.ai/api/search-image?query=seniors%20wisdom%20elderly%20care%20aged%20care%20services%20quality%20healthcare%20for%20elders%20compassionate%20caregivers%20honoring%20elders%20peaceful%20care%20facility%20warm%20professional%20setting%20natural%20lighting&width=600&height=400&seq=connection4bg&orientation=landscape"
-                alt="Seniors Wisdom Background"
+                src={copy.card4Gold.image}
+                alt={copy.card4Gold.imageAlt}
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/85 to-[#C4A137]/85"></div>
@@ -465,16 +318,13 @@ const HomePage = () => {
                   <div className="w-14 h-14 bg-[#0A2540] rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
                     <i className="ri-user-star-line text-2xl text-[#D4AF37]"></i>
                   </div>
-                  <h3 className="text-xl font-bold mb-3">Seniors Wisdom & Guidance</h3>
-                  <p className="text-white/90 text-sm leading-relaxed">
-                    Honoring elders through quality aged care services
-                  </p>
+                  <h3 className="text-xl font-bold mb-3">{copy.card4Gold.subheading}</h3>
+                  <p className="text-white/90 text-sm leading-relaxed">{copy.card4Gold.text}</p>
                 </div>
                 <Link
                   to="/programs#seniors-wisdom"
                   className="inline-flex items-center text-[#0A2540] hover:text-[#1a3a5a] font-semibold text-sm transition-colors duration-300"
-                >
-                  Learn More <i className="ri-arrow-right-line ml-2"></i>
+                >{copy.card4Gold.text2}<i className="ri-arrow-right-line ml-2"></i>
                 </Link>
               </div>
             </div>
@@ -486,12 +336,8 @@ const HomePage = () => {
       <section className="py-16 sm:py-20 lg:py-24 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4">
-              Integrated Programs & Services
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-              Comprehensive solutions tailored to address complex challenges and create sustainable impact
-            </p>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4">{copy.detailedProgramsOverview.heading}</h2>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">{copy.detailedProgramsOverview.text}</p>
           </div>
 
           <div className="space-y-12">
@@ -501,36 +347,32 @@ const HomePage = () => {
                 <div className="w-16 h-16 flex items-center justify-center bg-accent/10 rounded-2xl mb-6">
                   <i className="ri-ancient-pavilion-line text-4xl text-accent"></i>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-4">
-                  Cultural Resilience & Heritage Promotion
-                </h3>
-                <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
-                  Comprehensive programs preserving cultural identity while creating economic opportunities through heritage tourism, cultural enterprises, and traditional knowledge systems.
-                </p>
+                <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-4">{copy.s1CulturalResilienceAndHeritage.subheading}</h3>
+                <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">{copy.s1CulturalResilienceAndHeritage.text}</p>
                 <ul className="space-y-3">
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Heritage Tourism Development</span>
+                    <span>{copy.s1CulturalResilienceAndHeritage.label}</span>
                   </li>
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Cultural Enterprise Support</span>
+                    <span>{copy.s1CulturalResilienceAndHeritage.label2}</span>
                   </li>
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Traditional Knowledge Preservation</span>
+                    <span>{copy.s1CulturalResilienceAndHeritage.label3}</span>
                   </li>
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Community Cultural Centers</span>
+                    <span>{copy.s1CulturalResilienceAndHeritage.label4}</span>
                   </li>
                 </ul>
               </div>
               <div>
                 <div className="w-full h-80 lg:h-96 rounded-2xl overflow-hidden shadow-lg">
                   <img
-                    src="https://readdy.ai/api/search-image?query=cultural%20heritage%20preservation%20traditional%20artifacts%20museum%20display%20diverse%20community%20members%20celebrating%20cultural%20identity%20professional%20setting%20simple%20clean%20background&width=800&height=600&seq=intprog1&orientation=landscape"
-                    alt="Cultural Resilience & Heritage Promotion"
+                    src={copy.s1CulturalResilienceAndHeritage.image}
+                    alt={copy.s1CulturalResilienceAndHeritage.imageAlt}
                     className="w-full h-full object-cover object-center"
                   />
                 </div>
@@ -543,36 +385,32 @@ const HomePage = () => {
                 <div className="w-16 h-16 flex items-center justify-center bg-accent/10 rounded-2xl mb-6">
                   <i className="ri-hospital-line text-4xl text-accent"></i>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-4">
-                  Health Equity & Community Wellbeing
-                </h3>
-                <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
-                  Connecting underserved communities with quality healthcare services, mental health support, and wellness programs through strategic partnerships.
-                </p>
+                <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-4">{copy.s2HealthEquityAndCommunity.subheading}</h3>
+                <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">{copy.s2HealthEquityAndCommunity.text}</p>
                 <ul className="space-y-3">
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Healthcare Access Programs</span>
+                    <span>{copy.s2HealthEquityAndCommunity.label}</span>
                   </li>
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Mental Health Support</span>
+                    <span>{copy.s2HealthEquityAndCommunity.label2}</span>
                   </li>
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Caregiver Recruitment</span>
+                    <span>{copy.s2HealthEquityAndCommunity.label3}</span>
                   </li>
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Community Health Education</span>
+                    <span>{copy.s2HealthEquityAndCommunity.label4}</span>
                   </li>
                 </ul>
               </div>
               <div className="lg:order-1">
                 <div className="w-full h-80 lg:h-96 rounded-2xl overflow-hidden shadow-lg">
                   <img
-                    src="https://readdy.ai/api/search-image?query=healthcare%20professionals%20diverse%20team%20providing%20community%20health%20services%20medical%20consultation%20wellness%20programs%20professional%20setting%20simple%20clean%20background&width=800&height=600&seq=intprog2&orientation=landscape"
-                    alt="Health Equity & Community Wellbeing"
+                    src={copy.s2HealthEquityAndCommunity.image}
+                    alt={copy.s2HealthEquityAndCommunity.imageAlt}
                     className="w-full h-full object-cover object-center"
                   />
                 </div>
@@ -585,36 +423,32 @@ const HomePage = () => {
                 <div className="w-16 h-16 flex items-center justify-center bg-accent/10 rounded-2xl mb-6">
                   <i className="ri-exchange-line text-4xl text-accent"></i>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-4">
-                  Sustainable Trade & Livelihood Empowerment
-                </h3>
-                <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
-                  Facilitating market access, trade partnerships, and economic empowerment through capacity building and transnational business connections.
-                </p>
+                <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-4">{copy.s3SustainableTradeAndLivelihood.subheading}</h3>
+                <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">{copy.s3SustainableTradeAndLivelihood.text}</p>
                 <ul className="space-y-3">
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Market Access Support</span>
+                    <span>{copy.s3SustainableTradeAndLivelihood.label}</span>
                   </li>
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Trade Partnership Facilitation</span>
+                    <span>{copy.s3SustainableTradeAndLivelihood.label2}</span>
                   </li>
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Business Capacity Building</span>
+                    <span>{copy.s3SustainableTradeAndLivelihood.label3}</span>
                   </li>
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Export Development</span>
+                    <span>{copy.s3SustainableTradeAndLivelihood.label4}</span>
                   </li>
                 </ul>
               </div>
               <div>
                 <div className="w-full h-80 lg:h-96 rounded-2xl overflow-hidden shadow-lg">
                   <img
-                    src="https://readdy.ai/api/search-image?query=sustainable%20trade%20business%20partnership%20diverse%20entrepreneurs%20market%20access%20economic%20empowerment%20professional%20setting%20simple%20clean%20background&width=800&height=600&seq=intprog3&orientation=landscape"
-                    alt="Sustainable Trade & Livelihood Empowerment"
+                    src={copy.s3SustainableTradeAndLivelihood.image}
+                    alt={copy.s3SustainableTradeAndLivelihood.imageAlt}
                     className="w-full h-full object-cover object-center"
                   />
                 </div>
@@ -627,36 +461,32 @@ const HomePage = () => {
                 <div className="w-16 h-16 flex items-center justify-center bg-accent/10 rounded-2xl mb-6">
                   <i className="ri-mental-health-line text-4xl text-accent"></i>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-4">
-                  Mental Health & Wellbeing
-                </h3>
-                <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
-                  Redefining and addressing mental health challenges within communities through culturally sensitive support, professional services, and community-based wellness programs.
-                </p>
+                <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-4">{copy.s4MentalHealthAndWellbeing.subheading}</h3>
+                <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">{copy.s4MentalHealthAndWellbeing.text}</p>
                 <ul className="space-y-3">
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Community-based Support Networks</span>
+                    <span>{copy.s4MentalHealthAndWellbeing.label}</span>
                   </li>
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Early-intervention Workshops</span>
+                    <span>{copy.s4MentalHealthAndWellbeing.label2}</span>
                   </li>
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Holistic Wellness Programmes</span>
+                    <span>{copy.s4MentalHealthAndWellbeing.label3}</span>
                   </li>
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Digital Self-care Platforms</span>
+                    <span>{copy.s4MentalHealthAndWellbeing.label4}</span>
                   </li>
                 </ul>
               </div>
               <div className="lg:order-1">
                 <div className="w-full h-80 lg:h-96 rounded-2xl overflow-hidden shadow-lg">
                   <img
-                    src="https://readdy.ai/api/search-image?query=mental%20health%20counseling%20support%20group%20diverse%20people%20wellness%20therapy%20session%20professional%20setting%20simple%20clean%20background&width=800&height=600&seq=intprog4&orientation=landscape"
-                    alt="Mental Health & Wellbeing"
+                    src={copy.s4MentalHealthAndWellbeing.image}
+                    alt={copy.s4MentalHealthAndWellbeing.imageAlt}
                     className="w-full h-full object-cover object-center"
                   />
                 </div>
@@ -669,36 +499,32 @@ const HomePage = () => {
                 <div className="w-16 h-16 flex items-center justify-center bg-accent/10 rounded-2xl mb-6">
                   <i className="ri-earth-line text-4xl text-accent"></i>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-4">
-                  Cultural Exchange & Partnerships
-                </h3>
-                <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
-                  Building bridges through authentic cultural experiences, knowledge sharing, and collaborative partnerships that promote mutual understanding and preserve heritage.
-                </p>
+                <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-4">{copy.s5CulturalExchangePrograms.subheading}</h3>
+                <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">{copy.s5CulturalExchangePrograms.text}</p>
                 <ul className="space-y-3">
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Immersive Cultural Immersion Trips</span>
+                    <span>{copy.s5CulturalExchangePrograms.label}</span>
                   </li>
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Reciprocal Learning Partnerships</span>
+                    <span>{copy.s5CulturalExchangePrograms.label2}</span>
                   </li>
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Artistic Collaborations and Festivals</span>
+                    <span>{copy.s5CulturalExchangePrograms.label3}</span>
                   </li>
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Education Exchange Scholarships</span>
+                    <span>{copy.s5CulturalExchangePrograms.label4}</span>
                   </li>
                 </ul>
               </div>
               <div>
                 <div className="w-full h-80 lg:h-96 rounded-2xl overflow-hidden shadow-lg">
                   <img
-                    src="https://readdy.ai/api/search-image?query=cultural%20exchange%20program%20diverse%20people%20traditional%20clothing%20sharing%20knowledge%20international%20partnership%20professional%20setting%20simple%20clean%20background&width=800&height=600&seq=intprog5&orientation=landscape"
-                    alt="Cultural Exchange & Partnerships"
+                    src={copy.s5CulturalExchangePrograms.image}
+                    alt={copy.s5CulturalExchangePrograms.imageAlt}
                     className="w-full h-full object-cover object-center"
                   />
                 </div>
@@ -711,36 +537,32 @@ const HomePage = () => {
                 <div className="w-16 h-16 flex items-center justify-center bg-accent/10 rounded-2xl mb-6">
                   <i className="ri-hand-heart-line text-4xl text-accent"></i>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-4">
-                  Community Chaplaincy Rehabilitation Services
-                </h3>
-                <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
-                  Supporting reintegration and transformation through compassionate care, mentoring, and holistic rehabilitation services for individuals and families.
-                </p>
+                <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-4">{copy.s6CommunityChaplaincyRehabilitation.subheading}</h3>
+                <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">{copy.s6CommunityChaplaincyRehabilitation.text}</p>
                 <ul className="space-y-3">
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Spiritual Counseling and Guidance</span>
+                    <span>{copy.s6CommunityChaplaincyRehabilitation.label}</span>
                   </li>
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Mentoring Programmes for Reintegration</span>
+                    <span>{copy.s6CommunityChaplaincyRehabilitation.label2}</span>
                   </li>
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Family Reconciliation Support</span>
+                    <span>{copy.s6CommunityChaplaincyRehabilitation.label3}</span>
                   </li>
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Employment and Skills Development</span>
+                    <span>{copy.s6CommunityChaplaincyRehabilitation.label4}</span>
                   </li>
                 </ul>
               </div>
               <div>
                 <div className="w-full h-80 lg:h-96 rounded-2xl overflow-hidden shadow-lg">
                   <img
-                    src="https://readdy.ai/api/search-image?query=community%20chaplaincy%20mentoring%20counseling%20support%20rehabilitation%20services%20professional%20setting%20simple%20clean%20background&width=800&height=600&seq=intprog6&orientation=landscape"
-                    alt="Community Chaplaincy Rehabilitation Services"
+                    src={copy.s6CommunityChaplaincyRehabilitation.image}
+                    alt={copy.s6CommunityChaplaincyRehabilitation.imageAlt}
                     className="w-full h-full object-cover object-center"
                   />
                 </div>
@@ -753,36 +575,32 @@ const HomePage = () => {
                 <div className="w-16 h-16 flex items-center justify-center bg-accent/10 rounded-2xl mb-6">
                   <i className="ri-user-star-line text-4xl text-accent"></i>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-4">
-                  Promoting Belonging Through Seniors' Wisdom
-                </h3>
-                <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
-                  Honoring elders and harnessing their wisdom for intergenerational connection, cultural preservation, and community strength.
-                </p>
+                <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-4">{copy.s7SeniorsWisdomAndGuidance.subheading}</h3>
+                <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">{copy.s7SeniorsWisdomAndGuidance.text}</p>
                 <ul className="space-y-3">
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Intergenerational Mentorship Circles</span>
+                    <span>{copy.s7SeniorsWisdomAndGuidance.label}</span>
                   </li>
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Story-telling Archives and Digital Heritage</span>
+                    <span>{copy.s7SeniorsWisdomAndGuidance.label2}</span>
                   </li>
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Active Ageing Community Hubs</span>
+                    <span>{copy.s7SeniorsWisdomAndGuidance.label3}</span>
                   </li>
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Leadership Roles for Elder Advisors</span>
+                    <span>{copy.s7SeniorsWisdomAndGuidance.label4}</span>
                   </li>
                 </ul>
               </div>
               <div>
                 <div className="w-full h-80 lg:h-96 rounded-2xl overflow-hidden shadow-lg">
                   <img
-                    src="https://readdy.ai/api/search-image?query=seniors%20elders%20sharing%20wisdom%20with%20youth%20intergenerational%20mentorship%20community%20gathering%20professional%20setting%20simple%20clean%20background&width=800&height=600&seq=intprog7&orientation=landscape"
-                    alt="Promoting Belonging Through Seniors' Wisdom"
+                    src={copy.s7SeniorsWisdomAndGuidance.image}
+                    alt={copy.s7SeniorsWisdomAndGuidance.imageAlt}
                     className="w-full h-full object-cover object-center"
                   />
                 </div>
@@ -795,36 +613,32 @@ const HomePage = () => {
                 <div className="w-16 h-16 flex items-center justify-center bg-accent/10 rounded-2xl mb-6">
                   <i className="ri-seedling-line text-4xl text-accent"></i>
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-4">
-                  Turning Vulnerability into Opportunities
-                </h3>
-                <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">
-                  Transforming challenges into pathways for empowerment, helping individuals and communities convert barriers into catalysts for growth and positive change.
-                </p>
+                <h3 className="text-2xl sm:text-3xl font-bold text-primary mb-4">{copy.s8TurningVulnerabilityIntoOpportunities.subheading}</h3>
+                <p className="text-base sm:text-lg text-gray-700 mb-6 leading-relaxed">{copy.s8TurningVulnerabilityIntoOpportunities.text}</p>
                 <ul className="space-y-3">
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Asset-mapping and Community Co-design</span>
+                    <span>{copy.s8TurningVulnerabilityIntoOpportunities.label}</span>
                   </li>
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Micro-grant and Seed-fund Programmes</span>
+                    <span>{copy.s8TurningVulnerabilityIntoOpportunities.label2}</span>
                   </li>
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Advocacy for Policy Change</span>
+                    <span>{copy.s8TurningVulnerabilityIntoOpportunities.label3}</span>
                   </li>
                   <li className="flex items-start text-gray-700">
                     <i className="ri-checkbox-circle-fill text-accent mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Impact Measurement and Storytelling</span>
+                    <span>{copy.s8TurningVulnerabilityIntoOpportunities.label4}</span>
                   </li>
                 </ul>
               </div>
               <div className="lg:order-1">
                 <div className="w-full h-80 lg:h-96 rounded-2xl overflow-hidden shadow-lg">
                   <img
-                    src="https://readdy.ai/api/search-image?query=community%20empowerment%20transformation%20growth%20diverse%20people%20collaborating%20innovative%20solutions%20professional%20setting%20simple%20clean%20background&width=800&height=600&seq=intprog8&orientation=landscape"
-                    alt="Turning Vulnerability into Opportunities"
+                    src={copy.s8TurningVulnerabilityIntoOpportunities.image}
+                    alt={copy.s8TurningVulnerabilityIntoOpportunities.imageAlt}
                     className="w-full h-full object-cover object-center"
                   />
                 </div>
@@ -839,8 +653,8 @@ const HomePage = () => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img
-            src="https://readdy.ai/api/search-image?query=grassroots%20community%20empowerment%20Global%20South%20sustainable%20development%20cultural%20preservation%20beautiful%20landscape%20warm%20natural%20lighting%20professional%20photography%20simple%20clean%20background&width=1920&height=1080&seq=homesisterbg&orientation=landscape"
-            alt="Sister Organization Background"
+            src={copy.backgroundImageWithOverlay.image}
+            alt={copy.backgroundImageWithOverlay.imageAlt}
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-primary/80"></div>
@@ -852,43 +666,33 @@ const HomePage = () => {
         <div className="container-custom relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Our Sister Organization
-              </h2>
-              <p className="text-accent text-xl sm:text-2xl font-serif italic mb-6">
-                kwetu4communities
-              </p>
-              <p className="text-lg sm:text-xl text-gray-200 mb-6 leading-relaxed">
-                Our sister organization empowering grassroots communities across the Global South through sustainable development initiatives, cultural preservation programs, and community-led solutions. Together, we create lasting impact through integrated approaches to community resilience and empowerment.
-              </p>
-              <p className="text-base sm:text-lg text-gray-300 mb-8 leading-relaxed">
-                kwetu4communities focuses on direct community engagement, implementing programs that address immediate needs while building long-term capacity. Through this partnership, we ensure that our consultancy work is grounded in real community experiences and needs.
-              </p>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">{copy.backgroundImageWithOverlay.heading}</h2>
+              <p className="text-accent text-xl sm:text-2xl font-serif italic mb-6">{copy.backgroundImageWithOverlay.text}</p>
+              <p className="text-lg sm:text-xl text-gray-200 mb-6 leading-relaxed">{copy.backgroundImageWithOverlay.text2}</p>
+              <p className="text-base sm:text-lg text-gray-300 mb-8 leading-relaxed">{copy.backgroundImageWithOverlay.text3}</p>
               <a
-                href="https://kwetu4communities.org/"
+                href={copy.backgroundImageWithOverlay.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-accent hover:bg-accent-dark text-primary px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-xl whitespace-nowrap cursor-pointer"
-              >
-                Visit kwetu4communities →
-              </a>
+              >{copy.backgroundImageWithOverlay.link}</a>
             </div>
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">
                 <img
-                  src="https://readdy.ai/api/search-image?query=grassroots%20community%20members%20working%20together%20in%20Global%20South%20village%20setting%20collaborative%20development%20project%20warm%20natural%20lighting%20simple%20clean%20background&width=400&height=500&seq=sister1&orientation=portrait"
-                  alt="Community empowerment"
+                  src={copy.backgroundImageWithOverlay.image2}
+                  alt={copy.backgroundImageWithOverlay.imageAlt2}
                   className="rounded-2xl shadow-2xl border-4 border-white w-full h-64 sm:h-80 object-cover object-top transition-transform duration-500 hover:scale-105"
                 />
                 <div className="space-y-4">
                   <img
-                    src="https://readdy.ai/api/search-image?query=cultural%20preservation%20traditional%20heritage%20celebration%20diverse%20community%20members%20colorful%20authentic%20setting%20simple%20clean%20background&width=400&height=240&seq=sister2&orientation=landscape"
-                    alt="Cultural preservation"
+                    src={copy.backgroundImageWithOverlay.image3}
+                    alt={copy.backgroundImageWithOverlay.imageAlt3}
                     className="rounded-2xl shadow-2xl border-4 border-white w-full h-32 sm:h-40 object-cover object-top transition-transform duration-500 hover:scale-105"
                   />
                   <img
-                    src="https://readdy.ai/api/search-image?query=sustainable%20development%20community-led%20solutions%20people%20collaborating%20on%20local%20projects%20empowerment%20simple%20clean%20background&width=400&height=240&seq=sister3&orientation=landscape"
-                    alt="Sustainable development"
+                    src={copy.backgroundImageWithOverlay.image4}
+                    alt={copy.backgroundImageWithOverlay.imageAlt4}
                     className="rounded-2xl shadow-2xl border-4 border-white w-full h-32 sm:h-40 object-cover object-top transition-transform duration-500 hover:scale-105"
                   />
                 </div>
@@ -905,49 +709,39 @@ const HomePage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-5">
               <div className="lg:col-span-3 relative h-80 sm:h-96 lg:h-auto">
                 <img
-                  src="https://readdy.ai/api/search-image?query=international%20conference%20diverse%20speakers%20on%20stage%20engaged%20audience%20modern%20professional%20venue%20sophisticated%20lighting%20cultural%20resilience%20theme%20simple%20clean%20background&width=1200&height=800&seq=crop1&orientation=landscape"
-                  alt="CROP 2026 Conference"
+                  src={copy.featuredProgramCrop2026.image}
+                  alt={copy.featuredProgramCrop2026.imageAlt}
                   className="w-full h-full object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
               </div>
               <div className="lg:col-span-2 bg-accent p-8 sm:p-10 lg:p-12 flex flex-col justify-center">
-                <span className="text-primary text-sm font-bold uppercase tracking-wider mb-4">
-                  Flagship Event 2026
-                </span>
-                <h3 className="text-3xl sm:text-4xl font-bold text-primary mb-4 leading-tight">
-                  Cultural Resilience, One Planet Conference
-                </h3>
-                <p className="text-primary text-lg sm:text-xl mb-6">
-                  Sydney, Australia | November 6-8, 2026
-                </p>
+                <span className="text-primary text-sm font-bold uppercase tracking-wider mb-4">{copy.featuredProgramCrop2026.label}</span>
+                <h3 className="text-3xl sm:text-4xl font-bold text-primary mb-4 leading-tight">{copy.featuredProgramCrop2026.subheading}</h3>
+                <p className="text-primary text-lg sm:text-xl mb-6">{copy.featuredProgramCrop2026.text}</p>
                 <ul className="space-y-3 mb-8">
                   <li className="flex items-start text-primary">
                     <i className="ri-checkbox-circle-fill text-primary-light mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Global thought leaders and cultural experts</span>
+                    <span>{copy.featuredProgramCrop2026.label2}</span>
                   </li>
                   <li className="flex items-start text-primary">
                     <i className="ri-checkbox-circle-fill text-primary-light mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Innovative solutions for cultural preservation</span>
+                    <span>{copy.featuredProgramCrop2026.label3}</span>
                   </li>
                   <li className="flex items-start text-primary">
                     <i className="ri-checkbox-circle-fill text-primary-light mr-3 mt-1 flex-shrink-0"></i>
-                    <span>Networking with international partners</span>
+                    <span>{copy.featuredProgramCrop2026.label4}</span>
                   </li>
                 </ul>
                 <div className="space-y-3">
                   <Link
                     to="/crop2026"
                     className="block w-full bg-primary hover:bg-primary-light text-white text-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg whitespace-nowrap cursor-pointer"
-                  >
-                    Register Interest
-                  </Link>
+                  >{copy.featuredProgramCrop2026.text2}</Link>
                   <Link
                     to="/crop2026"
                     className="block w-full border-2 border-primary hover:bg-primary hover:text-white text-primary text-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg whitespace-nowrap cursor-pointer"
-                  >
-                    View Full Details
-                  </Link>
+                  >{copy.featuredProgramCrop2026.text3}</Link>
                 </div>
               </div>
             </div>
@@ -960,8 +754,8 @@ const HomePage = () => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img
-            src="https://readdy.ai/api/search-image?query=global%20network%20connections%20world%20map%20international%20partnerships%20diverse%20communities%20worldwide%20collaboration%20beautiful%20visualization%20professional%20design%20simple%20clean%20background&width=1920&height=1080&seq=homeimpactbg&orientation=landscape"
-            alt="Global Impact Background"
+            src={copy.backgroundImageWithOverlay.image5}
+            alt={copy.backgroundImageWithOverlay.imageAlt5}
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-primary/80"></div>
@@ -979,12 +773,8 @@ const HomePage = () => {
         </div>
         <div className="container-custom relative">
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              Our Global Impact
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-300 px-4">
-              Transforming communities and building partnerships worldwide
-            </p>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">{copy.backgroundImageWithOverlay.heading2}</h2>
+            <p className="text-lg sm:text-xl text-gray-300 px-4">{copy.backgroundImageWithOverlay.text4}</p>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {stats.map((stat, index) => (
@@ -1005,9 +795,7 @@ const HomePage = () => {
       <section className="py-16 sm:py-20 lg:py-24 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4 font-['Playfair_Display']">
-              Our Leadership
-            </h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4 font-['Playfair_Display']">{copy.founderSection.heading}</h2>
             <div className="w-24 h-1 bg-accent mx-auto"></div>
           </div>
 
@@ -1021,13 +809,9 @@ const HomePage = () => {
       <section className="py-16 sm:py-20 lg:py-24 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4 font-['Playfair_Display']">
-              Our Trusted Partners
-            </h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4 font-['Playfair_Display']">{copy.partnersSection.heading}</h2>
             <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              Collaborating with leading organizations to create lasting impact
-            </p>
+            <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">{copy.partnersSection.text}</p>
           </div>
 
           {/*
@@ -1049,28 +833,7 @@ const HomePage = () => {
             ============================================================
           */}
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8">
-            {[
-              { name: 'United Nations', url: 'https://www.un.org', logo: 'https://readdy.ai/api/search-image?query=United%20Nations%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner1&orientation=squarish' },
-              { name: 'World Health Organization', url: 'https://www.who.int', logo: 'https://readdy.ai/api/search-image?query=World%20Health%20Organization%20WHO%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner2&orientation=squarish' },
-              { name: 'Australian Government', url: 'https://www.australia.gov.au', logo: 'https://readdy.ai/api/search-image?query=Australian%20Government%20official%20logo%20coat%20of%20arms%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner3&orientation=squarish' },
-              { name: 'NSW Health', url: 'https://www.health.nsw.gov.au', logo: 'https://readdy.ai/api/search-image?query=NSW%20Health%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner4&orientation=squarish' },
-              { name: 'University of Sydney', url: 'https://www.sydney.edu.au', logo: 'https://readdy.ai/api/search-image?query=University%20of%20Sydney%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner5&orientation=squarish' },
-              { name: 'Red Cross Australia', url: 'https://www.redcross.org.au', logo: 'https://readdy.ai/api/search-image?query=Red%20Cross%20Australia%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner6&orientation=squarish' },
-              { name: 'UNICEF Australia', url: 'https://www.unicef.org.au', logo: 'https://readdy.ai/api/search-image?query=UNICEF%20Australia%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner7&orientation=squarish' },
-              { name: 'Refugee Council', url: 'https://www.refugeecouncil.org.au', logo: 'https://readdy.ai/api/search-image?query=Refugee%20Council%20of%20Australia%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner8&orientation=squarish' },
-              { name: 'Multicultural NSW', url: 'https://www.multiculturalnsw.id.au', logo: 'https://readdy.ai/api/search-image?query=Multicultural%20NSW%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner9&orientation=squarish' },
-              { name: 'Settlement Services', url: 'https://www.ssi.org.au', logo: 'https://readdy.ai/api/search-image?query=Settlement%20Services%20International%20SSI%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner10&orientation=squarish' },
-              { name: 'African Communities', url: '#', logo: 'https://readdy.ai/api/search-image?query=African%20Communities%20Council%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner11&orientation=squarish' },
-              { name: 'Global Health Alliance', url: '#', logo: 'https://readdy.ai/api/search-image?query=Global%20Health%20Alliance%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner12&orientation=squarish' },
-              { name: 'Cultural Heritage Foundation', url: '#', logo: 'https://readdy.ai/api/search-image?query=Cultural%20Heritage%20Foundation%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner13&orientation=squarish' },
-              { name: 'Sydney Showground', url: 'https://www.sydneyshowground.com.au', logo: 'https://readdy.ai/api/search-image?query=Sydney%20Showground%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner14&orientation=squarish' },
-              { name: 'Community Care Alliance', url: '#', logo: 'https://readdy.ai/api/search-image?query=Community%20Care%20Alliance%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner15&orientation=squarish' },
-              { name: 'Indigenous Health Network', url: '#', logo: 'https://readdy.ai/api/search-image?query=Indigenous%20Health%20Network%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner16&orientation=squarish' },
-              { name: 'Trade Development Council', url: '#', logo: 'https://readdy.ai/api/search-image?query=Trade%20Development%20Council%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner17&orientation=squarish' },
-              { name: 'Mental Health Australia', url: 'https://mhaustralia.org', logo: 'https://readdy.ai/api/search-image?query=Mental%20Health%20Australia%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner18&orientation=squarish' },
-              { name: 'Aged Care Quality', url: 'https://www.agedcarequality.gov.au', logo: 'https://readdy.ai/api/search-image?query=Aged%20Care%20Quality%20and%20Safety%20Commission%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner19&orientation=squarish' },
-              { name: 'Global Partnerships Forum', url: '#', logo: 'https://readdy.ai/api/search-image?query=Global%20Partnerships%20Forum%20official%20logo%20high%20resolution%20professional%20simple%20clean%20background&width=200&height=200&seq=partner20&orientation=squarish' },
-            ].map((partner, index) => (
+            {copy.partners.map((partner, index) => (
               <a
                 key={index}
                 href={partner.url}
@@ -1095,8 +858,8 @@ const HomePage = () => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img
-            src="https://readdy.ai/api/search-image?query=inspiring%20transformation%20opportunity%20growth%20diverse%20people%20collaborating%20success%20partnership%20beautiful%20professional%20setting%20warm%20lighting%20simple%20clean%20background&width=1920&height=1080&seq=homectabg&orientation=landscape"
-            alt="CTA Background"
+            src={copy.backgroundImageWithOverlay.image6}
+            alt={copy.backgroundImageWithOverlay.imageAlt6}
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-primary/80"></div>
@@ -1106,18 +869,12 @@ const HomePage = () => {
           <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(45deg, transparent 30%, rgba(255,255,255,.1) 30%, rgba(255,255,255,.1) 70%, transparent 70%)' }}></div>
         </div>
         <div className="container-custom text-center relative px-4">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Barriers into Opportunities?
-          </h2>
-          <p className="text-lg sm:text-xl text-gray-200 mb-10 max-w-3xl mx-auto">
-            Partner with Australia's leading consultancy in cultural resilience and sustainable development
-          </p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">{copy.backgroundImageWithOverlay.heading3}</h2>
+          <p className="text-lg sm:text-xl text-gray-200 mb-10 max-w-3xl mx-auto">{copy.backgroundImageWithOverlay.text5}</p>
           <Link
             to="/contact"
             className="inline-block bg-accent hover:bg-accent-dark text-primary px-10 py-4 rounded-full text-lg font-bold transition-all duration-300 hover:scale-105 hover:shadow-xl whitespace-nowrap cursor-pointer"
-          >
-            Start a Conversation
-          </Link>
+          >{copy.backgroundImageWithOverlay.text6}</Link>
         </div>
       </section>
 

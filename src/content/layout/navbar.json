@@ -1,0 +1,138 @@
+{
+  "navLinks": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "About",
+      "path": "/about"
+    },
+    {
+      "name": "Health Recruitment",
+      "path": "/health-recruitment"
+    },
+    {
+      "name": "Gallery",
+      "path": "/gallery"
+    },
+    {
+      "name": "Contact",
+      "path": "/contact"
+    }
+  ],
+  "programsMenu": [
+    {
+      "name": "Mental Health & Wellbeing",
+      "path": "/programs#mental-health",
+      "icon": "ri-mental-health-line"
+    },
+    {
+      "name": "Cultural Exchange Programs",
+      "path": "/programs#cultural-exchange",
+      "icon": "ri-earth-line"
+    },
+    {
+      "name": "Community Chaplaincy",
+      "path": "/programs#chaplaincy",
+      "icon": "ri-hand-heart-line"
+    },
+    {
+      "name": "Job Opportunities & Care",
+      "path": "/programs#job-opportunities",
+      "icon": "ri-briefcase-line"
+    },
+    {
+      "name": "Seniors Wisdom & Guidance",
+      "path": "/programs#seniors-wisdom",
+      "icon": "ri-user-star-line"
+    },
+    {
+      "name": "Turning Vulnerability to Opportunity",
+      "path": "/programs#vulnerability",
+      "icon": "ri-seedling-line"
+    }
+  ],
+  "cropMenu": [
+    {
+      "name": "Home",
+      "path": "/crop2026",
+      "icon": "ri-home-line"
+    },
+    {
+      "name": "Vision",
+      "path": "/crop2026/vision",
+      "icon": "ri-eye-line"
+    },
+    {
+      "name": "Thematic Pillars",
+      "path": "/crop2026/pillars",
+      "icon": "ri-layout-masonry-line"
+    },
+    {
+      "name": "Programme",
+      "path": "/crop2026/programme",
+      "icon": "ri-calendar-event-line"
+    },
+    {
+      "name": "Outcomes",
+      "path": "/crop2026/outcomes",
+      "icon": "ri-bar-chart-grouped-line"
+    },
+    {
+      "name": "Venue & Logistics",
+      "path": "/crop2026/venue",
+      "icon": "ri-map-pin-line"
+    },
+    {
+      "name": "Partnership",
+      "path": "/crop2026/partnership",
+      "icon": "ri-team-line"
+    },
+    {
+      "name": "Register Interest",
+      "path": "/crop2026/register",
+      "icon": "ri-edit-line",
+      "highlight": true
+    }
+  ],
+  "logoImage": {
+    "image": "https://res.cloudinary.com/dhjajm7ru/image/upload/w_200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg",
+    "imageAlt": "KWETU CONNECT Logo"
+  },
+  "brandText": {
+    "label": "KWETU",
+    "label2": "CONNECT"
+  },
+  "crop2026Dropdown": {
+    "text": "CROP 2026"
+  },
+  "crop2026DropdownMenuTwo": {
+    "text": "CROP 2026 Conference",
+    "text2": "November 6-8, 2026 · Sydney, Australia",
+    "text3": "Visit Conference Home "
+  },
+  "programsDropdown": {
+    "text": "Programs"
+  },
+  "dropdownMenu": {
+    "text": "View All Programs "
+  },
+  "ctaButtons": {
+    "url": "https://kwetu4communities.org/",
+    "link": "kwetu4communities",
+    "text": "Partner With Us"
+  },
+  "mobileMenuButton": {
+    "ariaLabel": "Toggle menu"
+  },
+  "crop2026MobileDropdown": {
+    "label": "CROP 2026"
+  },
+  "programsMobileDropdown": {
+    "label": "Programs",
+    "url": "https://kwetu4communities.org/",
+    "link": "kwetu4communities",
+    "text": "Partner With Us"
+  }
+}

@@ -3,67 +3,17 @@ import { Link } from 'react-router-dom';
 import founder from '../../content/founder.json';
 import Navbar from '../../components/feature/Navbar';
 import Footer from '../../components/feature/Footer';
+import copy from '../../content/pages/about.json';
+// Text, images and links: src/content/pages/about.json (editable in the website editors).
 
 const AboutPage = () => {
   const [openAccordion, setOpenAccordion] = useState<number | null>(0);
 
-  const coreValues = [
-    {
-      icon: 'ri-team-line',
-      title: 'Community-Centered',
-      description: 'We place communities at the heart of everything we do. Our approach is grounded in understanding local contexts, respecting cultural diversity, and empowering communities to lead their own development. We believe that sustainable change comes from within, and our role is to facilitate, support, and amplify community voices and aspirations.',
-    },
-    {
-      icon: 'ri-shield-check-line',
-      title: 'Integrity',
-      description: 'We operate with unwavering ethical standards and transparency in all our partnerships and programs. Integrity guides our decision-making, from how we engage with communities to how we manage resources and report outcomes. We are accountable to our partners, stakeholders, and most importantly, to the communities we serve.',
-    },
-    {
-      icon: 'ri-scales-line',
-      title: 'Equity',
-      description: 'We are committed to addressing systemic inequalities and ensuring fair access to opportunities and resources. Our programs are designed to reach marginalized and underserved communities, breaking down barriers that prevent people from achieving their full potential. We advocate for policies and practices that promote social justice and equal opportunities for all.',
-    },
-    {
-      icon: 'ri-lightbulb-line',
-      title: 'Innovation',
-      description: 'We embrace creative solutions and adaptive approaches to complex challenges. Innovation drives us to explore new methodologies, leverage technology, and develop cutting-edge programs that respond to evolving community needs. We continuously learn, iterate, and improve our practices to deliver maximum impact and sustainable outcomes.',
-    },
-  ];
+  const coreValues = copy.coreValues;
 
-  const approachSteps = [
-    {
-      icon: 'ri-search-eye-line',
-      title: 'Understanding Barriers',
-      description: 'We conduct comprehensive assessments to identify systemic, cultural, and economic barriers that communities face. Through participatory research and community consultations, we gain deep insights into challenges and root causes.',
-    },
-    {
-      icon: 'ri-lightbulb-flash-line',
-      title: 'Identifying Opportunities',
-      description: 'We transform challenges into opportunities by mapping community assets, cultural capital, and potential partnerships. Our analysis reveals pathways for sustainable development and empowerment.',
-    },
-    {
-      icon: 'ri-shake-hands-line',
-      title: 'Building Partnerships',
-      description: 'We connect communities with institutions, markets, and resources through strategic partnerships. Our network spans government agencies, private sector, NGOs, and international organizations.',
-    },
-    {
-      icon: 'ri-rocket-line',
-      title: 'Implementing Solutions',
-      description: 'We co-design and implement culturally appropriate, evidence-based programs that address identified needs. Our solutions are scalable, sustainable, and community-owned.',
-    },
-    {
-      icon: 'ri-line-chart-line',
-      title: 'Measuring Impact',
-      description: 'We employ rigorous monitoring and evaluation frameworks to track progress, measure outcomes, and ensure accountability. Our impact assessments inform continuous improvement and demonstrate value to stakeholders.',
-    },
-  ];
+  const approachSteps = copy.approachSteps;
 
-  const stats = [
-    { number: '500+', label: 'Communities Served' },
-    { number: '50+', label: 'Partnerships' },
-    { number: '15', label: 'Countries' },
-    { number: '10+', label: 'Years Experience' },
-  ];
+  const stats = copy.stats;
 
   return (
     <div className="min-h-screen bg-white">
@@ -74,24 +24,18 @@ const AboutPage = () => {
       {/* Hero Section */}
       <section className="relative h-[60vh] sm:h-[70vh] overflow-hidden">
         <img
-          src="https://readdy.ai/api/search-image?query=diverse%20professional%20team%20collaboration%20modern%20office%20setting%20multicultural%20business%20meeting%20strategic%20planning%20warm%20natural%20lighting%20simple%20clean%20background&width=1920&height=1080&seq=abouthero&orientation=landscape"
-          alt="About KWETU CONNECT"
+          src={copy.heroSection.image}
+          alt={copy.heroSection.imageAlt}
           className="w-full h-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="container-custom text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 px-4">
-              BRIDGING COMMUNITIES,
-              <br />
-              MARKETS & INSTITUTIONS
-            </h1>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 px-4">{copy.heroSection.title}<br />{copy.heroSection.title2}</h1>
             <div className="flex items-center justify-center space-x-3 text-gray-300">
-              <Link to="/" className="hover:text-accent transition-colors cursor-pointer">
-                Home
-              </Link>
+              <Link to="/" className="hover:text-accent transition-colors cursor-pointer">{copy.heroSection.text}</Link>
               <i className="ri-arrow-right-s-line"></i>
-              <span className="text-white font-semibold">About Us</span>
+              <span className="text-white font-semibold">{copy.heroSection.label}</span>
             </div>
           </div>
         </div>
@@ -105,19 +49,15 @@ const AboutPage = () => {
               <div className="w-16 h-16 flex items-center justify-center bg-accent rounded-2xl mb-6">
                 <i className="ri-eye-line text-3xl text-primary"></i>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-6">OUR VISION</h2>
-              <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
-                A world where cultural diversity is celebrated as a source of strength, where communities are empowered to overcome barriers, and where sustainable partnerships create pathways to prosperity and resilience for all. We envision thriving communities that preserve their heritage while embracing innovation and opportunity.
-              </p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-6">{copy.visionAndMission.heading}</h2>
+              <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">{copy.visionAndMission.text}</p>
             </div>
             <div className="bg-gradient-to-br from-teal/10 to-teal/5 p-8 sm:p-10 lg:p-12 rounded-3xl">
               <div className="w-16 h-16 flex items-center justify-center bg-teal rounded-2xl mb-6">
                 <i className="ri-compass-line text-3xl text-white"></i>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-6">OUR MISSION</h2>
-              <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">
-                To redefine barriers as opportunities by connecting communities with resources, markets, and institutions through innovative programs in cultural resilience, health equity, sustainable trade, and community empowerment. We facilitate transformative partnerships that create lasting positive impact across the Global South and beyond.
-              </p>
+              <h2 className="text-2xl sm:text-3xl font-bold text-primary mb-6">{copy.visionAndMission.heading2}</h2>
+              <p className="text-lg sm:text-xl text-gray-700 leading-relaxed">{copy.visionAndMission.text2}</p>
             </div>
           </div>
         </div>
@@ -127,12 +67,8 @@ const AboutPage = () => {
       <section className="py-16 sm:py-20 lg:py-24 bg-gray-50">
         <div className="container-custom max-w-5xl">
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4">
-              Our Core Values
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 px-4">
-              The principles that guide our work and partnerships
-            </p>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4">{copy.coreValuesAccordion.heading}</h2>
+            <p className="text-lg sm:text-xl text-gray-600 px-4">{copy.coreValuesAccordion.text}</p>
           </div>
           <div className="space-y-4">
             {coreValues.map((value, index) => (
@@ -178,12 +114,8 @@ const AboutPage = () => {
       <section className="py-16 sm:py-20 lg:py-24 bg-white">
         <div className="container-custom max-w-6xl">
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4">
-              Our Approach
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-600 px-4">
-              A systematic process for transforming barriers into opportunities
-            </p>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4">{copy.ourApproachTimeline.heading}</h2>
+            <p className="text-lg sm:text-xl text-gray-600 px-4">{copy.ourApproachTimeline.text}</p>
           </div>
           <div className="relative">
             {/* Vertical Line */}
@@ -203,7 +135,7 @@ const AboutPage = () => {
                         <div className="w-12 h-12 flex items-center justify-center bg-accent rounded-xl mr-4 flex-shrink-0">
                           <i className={`${step.icon} text-xl text-primary`}></i>
                         </div>
-                        <span className="text-accent font-bold text-lg">Step {index + 1}</span>
+                        <span className="text-accent font-bold text-lg">{copy.content.label}{index + 1}</span>
                       </div>
                       <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3">{step.title}</h3>
                       <p className="text-base sm:text-lg text-gray-700 leading-relaxed">{step.description}</p>
@@ -224,13 +156,11 @@ const AboutPage = () => {
               <img src={founder.photo} alt={founder.photoAlt} className="w-full h-72 md:h-full object-cover object-top" />
             </div>
             <div className="md:col-span-3 p-8 sm:p-10">
-              <p className="text-[#8a6d10] text-sm font-semibold uppercase tracking-[0.18em]">Our leadership</p>
+              <p className="text-[#8a6d10] text-sm font-semibold uppercase tracking-[0.18em]">{copy.teamSection.text}</p>
               <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-primary font-['Playfair_Display']">{founder.name}</h2>
               <p className="mt-2 text-gray-700 font-semibold">{founder.role}</p>
               <p className="mt-5 text-gray-700 leading-relaxed">{founder.chapters[0].blocks[0].text}</p>
-              <Link to={founder.path} className="group mt-7 inline-flex items-center gap-2 bg-primary hover:bg-primary-light text-white px-6 py-3 rounded-sm font-semibold transition-colors">
-                Read the full profile
-                <i className="ri-arrow-right-line transition-transform group-hover:translate-x-1" aria-hidden="true"></i>
+              <Link to={founder.path} className="group mt-7 inline-flex items-center gap-2 bg-primary hover:bg-primary-light text-white px-6 py-3 rounded-sm font-semibold transition-colors">{copy.teamSection.text2}<i className="ri-arrow-right-line transition-transform group-hover:translate-x-1" aria-hidden="true"></i>
               </Link>
             </div>
           </div>
@@ -242,8 +172,8 @@ const AboutPage = () => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img
-            src="https://readdy.ai/api/search-image?query=grassroots%20community%20development%20Global%20South%20village%20collaborative%20sustainable%20development%20projects%20warm%20natural%20lighting%20beautiful%20landscape%20simple%20clean%20background&width=1920&height=1080&seq=sisterbg&orientation=landscape"
-            alt="Sister Organization Background"
+            src={copy.backgroundImageWithOverlay.image}
+            alt={copy.backgroundImageWithOverlay.imageAlt}
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-primary/80"></div>
@@ -254,12 +184,8 @@ const AboutPage = () => {
         </div>
         <div className="container-custom relative">
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              Our Track Record
-            </h2>
-            <p className="text-lg sm:text-xl text-gray-300 px-4">
-              Measurable impact across communities and partnerships
-            </p>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">{copy.backgroundImageWithOverlay.heading}</h2>
+            <p className="text-lg sm:text-xl text-gray-300 px-4">{copy.backgroundImageWithOverlay.text}</p>
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {stats.map((stat, index) => (
@@ -279,25 +205,17 @@ const AboutPage = () => {
       {/* CTA Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-white">
         <div className="container-custom max-w-4xl text-center px-4">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-6">
-            Join Us in Creating Lasting Impact
-          </h2>
-          <p className="text-lg sm:text-xl text-gray-600 mb-10">
-            Partner with KWETU CONNECT to transform barriers into opportunities
-          </p>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-6">{copy.ctaSection.heading}</h2>
+          <p className="text-lg sm:text-xl text-gray-600 mb-10">{copy.ctaSection.text}</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/contact"
               className="w-full sm:w-auto bg-accent hover:bg-accent-dark text-primary px-10 py-4 rounded-full text-lg font-bold transition-all hover:scale-105 whitespace-nowrap cursor-pointer"
-            >
-              Partner With Us
-            </Link>
+            >{copy.ctaSection.text2}</Link>
             <Link
               to="/programs"
               className="w-full sm:w-auto border-2 border-primary hover:bg-primary hover:text-white text-primary px-10 py-4 rounded-full text-lg font-bold transition-all hover:scale-105 whitespace-nowrap cursor-pointer"
-            >
-              Explore Programs
-            </Link>
+            >{copy.ctaSection.text3}</Link>
           </div>
         </div>
       </section>

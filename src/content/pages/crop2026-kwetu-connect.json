@@ -1,0 +1,131 @@
+{
+  "backNavigation": {
+    "button": "Back to CROP 2026"
+  },
+  "hero": {
+    "image": "https://readdy.ai/api/search-image?query=diverse%20indigenous%20community%20gathering%20warm%20golden%20lighting%20cultural%20celebration%20heritage%20sustainable%20development%20professional%20photography%20beautiful%20composition%20vibrant%20colors&width=1920&height=900&seq=kwetuhero1&orientation=landscape",
+    "imageAlt": "KWETU CONNECT community",
+    "label": "Co-Organizer",
+    "title": "KWETU CONNECT ",
+    "label2": "PTY LTD",
+    "text": "Redefining Cultural Understanding of Care Among Indigenous Communities",
+    "text2": "Prioritizing the Care Industry at All Levels"
+  },
+  "whoWeAre": {
+    "label": "Who We Are",
+    "heading": "A Pioneering Organization for Cultural Resilience",
+    "text": "KWETU CONNECT PTY LTD is a pioneering organization dedicated to bridging cultural communities with sustainable development initiatives. Founded on the principles of inclusivity, empowerment, and cultural preservation, we work at the intersection of heritage and innovation.",
+    "text2": "Our name ",
+    "bold": "\"Kwetu\"",
+    "text3": " means ",
+    "emphasis": "\"our home\"",
+    "text4": " in Swahili, reflecting our commitment to creating spaces where diverse communities can thrive while maintaining their cultural identity and traditions. We believe that cultural resilience is fundamental to achieving sustainable development goals.",
+    "text5": "Through strategic partnerships, community engagement, and innovative programs, KWETU CONNECT facilitates meaningful connections between cultural actors, policymakers, academics, and grassroots organizations to co-create solutions for a more equitable and sustainable future.",
+    "url": "https://kwetuconnect.org/",
+    "link": "Visit Official Website",
+    "text6": "Get in Touch",
+    "image": "https://readdy.ai/api/search-image?query=african%20indigenous%20community%20cultural%20gathering%20colorful%20traditional%20attire%20warm%20sunset%20lighting%20professional%20photography%20authentic%20celebration%20heritage%20preservation&width=800&height=500&seq=kwetuimg1&orientation=landscape",
+    "imageAlt": "KWETU CONNECT community engagement",
+    "image2": "https://readdy.ai/api/search-image?query=indigenous%20cultural%20workshop%20traditional%20crafts%20hands%20weaving%20basketry%20professional%20photography%20warm%20natural%20light%20authentic%20expression&width=400&height=300&seq=kwetuimg2&orientation=landscape",
+    "imageAlt2": "Cultural preservation workshop",
+    "image3": "https://readdy.ai/api/search-image?query=diverse%20community%20leaders%20meeting%20collaboration%20strategic%20planning%20professional%20setting%20warm%20lighting%20cultural%20diversity&width=400&height=300&seq=kwetuimg3&orientation=landscape",
+    "imageAlt3": "Strategic partnerships"
+  },
+  "visionAndMission": {
+    "subheading": "Our Vision",
+    "text": "A world where cultural diversity is celebrated as a cornerstone of sustainable development, where Indigenous knowledge systems are valued and protected, and where communities have the agency to shape their own futures while preserving their heritage for generations to come.",
+    "subheading2": "Our Mission",
+    "text2": "To empower cultural communities through strategic partnerships, capacity building, and innovative programs that integrate traditional knowledge with contemporary solutions, fostering resilience, sustainability, and equitable development across diverse populations worldwide."
+  },
+  "leadership": {
+    "label": "Leadership",
+    "heading": "Leadership Profile",
+    "image": "/media/morris-kizito-mukasa.webp",
+    "imageAlt": "Portrait of Mr Morris Kizito Mukasa",
+    "subheading": "Mr Morris Kizito Mukasa",
+    "text": "Chief Executive Officer",
+    "text2": "KWETU CONNECT PTY LTD",
+    "text3": "Mr Morris Kizito Mukasa is a Ugandan-born Australian citizen, humanitarian, distinguished community leader and international advocate whose work spans social justice, cultural integration, trauma recovery, refugee support and the empowerment of marginalised communities.",
+    "subheading2": "Key Achievements",
+    "link": "Read the full profile "
+  },
+  "coreFocusAreas": {
+    "label": "Our Work",
+    "heading": "Our Core Focus Areas",
+    "text": "We work across multiple domains to create holistic and sustainable impact"
+  },
+  "impact": {
+    "label": "Results",
+    "heading": "Our Impact",
+    "text": "Creating meaningful change through dedicated action and collaboration"
+  },
+  "roleInCrop2026": {
+    "label": "Conference",
+    "heading": "Our Role in CROP 2026",
+    "text": "As a co-organizer of the CROP 2026 Conference, KWETU CONNECT brings extensive experience in community engagement, cultural programming, and international collaboration. We are committed to ensuring that the conference truly represents the voices and perspectives of diverse cultural communities.",
+    "text2": "Our responsibilities include facilitating community roundtables, coordinating cultural expositions, managing stakeholder engagement, and ensuring that Indigenous knowledge holders and cultural practitioners have meaningful participation throughout the conference. We are dedicated to making CROP 2026 a transformative event that not only discusses cultural resilience but actively demonstrates it through inclusive processes, respectful dialogue, and actionable outcomes that benefit communities worldwide.",
+    "url": "https://kwetuconnect.org/",
+    "link": "Explore Partnership",
+    "text3": "Get in Touch"
+  },
+  "items": [
+    "African Australian Community Service Award (2024)",
+    "Inaugural President, Australia African Nations Business Council (2026)",
+    "Nominated to the Synod of the Archdiocese of Sydney for African CALD communities (2026)",
+    "Appointed to promote the Kabaka Foundation of the Kingdom of Buganda in Australia (2020)"
+  ],
+  "items2": [
+    {
+      "icon": "ri-community-line",
+      "title": "Community Empowerment",
+      "desc": "Building capacity and leadership within cultural communities to drive their own development initiatives and preserve their heritage."
+    },
+    {
+      "icon": "ri-ancient-gate-line",
+      "title": "Cultural Preservation",
+      "desc": "Protecting and promoting Indigenous knowledge systems, traditional practices, and cultural heritage in the face of globalization."
+    },
+    {
+      "icon": "ri-cpu-line",
+      "title": "Innovation & Technology",
+      "desc": "Leveraging digital tools and innovative approaches to document, share, and sustain cultural knowledge across generations."
+    },
+    {
+      "icon": "ri-plant-line",
+      "title": "Sustainable Livelihoods",
+      "desc": "Creating economic opportunities that honor cultural values while promoting environmental sustainability and fair trade practices."
+    },
+    {
+      "icon": "ri-team-line",
+      "title": "Strategic Partnerships",
+      "desc": "Facilitating collaboration between communities, governments, academia, and private sector for collective impact."
+    },
+    {
+      "icon": "ri-file-search-line",
+      "title": "Research & Advocacy",
+      "desc": "Conducting evidence-based research and advocating for policies that support cultural rights and community resilience."
+    }
+  ],
+  "items3": [
+    {
+      "value": "50+",
+      "label": "Communities Served",
+      "sub": "Across multiple continents and cultural contexts"
+    },
+    {
+      "value": "200+",
+      "label": "Projects Implemented",
+      "sub": "Ranging from cultural preservation to sustainable development"
+    },
+    {
+      "value": "10,000+",
+      "label": "Lives Impacted",
+      "sub": "Through direct programs and community initiatives"
+    },
+    {
+      "value": "30+",
+      "label": "Strategic Partners",
+      "sub": "Including NGOs, governments, and international organizations"
+    }
+  ]
+}

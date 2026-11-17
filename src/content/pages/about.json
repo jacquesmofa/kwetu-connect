@@ -1,0 +1,110 @@
+{
+  "coreValues": [
+    {
+      "icon": "ri-team-line",
+      "title": "Community-Centered",
+      "description": "We place communities at the heart of everything we do. Our approach is grounded in understanding local contexts, respecting cultural diversity, and empowering communities to lead their own development. We believe that sustainable change comes from within, and our role is to facilitate, support, and amplify community voices and aspirations."
+    },
+    {
+      "icon": "ri-shield-check-line",
+      "title": "Integrity",
+      "description": "We operate with unwavering ethical standards and transparency in all our partnerships and programs. Integrity guides our decision-making, from how we engage with communities to how we manage resources and report outcomes. We are accountable to our partners, stakeholders, and most importantly, to the communities we serve."
+    },
+    {
+      "icon": "ri-scales-line",
+      "title": "Equity",
+      "description": "We are committed to addressing systemic inequalities and ensuring fair access to opportunities and resources. Our programs are designed to reach marginalized and underserved communities, breaking down barriers that prevent people from achieving their full potential. We advocate for policies and practices that promote social justice and equal opportunities for all."
+    },
+    {
+      "icon": "ri-lightbulb-line",
+      "title": "Innovation",
+      "description": "We embrace creative solutions and adaptive approaches to complex challenges. Innovation drives us to explore new methodologies, leverage technology, and develop cutting-edge programs that respond to evolving community needs. We continuously learn, iterate, and improve our practices to deliver maximum impact and sustainable outcomes."
+    }
+  ],
+  "approachSteps": [
+    {
+      "icon": "ri-search-eye-line",
+      "title": "Understanding Barriers",
+      "description": "We conduct comprehensive assessments to identify systemic, cultural, and economic barriers that communities face. Through participatory research and community consultations, we gain deep insights into challenges and root causes."
+    },
+    {
+      "icon": "ri-lightbulb-flash-line",
+      "title": "Identifying Opportunities",
+      "description": "We transform challenges into opportunities by mapping community assets, cultural capital, and potential partnerships. Our analysis reveals pathways for sustainable development and empowerment."
+    },
+    {
+      "icon": "ri-shake-hands-line",
+      "title": "Building Partnerships",
+      "description": "We connect communities with institutions, markets, and resources through strategic partnerships. Our network spans government agencies, private sector, NGOs, and international organizations."
+    },
+    {
+      "icon": "ri-rocket-line",
+      "title": "Implementing Solutions",
+      "description": "We co-design and implement culturally appropriate, evidence-based programs that address identified needs. Our solutions are scalable, sustainable, and community-owned."
+    },
+    {
+      "icon": "ri-line-chart-line",
+      "title": "Measuring Impact",
+      "description": "We employ rigorous monitoring and evaluation frameworks to track progress, measure outcomes, and ensure accountability. Our impact assessments inform continuous improvement and demonstrate value to stakeholders."
+    }
+  ],
+  "stats": [
+    {
+      "number": "500+",
+      "label": "Communities Served"
+    },
+    {
+      "number": "50+",
+      "label": "Partnerships"
+    },
+    {
+      "number": "15",
+      "label": "Countries"
+    },
+    {
+      "number": "10+",
+      "label": "Years Experience"
+    }
+  ],
+  "heroSection": {
+    "image": "https://readdy.ai/api/search-image?query=diverse%20professional%20team%20collaboration%20modern%20office%20setting%20multicultural%20business%20meeting%20strategic%20planning%20warm%20natural%20lighting%20simple%20clean%20background&width=1920&height=1080&seq=abouthero&orientation=landscape",
+    "imageAlt": "About KWETU CONNECT",
+    "title": "BRIDGING COMMUNITIES,",
+    "title2": "MARKETS & INSTITUTIONS",
+    "text": "Home",
+    "label": "About Us"
+  },
+  "visionAndMission": {
+    "heading": "OUR VISION",
+    "text": "A world where cultural diversity is celebrated as a source of strength, where communities are empowered to overcome barriers, and where sustainable partnerships create pathways to prosperity and resilience for all. We envision thriving communities that preserve their heritage while embracing innovation and opportunity.",
+    "heading2": "OUR MISSION",
+    "text2": "To redefine barriers as opportunities by connecting communities with resources, markets, and institutions through innovative programs in cultural resilience, health equity, sustainable trade, and community empowerment. We facilitate transformative partnerships that create lasting positive impact across the Global South and beyond."
+  },
+  "coreValuesAccordion": {
+    "heading": "Our Core Values",
+    "text": "The principles that guide our work and partnerships"
+  },
+  "ourApproachTimeline": {
+    "heading": "Our Approach",
+    "text": "A systematic process for transforming barriers into opportunities"
+  },
+  "content": {
+    "label": "Step "
+  },
+  "teamSection": {
+    "text": "Our leadership",
+    "text2": "Read the full profile"
+  },
+  "backgroundImageWithOverlay": {
+    "image": "https://readdy.ai/api/search-image?query=grassroots%20community%20development%20Global%20South%20village%20collaborative%20sustainable%20development%20projects%20warm%20natural%20lighting%20beautiful%20landscape%20simple%20clean%20background&width=1920&height=1080&seq=sisterbg&orientation=landscape",
+    "imageAlt": "Sister Organization Background",
+    "heading": "Our Track Record",
+    "text": "Measurable impact across communities and partnerships"
+  },
+  "ctaSection": {
+    "heading": "Join Us in Creating Lasting Impact",
+    "text": "Partner with KWETU CONNECT to transform barriers into opportunities",
+    "text2": "Partner With Us",
+    "text3": "Explore Programs"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "backgroundImage": {
+    "image": "https://readdy.ai/api/search-image?query=diverse%20community%20members%20collaborating%20together%20in%20bright%20modern%20space%20with%20cultural%20artifacts%20and%20symbols%20of%20unity%2C%20warm%20natural%20lighting%2C%20professional%20photography%2C%20vibrant%20atmosphere%20showing%20connection%20and%20empowerment&width=1920&height=1080&seq=programs-hero-bg&orientation=landscape",
+    "imageAlt": "Programs Hero Background"
+  },
+  "heroContent": {
+    "title": "Our Comprehensive Programs",
+    "text": "Explore the six core pillars of Kwetu Connect that drive cultural resilience, community wellbeing, and sustainable opportunities."
+  },
+  "s1MentalHealthAndWellbeing": {
+    "heading": "Redefining Mental Health & Wellbeing",
+    "text": "We provide culturally responsive mental health services that empower communities to tackle wellbeing challenges head‑on. Our approach blends community‑led counseling, digital mental health tools, and anti‑stigma campaigns to foster resilience and hope.",
+    "item": "Community‑based support networks",
+    "item2": "Early‑intervention workshops",
+    "item3": "Holistic wellness programmes",
+    "item4": "Digital self‑care platforms",
+    "item5": "Training for local mental‑health practitioners"
+  },
+  "imageWithProperContainer": {
+    "image": "https://readdy.ai/api/search-image?query=diverse%20group%20of%20people%20engaging%20in%20mental%20health%20workshop%20with%20counselor%2C%20warm%20natural%20lighting%2C%20supportive%20atmosphere%2C%20simple%20clean%20background%2C%20professional%20photography%20showing%20empathy%20and%20connection&width=1200&height=600&seq=program-mental-health&orientation=landscape",
+    "imageAlt": "Mental Health & Wellbeing"
+  },
+  "s2CulturalExchangePrograms": {
+    "heading": "Cultural Exchange & Partnerships",
+    "text": "Our exchange programmes connect Indigenous knowledge holders with global partners, fostering mutual learning, artistic collaborations, and sustainable trade pathways.",
+    "item": "Immersive cultural immersion trips",
+    "item2": "Reciprocal learning partnerships",
+    "item3": "Artistic collaborations and festivals",
+    "item4": "Education exchange scholarships",
+    "item5": "Sustainable trade facilitation",
+    "image": "https://readdy.ai/api/search-image?query=cultural%20exchange%20gathering%20with%20people%20in%20traditional%20clothing%20sharing%20knowledge%2C%20vibrant%20colours%2C%20outdoor%20natural%20setting%2C%20simple%20background%2C%20professional%20photography%20showing%20diversity%20and%20unity&width=1200&height=600&seq=program-cultural-exchange&orientation=landscape",
+    "imageAlt": "Cultural Exchange"
+  },
+  "s3CommunityChaplaincyRehabilitation": {
+    "heading": "Community Chaplaincy Rehabilitation Services",
+    "text": "We deliver holistic rehabilitation that blends spiritual care, mentorship, and practical life‑skill support, assisting individuals transitioning back into community life.",
+    "item": "Spiritual counseling and guidance",
+    "item2": "Mentoring programmes for reintegration",
+    "item3": "Family reconciliation support",
+    "item4": "Employment and skills development",
+    "item5": "Safe housing assistance",
+    "image": "https://readdy.ai/api/search-image?query=community%20chaplaincy%20mentoring%20session%20with%20counselor%20and%20individual%20in%20warm%20indoor%20setting%2C%20supportive%20atmosphere%2C%20simple%20clean%20background%2C%20professional%20photography%20showing%20hope%20and%20guidance&width=1200&height=600&seq=program-chaplaincy&orientation=landscape",
+    "imageAlt": "Community Chaplaincy"
+  },
+  "s4JobOpportunitiesAndCaregiver": {
+    "heading": "Navigating Job Opportunities & Caregiver Support",
+    "text": "Empowering both job seekers and caregivers through tailored career pathways, skills recognition, and wellbeing resources.",
+    "item": "Comprehensive career pathway mapping",
+    "item2": "Employer partnership programmes",
+    "item3": "Certification and skills‑bridging courses",
+    "item4": "Financial incentives for caregivers",
+    "item5": "Wellbeing and mental‑health resources for caregivers",
+    "image": "https://readdy.ai/api/search-image?query=diverse%20professionals%20discussing%20job%20opportunities%20in%20modern%20office%2C%20supportive%20environment%2C%20simple%20clean%20background%2C%20professional%20photography%20showing%20collaboration%20and%20career%20development&width=1200&height=600&seq=program-job-opportunities&orientation=landscape",
+    "imageAlt": "Job Opportunities & Caregiver Support"
+  },
+  "s5SeniorsWisdomAndGuidance": {
+    "heading": "Promoting Belonging Through Seniors' Wisdom",
+    "text": "Harnessing the experience of senior community members to mentor youth, preserve cultural knowledge, and strengthen inter‑generational bonds.",
+    "item": "Intergenerational mentorship circles",
+    "item2": "Story‑telling archives and digital heritage",
+    "item3": "Active ageing community hubs",
+    "item4": "Technology facilitation for seniors",
+    "item5": "Leadership roles for elder advisors",
+    "image": "https://readdy.ai/api/search-image?query=seniors%20sharing%20stories%20with%20youth%20in%20warm%20indoor%20setting%20with%20cultural%20artifacts%2C%20simple%20clean%20background%2C%20professional%20photography%20showing%20intergenerational%20connection%20and%20wisdom%20transfer&width=1200&height=600&seq=program-seniors-wisdom&orientation=landscape",
+    "imageAlt": "Seniors Wisdom"
+  },
+  "s6TurningVulnerabilityIntoOpportunities": {
+    "heading": "Turning Vulnerability into Opportunities",
+    "text": "A strengths‑based framework that transforms community challenges into innovative solutions, fostering resilience and sustainable growth.",
+    "item": "Asset‑mapping and community co‑design",
+    "item2": "Micro‑grant and seed‑fund programmes",
+    "item3": "Advocacy for policy change",
+    "item4": "Capacity‑building workshops",
+    "item5": "Impact measurement and storytelling",
+    "image": "https://readdy.ai/api/search-image?query=community%20members%20collaborating%20on%20innovative%20project%20in%20bright%20atmosphere%2C%20simple%20clean%20background%2C%20professional%20photography%20showing%20empowerment%20and%20transformation&width=1200&height=600&seq=program-vulnerability&orientation=landscape",
+    "imageAlt": "Turning Vulnerability into Opportunities"
+  }
+}

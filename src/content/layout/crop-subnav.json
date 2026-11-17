@@ -1,0 +1,38 @@
+{
+  "subNavLinks": [
+    {
+      "name": "Home",
+      "path": "/crop2026"
+    },
+    {
+      "name": "Vision",
+      "path": "/crop2026/vision"
+    },
+    {
+      "name": "Thematic Pillars",
+      "path": "/crop2026/pillars"
+    },
+    {
+      "name": "Programme",
+      "path": "/crop2026/programme"
+    },
+    {
+      "name": "Outcomes",
+      "path": "/crop2026/outcomes"
+    },
+    {
+      "name": "Venue & Logistics",
+      "path": "/crop2026/venue"
+    },
+    {
+      "name": "Partnership",
+      "path": "/crop2026/partnership"
+    }
+  ],
+  "main": {
+    "label": " EN",
+    "text": "Register Interest",
+    "ariaLabel": "Toggle conference menu",
+    "text2": "Register Interest"
+  }
+}

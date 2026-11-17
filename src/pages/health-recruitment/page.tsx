@@ -2,126 +2,17 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../../components/feature/Navbar';
 import Footer from '../../components/feature/Footer';
+import copy from '../../content/pages/health-recruitment.json';
+// Text, images and links: src/content/pages/health-recruitment.json (editable in the website editors).
 
 const HealthRecruitmentPage = () => {
   const [activeTab, setActiveTab] = useState('overview');
 
-  const benefits = [
-    {
-      icon: 'ri-heart-pulse-line',
-      title: 'Competitive Compensation',
-      description: 'Industry-leading salary packages with comprehensive benefits and performance incentives',
-    },
-    {
-      icon: 'ri-graduation-cap-line',
-      title: 'Professional Development',
-      description: 'Continuous training, certification support, and career advancement opportunities',
-    },
-    {
-      icon: 'ri-team-line',
-      title: 'Supportive Community',
-      description: 'Join a diverse, inclusive team with mentorship programs and peer support networks',
-    },
-    {
-      icon: 'ri-calendar-check-line',
-      title: 'Flexible Scheduling',
-      description: 'Work-life balance with flexible shifts, part-time and full-time options available',
-    },
-    {
-      icon: 'ri-shield-check-line',
-      title: 'Comprehensive Insurance',
-      description: 'Health, dental, vision coverage plus professional liability insurance',
-    },
-    {
-      icon: 'ri-hand-heart-line',
-      title: 'Wellbeing Support',
-      description: 'Mental health resources, wellness programs, and caregiver support services',
-    },
-  ];
+  const benefits = copy.benefits;
 
-  const positions = [
-    {
-      title: 'Registered Nurses (RN)',
-      type: 'Full-time / Part-time',
-      location: 'Sydney & Regional NSW',
-      description: 'Provide compassionate care in aged care facilities, hospitals, and community health settings',
-      requirements: ['Current AHPRA registration', '2+ years clinical experience', 'Cultural competency'],
-    },
-    {
-      title: 'Enrolled Nurses (EN)',
-      type: 'Full-time / Part-time',
-      location: 'Multiple Locations',
-      description: 'Support registered nurses in delivering quality patient care across diverse healthcare settings',
-      requirements: ['Current AHPRA registration', 'Diploma of Nursing', 'Medication administration certification'],
-    },
-    {
-      title: 'Personal Care Assistants',
-      type: 'Casual / Part-time / Full-time',
-      location: 'Sydney Metro & Regional',
-      description: 'Assist clients with daily living activities, personal care, and companionship',
-      requirements: ['Certificate III in Individual Support', 'First Aid & CPR', 'NDIS Worker Screening'],
-    },
-    {
-      title: 'Disability Support Workers',
-      type: 'Full-time / Part-time',
-      location: 'Sydney & Surrounding Areas',
-      description: 'Empower individuals with disabilities to live independently and achieve their goals',
-      requirements: ['Certificate IV in Disability', 'NDIS registration', 'Valid driver\'s license'],
-    },
-    {
-      title: 'Allied Health Professionals',
-      type: 'Contract / Permanent',
-      location: 'Various Locations',
-      description: 'Physiotherapists, occupational therapists, speech pathologists, and social workers needed',
-      requirements: ['Relevant tertiary qualification', 'AHPRA registration (where applicable)', 'Experience in community health'],
-    },
-    {
-      title: 'Mental Health Support Workers',
-      type: 'Full-time / Part-time',
-      location: 'Sydney & Regional NSW',
-      description: 'Provide culturally sensitive mental health support and crisis intervention services',
-      requirements: ['Mental health qualification', 'Trauma-informed care training', 'Cultural awareness'],
-    },
-  ];
+  const positions = copy.positions;
 
-  const steps = [
-    {
-      number: '01',
-      title: 'Submit Application',
-      description: 'Complete our online application form with your qualifications and experience',
-      icon: 'ri-file-text-line',
-    },
-    {
-      number: '02',
-      title: 'Initial Screening',
-      description: 'Our team reviews your application and conducts a preliminary phone interview',
-      icon: 'ri-phone-line',
-    },
-    {
-      number: '03',
-      title: 'Skills Assessment',
-      description: 'Participate in competency evaluation and cultural fit assessment',
-      icon: 'ri-checkbox-multiple-line',
-    },
-    {
-      number: '04',
-      title: 'Placement Matching',
-      description: 'We match you with suitable positions based on your skills and preferences',
-      icon: 'ri-user-search-line',
-    },
-    {
-      number: '05',
-      title: 'Onboarding & Training',
-      description: 'Comprehensive orientation, compliance training, and ongoing support',
-      icon: 'ri-graduation-cap-line',
-    },
-    {
-      number: '06',
-      title: 'Start Your Career',
-      description: 'Begin your rewarding healthcare career with continuous professional support',
-      icon: 'ri-rocket-line',
-    },
-  ];
+  const steps = copy.steps;
 
   return (
     <div className="min-h-screen bg-white">
@@ -131,38 +22,28 @@ const HealthRecruitmentPage = () => {
       {/* Hero Section */}
       <section className="relative h-[80vh] overflow-hidden">
         <img
-          src="https://readdy.ai/api/search-image?query=diverse%20healthcare%20professionals%20team%20doctors%20nurses%20caregivers%20standing%20together%20in%20modern%20hospital%20setting%20professional%20medical%20environment%20warm%20welcoming%20atmosphere%20representing%20health%20equity%20and%20community%20care%20simple%20clean%20background&width=1920&height=1080&seq=healthhero1&orientation=landscape"
-          alt="Healthcare Professionals"
+          src={copy.heroSection.image}
+          alt={copy.heroSection.imageAlt}
           className="w-full h-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/60"></div>
         
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="container-custom text-center px-4">
-            <span className="inline-block bg-accent text-primary px-6 py-2 rounded-full text-sm font-bold uppercase tracking-wider mb-6">
-              Join Our Healthcare Network
-            </span>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Build Your Healthcare Career
-              <br />
-              <span className="text-accent">With Purpose & Impact</span>
+            <span className="inline-block bg-accent text-primary px-6 py-2 rounded-full text-sm font-bold uppercase tracking-wider mb-6">{copy.heroSection.label}</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">{copy.heroSection.title}<br />
+              <span className="text-accent">{copy.heroSection.label2}</span>
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">
-              Connecting passionate healthcare professionals with meaningful opportunities across Australia
-            </p>
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed">{copy.heroSection.text}</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href="#positions"
                 className="w-full sm:w-auto bg-accent hover:bg-accent-dark text-primary px-10 py-4 rounded-full text-lg font-bold transition-all hover:scale-105 whitespace-nowrap cursor-pointer"
-              >
-                View Open Positions
-              </a>
+              >{copy.heroSection.link}</a>
               <a
                 href="#apply"
                 className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-primary px-10 py-4 rounded-full text-lg font-bold transition-all hover:scale-105 whitespace-nowrap cursor-pointer"
-              >
-                Apply Now
-              </a>
+              >{copy.heroSection.link2}</a>
             </div>
           </div>
         </div>
@@ -177,37 +58,25 @@ const HealthRecruitmentPage = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="text-accent text-sm font-bold uppercase tracking-wider">Health Equity & Wellbeing</span>
-              <h2 className="text-4xl lg:text-5xl font-bold text-primary mt-4 mb-6 leading-tight">
-                Connecting Communities with Quality Healthcare
-              </h2>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                KWETU CONNECT's Health Recruitment program bridges the gap between skilled healthcare professionals and communities in need. We specialize in recruiting culturally competent caregivers, nurses, and allied health professionals who understand the unique needs of diverse communities.
-              </p>
-              <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                Our comprehensive approach ensures that both healthcare workers and care recipients benefit from meaningful, sustainable partnerships that promote health equity and community wellbeing.
-              </p>
+              <span className="text-accent text-sm font-bold uppercase tracking-wider">{copy.overviewSection.label}</span>
+              <h2 className="text-4xl lg:text-5xl font-bold text-primary mt-4 mb-6 leading-tight">{copy.overviewSection.heading}</h2>
+              <p className="text-lg text-gray-700 mb-6 leading-relaxed">{copy.overviewSection.text}</p>
+              <p className="text-lg text-gray-700 mb-8 leading-relaxed">{copy.overviewSection.text2}</p>
               <div className="flex flex-wrap gap-3">
-                <span className="px-5 py-2 bg-blue-50 text-primary rounded-full text-sm font-medium whitespace-nowrap">
-                  Cultural Competency
-                </span>
-                <span className="px-5 py-2 bg-blue-50 text-primary rounded-full text-sm font-medium whitespace-nowrap">
-                  Professional Excellence
-                </span>
-                <span className="px-5 py-2 bg-blue-50 text-primary rounded-full text-sm font-medium whitespace-nowrap">
-                  Community Care
-                </span>
+                <span className="px-5 py-2 bg-blue-50 text-primary rounded-full text-sm font-medium whitespace-nowrap">{copy.overviewSection.label2}</span>
+                <span className="px-5 py-2 bg-blue-50 text-primary rounded-full text-sm font-medium whitespace-nowrap">{copy.overviewSection.label3}</span>
+                <span className="px-5 py-2 bg-blue-50 text-primary rounded-full text-sm font-medium whitespace-nowrap">{copy.overviewSection.label4}</span>
               </div>
             </div>
             <div className="relative">
               <img
-                src="https://readdy.ai/api/search-image?query=compassionate%20nurse%20caring%20for%20elderly%20patient%20in%20home%20care%20setting%20warm%20natural%20lighting%20professional%20healthcare%20environment%20representing%20quality%20community%20health%20services%20simple%20clean%20background&width=800&height=600&seq=healthcare2&orientation=landscape"
-                alt="Healthcare Professional"
+                src={copy.overviewSection.image}
+                alt={copy.overviewSection.imageAlt}
                 className="w-full h-96 object-cover object-top rounded-2xl shadow-2xl"
               />
               <div className="absolute -bottom-6 -left-6 bg-accent p-6 rounded-xl shadow-xl">
-                <div className="text-4xl font-bold text-primary mb-1">500+</div>
-                <div className="text-primary text-sm font-semibold">Healthcare Professionals Placed</div>
+                <div className="text-4xl font-bold text-primary mb-1">{copy.overviewSection.text3}</div>
+                <div className="text-primary text-sm font-semibold">{copy.overviewSection.text4}</div>
               </div>
             </div>
           </div>
@@ -218,19 +87,15 @@ const HealthRecruitmentPage = () => {
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-primary mb-4">
-              See Our Impact in Action
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Watch how KWETU CONNECT is transforming healthcare delivery through culturally responsive recruitment
-            </p>
+            <h2 className="text-4xl font-bold text-primary mb-4">{copy.videoSection.heading}</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">{copy.videoSection.text}</p>
           </div>
           <div className="max-w-5xl mx-auto">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl" style={{ paddingBottom: '56.25%' }}>
               <iframe
                 className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/i8DuRLLgSAo"
-                title="KWETU CONNECT Health Recruitment"
+                src={copy.videoSection.embedUrl}
+                title={copy.videoSection.title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               ></iframe>
@@ -243,12 +108,8 @@ const HealthRecruitmentPage = () => {
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-4">
-              Why Choose KWETU CONNECT?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We offer more than just a job – we provide a pathway to a fulfilling healthcare career
-            </p>
+            <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-4">{copy.benefitsSection.heading}</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">{copy.benefitsSection.text}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
@@ -271,12 +132,8 @@ const HealthRecruitmentPage = () => {
       <section id="positions" className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-4">
-              Current Opportunities
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore our open positions and find your perfect healthcare role
-            </p>
+            <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-4">{copy.openPositionsSection.heading}</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">{copy.openPositionsSection.text}</p>
           </div>
           <div className="space-y-6">
             {positions.map((position, index) => (
@@ -312,9 +169,7 @@ const HealthRecruitmentPage = () => {
                     <a
                       href="#apply"
                       className="inline-block bg-accent hover:bg-accent-dark text-primary px-8 py-3 rounded-full font-bold transition-all hover:scale-105 whitespace-nowrap cursor-pointer"
-                    >
-                      Apply Now
-                    </a>
+                    >{copy.openPositionsSection.link}</a>
                   </div>
                 </div>
               </div>
@@ -328,8 +183,8 @@ const HealthRecruitmentPage = () => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img
-            src="https://readdy.ai/api/search-image?query=healthcare%20career%20journey%20professional%20development%20medical%20training%20diverse%20healthcare%20workers%20success%20pathway%20beautiful%20professional%20setting%20warm%20lighting%20simple%20clean%20background&width=1920&height=1080&seq=healthprocessbg&orientation=landscape"
-            alt="Application Process Background"
+            src={copy.backgroundImageWithOverlay.image}
+            alt={copy.backgroundImageWithOverlay.imageAlt}
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-primary/80"></div>
@@ -340,12 +195,8 @@ const HealthRecruitmentPage = () => {
         </div>
         <div className="container-custom relative">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
-              Your Journey to Healthcare Excellence
-            </h2>
-            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              Our streamlined recruitment process ensures you're supported every step of the way
-            </p>
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">{copy.backgroundImageWithOverlay.heading}</h2>
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">{copy.backgroundImageWithOverlay.text}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {steps.map((step, index) => (
@@ -371,12 +222,8 @@ const HealthRecruitmentPage = () => {
       <section className="py-20 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-4">
-              Part of Our Comprehensive Approach
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Health Recruitment connects seamlessly with our other programs and pillars
-            </p>
+            <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-4">{copy.connectionToProgramsSection.heading}</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">{copy.connectionToProgramsSection.text}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Link
@@ -386,13 +233,10 @@ const HealthRecruitmentPage = () => {
               <div className="w-16 h-16 flex items-center justify-center mb-6">
                 <i className="ri-mental-health-line text-5xl text-accent"></i>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Mental Health & Wellbeing</h3>
-              <p className="text-white/90 text-sm leading-relaxed mb-4">
-                Supporting healthcare workers' mental health and wellbeing
-              </p>
+              <h3 className="text-2xl font-bold text-white mb-4">{copy.connectionToProgramsSection.subheading}</h3>
+              <p className="text-white/90 text-sm leading-relaxed mb-4">{copy.connectionToProgramsSection.text2}</p>
               <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="inline-flex items-center text-accent font-semibold hover:underline">
-                  Learn More <i className="ri-arrow-right-line ml-2"></i>
+                <span className="inline-flex items-center text-accent font-semibold hover:underline">{copy.connectionToProgramsSection.label}<i className="ri-arrow-right-line ml-2"></i>
                 </span>
               </div>
             </Link>
@@ -404,13 +248,10 @@ const HealthRecruitmentPage = () => {
               <div className="w-16 h-16 flex items-center justify-center mb-6">
                 <i className="ri-nurse-line text-5xl text-primary"></i>
               </div>
-              <h3 className="text-2xl font-bold text-primary mb-4">Job Opportunities & Care for Caregivers</h3>
-              <p className="text-primary/90 text-sm leading-relaxed mb-4">
-                Career pathways and support for healthcare professionals
-              </p>
+              <h3 className="text-2xl font-bold text-primary mb-4">{copy.connectionToProgramsSection.subheading2}</h3>
+              <p className="text-primary/90 text-sm leading-relaxed mb-4">{copy.connectionToProgramsSection.text3}</p>
               <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="inline-flex items-center text-primary font-semibold hover:underline">
-                  Learn More <i className="ri-arrow-right-line ml-2"></i>
+                <span className="inline-flex items-center text-primary font-semibold hover:underline">{copy.connectionToProgramsSection.label2}<i className="ri-arrow-right-line ml-2"></i>
                 </span>
               </div>
             </Link>
@@ -422,13 +263,10 @@ const HealthRecruitmentPage = () => {
               <div className="w-16 h-16 flex items-center justify-center mb-6">
                 <i className="ri-earth-line text-5xl text-accent"></i>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Cultural Exchange Programs</h3>
-              <p className="text-white/90 text-sm leading-relaxed mb-4">
-                Culturally competent care through exchange and learning
-              </p>
+              <h3 className="text-2xl font-bold text-white mb-4">{copy.connectionToProgramsSection.subheading3}</h3>
+              <p className="text-white/90 text-sm leading-relaxed mb-4">{copy.connectionToProgramsSection.text4}</p>
               <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="inline-flex items-center text-accent font-semibold hover:underline">
-                  Learn More <i className="ri-arrow-right-line ml-2"></i>
+                <span className="inline-flex items-center text-accent font-semibold hover:underline">{copy.connectionToProgramsSection.label3}<i className="ri-arrow-right-line ml-2"></i>
                 </span>
               </div>
             </Link>
@@ -440,13 +278,10 @@ const HealthRecruitmentPage = () => {
               <div className="w-16 h-16 flex items-center justify-center mb-6">
                 <i className="ri-user-star-line text-5xl text-primary"></i>
               </div>
-              <h3 className="text-2xl font-bold text-primary mb-4">Seniors Wisdom & Guidance</h3>
-              <p className="text-primary/90 text-sm leading-relaxed mb-4">
-                Honoring elders through quality aged care services
-              </p>
+              <h3 className="text-2xl font-bold text-primary mb-4">{copy.connectionToProgramsSection.subheading4}</h3>
+              <p className="text-primary/90 text-sm leading-relaxed mb-4">{copy.connectionToProgramsSection.text5}</p>
               <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="inline-flex items-center text-primary font-semibold hover:underline">
-                  Learn More <i className="ri-arrow-right-line ml-2"></i>
+                <span className="inline-flex items-center text-primary font-semibold hover:underline">{copy.connectionToProgramsSection.label4}<i className="ri-arrow-right-line ml-2"></i>
                 </span>
               </div>
             </Link>
@@ -458,53 +293,49 @@ const HealthRecruitmentPage = () => {
       <section className="py-20 bg-white">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-4">
-              Our Healthcare Community
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See the diverse, passionate professionals making a difference every day
-            </p>
+            <h2 className="text-4xl lg:text-5xl font-bold text-primary mb-4">{copy.imageGallerySection.heading}</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">{copy.imageGallerySection.text}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1">
               <img
-                src="https://readdy.ai/api/search-image?query=diverse%20team%20of%20nurses%20and%20doctors%20collaborating%20in%20modern%20hospital%20setting%20professional%20healthcare%20environment%20teamwork%20simple%20clean%20background&width=600&height=800&seq=gallery1&orientation=portrait"
-                alt="Healthcare Team"
+                src={copy.imageGallerySection.image}
+                alt={copy.imageGallerySection.imageAlt}
                 className="w-full h-full object-cover object-top"
               />
             </div>
             <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1">
               <img
-                src="https://readdy.ai/api/search-image?query=personal%20care%20assistant%20helping%20elderly%20person%20with%20daily%20activities%20warm%20home%20care%20setting%20compassionate%20care%20simple%20clean%20background&width=600&height=800&seq=gallery2&orientation=portrait"
-                alt="Personal Care"
+                src={copy.imageGallerySection.image2}
+                alt={copy.imageGallerySection.imageAlt2}
                 className="w-full h-full object-cover object-top"
               />
             </div>
             <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1">
               <img
-                src="https://readdy.ai/api/search-image?query=disability%20support%20worker%20engaging%20with%20client%20in%20community%20setting%20inclusive%20environment%20empowerment%20simple%20clean%20background&width=600&height=800&seq=gallery3&orientation=portrait"
-                alt="Disability Support"
+                src={copy.imageGallerySection.image3}
+                alt={copy.imageGallerySection.imageAlt3}
                 className="w-full h-full object-cover object-top"
               />
             </div>
             <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1">
               <img
-                src="https://readdy.ai/api/search-image?query=allied%20health%20professional%20physiotherapist%20working%20with%20patient%20in%20clinic%20modern%20healthcare%20facility%20professional%20setting%20simple%20clean%20background&width=600&height=800&seq=gallery4&orientation=portrait"
-                alt="Allied Health"
+                src={copy.imageGallerySection.image4}
+                alt={copy.imageGallerySection.imageAlt4}
                 className="w-full h-full object-cover object-top"
               />
             </div>
             <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1">
               <img
-                src="https://readdy.ai/api/search-image?query=mental%20health%20counselor%20in%20supportive%20therapy%20session%20warm%20welcoming%20environment%20professional%20care%20simple%20clean%20background&width=600&height=800&seq=gallery5&orientation=portrait"
-                alt="Mental Health Support"
+                src={copy.imageGallerySection.image5}
+                alt={copy.imageGallerySection.imageAlt5}
                 className="w-full h-full object-cover object-top"
               />
             </div>
             <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1">
               <img
-                src="https://readdy.ai/api/search-image?query=healthcare%20professionals%20celebrating%20success%20diverse%20team%20multicultural%20environment%20positive%20workplace%20culture%20simple%20clean%20background&width=600&height=800&seq=gallery6&orientation=portrait"
-                alt="Team Success"
+                src={copy.imageGallerySection.image6}
+                alt={copy.imageGallerySection.imageAlt6}
                 className="w-full h-full object-cover object-top"
               />
             </div>
@@ -517,8 +348,8 @@ const HealthRecruitmentPage = () => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0">
           <img
-            src="https://readdy.ai/api/search-image?query=healthcare%20professionals%20celebrating%20success%20diverse%20team%20meaningful%20career%20transformation%20beautiful%20professional%20setting%20warm%20lighting%20simple%20clean%20background&width=1920&height=1080&seq=healthctabg&orientation=landscape"
-            alt="Healthcare CTA Background"
+            src={copy.backgroundImageWithOverlay.image2}
+            alt={copy.backgroundImageWithOverlay.imageAlt2}
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-primary/80"></div>
@@ -528,25 +359,17 @@ const HealthRecruitmentPage = () => {
           <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(45deg, transparent 30%, rgba(255,255,255,.1) 30%, rgba(255,255,255,.1) 70%, transparent 70%)' }}></div>
         </div>
         <div className="container-custom text-center relative px-4">
-          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Start Your Healthcare Journey?
-          </h2>
-          <p className="text-xl text-gray-200 mb-10 max-w-3xl mx-auto">
-            Join hundreds of healthcare professionals who've found meaningful careers through KWETU CONNECT
-          </p>
+          <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">{copy.backgroundImageWithOverlay.heading2}</h2>
+          <p className="text-xl text-gray-200 mb-10 max-w-3xl mx-auto">{copy.backgroundImageWithOverlay.text2}</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/contact"
               className="w-full sm:w-auto bg-accent hover:bg-accent-dark text-primary px-12 py-5 rounded-full text-xl font-bold transition-all hover:scale-105 whitespace-nowrap cursor-pointer"
-            >
-              Apply Now
-            </Link>
+            >{copy.backgroundImageWithOverlay.text3}</Link>
             <Link
               to="/contact"
               className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-primary px-12 py-5 rounded-full text-xl font-bold transition-all hover:scale-105 whitespace-nowrap cursor-pointer"
-            >
-              Contact Our Team
-            </Link>
+            >{copy.backgroundImageWithOverlay.text4}</Link>
           </div>
         </div>
       </section>

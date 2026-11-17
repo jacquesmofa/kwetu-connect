@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import copy from '../../content/layout/navbar.json';
+// Text, images and links: src/content/layout/navbar.json (editable in the website editors).
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -17,33 +19,11 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Health Recruitment', path: '/health-recruitment' },
-    { name: 'Gallery', path: '/gallery' },
-    { name: 'Contact', path: '/contact' },
-  ];
+  const navLinks = copy.navLinks;
 
-  const programsMenu = [
-    { name: 'Mental Health & Wellbeing', path: '/programs#mental-health', icon: 'ri-mental-health-line' },
-    { name: 'Cultural Exchange Programs', path: '/programs#cultural-exchange', icon: 'ri-earth-line' },
-    { name: 'Community Chaplaincy', path: '/programs#chaplaincy', icon: 'ri-hand-heart-line' },
-    { name: 'Job Opportunities & Care', path: '/programs#job-opportunities', icon: 'ri-briefcase-line' },
-    { name: 'Seniors Wisdom & Guidance', path: '/programs#seniors-wisdom', icon: 'ri-user-star-line' },
-    { name: 'Turning Vulnerability to Opportunity', path: '/programs#vulnerability', icon: 'ri-seedling-line' },
-  ];
+  const programsMenu = copy.programsMenu;
 
-  const cropMenu = [
-    { name: 'Home', path: '/crop2026', icon: 'ri-home-line' },
-    { name: 'Vision', path: '/crop2026/vision', icon: 'ri-eye-line' },
-    { name: 'Thematic Pillars', path: '/crop2026/pillars', icon: 'ri-layout-masonry-line' },
-    { name: 'Programme', path: '/crop2026/programme', icon: 'ri-calendar-event-line' },
-    { name: 'Outcomes', path: '/crop2026/outcomes', icon: 'ri-bar-chart-grouped-line' },
-    { name: 'Venue & Logistics', path: '/crop2026/venue', icon: 'ri-map-pin-line' },
-    { name: 'Partnership', path: '/crop2026/partnership', icon: 'ri-team-line' },
-    { name: 'Register Interest', path: '/crop2026/register', icon: 'ri-edit-line', highlight: true },
-  ];
+  const cropMenu = copy.cropMenu;
 
   const isCropActive = location.pathname.startsWith('/crop2026');
 
@@ -62,8 +42,8 @@ const Navbar = () => {
               scrolled ? 'glass-effect-gold group-hover:bg-accent/30' : 'glass-effect group-hover:bg-white/30'
             }`}>
               <img 
-                src="https://res.cloudinary.com/dhjajm7ru/image/upload/w_200,q_auto,f_auto/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg" 
-                alt="KWETU CONNECT Logo" 
+                src={copy.logoImage.image} 
+                alt={copy.logoImage.imageAlt} 
                 className="w-10 h-10 object-contain"
               />
             </div>
@@ -71,12 +51,8 @@ const Navbar = () => {
             <div className="flex flex-col leading-tight">
               <span className={`font-display font-bold text-lg transition-colors duration-300 ${
                 scrolled ? 'text-white group-hover:text-accent' : 'text-white group-hover:text-accent'
-              }`}>
-                KWETU
-              </span>
-              <span className="text-accent font-bold text-lg -mt-1 group-hover:text-accent-light transition-colors duration-300">
-                CONNECT
-              </span>
+              }`}>{copy.brandText.label}</span>
+              <span className="text-accent font-bold text-lg -mt-1 group-hover:text-accent-light transition-colors duration-300">{copy.brandText.label2}</span>
             </div>
           </Link>
 
@@ -108,9 +84,7 @@ const Navbar = () => {
                 className={`relative px-4 py-2 text-sm font-medium transition-colors duration-300 whitespace-nowrap flex items-center magnetic-button ${
                   scrolled ? 'text-white hover:text-accent' : 'text-white hover:text-accent'
                 } ${isCropActive ? 'font-bold' : ''}`}
-              >
-                CROP 2026
-                <i className={`ri-arrow-down-s-line ml-1 transition-transform duration-300 ${cropDropdownOpen ? 'rotate-180' : ''}`}></i>
+              >{copy.crop2026Dropdown.text}<i className={`ri-arrow-down-s-line ml-1 transition-transform duration-300 ${cropDropdownOpen ? 'rotate-180' : ''}`}></i>
                 {isCropActive && (
                   <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent shimmer" />
                 )}
@@ -126,8 +100,8 @@ const Navbar = () => {
                           <i className="ri-calendar-check-line text-xl text-accent"></i>
                         </div>
                         <div>
-                          <p className="text-white font-semibold text-sm">CROP 2026 Conference</p>
-                          <p className="text-white/60 text-xs">November 6-8, 2026 &middot; Sydney, Australia</p>
+                          <p className="text-white font-semibold text-sm">{copy.crop2026DropdownMenuTwo.text}</p>
+                          <p className="text-white/60 text-xs">{copy.crop2026DropdownMenuTwo.text2}</p>
                         </div>
                       </div>
                       <div className="grid grid-cols-2 gap-2">
@@ -155,8 +129,7 @@ const Navbar = () => {
                       <Link
                         to="/crop2026"
                         className="text-accent hover:text-accent-light text-sm font-semibold flex items-center cursor-pointer transition-colors duration-300"
-                      >
-                        Visit Conference Home <i className="ri-arrow-right-line ml-1"></i>
+                      >{copy.crop2026DropdownMenuTwo.text3}<i className="ri-arrow-right-line ml-1"></i>
                       </Link>
                     </div>
                   </div>
@@ -175,9 +148,7 @@ const Navbar = () => {
                 className={`relative px-4 py-2 text-sm font-medium transition-colors duration-300 whitespace-nowrap flex items-center magnetic-button ${
                   scrolled ? 'text-white hover:text-accent' : 'text-white hover:text-accent'
                 } ${location.pathname === '/programs' ? 'font-bold' : ''}`}
-              >
-                Programs
-                <i className={`ri-arrow-down-s-line ml-1 transition-transform duration-300 ${programsDropdownOpen ? 'rotate-180' : ''}`}></i>
+              >{copy.programsDropdown.text}<i className={`ri-arrow-down-s-line ml-1 transition-transform duration-300 ${programsDropdownOpen ? 'rotate-180' : ''}`}></i>
                 {location.pathname === '/programs' && (
                   <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-accent shimmer" />
                 )}
@@ -205,8 +176,7 @@ const Navbar = () => {
                       <Link
                         to="/programs"
                         className="text-accent hover:text-accent-light text-sm font-semibold flex items-center cursor-pointer transition-colors duration-300"
-                      >
-                        View All Programs <i className="ri-arrow-right-line ml-1"></i>
+                      >{copy.dropdownMenu.text}<i className="ri-arrow-right-line ml-1"></i>
                       </Link>
                     </div>
                   </div>
@@ -218,29 +188,25 @@ const Navbar = () => {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
             <a
-              href="https://kwetu4communities.org/"
+              href={copy.ctaButtons.url}
               target="_blank"
               rel="noopener noreferrer"
               className={`text-sm font-medium transition-colors duration-300 whitespace-nowrap magnetic-button ${
                 scrolled ? 'text-accent hover:text-accent-light' : 'text-white hover:text-accent'
               }`}
             >
-              <i className="ri-links-line mr-1"></i>
-              kwetu4communities
-            </a>
+              <i className="ri-links-line mr-1"></i>{copy.ctaButtons.link}</a>
             <Link
               to="/contact"
               className="bg-[#D4AF37] hover:bg-[#E5C047] text-[#0A2540] px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-500 hover:scale-105 whitespace-nowrap cursor-pointer shadow-[0_0_20px_rgba(212,175,55,0.6)] hover:shadow-[0_0_30px_rgba(212,175,55,0.9)] animate-pulse-glow relative z-50"
-            >
-              Partner With Us
-            </Link>
+            >{copy.ctaButtons.text}</Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className={`lg:hidden p-2 rounded-lg transition-colors duration-300 ${scrolled ? 'text-white' : 'text-white'} cursor-pointer z-10`}
-            aria-label="Toggle menu"
+            aria-label={copy.mobileMenuButton.ariaLabel}
           >
             <i className={`text-2xl ${mobileMenuOpen ? 'ri-close-line' : 'ri-menu-line'}`}></i>
           </button>
@@ -272,7 +238,7 @@ const Navbar = () => {
                   isCropActive ? 'font-bold bg-accent/10' : ''
                 }`}
               >
-                <span>CROP 2026</span>
+                <span>{copy.crop2026MobileDropdown.label}</span>
                 <i className={`ri-arrow-down-s-line transition-transform duration-300 ${mobileCropOpen ? 'rotate-180' : ''}`}></i>
               </button>
               
@@ -305,7 +271,7 @@ const Navbar = () => {
                   location.pathname === '/programs' ? 'font-bold bg-accent/10' : ''
                 }`}
               >
-                <span>Programs</span>
+                <span>{copy.programsMobileDropdown.label}</span>
                 <i className={`ri-arrow-down-s-line transition-transform duration-300 ${programsDropdownOpen ? 'rotate-180' : ''}`}></i>
               </button>
               
@@ -327,21 +293,17 @@ const Navbar = () => {
             </div>
             
             <a
-              href="https://kwetu4communities.org/"
+              href={copy.programsMobileDropdown.url}
               target="_blank"
               rel="noopener noreferrer"
               className="block py-3 px-4 text-accent hover:bg-accent/20 hover:text-accent-light transition-all duration-300 rounded-lg cursor-pointer"
             >
-              <i className="ri-links-line mr-1"></i>
-              kwetu4communities
-            </a>
+              <i className="ri-links-line mr-1"></i>{copy.programsMobileDropdown.link}</a>
             <Link
               to="/contact"
               onClick={() => setMobileMenuOpen(false)}
               className="block w-full bg-[#D4AF37] hover:bg-[#E5C047] text-[#0A2540] px-6 py-3 rounded-full text-center font-bold transition-all duration-500 cursor-pointer mt-4 shadow-[0_0_20px_rgba(212,175,55,0.6)]"
-            >
-              Partner With Us
-            </Link>
+            >{copy.programsMobileDropdown.text}</Link>
           </div>
         </div>
       )}

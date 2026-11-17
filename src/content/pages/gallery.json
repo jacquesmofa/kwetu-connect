@@ -1,0 +1,44 @@
+{
+  "categoryTabComponent": {
+    "image": "https://res.cloudinary.com/dhjajm7ru/image/upload/w_1600,q_auto,f_auto/v1779237221/GPP2022_-_Multicultural_Mass-2_kmwutg.jpg",
+    "imageAlt": "Multicultural Mass celebration, 2022",
+    "text": "Gallery",
+    "text2": "Moments of Impact, Stories of Transformation",
+    "label": "+ photographs across ",
+    "label2": " collections"
+  },
+  "overviewTabOnlyVisibleWhen": {
+    "text": "Back to Overview"
+  },
+  "statsBreadcrumbBar": {
+    "text": "Scroll down to explore each collection. Click \"View All\" to see the complete set.",
+    "text2": "Showing ",
+    "text3": " photos in",
+    "label": "Titles auto-hide after 4 seconds — hover any photo to reveal details"
+  },
+  "sectionHeader": {
+    "text": " — click any to preview",
+    "button": "View All ",
+    "button2": " Photos"
+  },
+  "viewAllBottomButtonMobile": {
+    "button": "View All ",
+    "button2": " Photos"
+  },
+  "sectionTitle": {
+    "text": " — click any to view full size"
+  },
+  "categoryBadge": {
+    "text": "No photos found in this category.",
+    "button": "Back to Gallery Overview"
+  },
+  "topBar": {
+    "title": "Toggle caption"
+  },
+  "leftClickZone": {
+    "title": "Previous image"
+  },
+  "rightClickZone": {
+    "title": "Next image"
+  }
+}
