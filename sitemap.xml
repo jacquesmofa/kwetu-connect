@@ -1,45 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!-- Generated from src/content/seo.json on every build. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://kwetuconnect.org/</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-11-17</lastmod>
     <priority>1.0</priority>
+    <image:image><image:loc>https://res.cloudinary.com/dhjajm7ru/image/upload/c_pad,w_1200,h_630,b_white,q_auto,f_jpg/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://kwetuconnect.org/about</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kwetuconnect.org/about/morris-kizito-mukasa</loc>
-    <lastmod>2026-11-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://kwetuconnect.org/media/morris-kizito-mukasa-share.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://kwetuconnect.org/programs</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://kwetuconnect.org/crop2026</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kwetuconnect.org/health-recruitment</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kwetuconnect.org/gallery</loc>
+    <lastmod>2026-11-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://kwetuconnect.org/contact</loc>
-    <lastmod>2024-01-15</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kwetuconnect.org/crop2026</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://res.cloudinary.com/dhjajm7ru/image/upload/v1781706372/Crop_rounded_big_zgkob2.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://kwetuconnect.org/crop2026/vision</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://res.cloudinary.com/dhjajm7ru/image/upload/v1781706372/Crop_rounded_big_zgkob2.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://kwetuconnect.org/crop2026/pillars</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://res.cloudinary.com/dhjajm7ru/image/upload/v1781706372/Crop_rounded_big_zgkob2.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://kwetuconnect.org/crop2026/programme</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://res.cloudinary.com/dhjajm7ru/image/upload/v1781706372/Crop_rounded_big_zgkob2.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://kwetuconnect.org/crop2026/outcomes</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://res.cloudinary.com/dhjajm7ru/image/upload/v1781706372/Crop_rounded_big_zgkob2.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://kwetuconnect.org/crop2026/venue</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://res.cloudinary.com/dhjajm7ru/image/upload/v1781706372/Crop_rounded_big_zgkob2.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://kwetuconnect.org/crop2026/partnership</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://res.cloudinary.com/dhjajm7ru/image/upload/v1781706372/Crop_rounded_big_zgkob2.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://kwetuconnect.org/crop2026/register</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://res.cloudinary.com/dhjajm7ru/image/upload/v1781706372/Crop_rounded_big_zgkob2.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://kwetuconnect.org/crop2026/kwetu-connect</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://res.cloudinary.com/dhjajm7ru/image/upload/v1781706372/Crop_rounded_big_zgkob2.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://kwetuconnect.org/crop2026/ldii</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://res.cloudinary.com/dhjajm7ru/image/upload/v1781706372/Crop_rounded_big_zgkob2.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://kwetuconnect.org/crop2026/thrive-tours</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
+    <image:image><image:loc>https://res.cloudinary.com/dhjajm7ru/image/upload/v1781706372/Crop_rounded_big_zgkob2.png</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://kwetuconnect.org/privacy-policy</loc>
+    <lastmod>2026-11-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kwetuconnect.org/terms-of-service</loc>
+    <lastmod>2026-11-17</lastmod>
     <priority>0.8</priority>
   </url>
 </urlset>

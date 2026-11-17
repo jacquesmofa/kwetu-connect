@@ -1,0 +1,20 @@
+{
+  "name": "KWETU CONNECT",
+  "short_name": "KWETU",
+  "icons": [
+    {
+      "src": "https://res.cloudinary.com/dhjajm7ru/image/upload/c_pad,w_192,h_192,b_white,f_png/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://res.cloudinary.com/dhjajm7ru/image/upload/c_pad,w_512,h_512,b_white,f_png/v1780004656/Kwetu_connect_Logo_-_best_size_for_favicon_ilrvqn.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0A2540",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/"
+}
